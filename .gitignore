@@ -67,3 +67,9 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+
+# dotenv environment variable fiels
+######################## 重要!! ########################
+.env*
+######################## 重要!! ########################

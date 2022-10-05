@@ -1,11 +1,124 @@
+@import '_config.scss';
+
+//variable
+$drawer-menu-color: #000;
+$drawer-bg-color: #101c24;
 .header {
   &__wrap {
-    max-width: 1200px;
+    width: 100%;
+    max-width: calc(1200px + 2rem);
+    padding: 0.5rem;
+    @include mq() {
+      padding: 1rem;
+    }
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
+  &__left {
+    @include mq() {
+      display: flex;
+    }
+  }
   &__headline {
     font-size: 1rem;
   }
+  // ディスプレイメニュー
+  &__menu {
+    display: none;
+    @include mq() {
+      display: flex;
+    }
+  }
 }
+
+//ドロワー
+.drawer {
+  &__btn {
+
+    // button
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10002;
+    width: 70px;
+    height: 70px;
+    // background-color: #ddd;
+    overflow: hidden;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      background-color: $drawer-bg-color;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: .3s;
+
+      &:nth-child(1) { transform: translate(-50%, -14px); }
+      &:nth-child(2) { transform: translate(-50%, -50%); }
+      &:nth-child(3) { transform: translate(-50%, 10px); }
+    }
+
+    &.active {
+      span {
+        background-color: #fff;
+        &:nth-child(1) { transform: translate(-50%, 0) rotate(45deg); }
+        &:nth-child(2) { transform: translate(-50%, -50%); opacity: 0; }
+        &:nth-child(3) { transform: translate(-50%, 0) rotate(-45deg);}
+
+      }
+    }
+  } // btn
+
+  // menu
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10001;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    background-color: $drawer-bg-color;
+    transition: .3s;
+    transform: translateX(100%);
+    opacity: 0;
+    // active
+    &.active {
+      transform: translateX(0);
+      opacity: 0.95;
+   }
+  } // menu
+
+  //  menu_inner
+  &__inner {
+    width: 75%;
+    min-width: 275px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  &__def {
+    padding: 1rem 0;
+    border-bottom: 1px solid #FFF;
+  }
+  &__dttl {
+    &:before {
+      content: "■";
+      display: inline-block;
+      margin-right: 0.25rem;
+    }
+  }
+  &__list {
+    padding-left: 1rem;
+  }
+  &__item {
+    &:before {
+      content: "・";
+    }
+  }
+} // drawer
+

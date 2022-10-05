@@ -1,0 +1,14 @@
+@import './global/_config.scss';
+
+header [class^="drawer"] {
+  @include mq() {
+    display: none;
+  }
+}
+
+footer .drawer__list {
+  display: none;
+  @include mq() {
+    display: block;
+  }
+}

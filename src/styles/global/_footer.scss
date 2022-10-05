@@ -1,0 +1,50 @@
+@import '_config.scss';
+
+.footer {
+  background-color: #aecf32;
+  &__inner {
+    width: 75%;
+    margin: 0 auto;
+    min-width: 280px;
+    max-width: 995px;
+  }
+
+  &__sns {
+    display: flex;
+  }
+
+  // bottom button
+  &-fixed-btn {
+    &__wrap {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item {
+      width: 33%;
+      text-align: center;
+      height: 50px;
+      border-radius: 0.5rem 0.5rem 0 0;
+      &:nth-child(1) {
+        background: #ccc;
+      }
+      &:nth-child(2) {
+        background: #ddd;
+      }
+      &:nth-child(3) {
+        background: #555;
+      }
+    }
+  }
+}
+
+// bottom button media query
+[class^="footer-fixed"] {
+  @include mq() {
+    display: none;
+  }
+}
+
