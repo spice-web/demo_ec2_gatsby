@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1`,
@@ -32,5 +36,19 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+
+    // microCMS設定ここから
+    {
+      resolve: `gatsby-source-microcms`,
+      options: {
+        apiKey: process.env.MICROCMS_APIKEY,
+        serviceId: process.env.MICROCMS_SERVICE_ID,
+        apis: [{
+          endpoint: 'information',
+        }],
+      },
+    }
+    // microCMSの設定ここまで
+
   ],
 }

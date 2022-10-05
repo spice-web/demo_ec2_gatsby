@@ -22,8 +22,8 @@ const Header = ({ siteTitle }) => (
       <li><Link to="">アクセス</Link></li>
       <li><Link to="">Q&A</Link></li>
       <li><Link to="">お客様の声</Link></li>
-      <li><Link to="">新着情報</Link></li>
-      <li><Link to="">企業情報</Link></li>
+      <li><Link to="/information">新着情報</Link></li>
+      <li><Link to="about">企業情報</Link></li>
     </ul>
 
     {/* ドロワーメニュー */}
