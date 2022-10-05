@@ -1269,10 +1269,48 @@
   dependencies:
     "tslib" "^2.4.0"
 
+"@hapi/address@^2.1.2":
+  "integrity" "sha512-QD1PhQk+s31P1ixsX0H0Suoupp3VMXzIVMSwobR3F3MSUO2YCV0B7xqLcUw/Bh8yuvd3LhpyqLQWTNcRmp6IdQ=="
+  "resolved" "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"
+  "version" "2.1.4"
+
+"@hapi/formula@^1.2.0":
+  "integrity" "sha512-UFbtbGPjstz0eWHb+ga/GM3Z9EzqKXFWIbSOFURU0A/Gku0Bky4bCk9/h//K2Xr3IrCfjFNhMm4jyZ5dbCewGA=="
+  "resolved" "https://registry.npmjs.org/@hapi/formula/-/formula-1.2.0.tgz"
+  "version" "1.2.0"
+
+"@hapi/hoek@^8.2.4", "@hapi/hoek@^8.3.0":
+  "integrity" "sha512-yN7kbciD87WzLGc5539Tn0sApjyiGHAJgKvG9W8C7O+6c7qmoQMfVs0W4bX17eqz6C78QJqqFrtgdK5EWf6Qow=="
+  "resolved" "https://registry.npmjs.org/@hapi/hoek/-/hoek-8.5.1.tgz"
+  "version" "8.5.1"
+
 "@hapi/hoek@^9.0.0":
   "integrity" "sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ=="
   "resolved" "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.3.0.tgz"
   "version" "9.3.0"
+
+"@hapi/joi@^16.1.7":
+  "integrity" "sha512-wAsVvTPe+FwSrsAurNt5vkg3zo+TblvC5Bb1zMVK6SJzZqw9UrJnexxR+76cpePmtUZKHAPxcQ2Bf7oVHyahhg=="
+  "resolved" "https://registry.npmjs.org/@hapi/joi/-/joi-16.1.8.tgz"
+  "version" "16.1.8"
+  dependencies:
+    "@hapi/address" "^2.1.2"
+    "@hapi/formula" "^1.2.0"
+    "@hapi/hoek" "^8.2.4"
+    "@hapi/pinpoint" "^1.0.2"
+    "@hapi/topo" "^3.1.3"
+
+"@hapi/pinpoint@^1.0.2":
+  "integrity" "sha512-dtXC/WkZBfC5vxscazuiJ6iq4j9oNx1SHknmIr8hofarpKUZKmlUVYVIhNVzIEgK5Wrc4GMHL5lZtt1uS2flmQ=="
+  "resolved" "https://registry.npmjs.org/@hapi/pinpoint/-/pinpoint-1.0.2.tgz"
+  "version" "1.0.2"
+
+"@hapi/topo@^3.1.3":
+  "integrity" "sha512-tAag0jEcjwH+P2quUfipd7liWCNX2F8NvYjQp2wtInsZxnMlypdw0FtAOLxtvvkO+GSRRbmNi8m/5y42PQJYCQ=="
+  "resolved" "https://registry.npmjs.org/@hapi/topo/-/topo-3.1.6.tgz"
+  "version" "3.1.6"
+  dependencies:
+    "@hapi/hoek" "^8.3.0"
 
 "@hapi/topo@^5.0.0":
   "integrity" "sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg=="
@@ -5452,6 +5490,15 @@
     "valid-url" "^1.0.9"
     "xstate" "4.32.1"
 
+"gatsby-source-microcms@^3.0.0":
+  "integrity" "sha512-fR2XdW81dvFozaoP0lR0uyGyftOrky47AI5lRI4sYa4gAxtpctWJDBfnI3xZ/A9edWtZ6WAtjvHx21pCvmmoHA=="
+  "resolved" "https://registry.npmjs.org/gatsby-source-microcms/-/gatsby-source-microcms-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "@hapi/joi" "^16.1.7"
+    "camelcase" "^5.3.1"
+    "node-fetch" "^2.6.0"
+
 "gatsby-telemetry@^3.24.0":
   "integrity" "sha512-ioBzkmImRuyEAGtnyJgpln4LKTQ61MAjFaU+SFLVKDATcVh86rfNbD2ks5DzZgCtsP1/zVmHv2a7s4z/TQCZjA=="
   "resolved" "https://registry.npmjs.org/gatsby-telemetry/-/gatsby-telemetry-3.24.0.tgz"
@@ -7572,7 +7619,7 @@
   "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-5.0.0.tgz"
   "version" "5.0.0"
 
-"node-fetch@^2.6.6", "node-fetch@^2.6.7", "node-fetch@2", "node-fetch@2.6.7":
+"node-fetch@^2.6.0", "node-fetch@^2.6.6", "node-fetch@^2.6.7", "node-fetch@2", "node-fetch@2.6.7":
   "integrity" "sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ=="
   "resolved" "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.7.tgz"
   "version" "2.6.7"
