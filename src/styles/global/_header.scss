@@ -3,6 +3,7 @@
 //variable
 $drawer-menu-color: #000;
 $drawer-bg-color: #101c24;
+
 .header {
   &__wrap {
     width: 100%;
@@ -90,7 +91,7 @@ $drawer-bg-color: #101c24;
     &.active {
       transform: translateX(0);
       opacity: 0.95;
-   }
+    }
   } // menu
 
   //  menu_inner

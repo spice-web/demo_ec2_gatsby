@@ -3,12 +3,14 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import Menu from "./menu"
+
 const Header = ({ siteTitle }) => (
   <header class="header__wrap">
     <div className="header__left">
       <Link to="/" >
         <StaticImage
-          src="../images/dummy.png"
+          src="https://placehold.jp/150x50.png"
           alt="成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1"
           width={190}
         />

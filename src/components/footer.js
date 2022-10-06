@@ -9,18 +9,28 @@ const Footer = () => (
   <>
     <footer className="footer">
       <div className="footer__inner">
+        <div className="footer__head">
+          <h2><StaticImage src="https://placehold.jp/150x80.png" /></h2>
+          <h2>株式会社サン・ポート</h2>
+          <p>住所</p>
+        </div>
+
         {/* メニュー */}
-        <Menu />
+        <div className="footer__center">
+          <Menu /> 
+        </div>       
 
-        <ul className="footer__sns">
-          <li><a href="" rel="noreferrer noopener" target="_blank"><img src="" alt="サンパーキング公式twitter" /></a></li>
-          <li><a href="" rel="noreferrer noopener" target="_blank"><img src="" alt="サンパーキング公式インスタグラム" /></a></li>
-          <li><a href="" rel="noreferrer noopener" target="_blank"><img src="" alt="サンパーキング公式LINE" /></a></li>
-          <li><a href="" rel="noreferrer noopener" target="_blank"><img src="" alt="サンパーキング公式Facebook" /></a></li>
-        </ul>
+        <div className="footer__foot">
+          <ul className="footer__sns">
+            <li><a href="" rel="noreferrer noopener" target="_blank"><StaticImage src="https://placehold.jp/50x50.png" alt="サンパーキング公式twitter" /></a></li>
+            <li><a href="" rel="noreferrer noopener" target="_blank"><StaticImage src="https://placehold.jp/50x50.png" alt="サンパーキング公式インスタグラム" /></a></li>
+            <li><a href="" rel="noreferrer noopener" target="_blank"><StaticImage src="https://placehold.jp/50x50.png" alt="サンパーキング公式LINE" /></a></li>
+            <li><a href="" rel="noreferrer noopener" target="_blank"><StaticImage src="https://placehold.jp/50x50.png" alt="サンパーキング公式Facebook" /></a></li>
+          </ul>
+        </div>
+      </div>{/* footer-inner */}
 
-        <p className="copyright text-center">© 2007 © Sunport Co., Ltd.</p>
-      </div>
+      <p className="copyright text-center">© 2007 © Sunport Co., Ltd.</p>
 
 
     </footer>
