@@ -38,6 +38,7 @@ module.exports = {
     },
 
     // microCMS設定ここから
+    // information
     {
       resolve: `gatsby-source-microcms`,
       options: {
@@ -45,6 +46,17 @@ module.exports = {
         serviceId: process.env.MICROCMS_SERVICE_ID,
         apis: [{
           endpoint: 'information',
+        }],
+      },
+    },
+    // voice
+    {
+      resolve: `gatsby-source-microcms`,
+      options: {
+        apiKey: process.env.MICROCMS_APIKEY,
+        serviceId: process.env.MICROCMS_SERVICE_ID,
+        apis: [{
+          endpoint: 'voice',
         }],
       },
     }

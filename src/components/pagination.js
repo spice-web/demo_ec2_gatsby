@@ -1,5 +1,8 @@
-import React from "react"
+import * as React from "react"
 import { Link } from "gatsby"
+
+// ページネーション
+import * as styles from "../styles/_information.module.scss"
 
 export const Pagination = ({ totalCount }) => {
 
@@ -9,9 +12,9 @@ export const Pagination = ({ totalCount }) => {
   const range = (start, end) => [...Array(end - start + 1)].map((_, i) => start + i)
 
   return (
-    <ul>
+    <ul className={styles.pagination__list}>
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
-        <li key={index}>
+        <li className={styles.pagination__item} key={index}>
           <Link to={`/information/page/${number}`}>{number}</Link>
         </li>
       ))}

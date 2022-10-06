@@ -9,35 +9,38 @@ import { Pagination } from "../components/pagination"
 const InformationPage = ({ data }) => (
   <Layout>
     <Seo title="インフォーメーション" />
+    <div className="content__wrap">
 
-    {/* コンテナ */}
-    <div className="">
+      {/* コンテナ */}
+      <div className="content__inner --sm">
 
-      {/* 表題ブロック */}
-      <div className="">
-        インフォーメーション
-      </div>
-
-      {/* カードブロック */}
-      {data.allMicrocmsInformation.edges.map(({ node }) => (
+        {/* 表題ブロック */}
         <div className="">
+          インフォーメーション
+        </div>
+
+        {/* カードブロック */}
+        {data.allMicrocmsInformation.edges.map(({ node }) => (
           <div className="">
             <div className="">
-              <Link to={node.informationId}>
-                {node.title}
-              </Link>
+              <div className="">
+                <Link to={node.informationId}>
+                  {node.title}
+                </Link>
+              </div>
+              <div className="">
+                {node.date}{`  `}{node.category.category}
+              </div>
+              <p>{node.excerpt}</p>
             </div>
-            <div className="">
-              {node.date}{`  `}{node.category.category}
-            </div>
-            <p>{node.excerpt}</p>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
 
-    {/* ページネーション */}
-    <Pagination totalCount={data.allMicrocmsInformation.totalCount} />
+        {/* ページネーション */}
+        <Pagination totalCount={data.allMicrocmsInformation.totalCount} />
+      </div>
+
+    </div>{/* content__wrap */}
 
   </Layout>
 )
@@ -50,14 +53,13 @@ query {
     totalCount
     edges {
       node {
-        body
         category {
           category
         }
         date(formatString: "YYYY年MM月DD日")
         informationId
         title
-
+        excerpt
       }
     }
   }

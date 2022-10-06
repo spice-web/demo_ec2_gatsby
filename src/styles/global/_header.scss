@@ -123,3 +123,20 @@ $drawer-bg-color: #101c24;
   }
 } // drawer
 
+// ヘッダーナビゲーション
+.header-nav {
+  &__wrap {
+    width: 100%;
+    background-color: #69b82e;
+    color: #FFF;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    border-right: 1px solid #FFF;
+    padding: 0 3rem;
+    background: linear-gradient(to right, #69b82e, pink);
+  }
+}

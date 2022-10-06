@@ -15,6 +15,7 @@
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-source-microcms": "^3.0.0",
     "gatsby-transformer-sharp": "^4.24.0",
+    "google-map-react": "^2.2.0",
     "node-sass": "^7.0.3",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
