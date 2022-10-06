@@ -17,6 +17,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
     {
       allMicrocmsInformation {
+        totalCount
         edges {
           node {
             informationId
@@ -40,5 +41,21 @@ exports.createPages = ({ graphql, actions }) => {
         defer: false,
       })
     })
+
+    // ページネーション
+    const PerPage = 2
+    const pageCount = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
+
+    for (let i = 0; i < pageCount; i++) {
+      createPage({
+        path: `/information/page/${i + 1}`,
+        component: path.resolve("./src/templates/information-page.js"),
+        context: {
+          limit: PerPage,
+          skip: i * PerPage,
+        },
+      })
+    }
   })
 }
+

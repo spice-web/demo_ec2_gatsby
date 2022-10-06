@@ -3,6 +3,9 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+// ページネーション
+import { Pagination } from "../components/pagination"
+
 const InformationPage = ({ data }) => (
   <Layout>
     <Seo title="インフォーメーション" />
@@ -25,13 +28,17 @@ const InformationPage = ({ data }) => (
               </Link>
             </div>
             <div className="">
-              {node.deta}{`  `}{node.category.category}
+              {node.date}{`  `}{node.category.category}
             </div>
             <p>{node.excerpt}</p>
           </div>
         </div>
       ))}
     </div>
+
+    {/* ページネーション */}
+    <Pagination totalCount={data.allMicrocmsInformation.totalCount} />
+
   </Layout>
 )
 
@@ -39,7 +46,8 @@ export default InformationPage
 
 export const query = graphql`
 query {
-  allMicrocmsInformation(sort: {fields:[date], order:DESC}) {
+  allMicrocmsInformation(limit:2, skip:0, sort: {fields:[date], order:DESC}) {
+    totalCount
     edges {
       node {
         body
@@ -49,6 +57,7 @@ query {
         date(formatString: "YYYY年MM月DD日")
         informationId
         title
+
       }
     }
   }
