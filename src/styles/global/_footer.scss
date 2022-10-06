@@ -2,15 +2,22 @@
 
 .footer {
   background-color: #aecf32;
+  padding: 2rem 0 6rem;
   &__inner {
     width: 75%;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
     min-width: 280px;
     max-width: 995px;
   }
-
+  &__head {
+    text-align: center;
+  }
+  &__center {
+    margin: 2rem 0;
+  }
   &__sns {
     display: flex;
+    justify-content: space-around;
   }
 
   // bottom button

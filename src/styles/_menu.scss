@@ -1,14 +1,59 @@
 @import './global/_config.scss';
 
+// variable
+$main-black-color: #000;
+
+.navigation {
+  &__def {
+    padding: 1rem 0;
+    border-bottom: 1px solid #FFF;
+  }
+
+  &__dttl {
+    &:before {
+      content: "■";
+      display: inline-block;
+      margin-right: 0.25rem;
+    }
+  }
+
+  &__list {
+    padding-left: 1rem;
+  }
+
+  &__item {
+    &:before {
+      content: "・";
+    }
+  }
+  }
+  
+    // navigation
+header [class^="navigation"] {
+  @include mq() {
+    display: none;
+  }
+}
 header [class^="drawer"] {
   @include mq() {
     display: none;
   }
 }
+footer {
+  .navigation {
+    &__wrap {
+      border-top: 1px solid $main-black-color;
+      border-bottom: 1px solid $main-black-color;
+    }
+    &__def {
+      border-bottom: none;
+    }
+    &__list {
+      display: none;
 
-footer .drawer__list {
-  display: none;
-  @include mq() {
-    display: block;
+      @include mq() {
+        display: block;
+      }
+    }
   }
 }
