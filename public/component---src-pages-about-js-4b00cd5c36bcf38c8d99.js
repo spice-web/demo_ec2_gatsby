@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[682],{4633:function(e,t,a){a.r(t);var l=a(7294),n=a(1082),u=a(4940),r=a(9357);t.default=function(){return l.createElement(u.Z,null,l.createElement(r.Z,{title:"サンパーキンについて"}),l.createElement("h1",null,"aboutページです"),l.createElement("p",null,"aboutページへようこそ"),l.createElement(n.Link,{to:"/"},"ホームに戻る"))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-4b00cd5c36bcf38c8d99.js.map
