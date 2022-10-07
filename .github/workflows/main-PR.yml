@@ -35,7 +35,7 @@ jobs:
       - name: build gatsby
         run: |
           touch .env
-          echo "SENDGRID_APIKEY=${{ secrets.SENDGRID_APIKEY }}" >> .env
+          echo "GATSBY_SENDGRID_APIKEY=${{ secrets.GATSBY_SENDGRID_APIKEY }}" >> .env
           echo "GATSBY_GOOGLE_MAP_API_KEY=${{ secrets.GATSBY_GOOGLE_MAP_API_KEY }}" >> .env
           npm run build
           rm .env
