@@ -9,7 +9,7 @@ import * as styles from "../styles/_index.module.scss"
 // carousel
 import SlickSlider from "../components/SlickSlider"
 
-const IndexPage = ( {data} ) => (
+const IndexPage = ( { data } ) => (
   <Layout>
     <Seo title="Home" />
 

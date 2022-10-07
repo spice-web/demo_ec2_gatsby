@@ -8,7 +8,7 @@ import Seo from "../components/seo";
 const InformationPost = ({ data }) => (
 
   <Layout>
-    <Seo title="data.microcmsInformation.title" />
+    <Seo title={data.microcmsInformation.title} />
 
     {/* コンテナ */}
     <div className="">
