@@ -34,12 +34,10 @@ jobs:
 
       - name: build gatsby
         run: |
-          touch .env
-          echo "GATSBY_SENDGRID_APIKEY=${{ secrets.GATSBY_SENDGRID_APIKEY }}" >> .env
-          echo "GATSBY_GOOGLE_MAP_API_KEY=${{ secrets.GATSBY_GOOGLE_MAP_API_KEY }}" >> .env
           npm run build
-          rm .env
         env:
+          GATSBY_GOOGLE_MAP_API_KEY: ${{ secrets.GATSBY_GOOGLE_MAP_API_KEY }}
+          GATSBY_SENDGRID_APIKEY: ${{ secrets.GATSBY_SENDGRID_APIKEY }}
           MICROCMS_APIKEY: ${{ secrets.MICROCMS_APIKEY }}
           MICROCMS_SERVICE_ID: ${{ secrets.MICROCMS_SERVICE_ID }}
 
@@ -83,5 +81,5 @@ jobs:
           aws ec2 authorize-security-group-ingress --group-id ${{ secrets.EC2_SECURITY_GROUP_ID }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
           echo "${{ secrets.GIT_PRIVATE_KEY }}" > private_key
           chmod 600 private_key
-          ssh -A -o StrictHostKeyChecking=no ${{ secrets.EC2_USER_NAME }}@${{ secrets.EC2_HOST_NAME }} -i private_key "cd /var/www/html/ && git fetch --prune && git checkout main && git pull origin main"
+          ssh -A -o StrictHostKeyChecking=no ${{ secrets.EC2_USER_NAME }}@${{ secrets.EC2_HOST_NAME }} -i private_key "cd /var/www/html/ && git config pull.rebase false && git fetch --prune && git checkout main && git pull origin main"
           aws ec2 revoke-security-group-ingress --group-id ${{ secrets.EC2_SECURITY_GROUP_ID }} --ip-permissions IpProtocol=tcp,FromPort=22,ToPort=22,IpRanges='[{CidrIp=${{ steps.ip.outputs.ipv4 }}/32}]'
