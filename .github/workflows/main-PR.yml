@@ -81,5 +81,5 @@ jobs:
           aws ec2 authorize-security-group-ingress --group-id ${{ secrets.EC2_SECURITY_GROUP_ID }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
           echo "${{ secrets.GIT_PRIVATE_KEY }}" > private_key
           chmod 600 private_key
-          ssh -A -o StrictHostKeyChecking=no ${{ secrets.EC2_USER_NAME }}@${{ secrets.EC2_HOST_NAME }} -i private_key "cd /var/www/html/ && git config pull.rebase false && git fetch --prune && git checkout main && git pull origin main"
+          ssh -A -o StrictHostKeyChecking=no ${{ secrets.EC2_USER_NAME }}@${{ secrets.EC2_HOST_NAME }} -i private_key "cd /var/www/html/static_page && git config pull.rebase false && git fetch --prune && git checkout main && git pull origin main"
           aws ec2 revoke-security-group-ingress --group-id ${{ secrets.EC2_SECURITY_GROUP_ID }} --ip-permissions IpProtocol=tcp,FromPort=22,ToPort=22,IpRanges='[{CidrIp=${{ steps.ip.outputs.ipv4 }}/32}]'
