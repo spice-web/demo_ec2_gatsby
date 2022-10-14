@@ -25,7 +25,10 @@
       border-top: 1px dotted #000;
     }
     @include mq() {
-      display: flex;
+      display: grid;
+      grid-template-rows: 1;
+      grid-template-columns: auto auto 1fr
+      ;
       align-items: center;
     }
   }
@@ -62,13 +65,17 @@
   color: $green;
 }
 
+
+/* ==============================
+  information
+============================== */
 .sns {
   &__wrap {
-    @extend .flex__wrap--lg;
+    @extend .flex__wrap--md;
   }
   &__box {
     &_line {
-      @extend .flex-col-2--lg;
+      @extend .flex-col-2--md;
       background: $dark-green;
       text-align: center;
       border-radius: 1rem;
@@ -101,4 +108,34 @@
     align-items: center;
     padding: 0.5rem 0;
   }
+}
+
+// sponsor
+.sponsor {
+  img {
+    margin: 0 0.5rem;
+    object-fit: contain !important;
+  }
+  > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &_top {
+    img {
+      height: 30px;
+      @include mq() {
+        height: 42px;
+      }
+    }
+  }
+  &_bottom {
+    img {
+      height: 54px;
+      @include mq() {
+        height: 76px;
+      }
+    }
+  }
+
 }

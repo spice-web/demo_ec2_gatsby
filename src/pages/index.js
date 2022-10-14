@@ -82,11 +82,33 @@ const IndexPage = ( { data } ) => (
       <div className="content__inner --lg">
         <h3 className="text-center text-lg text-gr text-bold">信頼と安心の<br className="br-sp" />サンパーキング成田店<br />
           航空会社や旅行会社、<br className="br-sp" />銀行、官公庁など<br className="br-sp" />約2,000社と契約！</h3>
-        <div className="flex__wrap--lg">
-          <div className="text-white flex__box flex-col-4--lg bg--dark-green bdr-xs">test</div>
-          <div className="text-white flex__box flex-col-4--lg bg--dark-green bdr-xs">test</div>
-          <div className="text-white flex__box flex-col-4--lg bg--dark-green bdr-xs">test</div>
-          <div className="text-white flex__box flex-col-4--lg bg--dark-green bdr-xs">test</div>
+
+        <div className={styles.sponsor}>
+          <div className={styles.sponsor_top}>
+            <StaticImage src="../images/company-logo/jal.jpg" />
+            <StaticImage src="../images/company-logo/ana.jpg" />
+            <StaticImage src="../images/company-logo/jet.jpg" />
+            <StaticImage src="../images/company-logo/peach.jpg" />
+            <StaticImage src="../images/company-logo/zipair.jpg" />
+          </div>
+          <div className={styles.sponsor_bottom}>
+            <StaticImage src="../images/company-logo/spring.jpg" />
+            <StaticImage src="../images/company-logo/jtb.jpg" />
+            <StaticImage src="../images/company-logo/his.jpg" />
+            <StaticImage src="../images/company-logo/kinki.jpg" />
+            <StaticImage src="../images/company-logo/nipon.jpg" />
+            <StaticImage src="../images/company-logo/hankyu.jpg" />
+          </div>
+        </div>
+
+
+
+
+        <div className="flex__wrap--md">
+          <div className="text-white flex__box flex-col-4--md bg--dark-green bdr-xs">test</div>
+          <div className="text-white flex__box flex-col-4--md bg--dark-green bdr-xs">test</div>
+          <div className="text-white flex__box flex-col-4--md bg--dark-green bdr-xs">test</div>
+          <div className="text-white flex__box flex-col-4--md bg--dark-green bdr-xs">test</div>
         </div>
       </div>
     </div>
@@ -94,11 +116,11 @@ const IndexPage = ( { data } ) => (
     <div className="content__wrap bg--light-green">
       <h3>比べたらやっぱりサンパーキング成田店。 利便性とサービスに自信あり！</h3>
       <div className="content__inner --lg">
-        <div className="flex__wrap flex__wrap--lg">
-          <div className="flex-col-4--lg flex-col-2">test</div>
-          <div className="flex-col-4--lg flex-col-2">test</div>
-          <div className="flex-col-4--lg flex-col-2">test</div>
-          <div className="flex-col-4--lg flex-col-2">test</div>
+        <div className="flex__wrap flex__wrap--md">
+          <div className="flex-col-4--md flex-col-2">test</div>
+          <div className="flex-col-4--md flex-col-2">test</div>
+          <div className="flex-col-4--md flex-col-2">test</div>
+          <div className="flex-col-4--md flex-col-2">test</div>
         </div>
       </div>
 

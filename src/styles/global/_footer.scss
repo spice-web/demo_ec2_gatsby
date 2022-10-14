@@ -1,5 +1,12 @@
 @import '_config.scss';
 
+// 上部グレー部分
+.footer-gray{
+  .flex__wrap--md {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .footer {
   background-color: $light-green;
   padding: 2rem 2rem 6rem;
@@ -239,7 +246,7 @@
 }
 
 
-
+// サイドボタン
 .side-fixed-btn {
   &__wrap {
     display: block;

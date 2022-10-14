@@ -329,7 +329,7 @@ body {
       }
     }
     @include mq() {
-      &--lg {
+      &--md {
         display: flex;
         justify-content: space-between;
       }
@@ -338,7 +338,7 @@ body {
 
   &-col-2 {
     width: 48%;
-    &--lg {
+    &--md {
       width: 100%;
       @include mq() {
         width: 48%;
@@ -354,7 +354,7 @@ body {
         width: 32%;
       }
     }
-    &--lg {
+    &--md {
       width: 100%;
       @include mq() {
         width: 32%;
@@ -364,7 +364,7 @@ body {
 
   &-col-4 {
     width: 24%;
-    &--lg {
+    &--md {
       @include mq() {
         width: 24%;
       }
