@@ -2,71 +2,56 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
 import Menu from "./menu"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <>
-    <header class="header__wrap">
-      <div className="header__left">
-        <Link to="/" >
-          <StaticImage
-            src="https://placehold.jp/150x50.png"
-            alt="成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1"
-            width={190}
-          />
-        </Link>
-        <div>
-          <h1 className="header__headline">成田空港駐車場 サンパーキング成田店</h1>
-          <p>成田空港駐車場 サンパーキング成田店</p>
+    <header class="header" id="header">
+      <div className="header__wrap">
+        <div className="header__left">
+          <div className="header__logo">
+            <Link to="/" >
+              <StaticImage
+                src="../images/logo.png"
+                alt="成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1"
+                className="logoImg"
+              />
+            </Link>
+          </div>
+          <div className="header__left--text">
+            <p className="header__copy">成田空港に近くて安くて便利な駐車場</p>
+            <h1 className="header__headline">成田空港駐車場 サンパーキング成田店</h1>
+          </div>
+        </div>
+        <div className="header__right">
+          <p className="header__right--time">［営業時間］5：00～22：30 成田空港最終便到着まで営業</p>
+          <ul className="header-menu__wrap">
+            <li className="header-menu__item access"><Link to="/access">アクセス</Link></li>
+            <li className="header-menu__item faq"><Link to="/faq">Q&A</Link></li>
+            <li className="header-menu__item voice"><Link to="/voice">お客様の声</Link></li>
+            <li className="header-menu__item info"><Link to="/information">新着情報</Link></li>
+            <li className="header-menu__item about"><Link to="/about">企業情報</Link></li>
+          </ul>
+        </div>
+
+        {/* ドロワーメニュー */}
+        {/* ハンバーガーアイコン */}
+        <div class="drawer__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        {/* オーバーレイ背景 */}
+        <div class="drawer__bg"></div>
+
+        {/* ドロワーメニュー */}
+        <div class="drawer__menu">
+          <div className="drawer__inner">
+            <Menu />
+          </div>
         </div>
       </div>
-      <ul className="header__right header__menu">
-        <li><Link to="/access">アクセス</Link></li>
-        <li><Link to="/faq">Q&A</Link></li>
-        <li><Link to="/voice">お客様の声</Link></li>
-        <li><Link to="/information">新着情報</Link></li>
-        <li><Link to="about">企業情報</Link></li>
-      </ul>
 
-      {/* ドロワーメニュー */}
-      {/* ハンバーガーアイコン */}
-      <div class="drawer__btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      {/* オーバーレイ背景 */}
-      <div class="drawer__bg"></div>
-
-      {/* ドロワーメニュー */}
-      <div class="drawer__menu">
-        <div className="drawer__inner">
-          <dl class="drawer__def">
-            <dt className="drawer__dttl">料金について</dt>
-          </dl>
-          <dl class="drawer__def">
-            <dt className="drawer__dttl">オプション</dt>
-            <dd classNmae="drawer__desc">
-              <ul className="drawer__list">
-                <li className="drawer__item">空港お届けサービス</li>
-                <li className="drawer__item">空港お届けサービス</li>
-                <li className="drawer__item">空港お届けサービス</li>
-              </ul>
-            </dd>
-          </dl>
-          <dl class="drawer__def">
-            <dt className="drawer__dttl">オプション</dt>
-            <dd classNmae="drawer__desc">
-              <ul className="drawer__list">
-                <li className="drawer__item">空港お届けサービス</li>
-                <li className="drawer__item">空港お届けサービス</li>
-                <li className="drawer__item">空港お届けサービス</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-      </div>
 
     </header>
   
@@ -76,28 +61,21 @@ const Header = ({ siteTitle }) => (
           <Link to="/">料金に付いて</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">料金に付いて</Link>
+          <Link to="/">オプション</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">料金に付いて</Link>
+          <Link to="/">選ばれる理由</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">料金に付いて</Link>
+          <Link to="/">関連情報</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">料金に付いて</Link>
+          <Link to="/">ご利用案内</Link>
         </li>
       </ul>
     </div>
   </>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
+
