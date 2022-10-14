@@ -8,16 +8,26 @@ import Menu from "./menu"
 
 const Footer = () => (
   <>
-  <div className="content__wrap bg--gray">
-    <div className="content__inner">
-        <p className="text-center text-white text-lg text-bold">ご利用前日23:00までは<span className="nowrap"><span className="text-y">おトクなWEB予約</span>が可能！</span></p>
+  <div className="content__wrap bg--gray footer-gray">
+      <div className="content__inner  text-white">
+        <p className="text-center text-lg text-bold">ご利用前日23:00までは<span className="nowrap"><span className="text-y">おトクなWEB予約</span>が可能！</span></p>
 
         {/* 予約ボタン */}
         <ButtonReserve bg="white" />
         {/* 予約ボタン */}
 
+        <p className="text-center">当日はお電話でお問い合せください</p>
+        <div className="flex__wrap--md text-center">
+          <p>サン予約センター</p>
+          <h3 className="text-lg">TEL.0476-33-1123</h3>
+          <p>［受付時間］9：00〜18：00</p>
+        </div>
+
     </div>
   </div>
+  {/* background gray */}
+
+
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__head">

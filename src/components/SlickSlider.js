@@ -17,12 +17,20 @@ export default function SlickSlider() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1424,
         settings: {
           centerMode: true,
           centerPadding: "120px",
           slidesToShow: 1,
           dots: true,
+        }
+      },
+      {
+        breakpoint: 1224,
+        settings: {
+          centerMode: true,
+          centerPadding: "120px",
+          slidesToShow: 1,
         }
       },
       {
