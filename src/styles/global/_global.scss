@@ -2,23 +2,3 @@
 @import '_header.scss';
 @import '_footer.scss';
 
-body {
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-.content {
-  &__wrap {
-    width: 100%;
-    padding: 2rem 0;
-  }
-  &__inner {
-    width: 93%;
-    margin: 0 auto;
-    &.--sm {
-      max-width: 900px;
-    }
-    &.--lg {
-      max-width: 1200px;
-    }
-  }
-}

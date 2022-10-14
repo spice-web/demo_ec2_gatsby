@@ -1,11 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
+
+// css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import "../styles/_slick-user.scss";
-
-import { StaticImage } from "gatsby-plugin-image"
 
 export default function SlickSlider() {
   const settings = {
@@ -18,12 +17,20 @@ export default function SlickSlider() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1424,
         settings: {
           centerMode: true,
           centerPadding: "120px",
           slidesToShow: 1,
           dots: true,
+        }
+      },
+      {
+        breakpoint: 1224,
+        settings: {
+          centerMode: true,
+          centerPadding: "120px",
+          slidesToShow: 1,
         }
       },
       {
@@ -49,9 +56,6 @@ export default function SlickSlider() {
       <div className="slide-images --item01"></div>
       <div className="slide-images --item02"></div>
       <div className="slide-images --item03"></div>
-      <div className="slide-images --item04"></div>
-      <div className="slide-images --item05"></div>
-      <div className="slide-images --item06"></div>
     </Slider>
   );
 }

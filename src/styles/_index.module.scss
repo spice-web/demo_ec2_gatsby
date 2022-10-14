@@ -1,6 +1,141 @@
 @import './global/_config.scss';
 
-.info__list {
-  border-bottom: 1px dotted #000;
-  padding: 0.5rem 0;
+.slider {
+  &__wrap {
+    background: $light-green;
+    padding: 0 0 40px 0;
+    @include mq() {
+      padding: 40px 0;
+    }
+    
+  }
+}
+
+/* ==============================
+  information
+============================== */
+.info {
+  &__wrap {
+    margin-bottom: 1rem;
+  }
+  &__article {
+    border-bottom: 1px dotted #000;
+    padding: 0.5rem 0;
+    &:first-child {
+      border-top: 1px dotted #000;
+    }
+    @include mq() {
+      display: grid;
+      grid-template-rows: 1;
+      grid-template-columns: auto auto 1fr
+      ;
+      align-items: center;
+    }
+  }
+  &__head {
+    margin-bottom: 0.25rem;
+    @include mq() {
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+  &__cate {
+    color: #FFF;
+    font-size: 0.5rem;
+    background: $green;
+    margin-right: 0.5rem;
+    padding: 0 0.33rem;
+  }
+  &__date {
+    font-size: 0.625rem;
+  }
+  &__title {
+    font-size: 0.875rem;
+  }
+  &__foot {
+    font-size: 0.625rem;
+    text-align: right;
+  }
+}
+
+.reserve__button__color > p {
+  color: $green;
+}
+
+
+/* ==============================
+  information
+============================== */
+.sns {
+  &__wrap {
+    @extend .flex__wrap--md;
+  }
+  &__box {
+    &_line {
+      @extend .flex-col-2--md;
+      background: $dark-green;
+      text-align: center;
+      border-radius: 1rem;
+    }
+    &_tw {
+      @extend .sns__box_line;
+      background: #1D9BF0;
+      .sns__inner {
+        border: 3px solid #1D9BF0;
+      }
+    }
+  }
+  &__inner {
+    background: #FFF;
+    border-radius: 1rem 1rem 0 0;
+    height: 110px;
+    border: 3px solid $dark-green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 265.7px;
+    }
+  }
+  &__foot {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+}
+
+// sponsor
+.sponsor {
+  img {
+    margin: 0 0.5rem;
+    object-fit: contain !important;
+  }
+  > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &_top {
+    img {
+      height: 30px;
+      @include mq() {
+        height: 42px;
+      }
+    }
+  }
+  &_bottom {
+    img {
+      height: 54px;
+      @include mq() {
+        height: 76px;
+      }
+    }
+  }
+
 }
