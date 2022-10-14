@@ -1,32 +1,174 @@
 @import '_config.scss';
 
 .footer {
-  background-color: #aecf32;
-  padding: 2rem 0 6rem;
+  background-color: $light-green;
+  padding: 2rem 2rem 6rem;
+  @include mq() {
+    padding-bottom: 2rem;
+  }
   &__inner {
     width: 75%;
     margin: 0 auto 3rem;
     min-width: 280px;
-    max-width: 995px;
+    max-width: 1000px;
+    font-size: 0.875rem;
+    @include mq() {
+      width: 100%;
+    }
   }
   &__head {
     text-align: center;
+    > * {
+      font-size: 0.875rem;
+      font-weight: $regular;
+    }
+    @include mq() {
+      text-align: left;
+    }
+  }
+  &__logo {
+    margin-bottom: 0.875rem;
   }
   &__center {
     margin: 2rem 0;
   }
   &__sns {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    li {
+      margin: 0 0.5rem;
+      @include mq(lg) {
+        margin: 0 0 0.5rem 0;
+      }
+    }
   }
 
-  // bottom button
+  .copyright {
+    font-weight: $regular;
+    font-size: 0.625rem;
+    text-align: center;
+    @include mq() {
+      text-align: right;
+    }
+  }
+
+  @media screen and (min-width:1000px) {
+    .footer {
+      &__inner {
+        width: calc(100% - 2rem);
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto 50px;
+      }
+      &__head {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+        text-align: left;
+      }
+      &__center {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+      }
+      &__sns {
+        display: block;
+        margin-top: 2rem;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+    }
+  }
+
+
+/* ====================
+  footer-navigation
+==================== */
+  .navigation {
+    &__wrap {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: repeat(5, auto);
+      grid-auto-flow: column;
+      font-size: 0.875rem;
+      padding: 1rem 0;
+      @include mq() {
+        padding: 0;
+      }
+    }
+    &__def {
+      padding: 0 0 0.5rem 0;
+      &.faq {
+        display: none;
+      }
+    }
+    &__dttl {
+      .none {
+        display: none;
+        @include mq(){
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .none-footer {
+    display: none;
+  }
+
+  @media screen and (min-width:850px) {
+    .navigation {
+      &__wrap {
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(4, 1fr);
+        border: none;
+      }
+      &__def {
+        margin-right: 1rem;
+        padding-right: 1rem;
+        border-right: 1px solid $text-color;
+        &:nth-child(1) {
+        }
+        &:nth-child(2) {
+          grid-row: 2 / 5;
+        }
+        &:nth-child(4) {
+          grid-row: 2 / 5;
+        }
+        &:nth-child(5) {
+          grid-row: 1 / 3;
+        }
+        &:nth-child(8), &:nth-child(9), &:nth-child(10), &:last-child {
+          border-right: none;
+        }
+        &.faq {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width:1000px) {
+    .navigation {
+      &__list {
+        &.option {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          grid-template-rows: repeat(4, auto);
+          grid-auto-flow: column;
+        }
+      }
+    }
+  }
+
+  // bottom-button
   &-fixed-btn {
     &__wrap {
       position: fixed;
       bottom: 0;
-      left: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
       width: 100%;
+      max-width: 450px;
       display: flex;
       justify-content: space-between;
     }
@@ -35,23 +177,162 @@
       text-align: center;
       height: 50px;
       border-radius: 0.5rem 0.5rem 0 0;
+      color: #fff;
+
       &:nth-child(1) {
-        background: #ccc;
+        background: linear-gradient(to right, #FF9600, #FF9600);
+        &::before {
+          background-image: url('../../images/icon/fee.svg');
+        }
       }
       &:nth-child(2) {
-        background: #ddd;
+        background: linear-gradient(to right, #FF548E, #FF548E);
+        &:before {
+          background-image: url("../../images/icon/reserve.svg");
+        }
       }
       &:nth-child(3) {
-        background: #555;
+        background: linear-gradient(to right, #285AB4, #285AB4);
+        &:before {
+          background-image: url("../../images/icon/access_w.svg");
+        }
+      }
+      > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 0.15rem;
+          background-position: center center;
+          background-size: contain;
+        }
+      }
+      &:nth-child(1) a {
+        &::before {
+          background-image: url('../../images/icon/fee.svg');
+        }
+      }
+      &:nth-child(2) a {
+        &:before {
+          background-image: url("../../images/icon/reserve.svg");
+        }
+      }
+      &:nth-child(3) a {
+        &:before {
+          background-image: url("../../images/icon/access_w.svg");
+        }
       }
     }
   }
 }
 
-// bottom button media query
+
+// bottom-button media query
 [class^="footer-fixed"] {
   @include mq() {
     display: none;
   }
 }
 
+
+
+.side-fixed-btn {
+  &__wrap {
+    display: block;
+  }
+  &__item {
+    width: 175px;
+    height: 125px;
+    display: block;
+    position: fixed;
+    right: -125px;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+    &:hover {
+      right: 0;
+    }
+    &:nth-child(1) {
+      top: 170px;
+    }
+    &:nth-child(2) {
+      top: 305px;
+    }
+    &:nth-child(3) {
+      top: 440px;
+    }
+    &--head {
+      width: 50px;
+      line-height: 50px;
+      border-radius: 0.5rem 0 0 0.5rem;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 0.15rem;
+        background-position: center center;
+        background-size: contain;
+      }
+      &.fee {
+        background: linear-gradient(to right, #FF9600, #E05D00);
+        &::before {
+          background-image: url('../../images/icon/fee.svg');
+        }
+      }
+      &.reserve {
+        background: linear-gradient(to right, #FF548E, #DD004F);
+        &::before {
+          background-image: url("../../images/icon/reserve.svg");
+        }
+      }
+      &.access {
+        background: linear-gradient(to right, #285AB4, #001C78);
+        &::before {
+          background-image: url("../../images/icon/access_w.svg");
+        }
+      }
+    }
+    &--right {
+      width: 125px;
+      height: 125px;
+      padding: 1rem;
+      &.fee {
+        background: #F39518;
+      }
+      &.reserve {
+        background: #FF2C73;
+      }
+      &.access {
+        background: #193296;
+      }
+    }
+    > a {
+      display: flex;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__dttl {
+    font-size: 0.75rem;
+  }
+  &__desc {
+    border: 0.99px solid #FFF;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 849px) {
+  [class^="side-fixed-btn"] {
+    display: none;
+  }
+}

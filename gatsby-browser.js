@@ -38,3 +38,13 @@ export const onRouteUpdate = ({ location }) => {
     }
     const drawer = new Drawer();
 };
+
+setTimeout(function () {
+  window.addEventListener("scroll", function () {
+    const topBtn = document.getElementById("header");
+    const scroll = window.pageYOffset;
+    if (scroll > 200) {
+      topBtn.classList.add("fixed");
+    } else topBtn.classList.remove("fixed");
+  });
+}, 1000);

@@ -10,15 +10,19 @@ $main-black-color: #000;
   }
 
   &__dttl {
+    position: relative;
+    padding-left: 1rem;
     &:before {
       content: "■";
       display: inline-block;
-      margin-right: 0.25rem;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
   &__list {
-    padding-left: 1rem;
+    padding-left: 0.875rem;
   }
 
   &__item {
@@ -28,7 +32,7 @@ $main-black-color: #000;
   }
   }
   
-    // navigation
+// navigation
 header [class^="navigation"] {
   @include mq() {
     display: none;
@@ -39,6 +43,7 @@ header [class^="drawer"] {
     display: none;
   }
 }
+
 footer {
   .navigation {
     &__wrap {

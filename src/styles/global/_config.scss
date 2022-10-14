@@ -2,7 +2,9 @@
   || breakpoints
 ============================== */
 $breakpoints: (
-  'sm': 'screen and (min-width: 400px)',
+  'xs': 'screen and (min-width: 400px)',
+  'sm': 'screen and (min-width: 650px)',
+  'min-md': 'screen and (max-width: 850px)',
   'md': 'screen and (min-width: 850px)',
   'lg': 'screen and (min-width: 1000px)',
   'xl': 'screen and (min-width: 1200px)',
@@ -27,10 +29,37 @@ $breakpoints: (
 }
 
 */
+/* ==============================
+  variable
+============================== */
+// color
+$pale-green: #EFFCC9;
+$light-green: #B4F000;
+$green: #64C800;
+$dark-green: #32B400;
+$deep-green: #006E00; 
+$yellow: #FFFF00;
+$pink:   #FF2C73;
+$text-color: #404040;
+
+
+
+/* ==============================
+ font-weight
+============================== */
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
 
 /* ==============================
   || block
 ============================== */
+.nowrap {
+  display: inline-block;
+}
+
 /* inline -> block */
 .is-block {
   display: block;
@@ -44,6 +73,51 @@ $breakpoints: (
   justify-items: center;
 }
 
+
+// 650pxまで
+.br_sm {
+  display: block;
+  @include mq(sm) {
+    display: none;
+  }
+}
+// 850pxまで
+.br_maxmd {
+  display: block;
+  @include mq() {
+    display: none;
+  }
+}
+
+// 850px以上
+.br_md {
+  display: none;
+  @include mq() {
+    display: block;
+  }
+}
+
+// 1000px以上
+.br_lg {
+  display: none;
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+.br-sp {
+  @include mq() {
+    display: none;
+  }
+}
+
+.br-pc {
+  display: none;
+  @include mq() {
+    display: inline-block;
+  }
+}
+
 /* ==============================
   || text
 ============================== */
@@ -51,16 +125,263 @@ $breakpoints: (
   text-align: center;
 }
 
+.text-thin {
+  font-weight: $thin;
+}
+
+.text-light {
+  font-weight: $light;
+}
+
+.text-regular {
+  font-weight: $regular;
+}
+
+.text-medium {
+  font-weight: $medium;
+}
+
+.text-bold {
+  font-weight: $bold;
+}
+
 /* ==============================
-  || link
+  ||font-size
+============================== */
+.text-xs {
+  font-size: 0.625rem;
+}
+
+.text-sm {
+  font-size: 0.75rem;
+}
+
+.text-normal {
+  font-size: 1rem;
+}
+
+.text-md {
+  font-size: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.5rem;
+}
+
+.text-xl {
+  font-size: 3rem;
+}
+
+@media screen and (min-width:850px) {
+  .text-xs {
+    font-size: 0.625rem;
+  }
+
+  .text-sm {
+    font-size: 0.75rem;
+  }
+
+  .text-normal {
+    font-size: 1rem;
+  }
+
+  .text-md {
+    font-size: 1.5rem;
+  }
+
+  .text-lg {
+    font-size: 2rem;
+  }
+
+  .text-xl {
+    font-size: 3rem;
+  }
+}
+
+/* ==============================
+  || font-color
+============================== */
+.text-white { color: #FFF; }
+.text-dark-gr { color:$dark-green }
+.text-gr { color: $deep-green; }
+.text-bl { color: #1D9BF0; }
+.text-pk { color: #FF2C73; }
+.text-y { color: #FFFF00; }
+
+
+/* ==============================
+  ||link
 ============================== */
 a {
   text-decoration: none;
   color: inherit;
+
   &:hover {
     opacity: 0.75;
   }
+
   &:visited {
     color: inherit;
+  }
+}
+
+/* ==============================
+  ||body
+============================== */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: $text-color;
+}
+
+/* ==============================
+  ||content
+============================== */
+.content {
+  &__wrap {
+    width: 100%;
+    padding: 2rem 0;
+
+    @include mq() {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+
+  &__inner {
+    width: 93%;
+
+    @include mq() {
+      width: 100%;
+    }
+
+    margin: 0 auto;
+
+    &.--sm { max-width: 900px; }
+    &.--md { max-width: 1000px; }
+    &.--lg { max-width: 1200px; }
+  }
+}
+/* ==============================
+  ||border
+============================== */
+.bdr-xs {
+  border-radius: 5px;
+}
+.dbr-md { border-radius: 1rem; }
+
+.bdr-dark-green { border: 3px solid $dark-green;}
+
+/* ==============================
+  ||background-color
+============================== */
+.bg--pale-green {
+  background: $pale-green;
+
+  .content__inner {
+    background: #FFF;
+  }
+}
+
+.bg--light-green {
+  background: $light-green;
+
+  .content__inner {
+    background: #FFF;
+  }
+}
+
+.bg--green {
+  background: $green;
+
+  .content__inner {
+    background: #FFF;
+  }
+}
+
+.bg--dark-green {
+  background: $dark-green;
+
+  .content__inner {
+    background: #FFF;
+  }
+}
+
+.bg--gray {
+  background: $text-color;
+}
+
+[class^="bg"] {
+  background: #FFF;
+}
+
+/* ==============================
+  ||Flex ||Grid
+============================== */
+.flex {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mq(sm) {
+      &--sm {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    @include mq() {
+      &--lg {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &-col-2 {
+    width: 48%;
+    &--lg {
+      width: 100%;
+      @include mq() {
+        width: 48%;
+      }
+    }
+  }
+
+  &-col-3 {
+    width: 32%;
+    &--sm {
+      width: 100%;
+      @include mq(sm) {
+        width: 32%;
+      }
+    }
+    &--lg {
+      width: 100%;
+      @include mq() {
+        width: 32%;
+      }
+    }
+  }
+
+  &-col-4 {
+    width: 24%;
+    &--lg {
+      @include mq() {
+        width: 24%;
+      }
+    }
+  }
+}
+
+/* ==============================
+  ||見出し ||headline
+============================== */
+.headline {
+  .-lv1 {
+    font-size: 2rem;
+  }
+  .-lv2 {
+    font-size: 1.5rem;
+    font-weight: $bold;
+    text-align: center;
   }
 }

@@ -1,0 +1,93 @@
+@import './global/_config.scss';
+
+@mixin button($color: #fff) {
+  color: $color!important;
+  border-radius: 24px;
+  text-align: center;
+}
+.button__reserve {
+  &__wrap {
+    @include mq() {
+      display: flex;
+      justify-content: space-between;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  &__link {
+  @include button;
+    font-style: 1.5rem;
+    display: block;
+    height: 48px;
+    width: 276px;
+    background: linear-gradient(to bottom, #FF548E, #DD004F);
+    border: 2px solid #FFF;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 16px;
+    filter: drop-shadow(0px 4px 0 rgba(40, 45, 49, 0.7));
+  
+    &:before {
+      content: "";
+      display: inline-block;
+      background-image: url("../images/icon/reserve.svg");
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+    }
+  
+    &:after {
+      content: "";
+      background-image: url("../images/parts/button/hand.svg");
+      background-size: contain;
+      width: 50px;
+      height: 44px;
+      position: absolute;
+      right: -10px;
+      bottom: -16px;
+      filter: drop-shadow(0px 2px 0 rgba(40, 45, 49, 0.7));
+    }
+  
+    &:hover {
+      filter: none;
+    }
+  }
+  &[data-type="line"] {
+    .button__reserve__link {
+      @extend .button__reserve__link;
+      background: linear-gradient(to bottom, #10D658, #077340);
+    }
+    .button__reserve__title {
+      color: $deep-green;
+    }
+  }
+  &__title {
+    text-align: center;
+    color: $pink;
+  }
+  &__wrap[data-bg="white"] .button__reserve__title {
+    color: #fff;
+  }
+}
+
+
+.button__more {
+  @include button;
+  background: linear-gradient(to bottom, #285AB4, #001C78);
+  width: 280px;
+  height: 44px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+  border: #FFF 2px solid;
+  margin: 2rem auto;
+  // line-height: 44px;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.5));
+  &:hover {
+    filter:none;
+    opacity: 1;
+  }
+}
