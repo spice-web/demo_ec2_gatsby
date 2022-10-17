@@ -14,7 +14,11 @@ import Footer from "./footer"
 // import "./layout.css"
 
 // font指定
-import "@fontsource/noto-sans-jp"
+import "@fontsource/noto-sans-jp/100.css"
+import "@fontsource/noto-sans-jp/300.css"
+import "@fontsource/noto-sans-jp/400.css"
+import "@fontsource/noto-sans-jp/500.css"
+import "@fontsource/noto-sans-jp/700.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

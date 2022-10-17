@@ -4,7 +4,7 @@
 $breakpoints: (
   'xs': 'screen and (min-width: 400px)',
   'sm': 'screen and (min-width: 650px)',
-  'min-md': 'screen and (max-width: 850px)',
+  'max-md': 'screen and (max-width: 850px)',
   'md': 'screen and (min-width: 850px)',
   'lg': 'screen and (min-width: 1000px)',
   'xl': 'screen and (min-width: 1200px)',
@@ -45,7 +45,7 @@ $text-color: #404040;
 
 
 /* ==============================
- font-weight
+ ||font-weight
 ============================== */
 $thin: 100;
 $light: 300;
@@ -54,7 +54,7 @@ $medium: 500;
 $bold: 700;
 
 /* ==============================
-  || block
+  ||block
 ============================== */
 .nowrap {
   display: inline-block;
@@ -118,8 +118,13 @@ $bold: 700;
   }
 }
 
+.position-re {
+  position: relative;
+}
+
+
 /* ==============================
-  || text
+  ||text
 ============================== */
 .text-center {
   text-align: center;
@@ -148,20 +153,24 @@ $bold: 700;
 /* ==============================
   ||font-size
 ============================== */
-.text-xs {
+.text-xxs {
   font-size: 0.625rem;
 }
 
-.text-sm {
+.text-xs {
   font-size: 0.75rem;
 }
 
-.text-normal {
-  font-size: 1rem;
+.text-sm {
+  font-size: 0.875rem;
 }
 
+// .text-normal {
+//   font-size: 1rem;
+// }
+
 .text-md {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .text-lg {
@@ -173,17 +182,20 @@ $bold: 700;
 }
 
 @media screen and (min-width:850px) {
-  .text-xs {
-    font-size: 0.625rem;
-  }
-
-  .text-sm {
+  .text-xxs {
     font-size: 0.75rem;
   }
-
-  .text-normal {
-    font-size: 1rem;
+  .text-xs {
+    font-size: 0.875rem;
   }
+
+  // .text-sm {
+  //   font-size: 0.75rem;
+  // }
+
+  // .text-normal {
+  //   font-size: 1rem;
+  // }
 
   .text-md {
     font-size: 1.5rem;
@@ -203,7 +215,8 @@ $bold: 700;
 ============================== */
 .text-white { color: #FFF; }
 .text-dark-gr { color:$dark-green }
-.text-gr { color: $deep-green; }
+.text-deep-gr { color: $deep-green; }
+.text-gr { color: $green;}
 .text-bl { color: #1D9BF0; }
 .text-pk { color: #FF2C73; }
 .text-y { color: #FFFF00; }
@@ -269,6 +282,9 @@ body {
 }
 .dbr-md { border-radius: 1rem; }
 
+.bdr-white {
+  border: 0.99px solid #FFF;
+}
 .bdr-dark-green { border: 3px solid $dark-green;}
 
 /* ==============================
@@ -306,12 +322,21 @@ body {
   }
 }
 
+.bg-light-gray {
+  background: #F0F0F0;
+}
 .bg--gray {
   background: $text-color;
 }
 
-[class^="bg"] {
-  background: #FFF;
+// [class^="bg"] {
+//   background: #FFF;
+// }
+.bg--pink {
+  background: $pink;
+}
+.bg--light-yellow {
+  background: #FFFAC8;
 }
 
 /* ==============================
@@ -364,6 +389,11 @@ body {
 
   &-col-4 {
     width: 24%;
+    &--sm {
+        @include mq(sm) {
+          width: 24%;
+        }
+      }
     &--md {
       @include mq() {
         width: 24%;

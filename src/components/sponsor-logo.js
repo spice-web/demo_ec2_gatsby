@@ -29,10 +29,6 @@ const Sponsor = (props) => {
       <li key={page_link}>
         <Link to={page_link} style={LinkStyles} className="page-link">
 
-          <StaticImage
-            src={page_link}>
-
-          </StaticImage>
         </Link>
       </li>
     )

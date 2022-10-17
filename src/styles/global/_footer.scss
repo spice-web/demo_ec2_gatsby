@@ -250,6 +250,9 @@
 .side-fixed-btn {
   &__wrap {
     display: block;
+    > * {
+      z-index: 102;
+    }
   }
   &__item {
     width: 175px;
