@@ -1,0 +1,76 @@
+@import '../styles/global/config';
+
+.price-chart {
+  width: 100%;
+  max-width: 530px;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  &__wrap {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    @include mq(lg) {
+      display: flex;
+      width: calc(100% - 2rem);
+    }
+  }
+
+  &__head {
+    > * {
+      padding: 0.5rem 0;
+    }
+  }
+  &__row {
+    justify-content: center;
+    &:not(.price-chart__head):last-child {
+      .price--sale {
+        &:before {
+          content: "1日ごと";
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.price {
+  &__second {
+      display: none;
+    @include mq(lg) {
+      display: block;
+    }
+  }
+  &--normal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: line-through;
+    text-decoration-color: $pink;
+  }
+  &--sale, &__head--sale {
+    flex-grow: 2;
+  }
+  &--sale {
+    text-align: right;
+    padding-right: .5em;
+  }
+
+}
+
+.day {
+  width: 20%;
+  font-weight: $medium;
+  font-weight: $regular;
+}
+.en {
+  font-size: 1rem;
+}
+
+.note {
+  margin: 0 auto;
+  max-width: 530px;
+  @include mq(lg) {
+    width: calc(100% - 2rem);
+    max-width: 100%;
+  }
+}

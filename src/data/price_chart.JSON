@@ -1,0 +1,62 @@
+[
+  {
+    "display": "first",
+    "date": "1日",
+    "price": "2,200",
+    "sale": "1,360"
+  },
+  {
+    "display": "first",
+    "date": "2日",
+    "price": "4,400",
+    "sale": "2,720"
+  },
+  {
+    "display": "first",
+    "date": "3日",
+    "price": "4,400",
+    "sale": "2,720"
+  },
+  {
+    "display": "first",
+    "date": "4日",
+    "price": "4,400",
+    "sale": "2,720"
+  },
+  {
+    "display": "first",
+    "date": "5日",
+    "price": "4,400",
+    "sale": "5,450"
+  },
+  {
+    "display": "first",
+    "date": "6日",
+    "price": "2,200",
+    "sale": "1,360"
+  },
+  {
+    "display": "first",
+    "date": "7日",
+    "price": "4,400",
+    "sale": "2,720"
+  },
+  {
+    "display": "block",
+    "date": "8日",
+    "price": "4,400",
+    "sale": "2,720"
+  },
+  {
+    "display": "block",
+    "date": "9日",
+    "price": "4,400",
+    "sale": "2,720"
+  },
+  {
+    "display": "block",
+    "date": "10日以降",
+    "price": "4,400",
+    "sale": "+220"
+  }
+]

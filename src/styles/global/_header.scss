@@ -13,7 +13,7 @@ img {
   z-index: 101;
   transition: 0.5s;
   &.fixed {
-    @include mq(min-md) {
+    @include mq(max-md) {
     position: fixed;
       top: 0;
       left: 0;
