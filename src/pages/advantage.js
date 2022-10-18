@@ -8,7 +8,6 @@ const AdvantagePage = () => (
     <Seo title="サンパーキンについて" />
     <h1>aboutページです</h1>
     <p>aboutページへようこそ</p>
-    <Link to="/">ホームに戻る</Link>
   </Layout>
 )
 
