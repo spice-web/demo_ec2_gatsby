@@ -12,6 +12,7 @@ import SlickSlider from "../components/SlickSlider"
 // button
 import ButtonMore from "../components/button-more"
 import ButtonReserve from "../components/button-reserve"
+
 import PriceChart from "../components/price_chart"
 
 // アニメーション
@@ -71,10 +72,7 @@ const IndexPage = ( { data } ) => (
       <StaticImage src="../images/top/year.png" alt="サンパーキングは今年で創業37年を迎えます" className={styles.hero_logo} />
       <StaticImage src="../images/top/build.png" alt="サンパーキング外観" className={styles.hero_build} />
       <StaticImage src="../images/top/airplane.png" alt="飛行機イメージ図" className={styles.hero_airplane} />
-      <motion.div animate={{ x: [null, 50, -50, 0] }}
-        transition={{ duration: 4, times: [0, 0.5, 0.8, 1] }}
-        ><StaticImage src="../images/top/bus.png" alt="送迎用バス" className={styles.hero_bus} />
-      </motion.div>
+      <StaticImage src="../images/top/bus.png" alt="送迎用バス" className={styles.hero_bus} />
     </div>
 
 

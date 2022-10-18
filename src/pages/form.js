@@ -8,6 +8,8 @@ import Seo from "../components/seo"
 import Complete from "../components/complete"
 import * as styles from '../styles/_form.module.scss'
 
+import Faq from "../components/faq"
+
 export default function FormPage() {
   const [value, setValue] = React.useState({})
   const [serverResponse, setServerResponse] = React.useState(``)
@@ -55,7 +57,7 @@ export default function FormPage() {
 
         <p className="text-light">各店舗のご利用・ご予約に関するお問い合せ、サンパーキング各店舗のご利用・ご予約に関するお問い合わせは、下記メールフォームまたはサン予約センター TEL. 0476-33-1123 にてお受けいたします。 ご質問・ご要望にはなるべく迅速にお答えいたします。なお、ご入力いただきましたお客様の個人情報および記述内容は、内容の確認ならびにお客様への回答のために 必要な範囲でのみ利用させていただきます。</p>
 
-        <p className="text-center text-deep-gr"><Link to="/policy">>>>サイトポリシー</Link></p>
+        <p className="text-center text-deep-gr"><Link to="/policy">&gt;&gt;&gt;サイトポリシー</Link></p>
         <p className="text-center text-xs">必須の欄は必ずご記入の上お問い合わせください。 漢字・カナは全角、半角数字、半角ハイフンをご使用ください。</p>
 
         <p className="text-center text-deep-gr">お問い合わせの前に<Link to="/faq">よくあるお問い合わせ</Link>のご確認もお願いします。</p>
@@ -96,14 +98,11 @@ export default function FormPage() {
       <div className="content__inner --sm bg--light-gray dbr-md">
         <div className="content__inner--xs">
           <h3 className="text-deep-gr text-center">よくあるお問い合わせ</h3>
-          <h4 className="text-deep-gr">予約に関して</h4>
+          
 
-          <dl>
-            <dt className="bg--dark-green text-white">Q1予約はいつでもできますか？</dt>
-            <dd className="text-sm">インターネットからのオンライン予約は、ご出発の5か月前の月初から、ご出発前日の23:00まで24時間承ります。例えば8月8日からご利用のご予約は、5か月前の3月1日から、前日8月7日の23:00まで承ることができます。<br />
-              お電話でのご予約は、サン予約センター0476-33-1123にて、年中無休で9:00～18:00に承っています。インターネットが難しい環境からのご予約や、当日の急なご利用などはお電話からのご予約が便利です。<br />
-              満車になることもございますので早めのご予約をお待ちしております。</dd>
-          </dl>
+          <Faq />
+
+
 
         </div>
       </div>
