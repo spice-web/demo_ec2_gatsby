@@ -55,7 +55,9 @@ const Faq = () => {
   const Arrival = data.allFaqArrivalJson.edges
   const Other = data.allFaqOtherJson.edges
 
-
+  const TitleStyles = {
+    padding: "10px 30px 10px 20px",
+  }
 
 
   return (
@@ -63,18 +65,18 @@ const Faq = () => {
 
       <h4 className="text-deep-gr">予約に関して</h4>
       {reserve.map(e => (
-        <dl className="">
-          <dt className="bg--dark-green text-white">{e.node.title}</dt>
-          <dd className="text-sm">{e.node.contents}</dd>
+        <dl class="faq">
+          <dt style={TitleStyles} className="headline--greenLabel faq__title">{e.node.title}<button class="question-button"></button></dt>
+          <dd class="text-sm faq__answer">{e.node.contents}</dd>
         </dl>
       ))}
 
       <h4 className="text-deep-gr">支払い、料金に関して</h4>
 
       {payment.map(f => (
-        <dl className="">
-          <dt className="bg--dark-green text-white">{f.node.title}</dt>
-          <dd className="text-sm">{f.node.contents}
+        <dl class="faq">
+          <dt style={TitleStyles} className="headline--greenLabel faq__title">{f.node.title}<button class="question-button"></button></dt>
+          <dd class="text-sm faq__answer">{f.node.contents}
             {f.node.url &&
               <Link to={f.node.url}>{f.node.link}</Link>
             }
@@ -86,17 +88,17 @@ const Faq = () => {
       <h4 className="text-deep-gr">到着について</h4>
 
       {Arrival.map(g => (
-        <dl className="">
-          <dt className="bg--dark-green text-white">{g.node.title}</dt>
-          <dd className="text-sm">{g.node.contents}</dd>
+        <dl class="faq">
+          <dt style={TitleStyles} className="headline--greenLabel  faq__title">{g.node.title}<button class="question-button"></button></dt>
+          <dd class="text-sm faq__answer">{g.node.contents}</dd>
         </dl>
       ))}
 
       <h4 className="text-deep-gr">その他</h4>
       {Other.map(h => (
-        <dl className="">
-          <dt className="bg--dark-green text-white">{h.node.title}</dt>
-          <dd className="text-sm">{h.node.contents}
+        <dl class="faq">
+          <dt style={TitleStyles} class="headline--greenLabel faq__title">{h.node.title}<button class="question-button"></button></dt>
+          <dd class="text-sm faq__answer">{h.node.contents}
             {h.node.url &&
               <Link to={h.node.url}>{h.node.link}</Link>
             }

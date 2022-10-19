@@ -67,31 +67,61 @@ export default function FormPage() {
 
         <div className="content__inner --sm bg--light-gray dbr-md">
 
-        {/* 受付メッセージブロック */}
-        <div className="">
-            { serverResponse ? <Complete /> : null }
-        </div>
-
         {/* フォームブロック */}
         <div className="content__inner--xs">
+          
+          {/* 受付メッセージブロック */}
+          <div className="text-center">
+            {serverResponse ? <Complete /> : null}
+          </div>
+
           <form onSubmit={onSubmit} method="POST" action="/api/send">
+
+            {/* お名前 */}
             <div class="">
               <label for="formName" class="">お名前</label>
               <input type="text" id="formName" value={value['formName'] || ``} onChange={handleChange} class="" placeholder="例：鈴木太郎" />
             </div>
+
+            {/* フリガナ */}
+            <div class="">
+              <label for="formKana" class="">フリガナ</label>
+              <input type="text" id="formKana" value={value['formKana'] || ``} onChange={handleChange} class="" placeholder="例：スズキタロウ" />
+            </div>
+
+
+            {/* 電話番号 */}
+            <div class="">
+              <label for="formTel" class="">電話番号</label>
+                <input type="text" id="formTel" value={value['formTel'] || ``} onChange={handleChange} class="" placeholder="例：0476-33-1155" />
+            </div>
+
+            {/* FAX */}
+            <div class="">
+              <label for="formFax" class="">FAX番号</label>
+              <input type="text" id="formFax" value={value['formFax'] || ``} onChange={handleChange} class="" placeholder="例：0476-33-1198" />
+            </div>
+
+            {/* メールアドレス */}
             <label for="formEmail" class="">メールアドレス</label>
             <div class="">
               <input type="email" id="formEmail" value={value['formEmail'] || ``} onChange={handleChange} class="" placeholder="info@sunparking.co.jp" />
             </div>
-            <label for="formTextarea" class="">メッセージ</label>
+
+            {/* お問い合わせ内容 */}
+            <label for="formTextarea" class="">お問い合わせ内容</label>
             <div class="">
               <textarea id="formTextarea" value={value['formTextarea'] || ``} onChange={handleChange} class="" rows="3" placeholder=""></textarea>
             </div>
+
+            {/* 送信ボタン */}
             <div class="">
-              <button type="submit" class="">送 信</button>
+              <button type="submit" class="button__submit"></button>
             </div>
           </form>
         </div>
+        {/* フォームブロック */}
+
       </div>
       {/* content__inner */}
 

@@ -36,10 +36,25 @@ export const onRouteUpdate = ({ location }) => {
         this.toggle(event);
       }
     }
-    const drawer = new Drawer();
-};
+ const drawer = new Drawer();
 
-setTimeout(function () {
+
+ // FAQ表示非表示
+  const faq = document.querySelectorAll(".faq")
+
+  faq.forEach(function (question) {
+    const button = question.querySelector(".question-button")
+    if (!button) { return false; }
+    button.addEventListener("click", function () {
+      faq.forEach(function (eachQuestion) {
+        if (eachQuestion !== question) {
+          eachQuestion.classList.remove("show-answer")
+        }
+      })
+      question.classList.toggle("show-answer")
+    })
+  });
+
   window.addEventListener("scroll", function () {
     const topBtn = document.getElementById("header");
     const scroll = window.pageYOffset;
@@ -47,4 +62,5 @@ setTimeout(function () {
       topBtn.classList.add("fixed");
     } else topBtn.classList.remove("fixed");
   });
-}, 1000);
+
+};

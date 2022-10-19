@@ -266,10 +266,12 @@ body {
 
   &__inner {
     width: 93%;
+    margin: 0 auto;
     @include mq() {
       width: 100%;
+      margin-bottom: 5rem;
     }
-    margin: 0 auto;
+    
 
     &.--sm { max-width: 880px; }
     &.--md { max-width: 1000px; }
@@ -440,11 +442,62 @@ body {
       display: block;
     }
   }
+  &--greenLabel {
+    background: $dark-green;
+    color: #fff;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
 }
 
 /* ==============================
   ||ボタン ||button
 ============================== */
 .button {
-  
+  text-align: center;
+  &__submit {
+    @extend .button;
+    width: 250px;
+    height: 64px;
+    color: $text-color;
+    margin: 0 auto;
+    border-radius: 32px;
+    font-size: 1.25rem;
+    font-weight: $bold;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      display: block;
+      background: #DCDCDC 0% 0% no-repeat padding-box;
+      mix-blend-mode: multiply;
+      width: 250px;
+      height: 64px;
+      border-radius: 32px;
+    }
+    &:after {
+      content: "送信";
+      line-height: 65px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      background: transparent linear-gradient(180deg, #DFFF66 0%, #B4F000 25%, #90D200 50%, #B4F000 75%, #90D200 100%) 0% 0% no-repeat padding-box;
+      width: 250px;
+      height: 64px;
+      border-radius: 32px;
+      z-index: 1;
+      border: 2px solid #FFF;
+    }
+    &:hover {
+      &:before {
+        display: none;
+      }
+      &:after {
+        bottom: -2px;
+      }
+    }
+  }
 }

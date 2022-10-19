@@ -15,9 +15,10 @@ form {
   label {
     color: $deep-green;
   }
-  div {
+  > div {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -25,4 +26,5 @@ input, textarea {
   border: 1px solid #404040;
   padding: 0.5rem;
   width: 100%;
+  background: #FFF;
 }
