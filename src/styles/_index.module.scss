@@ -102,7 +102,7 @@
 }
 
 .hero_logo {
-  position: absolute;
+  position: absolute!important;
   top: 2vw;
   left: 50%;
   transform: translate(-50%, 0);
@@ -115,7 +115,7 @@
 }
 
 .hero_build {
-  position: absolute;
+  position: absolute!important;
   bottom: 2rem;
   left: -8vw;
   width: 110vw;
@@ -130,7 +130,7 @@
 }
 
 .hero_airplane {
-  position: absolute;
+  position: absolute!important;
   top: 10vw;
   right: 5vw;
   width: 20vw;
@@ -229,6 +229,8 @@
     padding: 0.5rem 0;
   }
 }
+
+
 /* ==============================
   sponsor
 ============================== */

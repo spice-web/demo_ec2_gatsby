@@ -46,7 +46,7 @@ const Footer = () => (
             <li><a href="" rel="noreferrer noopener" target="_blank"><StaticImage src="../images/icon/line_k.svg" alt="サンパーキング公式LINE" /></a></li>
             <li><a href="" rel="noreferrer noopener" target="_blank"><StaticImage src="../images/icon/tw_k.svg" alt="サンパーキング公式twitter" /></a></li>
             <li><a href="" rel="noreferrer noopener" target="_blank"><StaticImage src="../images/icon/fb_k.svg" alt="サンパーキング公式facebook" /></a></li>
-            <li><Link to="/contact"><StaticImage src="../images/icon/mail_k.svg" alt="お問い合わせ" /></Link></li>
+            <li><Link to="/form"><StaticImage src="../images/icon/mail_k.svg" alt="お問い合わせ" /></Link></li>
           </ul>
         </div>
       </div>{/* footer-inner */}

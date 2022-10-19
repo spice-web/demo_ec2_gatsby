@@ -19,15 +19,8 @@ const PriceChart = () => {
     }
   `)
   
-  const wrap = {
-  }
-  const LinkStyles = {
-    border: '1px solid #FFF',
-    color: 'white',
-    fontWeight: "normal"
-  }
-
   const prices = data.allPriceChartJson.edges
+
   return (
     <>
     <div className="price-chart__wrap">

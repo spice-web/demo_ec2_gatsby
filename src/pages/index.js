@@ -12,7 +12,11 @@ import SlickSlider from "../components/SlickSlider"
 // button
 import ButtonMore from "../components/button-more"
 import ButtonReserve from "../components/button-reserve"
+
 import PriceChart from "../components/price_chart"
+
+// アニメーション
+import { motion } from "framer-motion"
 
 const IndexPage = ( { data } ) => (
   <Layout>

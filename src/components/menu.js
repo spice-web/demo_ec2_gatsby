@@ -69,7 +69,7 @@ const Menu = () => (
     </dl>
 
     <dl class="navigation__def">
-      <dt className="navigation__dttl"><Link to="/">会社情報</Link></dt>
+      <dt className="navigation__dttl"><Link to="/about">会社情報</Link></dt>
     </dl>
 
     <dl class="navigation__def">
@@ -77,11 +77,11 @@ const Menu = () => (
     </dl>
 
     <dl class="navigation__def">
-      <dt className="navigation__dttl"><Link to="/">求人情報</Link></dt>
+      <dt className="navigation__dttl"><Link to="/recruit">求人情報</Link></dt>
     </dl>
 
     <dl class="navigation__def">
-      <dt className="navigation__dttl"><Link to="/"><span className="none">サイトポリシー・<br className="none-drawer"/>プライバシー</span>ポリシー</Link></dt>
+      <dt className="navigation__dttl"><Link to="/policy"><span className="none">サイトポリシー・<br className="none-drawer"/>プライバシー</span>ポリシー</Link></dt>
     </dl>
   </div>
 

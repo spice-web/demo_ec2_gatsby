@@ -1,4 +1,30 @@
+/* ==============================
+  variable
+============================== */
+// color
+$pale-green: #EFFCC9;
+$light-green: #B4F000;
+$green: #64C800;
+$dark-green: #32B400;
+$deep-green: #006E00;
+$yellow: #FFFF00;
+$pink: #FF2C73;
+$text-color: #404040;
+
+form {
+  label {
+    color: $deep-green;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+}
+
 input, textarea {
-  border: 1px solid #313131;
+  border: 1px solid #404040;
   padding: 0.5rem;
+  width: 100%;
+  background: #FFF;
 }
