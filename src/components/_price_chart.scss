@@ -12,6 +12,9 @@
     @include mq(lg) {
       display: flex;
       width: calc(100% - 2rem);
+      &.price-page {
+        display: block;
+      }
     }
   }
 

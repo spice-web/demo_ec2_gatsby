@@ -1,0 +1,22 @@
+.wrap {
+  width: 93%;
+  max-width: 980px;
+  margin: 0 auto;
+  background: #F2F2F2;
+  border-radius: 0.625rem;
+  position: relative;
+  margin-bottom: 4rem;
+  padding: 2rem 0 4rem;
+}
+
+@media screen and (min-width:850px) {
+  .wrap {
+    border-radius: 1.25rem;
+  }
+}
+
+.inner {
+  width: 93%;
+  max-width: 880px;
+  margin: 0 auto;
+}

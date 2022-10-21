@@ -13,6 +13,7 @@ import SlickSlider from "../components/SlickSlider"
 import ButtonMore from "../components/button-more"
 import ButtonReserve from "../components/button-reserve"
 
+// 価格表
 import PriceChart from "../components/price_chart"
 
 // アニメーション
@@ -78,7 +79,8 @@ const IndexPage = ( { data } ) => (
 
     <div className="content__wrap bg--pale-green">
       <div className="content__inner --lg">
-        <StaticImage src="../images/top/banner_campaign.jpg"></StaticImage>
+        <StaticImage src="../images/top/banner_campaign.jpg" className="br_lg"></StaticImage>
+        <StaticImage src="../images/top/banner_campaign_sp.jpg" className="br_maxlg"></StaticImage>
         <h3 className="text-lg text-center text-gr text-bold">サンパーキング成田店は、<br className="br-sp" /><span className="text-pk">安心の総額表示</span>で<br className="br-sp" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
 
         {/* 価格表 */}

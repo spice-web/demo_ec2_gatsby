@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import * as styles from "../styles/_faq.module.scss"
 
 
 const Faq = () => {
@@ -46,17 +47,29 @@ const Faq = () => {
           }
         }
       }
+
+      allFaqDepartureJson {
+        edges {
+          node {
+            title
+            contents
+          }
+        }
+      }
+
       
     }
   `)
 
   const reserve = data.allFaqReserveJson.edges
   const payment = data.allFaqPaymentJson.edges
+  const Departure = data.allFaqDepartureJson.edges
   const Arrival = data.allFaqArrivalJson.edges
   const Other = data.allFaqOtherJson.edges
 
   const TitleStyles = {
     padding: "10px 30px 10px 20px",
+    borderRadius: "3px",
   }
 
 
@@ -75,7 +88,8 @@ const Faq = () => {
 
       {payment.map(f => (
         <dl class="faq">
-          <dt style={TitleStyles} className="headline--greenLabel faq__title">{f.node.title}<button class="question-button"></button></dt>
+          <dt style={TitleStyles} className="headline--greenLabel faq__title">{f.node.title}<button class="question-button"><span></span><span></span></button>
+          </dt>
           <dd class="text-sm faq__answer">{f.node.contents}
             {f.node.url &&
               <Link to={f.node.url}>{f.node.link}</Link>
@@ -84,6 +98,19 @@ const Faq = () => {
           </dd>
         </dl>
       ))}
+
+
+
+      <h4 className="text-deep-gr">出発当日に関して</h4>
+      {Departure.map(i => (
+        <dl class="faq">
+          <dt style={TitleStyles} className="headline--greenLabel faq__title">{i.node.title}<button class="question-button"><span></span><span></span></button>
+          </dt>
+          <dd class="text-sm faq__answer">{i.node.contents}</dd>
+        </dl>
+      ))}
+
+
 
       <h4 className="text-deep-gr">到着について</h4>
 

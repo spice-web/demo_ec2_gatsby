@@ -1,0 +1,16 @@
+.reservationButton {
+  color: #fff;
+  font-size: 0.875rem;
+  background: #32B400;
+  > * {
+    padding: 0.25rem 1rem;
+  }
+}
+
+.reservationLink {
+  background: #FF2C73;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+}

@@ -1,0 +1,43 @@
+/* ==============================
+  || breakpoints
+============================== */
+$breakpoints: (
+  'xs': 'screen and (min-width: 400px)',
+  'sm': 'screen and (min-width: 650px)',
+  'max-md': 'screen and (max-width: 850px)',
+  'md': 'screen and (min-width: 850px)',
+  'lg': 'screen and (min-width: 980px)',
+  'xl': 'screen and (min-width: 1200px)',
+  ) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* *** 呼び出し方 ***
+
+.foo {
+  color: blue;
+  @include mq() { // 引数を省略（初期値はmdの850px）
+    color: yellow;
+  }
+  @include mq(lg) { // 引数を個別に指定
+    color: red;
+  }
+}
+
+*/
+/* ==============================
+  variable
+============================== */
+// color
+$pale-green: #EFFCC9;
+$light-green: #B4F000;
+$green: #64C800;
+$dark-green: #32B400;
+$deep-green: #006E00; 
+$yellow: #FFFF00;
+$pink:   #FF2C73;
+$text-color: #404040;

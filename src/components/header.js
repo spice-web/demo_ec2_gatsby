@@ -57,19 +57,19 @@ const Header = () => (
     <div className="header-nav__wrap">
       <ul className="header-nav__list">
         <li className="header-nav__item">
-          <Link to="/">料金に付いて</Link>
+          <Link to="/price">料金について</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">オプション</Link>
+          <Link to="/option">オプション</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">選ばれる理由</Link>
+          <Link to="/advantage">選ばれる理由</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">関連情報</Link>
+          <Link to="/more-information">関連情報</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">ご利用案内</Link>
+          <Link to="/guide">ご利用案内</Link>
         </li>
       </ul>
     </div>

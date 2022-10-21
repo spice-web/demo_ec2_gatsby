@@ -1,0 +1,56 @@
+@import './global/_variable.scss';
+.voice {
+  &__wrap {
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__title {
+    color: $deep-green;
+    text-align: left;
+    font-size: 0.75rem;
+  }
+}
+
+@mixin comment {
+  border-radius: 1rem;
+  padding: 0.625rem;
+  position: relative;
+}
+
+.customer {
+  @include comment;
+  margin-left: 50px;
+  background: #FFF;
+  margin-bottom: 0.625rem;
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url('../images/icon/customer.svg');
+    background-size: contain;
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background-position: center center;
+    top: 0;
+    left: -50px;
+  }
+}
+
+.reply {
+  @include comment;
+  background: #FFFAC8;
+  margin-right: 50px;
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url('../images/icon/reply.svg');
+    background-size: contain;
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background-position: center center;
+    top: 0;
+    right: -50px;
+  }
+}
