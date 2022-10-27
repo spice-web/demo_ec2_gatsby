@@ -23,8 +23,17 @@ form {
 }
 
 input, textarea {
-  border: 1px solid #404040;
+  border: 0.99px solid #404040;
   padding: 0.5rem;
   width: 100%;
   background: #FFF;
+  border-radius: 0.25rem;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 15px auto;
+  grid-template-rows: auto;
+  gap: 5px;
+  margin: 0 auto 2rem;
 }

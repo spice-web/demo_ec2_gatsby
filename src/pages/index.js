@@ -226,7 +226,7 @@ export default IndexPage
 
 export const query = graphql`
 query {
-  allMicrocmsInformation(limit: 3, sort: {fields:date, order:DESC }) {
+  allMicrocmsInformation(limit:3, sort: {fields:date, order:DESC }) {
     edges {
       node {
         informationId

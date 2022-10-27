@@ -6,10 +6,13 @@
 
 // よくある質問
 .faq {
-  margin-bottom: 1.5rem;
+  &__def {
+    margin-bottom: 1.5rem;
+  }
   &__title {
     position: relative;
     margin-bottom: 0;
+    text-align: left;
   }
   &__answer {
     display: none;

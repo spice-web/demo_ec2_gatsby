@@ -4,7 +4,7 @@
 .content {
   &__wrap {
     width: 100%;
-    padding: 2rem 0;
+    padding: 0 0 2.5rem 0;
 
     @include mq() {
       padding-left: 5rem;
@@ -14,7 +14,7 @@
 
   &__inner {
     width: 93%;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     @include mq() {
       width: 100%;
       margin-bottom: 5rem;
@@ -28,7 +28,7 @@
     &.--lg { max-width: 1200px; }
 
     &--xs {
-      padding: 4rem 0;
+      padding: 2.5rem 0;
       width: 90%;
       max-width: 700px;
       margin: 0 auto;
@@ -37,16 +37,18 @@
 }
 
 .inner {
+  padding: 3.5rem;
   &--white {
     @extend .bdr-xs;
-    background: #FFF;
+    background: #FFF; 
     padding: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 }
+
 .inner-pd {
   padding: 1.25rem;
 }
-
 
 /* ==============================
   ||Flex
@@ -56,6 +58,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    &.center {
+      justify-content: center;
+    }
+    @include mq(max-sm) {
+      &--max-sm {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
     @include mq(sm) {
       &--sm {
         display: flex;
@@ -125,6 +137,19 @@
     &--md {
       @include mq() {
         width: 24%;
+      }
+    }
+  }
+  &-col-5 {
+    width: 19%;
+    &--sm {
+        @include mq(sm) {
+          width: 19%;
+        }
+      }
+    &--md {
+      @include mq() {
+        width: 19%;
       }
     }
   }

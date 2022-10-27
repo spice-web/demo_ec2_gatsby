@@ -9,7 +9,7 @@ import Menu from "./menu"
 const Footer = () => (
   <>
   <div className="content__wrap bg--gray footer-gray">
-      <div className="content__inner  text-white">
+      <div className="text-white footer-gray__inner">
         <p className="text-center text-lg text-bold">ご利用前日23:00までは<span className="nowrap"><span className="text-y">おトクなWEB予約</span>が可能！</span></p>
 
         {/* 予約ボタン */}
@@ -20,7 +20,7 @@ const Footer = () => (
         <div className="flex__wrap--md text-center">
           <p>サン予約センター</p>
           <h3 className="text-lg">TEL.0476-33-1123</h3>
-          <p>［受付時間］9：00〜18：00</p>
+          <p>［受付時間］9:00〜18:00</p>
         </div>
 
     </div>
@@ -33,7 +33,7 @@ const Footer = () => (
         <div className="footer__head">
           <h2 className="footer__logo"><StaticImage src="../images/logo.svg" /></h2>
           <h3>株式会社サン・ポート&nbsp;&nbsp;<br className="br_maxmd" />〒286-0121 千葉県成田市駒井野 134</h3>
-          <p>［営業時間］5：00～22：30&nbsp;&nbsp;<br className="br_maxmd" />成田空港最終便到着まで営業</p>
+          <p>［営業時間］5:00～22:30&nbsp;&nbsp;<br className="br_maxmd" />成田空港最終便到着まで営業</p>
         </div>
 
         {/* メニュー */}
@@ -57,9 +57,9 @@ const Footer = () => (
     </footer>
     {/* フッター固定ボタン */}
     <ul className="footer-fixed-btn__wrap">
-      <li className="footer-fixed-btn__item"><Link to="" className="is-block">料金確認</Link></li>
+      <li className="footer-fixed-btn__item"><Link to="/price" className="is-block">料金確認</Link></li>
       <li className="footer-fixed-btn__item"><Link to="" className="is-block">WEB予約</Link></li>
-      <li className="footer-fixed-btn__item"><Link to="access" className="is-block">アクセス</Link></li>
+      <li className="footer-fixed-btn__item"><Link to="/access" className="is-block">アクセス</Link></li>
     </ul>
     {/* フッター固定ボタン */}
     <ul className="side-fixed-btn__wrap">

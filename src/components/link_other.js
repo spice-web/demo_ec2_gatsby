@@ -1,4 +1,5 @@
 import * as React from "react"
+import * as styles from "../styles/_faq.module.scss";
 
 const TitleStyles = {
   padding: "10px 30px 10px 20px",
@@ -8,7 +9,7 @@ const TitleStyles = {
 const LinkPage = () => {
 
   return (
-    <>
+    <div className={styles.linkOther}>
       <dl class="faq">
         <dt style={TitleStyles} className="headline--greenLabel faq__title">
           空　港<button class="question-button"><span></span><span></span></button>
@@ -35,17 +36,13 @@ const LinkPage = () => {
         <div><a href="https://ana.co.jp/" target="_blank" rel="noreferrer noopener">全日本空輸</a></div>
         <div><a href="http://www.air-japan.co.jp/" target="_blank" rel="noreferrer noopener">エアージャパン</a></div>
         <div><a href="http://www.ibexair.co.jp/" target="_blank" rel="noreferrer noopener">IBEXエアラインズ</a></div>
-        <div><a href="http://www.nca.aero/index.html" target="_blank" rel="noreferrer noopener">日本貨物航空</a></div>
         <div><a href="https://aeroflot.ru/" target="_blank" rel="noreferrer noopener">アエロフロート・ロシア航空</a></div>
         <div><a href="https://aeromexico.jp/" target="_blank" rel="noreferrer noopener">アエロメヒコ航空</a></div>
         <div><a href="http://jp.flyasiana.com/Global/JP/ja/main" target="_blank" rel="noreferrer noopener">アシアナ航空</a></div>
         <div><a href="http://www.americanairlines.jp/" target="_blank" rel="noreferrer noopener">アメリカン航空</a></div>
         <div><a href="http://www.xiamenair.com.cn/" target="_blank" rel="noreferrer noopener">厦門航空（本国）</a></div>
-        <div><a href="https://alitalia.com/" target="_blank" rel="noreferrer noopener">アリタリア航空</a></div>
         <div><a href="https://www.eastarjet.com/" target="_blank" rel="noreferrer noopener">イースター航空</a></div>
         <div><a href="http://www.iberia.com/" target="_blank" rel="noreferrer noopener">イベリア・スペイン航空（本国）</a></div>
-        <div><a href="http://iranair.co.jp/" target="_blank" rel="noreferrer noopener">イラン航空</a></div>
-        <div><a href="https://www.virginaustralia.com/" target="_blank" rel="noreferrer noopener">ヴァージン・オーストラリア</a></div>
         <div><a href="https://www.uzairways.com/" target="_blank" rel="noreferrer noopener">ウズベキスタン航空</a></div>
         <div><a href="https://www.airasia.com/" target="_blank" rel="noreferrer noopener">エアアジアX</a></div>
         <div><a href="http://airindia.in/" target="_blank" rel="noreferrer noopener">エア・インディア</a></div>
@@ -61,7 +58,6 @@ const LinkPage = () => {
         <div><a href="https://www.etihad.com/" target="_blank" rel="noreferrer noopener">エティハド航空</a></div>
         <div><a href="https://www.evaair.com/" target="_blank" rel="noreferrer noopener">エバー航空</a></div>
         <div><a href="https://www.emirates.com/" target="_blank" rel="noreferrer noopener">エミレーツ航空</a></div>
-        <div><a href="https://www.elal.com/" target="_blank" rel="noreferrer noopener">エルアル&nbsp;イスラエル航空</a></div>
         <div><a href="https://www.austrian.com/" target="_blank" rel="noreferrer noopener">オーストリア航空</a></div>
         <div><a href="https://uts-air.com/aurora/" target="_blank" rel="noreferrer noopener">オーロラ航空</a></div>
         <div><a href="https://www.hainanairlines.com/" target="_blank" rel="noreferrer noopener">海南航空</a></div>
@@ -89,11 +85,9 @@ const LinkPage = () => {
         <div><a href="https://www.srilankan.com/" target="_blank" rel="noreferrer noopener">スリランカ航空</a></div>
         <div><a href="https://www.cebupacificair.com/" target="_blank" rel="noreferrer noopener">セブパシフィック航空</a></div>
         <div><a href="https://www.turkishairlines.com/" target="_blank" rel="noreferrer noopener">ターキッシュ エアラインズ</a></div>
-        <div><a href="https://www.airasia.com/" target="_blank" rel="noreferrer noopener">タイ・エアアジアX</a></div>
         <div><a href="https://www.tigerairtw.com/" target="_blank" rel="noreferrer noopener">タイガーエア台湾</a></div>
         <div><a href="https://www.koreanair.com/" target="_blank" rel="noreferrer noopener">大韓航空</a></div>
         <div><a href="https://www.thaiairways.com/" target="_blank" rel="noreferrer noopener">タイ国際航空</a></div>
-        <div><a href="https://www.lionairthai.com/" target="_blank" rel="noreferrer noopener">タイ ライオンエアー</a></div>
         <div><a href="https://www.jejuair.net//" target="_blank" rel="noreferrer noopener">チェジュ航空</a></div>
         <div><a href="https://www.china-airlines.com/" target="_blank" rel="noreferrer noopener">チャイナエアライン</a></div>
         <div><a href="http://www.airchina.jp/" target="_blank" rel="noreferrer noopener">中国国際航空</a></div>
@@ -101,9 +95,7 @@ const LinkPage = () => {
         <div><a href="https://global.csair.com/" target="_blank" rel="noreferrer noopener">中国南方航空</a></div>
         <div><a href="https://www.twayair.com/" target="_blank" rel="noreferrer noopener">ティーウェイ航空</a></div>
         <div><a href="https://delta.com/" target="_blank" rel="noreferrer noopener">デルタ航空（本国）</a></div>
-        <div><a href="http://www.airniugini.com.pg/" target="_blank" rel="noreferrer noopener">ニューギニア航空（英語）</a></div>
         <div><a href="http://www.airnewzealand.jp/" target="_blank" rel="noreferrer noopener">ニュージーランド航空</a></div>
-        <div><a href="https://www.nokscoot.com/jp/" target="_blank" rel="noreferrer noopener">ノックスクート</a></div>
         <div><a href="https://www.hawaiianairlines.co.jp/" target="_blank" rel="noreferrer noopener">ハワイアン航空</a></div>
         <div><a href="https://www.bangkokair.com/" target="_blank" rel="noreferrer noopener">バンコクエアウェイズ</a></div>
         <div><a href="https://www.piac.com.pk/" target="_blank" rel="noreferrer noopener">パキスタン国際航空（英語）</a></div>
@@ -112,45 +104,21 @@ const LinkPage = () => {
         <div><a href="https://www.fijiairways.com/ja-jp/" target="_blank" rel="noreferrer noopener">フィジーエアウェイズ</a></div>
         <div><a href="https://www.philippineairlines.com/" target="_blank" rel="noreferrer noopener">フィリピン航空</a></div>
         <div><a href="https://www.finnair.com/" target="_blank" rel="noreferrer noopener">フィンランド航空</a></div>
-        <div><a href="https://www.britishairways.com/" target="_blank" rel="noreferrer noopener">ブリティッシュ・エアウェイズ</a></div>
         <div><a href="https://www.vietjetair.com/" target="_blank" rel="noreferrer noopener">ベトジェットエア</a></div>
         <div><a href="http://www.vietnamairlines.com/wps/portal/vn/welcome/" target="_blank" rel="noreferrer noopener">ベトナム航空</a></div>
         <div><a href="https://www.hkexpress.com/" target="_blank" rel="noreferrer noopener">香港エクスプレス</a></div>
         <div><a href="https://www.hongkongairlines.com/ja_JP/homepage" target="_blank" rel="noreferrer noopener">香港航空</a></div>
         <div><a href="https://www.airmacau.jp/" target="_blank" rel="noreferrer noopener">マカオ航空</a></div>
         <div><a href="https://www.malaysiaairlines.com/" target="_blank" rel="noreferrer noopener">マレーシア航空</a></div>
-        <div><a href="https://www.mandarin-airlines.com/" target="_blank" rel="noreferrer noopener">マンダリン航空</a></div>
         <div><a href="http://www.miat.com/" target="_blank" rel="noreferrer noopener">ミアットモンゴル航空（英語）</a></div>
-        <div><a href="https://www.flysaa.com/" target="_blank" rel="noreferrer noopener">南アフリカ航空</a></div>
         <div><a href="https://www.united.com/" target="_blank" rel="noreferrer noopener">ユナイテッド航空</a></div>
         <div><a href="https://www.latam.com/" target="_blank" rel="noreferrer noopener">ラタム航空</a></div>
         <div><a href="https://www.lufthansa.com/" target="_blank" rel="noreferrer noopener">ルフトハンザドイツ航空</a></div>
         <div><a href="https://www.flyroyalbrunei.com/japan/ja/" target="_blank" rel="noreferrer noopener">ロイヤルブルネイ航空</a></div>
         <div><a href="https://www.lot.com/jp/ja/" target="_blank" rel="noreferrer noopener">LOTポーランド航空</a></div>
-        <div><a href="https://www.fedex.com/" target="_blank" rel="noreferrer noopener">フェデラルエクスプレス</a></div>
-        <div><a href="https://www.ups.com/" target="_blank" rel="noreferrer noopener">ユナイテッド・パーセルサービス</a></div>
       </dd>
     </dl>
 
-
-
-
-
-
-    {/* 開閉パーツ */}
-    <dl class="faq">
-      <dt style={TitleStyles} className="headline--greenLabel faq__title">
-         航空会社（羽田空港乗入）<button class="question-button"><span></span><span></span></button>
-      </dt>
-      <dd class="text-sm faq__answer">
-        <div><a href="http://www.jal.co.jp/" target="_blank" rel="noreferrer noopener">日本航空</a></div>
-        <div><a href="https://www.ana.co.jp/" target="_blank" rel="noreferrer noopener">全日本空輸</a></div>
-        <div><a href="http://www.skymark.co.jp/index.html" target="_blank" rel="noreferrer noopener">スカイマーク（SKY）</a></div>
-        <div><a href="http://www.airdo.jp/ap/index.html" target="_blank" rel="noreferrer noopener">エア・ドゥ（ADO）</a></div>
-        <div><a href="http://www.solaseedair.jp" target="_blank" rel="noreferrer noopener">ソラシドエア（SNJ）</a></div>
-        <div><a href="https://www.starflyer.jp/" target="_blank" rel="noreferrer noopener">スターフライヤー（SFJ）</a></div>
-      </dd>
-    </dl>
 
 
 
@@ -278,11 +246,10 @@ const LinkPage = () => {
       </dt>
       <dd class="text-sm faq__answer">
         <div><a href="http://www.sunnarita.com/" target="_blank" rel="noreferrer noopener">サンパーキング成田店公式特設ページ</a></div>
-        <div><a href="http://www.sunredgarage.com/" target="_blank" rel="noreferrer noopener">サンレッドガレージ公式特設ページ</a></div>
       </dd>
     </dl>
 
-    </>
+    </div>
   )
 }
 

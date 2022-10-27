@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import "./_price_chart.scss"
+import "../styles/_price_chart.scss"
 
 // button
 import ButtonMore from "../components/button-more"

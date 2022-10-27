@@ -1,4 +1,101 @@
-@import './global/_variable.scss';
+@import './global/config.scss';
+
+// 見出し
+.headline {
+  background: $dark-green;
+  padding: 0.75rem 0;
+  font-weight: $medium;
+  color: #fff;
+  text-align: center;
+  @extend .bdr-xs;
+  @extend .text-normal;
+  margin-bottom: 1rem;
+}
+
+// マイレージ
+.mile_box {
+  background: #FFF;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  @extend .mb--md;
+  @extend .mb0--lg;
+  @include mq(lg){
+    width: 32%;
+    margin-bottom: 0;
+  }
+  h4 {
+    margin: 1.5rem 0 1rem;
+    text-align: center;
+    color: $deep-green;
+  }
+  p {
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 0.875rem;
+  }
+  img {
+    object-fit: contain!important;
+  }
+}
+.mileImg {
+  max-width: 350px;
+  margin: 0 auto;
+  // display: block;
+}
+
+
+.member {
+  div[data-wrap="member"] {
+    @include mq(max-sm) {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  img {
+    object-fit: contain!important;
+  }
+  dt {
+    font-weight: bold;
+    margin-bottom: 0.625rem;
+    span { font-weight: $medium; }
+  }
+  dd {
+    @extend .text-xs;
+  }
+}
+
+.aboutMemberWrap {
+  @extend .mb--lg;
+  @include mq() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.aboutMember {
+  @include mq() {
+    width: 48%;
+  }
+  dt {
+    color: $deep-green;
+    margin-bottom: 0.125rem;
+    font-weight: $medium;
+  }
+  dd {
+    @extend .text-sm;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    li {
+      list-style-type: decimal;
+      margin-left: 1rem;
+    }
+  }
+}
+
+// お客様の声
 .voice {
   &__wrap {
     &:not(:last-child) {
@@ -8,19 +105,25 @@
   &__title {
     color: $deep-green;
     text-align: left;
-    font-size: 0.75rem;
+    @extend .text-normal;
   }
 }
 
-@mixin comment {
+// 吹き出し
+@mixin commentWrap {
   border-radius: 1rem;
-  padding: 0.625rem;
+  padding: 1rem;
   position: relative;
+  @include mq() {
+    border-radius: 30px;
+    padding: 1rem 2rem;
+  }
 }
 
 .customer {
-  @include comment;
+  @include commentWrap;
   margin-left: 50px;
+  margin-right: 50px;
   background: #FFF;
   margin-bottom: 0.625rem;
   &:before {
@@ -33,14 +136,27 @@
     display: inline-block;
     background-position: center center;
     top: 0;
-    left: -50px;
+    left: -55px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url('../images/more-information/parts/arrow_w.png');
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-position: center center;
+    top: 20px;
+    left: -10px;
   }
 }
 
 .reply {
-  @include comment;
+  @include commentWrap;
   background: #FFFAC8;
   margin-right: 50px;
+  margin-left: 80px;
   &:after {
     content: "";
     position: absolute;
@@ -51,6 +167,36 @@
     display: inline-block;
     background-position: center center;
     top: 0;
-    right: -50px;
+    right: -55px;
   }
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url('../images/more-information/parts/arrow_y.png');
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-position: center center;
+    top: 20px;
+    right: -10px;
+  }
+  &__title {
+    color: #193296;
+  }
+}
+
+.more {
+  width: 107px;
+  height: 30px;
+  border: 1px solid #006E00;
+  border-radius: 4px;
+  color: $deep-green!important;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: $medium;
+  display: grid;
+  place-items: center;
 }

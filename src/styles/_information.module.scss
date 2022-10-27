@@ -1,3 +1,7 @@
+@import "./global/_variable.scss";
+@import "./global/_config.scss";
+@import "./global/layout.scss";
+
 .pagination {
   &__list {
     display: flex;
@@ -7,7 +11,58 @@
     margin: 0 0.25rem;
     a {
       padding: 0 0.5rem;
-      border: 1px solid #ccc;
+      // border: 1px solid #ccc;
+      &[aria-current="page"] {
+        background: #404040;
+        color: #fff;
+        line-height: 1;
+      }
     }
+
   }
+}
+
+.inner {
+  @extend .content__inner;
+  @extend .flex__wrap--md;
+  justify-content: center;
+}
+.mainInner {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  @include mq() {
+    max-width: 580px;
+  }
+}
+
+.article {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 0.99px solid rgba(151, 151, 151, 1);
+}
+
+
+
+.title {
+  @extend .text-smd;
+  font-weight: $medium;
+  margin-bottom: 1rem;
+}
+
+.excerpt, .footer {
+  @extend .text-xs;
+  font-weight: $light;
+}
+
+.footer {
+  display: flex;
+  margin-top: 1rem;
+  li {
+    margin-right: 1rem;
+  }
+}
+
+.more {
+  flex-grow: 1;
+  text-align: right;
 }

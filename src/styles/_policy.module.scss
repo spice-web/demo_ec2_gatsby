@@ -1,0 +1,18 @@
+@import './global/_config.scss';
+@import './global/_layout.scss';
+
+.def {
+  counter-reset: number;
+  @extend .mb--xl;
+  > dt {
+    &::before {
+      counter-increment: number;
+      content: counter(number)"."; //"."で「1.」のように表示できる
+      padding-right: 0.5rem;
+    }
+  }
+  > dd {
+    padding-left: 1.25rem;
+    @extend .mb--md;
+  }
+}

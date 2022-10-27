@@ -11,6 +11,7 @@
 
 @media screen and (min-width:850px) {
   .wrap {
+    width: 100%;
     border-radius: 1.25rem;
   }
 }
@@ -19,4 +20,9 @@
   width: 93%;
   max-width: 880px;
   margin: 0 auto;
+}
+
+.wrap_sm {
+  @extend .wrap;
+  width: 100%;
 }

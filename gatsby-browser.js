@@ -2,41 +2,43 @@ import './src/styles/global/_ress.scss';
 import './src/styles/global/_global.scss';
 
 export const onRouteUpdate = ({ location }) => {
-    class Drawer {
-      constructor() {
-        this.bg = document.querySelector('.drawer__bg');
-        this.btn = document.querySelector('.drawer__btn');
-        this.menu = document.querySelector('.drawer__menu');
-        this.body = document.body;
-        this.active = 'active';
-        this.init();
-      }
+  document.body.classList.remove("noneScroll");
 
-      init() {
-        this.bg.addEventListener('click', this, false);
-        this.btn.addEventListener('click', this, false);
-      }
+  const toggler = document.querySelector(".drawer__btn");
+  const bg   = document.querySelector('.drawer__bg');
+  const btn  = document.querySelector('.drawer__btn');
+  const cover = document.querySelector('.cover');
+  const menu = document.querySelector('.drawer__menu');
+  // 一番上のコピー
+  const obi  = document.querySelector('.header__right--time');
 
-      toggle() {
-        if (!this.btn.classList.contains(this.active)) {
-          this.menu.classList.add(this.active);
-          this.bg.classList.add(this.active);
-          this.btn.classList.add(this.active);
-          this.body.style.overflowY = 'hidden';
 
-        } else {
-          this.menu.classList.remove(this.active);
-          this.bg.classList.remove(this.active);
-          this.btn.classList.remove(this.active);
-          this.body.style.overflowY = 'auto';
-        }
-      }
+  window.addEventListener("click", event => {
+    if(event.target.className == "cover" || event.target.className == "cover") {
+      document.body.classList.add("noneScroll");
+      cover.classList.add("close");
+      cover.classList.remove("cover");
+      btn.classList.remove("drawer__btn");
+      btn.classList.add("drawer__btn__close");
+      bg.classList.toggle("active");
+      menu.classList.toggle("active");
+      obi.classList.toggle("active");
 
-      handleEvent(event) {
-        this.toggle(event);
-      }
+    } else if (event.target.className == "close" || event.target.className == "close") {
+      document.body.classList.remove("noneScroll");
+      cover.classList.remove("close");
+      cover.classList.add("cover");
+      bg.classList.toggle("active");
+      btn.classList.add("drawer__btn");
+      btn.classList.remove("drawer__btn__close");
+      menu.classList.toggle("active");
+      obi.classList.toggle("active");
+      
+    } else if (event.target.className == "link" || event.target.className == "link") {
+      window.location.reload();
     }
- const drawer = new Drawer();
+  
+  });
 
 
  // FAQ表示非表示

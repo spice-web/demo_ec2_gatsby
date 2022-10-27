@@ -16,10 +16,10 @@
     letter-spacing: 0.2em;
     font-weight: $regular;
     font-size: 1.25rem;
-    padding: 2.5rem;
+    padding: 2.5rem 2.5rem;
     @include mq() {
       font-size: 2rem;
-      padding: 4rem 5rem;
+      padding: 3rem 4rem 5rem;
     }
     &.text-white {
       color: #FFF;
@@ -38,10 +38,36 @@
     padding: 1rem 0;
     margin-bottom: 2rem;
     text-align: center;
-    .--left {
+    &.--left {
       text-align: left;
     }
     @extend .bdr-xs;
+  }
+}
+
+.label {
+  padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+  &.text-left {
+    text-align: left;
+    padding-left: 1rem;
+  }
+  @include mq() {
+
+  }
+  &.--left {
+    text-align: left;
+  }
+  &.--pd-sm {
+    padding: 0.5rem 0;
+  }
+  &.--pd-md {
+    padding: 0.625rem 0;
+  }
+  &.--pd-xd {
+    padding: 1.25rem 0;
   }
 }
 
@@ -54,5 +80,8 @@
     color: $deep-green;
     text-align: center;
     margin-bottom: 0.75rem ;
+    &--sub {
+      display: block;
+    }
   }
 }

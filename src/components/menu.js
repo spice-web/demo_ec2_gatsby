@@ -19,8 +19,8 @@ const Menu = () => (
           <li><Link to="/option#insurance">・海外・国内旅行保険</Link></li>
           <li><Link to="/option#electrification">・電気自動車充電サービス</Link></li>
           <li><Link to="/option#rental">・レンタルモバイル</Link></li>
-          <li><Link to="/option#delivery">・空港宅配サービス</Link></li>
-          <li><Link to="/option#jaf">・JAF</Link></li>
+          <li><Link to="/option#delivery" class="link">・空港宅配サービス</Link></li>
+          <li><Link to="/option#jaf" class="link">・JAF</Link></li>
         </ul>
       </dd>
     </dl>
@@ -54,7 +54,7 @@ const Menu = () => (
     </dl>
 
     <dl class="navigation__def">
-      <dt className="navigation__dttl"><Link to="/">お問い合わせ</Link></dt>
+      <dt className="navigation__dttl"><Link to="/form">お問い合わせ</Link></dt>
       <dd className="navigation__desc none-footer">
         <ul className="navigation__list">
           <li><Link to="/">・よくあるお問い合わせ</Link></li>
@@ -63,7 +63,7 @@ const Menu = () => (
     </dl>
 
     <dl class="navigation__def none-drawer faq">
-      <dt className="navigation__dttl"><Link to="/">よくあるお問い合わせ</Link></dt>
+      <dt className="navigation__dttl"><Link to="/form#faq">よくあるお問い合わせ</Link></dt>
     </dl>
 
     <dl class="navigation__def">
@@ -71,7 +71,7 @@ const Menu = () => (
     </dl>
 
     <dl class="navigation__def">
-      <dt className="navigation__dttl"><Link to="/">新着情報</Link></dt>
+      <dt className="navigation__dttl"><Link to="/information">新着情報</Link></dt>
     </dl>
 
     <dl class="navigation__def">

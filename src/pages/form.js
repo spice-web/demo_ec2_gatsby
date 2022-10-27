@@ -55,12 +55,12 @@ export default function FormPage() {
         {/* 表題ブロック */}
         <h2 class="headline--title">INQUIRY<span>お問い合わせ</span></h2>
 
-        <p className="text-light">各店舗のご利用・ご予約に関するお問い合せ、サンパーキング各店舗のご利用・ご予約に関するお問い合わせは、下記メールフォームまたはサン予約センター TEL. 0476-33-1123 にてお受けいたします。 ご質問・ご要望にはなるべく迅速にお答えいたします。なお、ご入力いただきましたお客様の個人情報および記述内容は、内容の確認ならびにお客様への回答のために 必要な範囲でのみ利用させていただきます。</p>
+        <p className="pg--md mb--lg">各店舗のご利用・ご予約に関するお問い合せ、サンパーキング各店舗のご利用・ご予約に関するお問い合わせは、下記メールフォームまたはサン予約センター TEL. 0476-33-1123 にてお受けいたします。 ご質問・ご要望にはなるべく迅速にお答えいたします。<br />なお、ご入力いただきましたお客様の個人情報および記述内容は、内容の確認ならびにお客様への回答のために 必要な範囲でのみ利用させていただきます。</p>
 
-        <p className="text-center text-deep-gr"><Link to="/policy">&gt;&gt;&gt;サイトポリシー</Link></p>
-        <p className="text-center text-xs">必須の欄は必ずご記入の上お問い合わせください。 漢字・カナは全角、半角数字、半角ハイフンをご使用ください。</p>
+        <p className="text-center text-deep-gr mb--xs"><Link to="/policy">&gt;&gt;&gt;サイトポリシー</Link></p>
+        <p className="text-center text-xs mb--lg">必須の欄は必ずご記入の上お問い合わせください。 漢字・カナは全角、半角数字、半角ハイフンをご使用ください。</p>
 
-        <p className="text-center text-deep-gr">お問い合わせの前に<Link to="/faq">よくあるお問い合わせ</Link>のご確認もお願いします。</p>
+        <p className="text-center text-deep-gr mb--xxl">お問い合わせの前に<Link to="#faq" className="link_deco">よくあるお問い合わせ</Link>のご確認もお願いします。</p>
 
       </div>
       {/* content__inner */}
@@ -79,14 +79,14 @@ export default function FormPage() {
 
             {/* お名前 */}
             <div class="">
-              <label for="formName" class="">お名前</label>
-              <input type="text" id="formName" value={value['formName'] || ``} onChange={handleChange} class="" placeholder="例：鈴木太郎" />
+              <label for="formName" class="">お名前※必須</label>
+              <input type="text" id="formName" value={value['formName'] || ``} onChange={handleChange} class="" placeholder="例：鈴木太郎" required />
             </div>
 
             {/* フリガナ */}
             <div class="">
-              <label for="formKana" class="">フリガナ</label>
-              <input type="text" id="formKana" value={value['formKana'] || ``} onChange={handleChange} class="" placeholder="例：スズキタロウ" />
+              <label for="formKana" class="">フリガナ※必須</label>
+              <input type="text" id="formKana" value={value['formKana'] || ``} onChange={handleChange} class="" placeholder="例：スズキタロウ" required  />
             </div>
 
 
@@ -103,15 +103,29 @@ export default function FormPage() {
             </div>
 
             {/* メールアドレス */}
-            <label for="formEmail" class="">メールアドレス</label>
+            <label for="formEmail" class="">メールアドレス※必須</label>
             <div class="">
-              <input type="email" id="formEmail" value={value['formEmail'] || ``} onChange={handleChange} class="" placeholder="info@sunparking.co.jp" />
+              <input type="email" id="formEmail" value={value['formEmail'] || ``} onChange={handleChange} class="" placeholder="info@sunparking.co.jp" required  />
             </div>
 
             {/* お問い合わせ内容 */}
-            <label for="formTextarea" class="">お問い合わせ内容</label>
+            <label for="formTextarea" class="">お問い合わせ内容※必須</label>
             <div class="">
-              <textarea id="formTextarea" value={value['formTextarea'] || ``} onChange={handleChange} class="" rows="3" placeholder=""></textarea>
+              <textarea id="formTextarea" value={value['formTextarea'] || ``} onChange={handleChange} class="" rows="3" placeholder="" required></textarea>
+            </div>
+
+            <div className={styles.checkbox}>
+              <input
+                type="checkbox"
+                name="agreement"
+                id="agreement"
+                required
+                onChange={handleChange}
+              />
+              <label for="agreement">
+                <Link to="/policy/" className="link_deco">プライバシーポリシー</Link>
+                に同意する※必須
+              </label>
             </div>
 
             {/* 送信ボタン */}
@@ -125,7 +139,7 @@ export default function FormPage() {
       </div>
       {/* content__inner */}
 
-      <div className="content__inner --sm bg--light-gray dbr-md">
+      <div id="faq" className="content__inner --sm bg--light-gray dbr-md">
         <div className="content__inner--xs">
           <h3 className="text-deep-gr text-center">よくあるお問い合わせ</h3>
           
