@@ -1,0 +1,28 @@
+@import "./global/_variable.scss";
+@import "./global/_config.scss";
+@import "./global/layout.scss";
+
+
+.side {
+  @include mq() {
+    max-width: 175px;
+    margin-left: 5rem;
+  }
+}
+
+.headline {
+  @extend .text-normal;
+  font-weight: $regular;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 0.99px solid #000;
+}
+
+.section {
+  font-size: 14px;
+  font-weight: $light;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+}

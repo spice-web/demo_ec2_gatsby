@@ -1,0 +1,12 @@
+@import "./global/config.scss";
+
+.headline {
+  background: $dark-green;
+  padding: 0.75rem 0;
+  font-weight: $medium;
+  color: #fff;
+  text-align: center;
+  @extend .bdr-xs;
+  @extend .text-normal;
+  margin-bottom: 1rem;
+}

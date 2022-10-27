@@ -1,0 +1,24 @@
+.desc {
+  padding-left: 1rem;
+  > * { line-height: 2; }
+  dt {
+    position: relative;
+    &:before {
+      content: "●";
+      position: absolute;
+      top: 0;
+      left: -1.125rem;
+      color: #006E00;
+    }
+  }
+}
+
+.recruiting {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(8, auto);
+  > * { line-height: 2; }
+  dt {
+    margin-right: 1rem;
+  }
+}

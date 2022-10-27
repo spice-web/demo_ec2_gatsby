@@ -1,7 +1,9 @@
+@import './global/_variable.scss';
 @import './global/_config.scss';
 
 @mixin button($color: #fff) {
   color: $color!important;
+  font-weight: bold;
   border-radius: 24px;
   text-align: center;
 }
@@ -58,10 +60,16 @@
     .button__reserve__link {
       @extend .button__reserve__link;
       background: linear-gradient(to bottom, #10D658, #077340);
+      &:before {
+        background-image: url("../images/icon/line.svg");
+      }
     }
     .button__reserve__title {
       color: $deep-green;
     }
+  }
+  &[data-type="tel"], &[data-type="fax"] {
+    margin-bottom: 2rem;
   }
   &__title {
     text-align: center;
@@ -90,4 +98,30 @@
     filter:none;
     opacity: 1;
   }
+}
+
+.button {
+  &__tel {
+    @extend .button__reserve__link;
+    color: #404040!important;
+    background: transparent linear-gradient(180deg, #DFFF66 0%, #B4F000 25%, #90D200 50%, #B4F000 75%, #90D200 100%) 0% 0% no-repeat padding-box;
+    &:before {
+      background-image: url("../images/icon/tel.svg");
+    }
+    &:after {
+      content: none;
+    }
+  }
+  &__fax {
+    @extend .button__tel;
+    &:before {
+      background-image: url("../images/icon/fax.svg");
+    }
+  }
+}
+
+.number {
+  font-size: 1.5rem;
+  font-weight: $medium;
+  text-align: center;
 }

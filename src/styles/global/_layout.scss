@@ -1,0 +1,160 @@
+/* ==============================
+  ||content
+============================== */
+.content {
+  &__wrap {
+    width: 100%;
+    padding: 0 0 2.5rem 0;
+
+    @include mq() {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+
+  &__inner {
+    width: 93%;
+    margin: 0 auto 4rem;
+    @include mq() {
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+    &.bg--light-gray {
+      margin-bottom: 6rem;
+    }
+
+    &.--sm { max-width: 880px; }
+    &.--md { max-width: 980px; }
+    &.--lg { max-width: 1200px; }
+
+    &--xs {
+      padding: 2.5rem 0;
+      width: 90%;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.inner {
+  padding: 3.5rem;
+  &--white {
+    @extend .bdr-xs;
+    background: #FFF; 
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.inner-pd {
+  padding: 1.25rem;
+}
+
+/* ==============================
+  ||Flex
+============================== */
+.flex {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &.center {
+      justify-content: center;
+    }
+    @include mq(max-sm) {
+      &--max-sm {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+    @include mq(sm) {
+      &--sm {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+    @include mq() {
+      &--md {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    @include mq(lg) {
+      &--lg {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &-col-2 {
+    width: 48%;
+    &--sm {
+      width: 100%;
+      @include mq(sm) {
+        width: 48%;
+      }
+    }
+    &--md {
+      width: 100%;
+      @include mq() {
+        width: 48%;
+      }
+    }
+    &--lg {
+      width: 100%;
+      @include mq(lg) {
+        width: 48%;
+      }
+    }
+  }
+
+  &-col-3 {
+    width: 32%;
+    &--sm {
+      width: 100%;
+      @include mq(sm) {
+        width: 32%;
+      }
+    }
+    &--md {
+      width: 100%;
+      @include mq() {
+        width: 32%;
+      }
+    }
+  }
+
+  &-col-4 {
+    width: 24%;
+    &--sm {
+        @include mq(sm) {
+          width: 24%;
+        }
+      }
+    &--md {
+      @include mq() {
+        width: 24%;
+      }
+    }
+  }
+  &-col-5 {
+    width: 19%;
+    &--sm {
+        @include mq(sm) {
+          width: 19%;
+        }
+      }
+    &--md {
+      @include mq() {
+        width: 19%;
+      }
+    }
+  }
+}
+
+/* ==============================
+  ||Flex ||Grid
+============================== */

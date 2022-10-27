@@ -5,26 +5,42 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+// サイドバー
+import Sidebar from "../components/Sidebar";
+//  CSS
+import * as Styles from "../styles/_info_post.module.scss";
+import * as infoStyles from "../styles/_information.module.scss";
+
+
 const InformationPost = ({ data }) => (
 
   <Layout>
     <Seo title={data.microcmsInformation.title} />
 
     {/* コンテナ */}
-    <div className="">
+    <div className="content__wrap">
+      <div className={infoStyles.inner}>
 
-      {/* 表題ブロック */}
-      <div className="">
-        {data.microcmsInformation.title}
-      </div>
+        <div className={infoStyles.mainInner}>
+          {/* 表題ブロック */}
+          <div className={infoStyles.title}>
+            {data.microcmsInformation.title}
+          </div>
 
-      {/* 記事詳細ブロック */}
-      <div className="">
-        <div className="">
-          {data.microcmsInformation.date}{` `}{data.microcmsInformation.category.category}
+          {/* 記事詳細ブロック */}
+          <div className="">
+            <div className="">
+              {data.microcmsInformation.date}{` `}{data.microcmsInformation.category.category}
+            </div>
+            <div className="" dangerouslySetInnerHTML={{ __html: data.microcmsInformation.body }} />
+          </div>
         </div>
-        <div className="" dangerouslySetInnerHTML={{ __html: data.microcmsInformation.body }} />
+
+        <Sidebar />
+
       </div>
+
+
     </div>
   </Layout>
 )

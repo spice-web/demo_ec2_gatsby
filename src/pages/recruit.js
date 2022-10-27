@@ -3,18 +3,22 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo";
 
+import Wrap from "../components/grayContainer_sm";
+// css
+import * as Styles from "../styles/_recruit.module.scss"
+
 const RecruitPage = () => (
   <Layout>
     <Seo title="求人情報" />
     <h2 class="headline--title">RECRUIT<span>求人情報</span></h2>
     <div className="content__wrap">
       <div className="content__inner --sm">
-        <p className="text-center">「やりがい」と「充実感」が感じられる職場です。 元気があって活力のある方からのエントリーを待っています。</p>
+        <p className="mb--xl pg--md">「やりがい」と「充実感」が感じられる職場です。 元気があって活力のある方からのエントリーを待っています。</p>
 
-        <p className="text-center bg--green text-white">駐車場事業の仕事内容</p>
+        <h3 className="label --pd-sm bg--green bdr-xs text-medium mb--md">駐車場事業の仕事内容</h3>
 
-        <div className="bg--light-gray bdr-md">
-          <dl>
+        <Wrap>
+          <dl className={Styles.desc}>
             <dt>送迎業務</dt>
             <dd>各駐車場から各空港間のマイクロバスによるお客様の送迎を行います。</dd>
             <dt>駐車管理</dt>
@@ -24,13 +28,12 @@ const RecruitPage = () => (
             <dt>予約センター業務</dt>
             <dd>予約センターにてお客様からの電話予約受付及びコンピュータ入力を行ないます。</dd>
           </dl>
+        </Wrap>
 
-        </div>
-
-        <h3 className="text-center bg--green text-white">募集要項</h3>
-        <div className="bg--light-gray bdr-md">
-          <h4 className="text-center text-deep-gr">正社員</h4>
-          <dl>
+        <h3 className="label --pd-sm bg--green bdr-xs text-medium mb--md">募集要項</h3>
+        <Wrap>
+          <h4 className="text-center text-deep-gr mb--md">正社員</h4>
+          <dl className={Styles.recruiting}>
             <dt>応募資格</dt>
             <dd>25歳～40歳位の方</dd>
             <dt>募集職種</dt>
@@ -51,11 +54,11 @@ const RecruitPage = () => (
               株式会社サン・ポート　総務部　人事担当
               〒286-0121千葉県成田市駒井野 134</dd>
           </dl>
-        </div>
+        </Wrap>
 
-        <div className="bg--light-gray bdr-md">
-          <h4 className="text-center text-deep-gr">シーズン・スタッフ（パート・アルバイト）</h4>
-          <dl>
+        <Wrap>
+          <h4 className="text-center text-deep-gr mb--md">シーズン・スタッフ（パート・アルバイト）</h4>
+          <dl className={Styles.recruiting}>
             <dt>応募資格</dt>
             <dd>25歳～40歳位の方</dd>
             <dt>募集職種</dt>
@@ -76,7 +79,7 @@ const RecruitPage = () => (
               株式会社サン・ポート　総務部　人事担当
               〒286-0121千葉県成田市駒井野 134</dd>
           </dl>
-        </div>
+        </Wrap>
 
       </div>
 

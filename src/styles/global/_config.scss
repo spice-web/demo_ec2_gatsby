@@ -1,49 +1,4 @@
-/* ==============================
-  || breakpoints
-============================== */
-$breakpoints: (
-  'xs': 'screen and (min-width: 400px)',
-  'sm': 'screen and (min-width: 650px)',
-  'max-md': 'screen and (max-width: 850px)',
-  'md': 'screen and (min-width: 850px)',
-  'lg': 'screen and (min-width: 1000px)',
-  'xl': 'screen and (min-width: 1200px)',
-  ) !default;
-
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-/* *** 呼び出し方 ***
-
-.foo {
-  color: blue;
-  @include mq() { // 引数を省略（初期値はmdの850px）
-    color: yellow;
-  }
-  @include mq(lg) { // 引数を個別に指定
-    color: red;
-  }
-}
-
-*/
-/* ==============================
-  variable
-============================== */
-// color
-$pale-green: #EFFCC9;
-$light-green: #B4F000;
-$green: #64C800;
-$dark-green: #32B400;
-$deep-green: #006E00; 
-$yellow: #FFFF00;
-$pink:   #FF2C73;
-$text-color: #404040;
-
-
-
+@import '_variable.scss';
 /* ==============================
  ||font-weight
 ============================== */
@@ -60,6 +15,10 @@ $bold: 700;
   display: inline-block;
 }
 
+.scroll {
+  overflow-x: scroll;
+}
+
 /* inline -> block */
 .is-block {
   display: block;
@@ -73,8 +32,20 @@ $bold: 700;
   justify-items: center;
 }
 
+.mb-center {
+  margin-left: auto;
+  margin-right: auto;
+}
 
+// ||br 
 // 650pxまで
+.br_maxsm {
+  display: block;
+  @include mq(max-sm) {
+    display: none;
+  }
+}
+// 650px以上
 .br_sm {
   display: block;
   @include mq(sm) {
@@ -97,17 +68,19 @@ $bold: 700;
   }
 }
 
-// 1000px以上
+// 980pxまで
+.br_maxlg {
+  display: block;
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+// 981px以上
 .br_lg {
   display: none;
   @include mq(lg) {
     display: block;
-  }
-}
-
-.br-sp {
-  @include mq() {
-    display: none;
   }
 }
 
@@ -122,17 +95,137 @@ $bold: 700;
   position: relative;
 }
 
+/* ==============================
+  ||padding
+============================== */
+.pd {
+  &--sm {
+    padding: 0.75rem;
+  }
+  &--md {
+    padding: 1.25rem;
+  }
+}
+
+
+/* ==============================
+  ||margin
+============================== */
+.mb {
+  &--xxs {
+    margin-bottom: 0.5rem;
+  }
+  &--xs {
+    margin-bottom: 0.75;
+  }
+  &--sm {
+    margin-bottom: 1rem;
+  }
+  &--md {
+    margin-bottom: 1.5rem;
+    @include mq() {
+      margin-bottom: 2rem;
+    }
+  }
+  &--lg {
+    margin-bottom: 2rem;
+    @include mq() {
+      margin-bottom: 3rem;
+    }
+  }
+  &--xl {
+    margin-bottom: 3rem;
+    @include mq() {
+      margin-bottom: 4rem;
+    }
+  }
+  &--xxl {
+    margin-bottom: 4rem;
+    @include mq() {
+      margin-bottom: 5rem;
+    }
+  }
+  &--xxxl {
+    margin-bottom: 6rem;
+    @include mq() {
+      margin-bottom: 8rem;
+    }
+  }
+}
+
+
+.mb0 {
+  margin-bottom: 0;
+  &--md {
+    @include mq() {
+      margin-bottom: 0;
+    }
+  }
+  &--lg {
+    @include mq(lg) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+/* ==============================
+  ||IMG
+============================== */
+.img-contain {
+  img {
+    object-fit: contain;
+  }
+}
 
 /* ==============================
   ||text
 ============================== */
 .text-center {
   text-align: center;
+  &--md {
+    text-align: left;
+    @include mq() {
+      text-align: center;
+    }
+  }
+
 }
 .text-right {
   text-align: right;
 }
 
+/* ==============================
+  ||line-height
+============================== */
+.lh15 {
+  line-height: 1.5;
+  @include del-space(1.5);
+}
+.lh175 {
+  line-height: 1.75;
+  @include del-space(1.75);
+}
+.lh2 {
+  line-height: 2;
+  @include del-space(2);
+}
+
+
+/* ==============================
+  ||letter-space
+  ============================== */
+.ls005 {
+  letter-spacing: 0.05em;
+}
+.ls01 {
+  letter-spacing: 0.1em;
+}
+
+/* ==============================
+  ||font-weight
+============================== */
 .text-thin {
   font-weight: $thin;
 }
@@ -156,65 +249,111 @@ $bold: 700;
 /* ==============================
   ||font-size
 ============================== */
+.pg {
+  &--md {
+    font-size: 1rem;
+    font-weight: $light;
+    margin-bottom: 2rem;
+    @include height(18, 32);
+    @include mq() {
+      font-size: 1.125rem;
+      margin-bottom: 3rem;
+    }
+    &.--mb0 {
+      margin-bottom: 0;
+      @include mq() {
+        &--md {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &--deepGreen-sm-medium {
+    color: $deep-green;
+    font-weight: $medium;
+    font-size: 0.75rem;
+    @include mq() {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+
 .text-xxs {
   font-size: 0.625rem;
+  @include mq() {
+    font-size: 0.75rem;
+  }
 }
 
 .text-xs {
   font-size: 0.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-}
-
-.text-normal {
-  font-size: 1rem;
-}
-
-.text-md {
-  font-size: 1.25rem;
-}
-
-.text-lg {
-  font-size: 1.5rem;
-}
-
-.text-xl {
-  font-size: 3rem;
-}
-
-@media screen and (min-width:850px) {
-  .text-xxs {
-    font-size: 0.75rem;
-  }
-  .text-xs {
+  @include mq() {
     font-size: 0.875rem;
   }
+}
 
-  .text-sm {
+.text-sm { // 14-16
+  font-size: 0.875rem;
+  @include mq() {
     font-size: 1rem;
-  }
-
-  .text-normal {
-    font-size: 1.125rem;
-  }
-
-  .text-md {
-    font-size: 1.5rem;
-  }
-
-  .text-lg {
-    font-size: 2rem;
-  }
-
-  .text-xl {
-    font-size: 3rem;
   }
 }
 
+.text-normal { //16-18
+  font-size: 1rem;
+  @include mq() {
+    font-size: 1.125rem;
+  }
+}
+
+.text-smd { // 18-20
+  font-size: 1.125rem;
+  @include mq() {
+    font-size: 1.25rem;
+  }
+}
+
+.text-md { // 20-24
+  font-size: 1.25rem;
+  @include mq() {
+    font-size: 1.5rem;
+  }
+}
+
+.text-lg { // 24-32
+  font-size: 1.5rem;
+  @include mq() {
+    font-size: 2rem;
+  }
+}
+
+.text-xl { // 32 - 40
+  font-size: 2rem;
+  @include mq() {
+    font-size: 2.5rem;
+  }
+}
+
+.pg--sm-lgt {
+  @extend .text-sm;
+  font-weight: $light;
+}
+
+.pg--normal-lgt {
+  @extend .text-normal;
+  font-weight: $light;
+}
+
+.note {
+  @extend .text-xs;
+  font-weight: $light;
+}
+
+
 /* ==============================
-  || font-color
+  ||color
 ============================== */
 .text-white { color: #FFF; }
 .text-dark-gr { color:$dark-green }
@@ -241,6 +380,15 @@ a {
   }
 }
 
+a.text-deep-gr {
+  color: $deep-green!important;
+}
+
+.link_deco {
+  padding-bottom: 0.125rem;
+  text-decoration: underline;
+}
+
 /* ==============================
   ||body
 ============================== */
@@ -250,53 +398,28 @@ body {
   font-size: 16px;
 }
 
-/* ==============================
-  ||content
-============================== */
-.content {
-  &__wrap {
-    width: 100%;
-    padding: 2rem 0;
-
-    @include mq() {
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
-  }
-
-  &__inner {
-    width: 93%;
-    margin: 0 auto;
-    @include mq() {
-      width: 100%;
-      margin-bottom: 5rem;
-    }
-    
-
-    &.--sm { max-width: 880px; }
-    &.--md { max-width: 1000px; }
-    &.--lg { max-width: 1200px; }
-
-    &--xs {
-      padding: 4rem 0;
-      width: 90%;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-  }
+p {
+  text-justify: inter-ideograph;
 }
-
 
 /* ==============================
   ||border
 ============================== */
 .bdr-xs { border-radius: 5px; }
+.bdr-sm {
+  border-radius: 0.75rem;
+  @include mq() {
+    border-radius: 1.25rem;
+  }
+}
+
 .dbr-md { border-radius: 1rem; }
 
 .bdr-white {
   border: 0.99px solid #FFF;
 }
 .bdr-dark-green { border: 3px solid $dark-green;}
+
 
 /* ==============================
   ||background-color
@@ -325,6 +448,13 @@ body {
   }
 }
 
+.bg--deep-green {
+  background: $deep-green;
+
+  .content__inner {
+    background: #FFF;
+  }
+}
 .bg--dark-green {
   background: $dark-green;
 
@@ -347,108 +477,14 @@ body {
 // [class^="bg"] {
 //   background: #FFF;
 // }
-.bg--pink {
-  background: $pink;
-}
+.bg--white { background: #FFF; }
+.bg--be { background: #FFFAC8; }
+.bg--pink  { background: $pink; }
 .bg--light-yellow {
   background: #FFFAC8;
 }
 
-/* ==============================
-  ||Flex ||Grid
-============================== */
-.flex {
-  &__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    @include mq(sm) {
-      &--sm {
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-    @include mq() {
-      &--md {
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-  }
 
-  &-col-2 {
-    width: 48%;
-    &--md {
-      width: 100%;
-      @include mq() {
-        width: 48%;
-      }
-    }
-  }
-
-  &-col-3 {
-    width: 32%;
-    &--sm {
-      width: 100%;
-      @include mq(sm) {
-        width: 32%;
-      }
-    }
-    &--md {
-      width: 100%;
-      @include mq() {
-        width: 32%;
-      }
-    }
-  }
-
-  &-col-4 {
-    width: 24%;
-    &--sm {
-        @include mq(sm) {
-          width: 24%;
-        }
-      }
-    &--md {
-      @include mq() {
-        width: 24%;
-      }
-    }
-  }
-}
-
-/* ==============================
-  ||見出し ||headline
-============================== */
-.headline {
-  .-lv1 {
-    font-size: 2rem;
-  }
-  .-lv2 {
-    font-size: 1.5rem;
-    font-weight: $bold;
-    text-align: center;
-  }
-  &--title {
-    text-align: center;
-    color: $deep-green;
-    letter-spacing: 0.2em;
-    font-weight: $regular;
-    &.text-white {
-      color: #FFF;
-    }
-    span {
-      font-size: 1rem; 
-      display: block;
-    }
-  }
-  &--greenLabel {
-    background: $dark-green;
-    color: #fff;
-    padding: 1rem 0;
-    margin-bottom: 2rem;
-  }
-}
 
 /* ==============================
   ||ボタン ||button

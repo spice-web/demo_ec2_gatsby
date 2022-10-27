@@ -1,0 +1,193 @@
+@import './global/config.scss';
+@import './global/layout.scss';
+
+.inner {
+  width: 93%;
+  margin: 0 auto;
+  max-width: 1200%;
+  padding: 0;
+  @include mq(){
+    width: 100%;
+  }
+}
+
+.option {
+  background: #B4F000;
+  padding: 3rem 0;
+  margin-bottom: 6rem;
+  @include mq(){
+    padding: 4rem 5rem;
+  }
+}
+
+.option {
+  .box {
+    display: flex;
+    background: #FFF;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+      @include mq(){
+        margin-bottom: 0;
+      }
+    }
+    &:last-child {
+      &::before {
+        content: "現在サービス停止中";
+        color: #fff;
+        border: 0.99px solid #FFF;
+        @include center(xy);
+        padding: 0.25rem 1rem;
+        z-index: 2;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+
+  .img {
+    width: 40%;
+  }
+
+  .text {
+    color: #006E00;
+    width: calc(60% - 27px);
+    padding: 1rem;
+    dd {
+      font-size: 0.875rem;
+    }
+  }
+
+  .link {
+    width: 27px;
+    line-height: 27px;
+    letter-spacing: 0.25em;
+    background: #006E00;
+    writing-mode: vertical-rl;
+    color: #fff;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  @include mq(sm) {
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .box {
+      flex-direction: column;
+      width: 48%;
+      &:last-child {
+        margin-bottom: 1.25rem;
+        &::before {
+          padding: 0.25rem;
+          width: 90%;
+          text-align: center;
+        }
+      }
+    }
+    .img {
+      width: 100%;
+    }
+    .text {
+      width: 100%;
+    }
+    .link {
+      width: 100%;
+      writing-mode: horizontal-tb;
+      margin-top: auto;
+    }
+  }
+
+  @include mq(md) {
+    .box {
+      width: 24%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #000;
+  .box {
+    @extend .flex-col-3;
+    @extend .flex-col-5--md;
+    margin-bottom: 1rem;
+  }
+}
+
+.card_sec {
+  @extend .card;
+  padding-bottom: 0;
+  border-bottom: none;
+  justify-content: space-between;
+  .box_sec {
+    width: 16%;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.mile {
+  @extend .flex__wrap;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  .box {
+    @extend .flex-col-3;
+  }
+  img {
+    width: 100%;
+  }
+  figcaption {
+    text-align: center;
+    font-weight: $light;
+    margin-top: 0.5rem;
+  }
+}
+.circle {
+  margin: 0 auto;
+  background: #EFFCC9;
+  color: #006e00;
+  text-align: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  align-items: center;
+  @include mq() {
+    font-size: 1.5rem;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.button {
+  display: block;
+  width: 107px;;
+  text-align: center;
+  border: 1px solid #006E00;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+  color: #006E00!important;
+  margin: 0 auto;
+}

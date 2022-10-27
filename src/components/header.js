@@ -19,13 +19,13 @@ const Header = () => (
           </div>
           <div className="header__left--text">
             <p className="header__copy">成田空港に近くて安くて便利な駐車場</p>
-            <h1 className="header__headline">成田空港駐車場 サンパーキング成田店</h1>
+            <h1>成田空港駐車場 サンパーキング成田店</h1>
           </div>
         </div>
         <div className="header__right">
-          <p className="header__right--time">［営業時間］5：00～22：30 成田空港最終便到着まで営業</p>
+          <p className="header__right--time">［営業時間］5:00～22:30 成田空港最終便到着まで営業</p>
           <ul className="header-menu__wrap">
-            <li className="header-menu__item access"><Link to="/access">アクセス</Link></li>
+            <li className="header-menu__item access"><Link to="/guide">アクセス</Link></li>
             <li className="header-menu__item faq"><Link to="/faq">Q&A</Link></li>
             <li className="header-menu__item voice"><Link to="/voice">お客様の声</Link></li>
             <li className="header-menu__item info"><Link to="/information">新着情報</Link></li>
@@ -39,6 +39,7 @@ const Header = () => (
           <span></span>
           <span></span>
           <span></span>
+          <div class="cover"></div>
         </div>
         {/* オーバーレイ背景 */}
         <div class="drawer__bg"></div>
@@ -57,19 +58,19 @@ const Header = () => (
     <div className="header-nav__wrap">
       <ul className="header-nav__list">
         <li className="header-nav__item">
-          <Link to="/">料金に付いて</Link>
+          <Link to="/price">料金について</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">オプション</Link>
+          <Link to="/option">オプション</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">選ばれる理由</Link>
+          <Link to="/advantage">選ばれる理由</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">関連情報</Link>
+          <Link to="/more-information">関連情報</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/">ご利用案内</Link>
+          <Link to="/guide">ご利用案内</Link>
         </li>
       </ul>
     </div>

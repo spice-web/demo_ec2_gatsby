@@ -2,9 +2,18 @@
 
 // 上部グレー部分
 .footer-gray{
+  padding: 0!important;
+  margin-top:4rem;
+  @include mq() {
+    margin-top: 6rem;
+  }
   .flex__wrap--md {
     justify-content: center;
     align-items: center;
+  }
+  &__inner {
+    width: 93%;
+    padding: 4rem 0;
   }
 }
 .footer {
@@ -178,6 +187,7 @@
       max-width: 450px;
       display: flex;
       justify-content: space-between;
+      z-index: 101;
     }
     &__item {
       width: 33%;

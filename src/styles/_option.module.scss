@@ -1,0 +1,212 @@
+@import "./global/config.scss";
+
+.headline {
+  background: $dark-green;
+  padding: 0.75rem 0;
+  font-weight: $medium;
+  color: #fff;
+  text-align: center;
+  @extend .bdr-xs;
+  @extend .text-smd;
+  margin-bottom: 1rem;
+}
+
+.reservationButton {
+  color: #fff;
+  background: #32B400;
+  @extend .text-sm;
+  > * {
+    padding: 0.375rem 1rem;
+  }
+}
+
+.reservationText {
+  background: #32B400;
+  width: 70%;
+}
+.reservationLink {
+  width: 30%;
+  background: #FF2C73;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+  text-align: center;
+}
+
+// flex
+.flexTop {
+  margin-bottom: 2rem;
+  p {
+    @extend .pg--normal-lgt;
+    @extend .lh2;
+    @extend .mb--lg;
+  }
+  @include mq() {
+    display: flex;
+    justify-content: space-between;
+    .leftBox {
+      width: 65%;
+    }
+    figure {
+      width: 32%;
+    } 
+  } 
+}
+
+//  料金表
+.fee {
+  border-top: 0.99px solid #006E00;
+  border-left: 0.99px solid #006E00;
+  border-right: 0.99px solid #006E00;
+  color: #006e00;
+  text-align: center;
+  font-weight: $medium;
+  > * {
+    padding: 0.5rem 0;
+  }
+  dt {
+    @extend .text-normal;
+    background: #FFFAC8;
+    border-bottom: 0.99px solid #006E00;
+  }
+  dd {
+    @extend .text-smd;
+    background: #fff;
+    border-bottom: 0.99px solid #006E00;
+  }
+}
+
+@include mq() {
+  .fee {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(6, auto);
+    dt {
+      display: grid;
+      align-items: center;
+      text-align: left;
+      border-right: 0.99px solid #006E00;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.border_line {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.99px solid #006E00;
+}
+
+// 有料メニュー
+.menu {
+  dl {
+    &:not(:last-child) {
+      @extend .border_line;
+    }
+  }
+  dt {
+    color: $deep-green;
+    font-weight: $medium;
+    margin-bottom: 0.5rem;
+    @extend .text-smd;
+  }
+}
+
+// keeper
+.coating {
+  @include mq() {
+    display: grid;
+    grid-template-columns: 1fr 150px 141px;
+    grid-template-rows: auto;
+  }
+}
+
+.keeper {
+  width: calc(150px + 141px);
+  display: grid;
+  grid-template-columns: 150px 141px;
+  grid-template-rows: 98px;
+  align-items: center;
+  margin: 0 auto 2rem;
+}
+
+// 保険
+.hoken {
+  font-weight: $light;
+  font-size: 14px;
+  @extend .mb--lg;
+  @include mq() {
+    display: grid;
+    grid-template-columns: 29.3% 41.3% 29.3%;
+    grid-template-rows: auto;
+  }
+  dl {
+    &:not(:last-child) {
+      @extend .border_line;
+    }
+    @include mq() {
+      border-bottom: none!important;
+      &:nth-child(2) {
+        border-right: #006E00 solid 0.99px;
+        border-left: #006E00 solid 0.99px;
+        padding-left: 3%;
+        padding-right: 3%;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 52px auto;
+      gap: 1rem;
+      align-items: center;
+      }
+  }
+  dt {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.compare {
+  text-align: center;
+  color: #fff;
+  background: $deep-green;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 358px;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+
+// レンタル　宅配　JAF
+.service {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  grid-template-rows: auto;
+  gap: 2%;
+  @include mq() {
+    display: flex;
+    flex-direction: column;
+    .img {
+      margin-top: auto;
+    }
+  }
+}
+
+.service_wrap {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  @include mq() {
+    display: flex;
+    justify-content: space-between;
+    > * {
+      width: 32%;
+      margin: 0;
+    }
+    h3 {
+      font-size: clamp(18px, 2.8vw, 32px)
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "./global/_variable.scss";
+
+.gridCompany {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(7, auto);
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  @include mq() {
+    margin-bottom: 5rem;
+  }
+  dt {
+    padding: 1.5rem 1rem 1.5rem 0.25rem;
+    border-bottom: 1px solid #FFF;
+  }
+  dd {
+    padding: 1.5rem 0.25rem 1.5rem 1rem;
+    border-bottom: 1px solid #FFF;
+  }
+}
+
+.office {
+  display: flex;
+  font-weight: 300;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+  dl {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width:769px) {
+  .office {
+    dl {
+      width: 32%;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .office {
+    dl {
+      width: 48%;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.history {
+  @extend .office;
+  li {
+    line-height: 2.5;
+  }
+}
+
