@@ -1,5 +1,4 @@
-// テストを行いたいのでここを変更
-// コンフリクト
+// コンフリクト再び
 
 import * as React from "react"
 import { graphql, Link } from "gatsby"
