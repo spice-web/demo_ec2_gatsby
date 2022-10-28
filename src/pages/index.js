@@ -10,6 +10,7 @@ import * as styles from "../styles/_index.module.scss"
 
 // carousel
 import SlickSlider from "../components/SlickSlider"
+import SlickSliderWide from "../components/SlickSliderWide"
 
 // button
 import ButtonMore from "../components/button-more"
@@ -28,6 +29,10 @@ const IndexPage = ( { data } ) => (
     {/* スライダーブロック */}
     <div className={styles.slider__wrap}>
       <SlickSlider />
+    </div>
+
+    <div className={styles.slider__wrapWide}>
+      <SlickSliderWide />
     </div>
 
     {/* 最新記事ブロック */}
@@ -72,7 +77,11 @@ const IndexPage = ( { data } ) => (
     <h2 className="text-center text-lg text-deep-gr text-bold">創業37年の信頼と<br />安⼼のサンパーキング<br className="br-sp" />成⽥店です。</h2>
     
     <div className={styles.hero_image}>
-      <StaticImage src="../images/top/year.png" alt="サンパーキングは今年で創業37年を迎えます" className={styles.hero_logo} />
+      <StaticImage
+        src="../images/top/year.png"
+        alt="サンパーキングは今年で創業37年を迎えます"
+        className={styles.hero_logo}
+      />
       <StaticImage src="../images/top/build.png" alt="サンパーキング外観" className={styles.hero_build} />
       <StaticImage src="../images/top/airplane.png" alt="飛行機イメージ図" className={styles.hero_airplane} />
       <StaticImage src="../images/top/bus.png" alt="送迎用バス" className={styles.hero_bus} />

@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "../styles/_slick-user.scss";
 
-export default function SlickSlider() {
+export default function SlickSliderWide() {
   const settings = {
     // autoplay: true,
     speed: 500,
@@ -60,18 +60,18 @@ export default function SlickSlider() {
       <div className="slide-images --item03"></div> */}
 
       <StaticImage
-        src="../images/slider/slider001_sp.webp"
+        src="../images/slider/slider001_pc.webp"
         alt="秋割campaign"
       />
       <StaticImage
-        src="../images/slider/slider002_sp.webp"
+        src="../images/slider/slider002_pc.webp"
         alt="秋割campaign"
       />
       <StaticImage
-        src="../images/slider/slider003_sp.webp"
+        src="../images/slider/slider003_pc.webp"
         alt="秋割campaign"
       />
-    </Slider>
 
+    </Slider>
   );
 }

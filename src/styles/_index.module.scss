@@ -8,11 +8,27 @@
     @include mq() {
       padding: 40px 0;
     }
+    &Wide {
+      @extend .slider__wrap;
+      display: none;
+    }
     
   }
 }
 
-
+@media screen and (max-width:480px) {
+  .slider__wrapWide {
+    display: none;
+  }
+}
+@media screen and (min-width:481px) {
+  .slider__wrap {
+    display: none;
+  }
+  .slider__wrapWide {
+    display: block;
+  }
+}
 /* ==============================
   information
 ============================== */
