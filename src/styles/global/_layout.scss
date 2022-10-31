@@ -15,6 +15,7 @@
   &__inner {
     width: 93%;
     margin: 0 auto 4rem;
+    padding: 2.5rem 0;
     @include mq() {
       width: 100%;
       margin-bottom: 5rem;
@@ -136,6 +137,11 @@
       }
     &--md {
       @include mq() {
+        width: 24%;
+      }
+    }
+    &--lg {
+      @include mq(lg) {
         width: 24%;
       }
     }

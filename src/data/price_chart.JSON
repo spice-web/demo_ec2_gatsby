@@ -3,60 +3,82 @@
     "display": "first",
     "date": "1日",
     "price": "2,200",
-    "sale": "1,360"
+    "sale": "1,360",
+    "data": {
+      "keytext": "left"
+    }
   },
   {
     "display": "first",
     "date": "2日",
     "price": "4,400",
-    "sale": "2,720"
+    "sale": "2,720",
+    "data": {
+      "keytext": "left"
+    }
   },
   {
-    "display": "first",
     "date": "3日",
     "price": "4,400",
-    "sale": "2,720"
+    "sale": "2,720",
+    "data": {
+      "keytext": "left"
+    }
   },
   {
-    "display": "first",
     "date": "4日",
     "price": "4,400",
-    "sale": "2,720"
+    "sale": "2,720",
+    "data": {
+      "keytext": "left"
+    }
   },
   {
-    "display": "first",
     "date": "5日",
     "price": "4,400",
-    "sale": "5,450"
+    "sale": "5,450",
+    "data": {
+      "keytext": "left"
+    }
   },
   {
-    "display": "first",
     "date": "6日",
     "price": "2,200",
-    "sale": "1,360"
+    "sale": "1,360",
+    "data": {
+      "keytext": "right"
+    }
   },
   {
-    "display": "first",
     "date": "7日",
     "price": "4,400",
-    "sale": "2,720"
+    "sale": "2,720",
+    "data": {
+      "keytext": "right"
+    }
   },
   {
-    "display": "block",
     "date": "8日",
     "price": "4,400",
-    "sale": "2,720"
+    "sale": "2,720",
+    "data": {
+      "keytext": "right"
+    }
   },
   {
-    "display": "block",
     "date": "9日",
     "price": "4,400",
-    "sale": "2,720"
+    "sale": "2,720",
+    "data": {
+      "keytext": "right"
+    }
   },
   {
-    "display": "block",
     "date": "10日以降",
     "price": "4,400",
-    "sale": "+220"
+    "sale": "+220",
+    "data": {
+      "keytext": "right"
+    }
   }
 ]

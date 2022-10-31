@@ -5,19 +5,13 @@
   max-width: 530px;
   margin: 0 auto 2rem;
   font-size: 0.75rem;
-  &__wrap {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    @include mq(lg) {
-      display: flex;
-      width: calc(100% - 2rem);
-      &.price-page {
-        display: block;
-      }
-    }
-  }
 
+  @include mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2rem);
+    max-width: 1100px;
+  }
   &__head {
     > * {
       padding: 0.5rem 0;
@@ -25,6 +19,8 @@
   }
   &__row {
     justify-content: center;
+  }
+  &__second {
     &:not(.price-chart__head):last-child {
       .price--sale {
         &:before {
@@ -36,11 +32,16 @@
   }
 }
 
+
+
 .price {
+  // 右側
   &__second {
+    .price-chart__head {
       display: none;
-    @include mq(lg) {
-      display: block;
+      @include mq(lg) {
+        display: flex;
+      }
     }
   }
   &--normal {
@@ -59,6 +60,14 @@
   }
 
 }
+
+.priceBox {
+  margin: 0 auto;
+  @include mq(lg) {
+    width: 48%;
+  }
+}
+
 
 .day {
   width: 20%;
@@ -89,9 +98,10 @@
       padding-right: 6rem;
     }
   }
+  .note {
+    @extend .note;
+    max-width: 980px;
+  }
+  
 }
 
-.note {
-  @extend .note;
-  max-width: 980px;
-}

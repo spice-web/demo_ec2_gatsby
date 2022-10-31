@@ -1,5 +1,3 @@
-// コンフリクト再び
-
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -10,6 +8,7 @@ import * as styles from "../styles/_index.module.scss"
 
 // carousel
 import SlickSlider from "../components/SlickSlider"
+import SlickSliderWide from "../components/SlickSliderWide"
 
 // button
 import ButtonMore from "../components/button-more"
@@ -19,7 +18,15 @@ import ButtonReserve from "../components/button-reserve"
 import PriceChart from "../components/price_chart"
 
 // アニメーション
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
+
+// to reservation
+const reserve = "https://www.sunparking.co.jp/form/rsv1.php";
+
+// 見出し
+const headline = {
+  padding: '0 0 2rem'
+}
 
 const IndexPage = ( { data } ) => (
   <Layout>
@@ -30,22 +37,24 @@ const IndexPage = ( { data } ) => (
       <SlickSlider />
     </div>
 
+    <div className={styles.slider__wrapWide}>
+      <SlickSliderWide />
+    </div>
+
     {/* 最新記事ブロック */}
     <div className="content__wrap">
       <div className="content__inner --sm">
 
-        <h3 className="text-center">最新情報</h3>
+        <h3 className="text-center text-normal mb--md">最新情報</h3>
 
         {/* 最新記事ループ */}
         <div className={styles.info__wrap}>
           {data.allMicrocmsInformation.edges.map(({ node }) => (
             <div className={styles.info__article}>
-              <div className={styles.info__head}>
-                <ul className={styles.info__list}>
-                  <li className={styles.info__cate}>{node.category.category}</li>
-                  <li className={styles.info__date}>{node.date}</li>
-                </ul>
-              </div>
+              <ul className={styles.info__head}>
+                <li className={styles.info__cate}>{node.category.category}</li>
+                <li className={styles.info__date}>{node.date}</li>
+              </ul>
               <div className={styles.info__center}>
                 <p className={styles.info__title}>
                   <Link to={`/information/${node.informationId}`}>
@@ -54,14 +63,14 @@ const IndexPage = ( { data } ) => (
                 </p>
               </div>
               <div className={styles.info__foot}>
-                <Link to={`/information/${node.informationId}`}>&gt;&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;MORE</Link>
+                <Link to={`/information/${node.informationId}`}>&gt;&gt;&gt;&nbsp;&nbsp;MORE</Link>
               </div>
             </div>
           ))}
         </div>
         {/* 最新記事ループ */}
 
-        <p className="text-center"><Link to="/information">&gt;&gt;&gt;&nbsp;&nbsp;&nbsp;記事一覧&nbsp;&nbsp;&nbsp;&lt;&lt;&lt;</Link></p>
+        <p className="text-center ls01"><Link to="/information">&gt;&gt;&gt;&nbsp;&nbsp;&nbsp;記事一覧&nbsp;&nbsp;&nbsp;&lt;&lt;&lt;</Link></p>
 
       </div>
     </div>
@@ -69,21 +78,55 @@ const IndexPage = ( { data } ) => (
 
 
 
-    <h2 className="text-center text-lg text-deep-gr text-bold">創業37年の信頼と<br />安⼼のサンパーキング<br className="br-sp" />成⽥店です。</h2>
+    <h2 className="text-center text-lg text-deep-gr text-bold">創業37年の信頼と<br />安⼼のサンパーキング<br className="br_sm" />成⽥店です。</h2>
     
     <div className={styles.hero_image}>
-      <StaticImage src="../images/top/year.png" alt="サンパーキングは今年で創業37年を迎えます" className={styles.hero_logo} />
-      <StaticImage src="../images/top/build.png" alt="サンパーキング外観" className={styles.hero_build} />
-      <StaticImage src="../images/top/airplane.png" alt="飛行機イメージ図" className={styles.hero_airplane} />
-      <StaticImage src="../images/top/bus.png" alt="送迎用バス" className={styles.hero_bus} />
+      <StaticImage
+        src="../images/top/year.png"
+        alt="サンパーキングは今年で創業37年を迎えます"
+        className={styles.hero_logo}
+      />
+      <StaticImage
+        src="../images/top/build.png"
+        alt="サンパーキング外観"
+        className={styles.hero_build}
+      />
+      <StaticImage
+        src="../images/top/airplane.png"
+        alt="飛行機イメージ図"
+        className={styles.hero_airplane}
+      />
+      <StaticImage
+        src="../images/top/bus.png"
+        alt="送迎用バス"
+        className={styles.hero_bus}
+      />
     </div>
 
 
     <div className="content__wrap bg--pale-green">
+      <div className="content__inner --lg mb0">
+        <div className="br_md">
+          <Link to={reserve}>
+            <StaticImage
+              src="../images/top/banner_campaign.jpg"
+              alt="サンパーキング秋割キャンペーン"
+            />
+          </Link>
+        </div>
+        <div className="br_maxmd">
+          <Link to={reserve}>
+            <StaticImage
+              src="../images/top/banner_campaign_sp.jpg"
+              alt="サンパーキング秋割キャンペーン"
+            />
+          </Link>
+        </div>
+      </div>
+
+
       <div className="content__inner --lg">
-        <StaticImage src="../images/top/banner_campaign.jpg" className="br_lg"></StaticImage>
-        <StaticImage src="../images/top/banner_campaign_sp.jpg" className="br_maxlg"></StaticImage>
-        <h3 className="text-lg text-center text-gr text-bold">サンパーキング成田店は、<br className="br-sp" /><span className="text-pk">安心の総額表示</span>で<br className="br-sp" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
+        <h3 style={headline} className="text-lg text-center text-deep-gr text-bold">サンパーキング成田店は、<br className="br-sp" /><span className="text-pk">安心の総額表示</span>で<br className="br-sp" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
 
         {/* 価格表 */}
         <div className="content__inner --lg">
@@ -98,8 +141,8 @@ const IndexPage = ( { data } ) => (
     </div>
 
     <div className="content__wrap">
-      <div className="content__inner --lg">
-        <h3 className="text-center text-lg text-deep-gr text-bold">信頼と安心の<br className="br-sp" />サンパーキング成田店<br />
+      <div className="content__inner --lg mb0">
+        <h3 style={headline} className="text-center text-lg text-deep-gr text-bold">信頼と安心の<br className="br-sp" />サンパーキング成田店<br />
           航空会社や旅行会社、<span className="nowrap">銀行、官公庁など</span><span className="nowrap">約2,000社と契約！</span></h3>
 
         <div className={styles.sponsor}>
@@ -121,27 +164,58 @@ const IndexPage = ( { data } ) => (
         </div>
 
 
-        <div className="flex__wrap--md">
-          <div className="text-white flex__box flex-col-4--md bg--dark-green bdr-xs">test</div>
-          <div className="text-white flex__box flex-col-4--md bg--dark-green bdr-xs">test</div>
-          <div className="text-white flex__box flex-col-4--md bg--dark-green bdr-xs">test</div>
-          <div className="text-white flex__box flex-col-4--md bg--dark-green bdr-xs">test</div>
+        <div className={styles.select}>
+          <ul className={styles.selectBox}>
+            <li className={styles.textBox}>成田ICを降りてまっすぐ！ 成田空港通り交差点前に<span>グリーンの門が目印</span>で、わかりやすい＆入りやすい！</li>
+            <StaticImage
+              src="../images/top/select01.jpg" imgClassName={styles.selectImg} alt="迷わない" className={styles.imgBox} />
+          </ul>
+          <ul className={styles.selectBox}>
+            <li className={styles.textBox}><span>24時間警備体制で安心</span>で安心！鍵はセコムの大型金庫で保管！ 預かり時のお車の状態を 動画でチェック！</li>
+            <StaticImage src="../images/top/select02.jpg" imgClassName={styles.selectImg} alt="24時間警備体制で安心" />
+          </ul>
+          <ul className={styles.selectBox}>
+            <li className={styles.textBox}>成田空港駐車場では<span>最大級の2,000台収容!</span>お仕事が旅行シーズンと重なっても大丈夫！</li>
+            <StaticImage src="../images/top/select03.jpg" imgClassName={styles.selectImg} alt="成田空港駐車場では最大級の2,000台収容" className={styles.imgBox} />
+          </ul>
+          <ul className={styles.selectBox}>
+            <li className={styles.textBox}><span>予約専用コールセンターで安心！</span>WEB予約だと更に大幅割引実施中！</li>
+            <StaticImage src="../images/top/select04.jpg" imgClassName={styles.selectImg} alt="WEB予約だと更に 大幅割引実施中！" className={styles.imgBox} />
+          </ul>
         </div>
+
+        <ButtonMore title="サンパーキングが選ばれる理由" url="/advantage" />
+
+    
       </div>
     </div>
 
     <div className="content__wrap bg--light-green">
-      <h3>比べたらやっぱりサンパーキング成田店。 利便性とサービスに自信あり！</h3>
-      <div className="content__inner --lg">
-        <div className="flex__wrap flex__wrap--md">
-          <div className="flex-col-4--md flex-col-2">test</div>
-          <div className="flex-col-4--md flex-col-2">test</div>
-          <div className="flex-col-4--md flex-col-2">test</div>
-          <div className="flex-col-4--md flex-col-2">test</div>
+      <div className="content__inner inner --lg">
+      <h3 style={headline} className="sec__ttl">比べたらやっぱり<span className="nowrap">サンパーキング成田店。</span><span className="nowrap">利便性とサービスに自信あり！</span></h3>
+      <div className={styles.option}>
+          <ul className={styles.optionBox}>
+            <li className={styles.textBox}>成田ICを降りてまっすぐ！ 成田空港通り交差点前に<span>グリーンの門が目印</span>で、わかりやすい＆入りやすい！</li>
+            <StaticImage
+              src="../images/top/option01.jpg" imgClassName={styles.optionImg} alt="迷わない" className={styles.imgBox} />
+          </ul>
+          <ul className={styles.optionBox}>
+            <li className={styles.textBox}><span>24時間警備体制で安心</span>で安心！鍵はセコムの大型金庫で保管！ 預かり時のお車の状態を 動画でチェック！</li>
+            <StaticImage src="../images/top/option02.jpg" imgClassName={styles.optionImg} alt="24時間警備体制で安心" />
+          </ul>
+          <ul className={styles.optionBox}>
+            <li className={styles.textBox}>成田空港駐車場では<span>最大級の2,000台収容!</span>お仕事が旅行シーズンと重なっても大丈夫！</li>
+            <StaticImage src="../images/top/option03.jpg" imgClassName={styles.optionImg} alt="成田空港駐車場では最大級の2,000台収容" className={styles.imgBox} />
+          </ul>
+          <ul className={styles.optionBox}>
+            <li className={styles.textBox}><span>予約専用コールセンターで安心！</span>WEB予約だと更に大幅割引実施中！</li>
+            <StaticImage src="../images/top/option04.jpg" imgClassName={styles.optionImg} alt="WEB予約だと更に 大幅割引実施中！" className={styles.imgBox} />
+          </ul>
         </div>
+
+        <ButtonMore title="オプションについて詳しく" url="/option" />
       </div>
 
-      <ButtonMore title="test" url="/about" />
     </div>
 
 {/* information ここから */}
