@@ -1,11 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby"
 
 // css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import * as styles from "../styles/_slick-user.scss";
+import "../styles/_slick-user.scss";
+
+const reserve = "https://www.sunparking.co.jp/form/rsv1.php";
 
 export default function SlickSliderWide() {
   const settings = {
@@ -59,18 +62,28 @@ export default function SlickSliderWide() {
       <div className="slide-images --item02"></div>
       <div className="slide-images --item03"></div> */}
 
-      <StaticImage
-        src="../images/slider/slider001_pc.webp"
-        alt="秋割campaign"
-      />
-      <StaticImage
-        src="../images/slider/slider002_pc.webp"
-        alt="秋割campaign"
-      />
-      <StaticImage
-        src="../images/slider/slider003_pc.webp"
-        alt="秋割campaign"
-      />
+      <Link to={reserve}>
+        <StaticImage
+          src="../images/slider/slider001_pc.webp"
+          alt="キャンペーン実施中！予約する"
+          className="slide-images"
+        />
+      </Link>
+      <Link to="/advantage">
+        <StaticImage
+          src="../images/slider/slider002_pc.webp"
+          alt="様々なオプション"
+          className="slide-images"
+        />
+      </Link>
+      <Link to="/price">
+        <StaticImage
+          src="../images/slider/slider003_pc.webp"
+          alt="選ばれる理由"
+          className="slide-images"
+        />
+      </Link>
+
 
     </Slider>
   );
