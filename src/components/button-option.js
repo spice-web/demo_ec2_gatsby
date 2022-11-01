@@ -24,7 +24,7 @@ const reservationButton = {
 const ButtonOption = () => (
   <div style={reservationButton} className={styles.reservationButton}>
     <p className={styles.reservationText}>■ 駐車ご予約時に<br className="br_sm"/>一緒にお申込いただけます。</p>
-    <Link to={link} className={styles.reservationLink}>今すぐ予約<br className="br_sm" />&#9654;&#9654;&#9654;</Link>
+    <Link to={link} className={styles.reservationLink}>今すぐ予約&nbsp;&nbsp;<br className="br_sm" />&#9654;&#9654;&#9654;</Link>
   </div>
 )
 

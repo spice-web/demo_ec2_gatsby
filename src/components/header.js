@@ -47,6 +47,10 @@ const Header = () => (
         {/* ドロワーメニュー */}
         <div class="drawer__menu">
           <div className="drawer__inner">
+            <StaticImage src="../images/logo_w.svg"
+            alt="サンパーキング"
+            width={188}
+            className="drawer__logo" />
             <Menu />
           </div>
         </div>

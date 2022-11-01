@@ -20,6 +20,7 @@
   background-color: $light-green;
   padding: 2rem 2rem 6rem;
   @include mq() {
+    padding-top: 4rem;
     padding-bottom: 2rem;
   }
   &__inner {
