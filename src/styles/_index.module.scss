@@ -423,7 +423,6 @@
     &Text {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
-      @extend .text-sm;
       align-self: start;
     }
     &Img {
