@@ -19,41 +19,8 @@ export default function SlickSlider() {
     centerMode: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1424,
-        settings: {
-          centerMode: true,
-          centerPadding: "120px",
-          slidesToShow: 1,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 1224,
-        settings: {
-          centerMode: true,
-          centerPadding: "120px",
-          slidesToShow: 1,
-        }
-      },
-      {
-        breakpoint: 850,
-        settings: {
-          slidesToShow: 1,
-          initialSlide: 1,
-          centerMode: false,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-        }
-      }
-    ]
+    initialSlide: 1,
+    centerMode: false,
   };
 
   return (
@@ -73,12 +40,14 @@ export default function SlickSlider() {
         <StaticImage
           src="../images/slider/slider002_sp.webp"
           alt="様々なオプション"
+          loading='lazy'
         />
       </Link>
       <Link to="/price">
         <StaticImage
           src="../images/slider/slider003_sp.webp"
           alt="選ばれる理由"
+          loading='lazy'
         />
       </Link>
     </Slider>

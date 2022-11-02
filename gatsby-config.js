@@ -68,8 +68,25 @@ module.exports = {
           endpoint: 'voice',
         }],
       },
-    }
+    },
     // microCMSの設定ここまで
+
+    // sitemap設定
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        // output: `/sitemap-path.xml`, ファイル名 
+        // exclude: [`/thanks`, `/category/*`],　除く
+      }
+    },
+
+    // 不要なlodashライブラリを削除
+    {
+      resolve: `gatsby-plugin-lodash`,
+      options: {
+        disablesFeatures: [`shorthand`]
+      },
+    },
 
   ],
 }

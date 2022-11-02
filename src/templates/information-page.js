@@ -6,6 +6,8 @@ import Seo from '../components/seo';
 import { Pagination } from '../components/pagination';
 import PageTitle from '../components/PageTitle';
 
+import { Helmet } from "react-helmet"
+
 // サイドバー
 import Sidebar from "../components/Sidebar";
 // CSS
@@ -13,6 +15,10 @@ import * as Styles from "../styles/_information.module.scss"
 
 const InformationPage = ({ data }) => {
   return (
+    <>
+    {/* <Helmet>
+      <link rel="canonical" href="https://example.com/dresses/green-dresses" />
+    </Helmet> */}
     <Layout>
       <Seo title='HOME' />
       <PageTitle>INFORMATION<span>新着情報</span></PageTitle>
@@ -50,6 +56,7 @@ const InformationPage = ({ data }) => {
     </div>{/* content__wrap */}
 
     </Layout>
+    </>
   )
 }
 
