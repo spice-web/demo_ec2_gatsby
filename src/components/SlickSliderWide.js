@@ -66,7 +66,6 @@ export default function SlickSliderWide() {
           src="../images/slider/slider002_pc.webp"
           alt="様々なオプション"
           className="slide-images"
-          loading='lazy'
         />
       </Link>
       <Link to="/price">
@@ -74,7 +73,6 @@ export default function SlickSliderWide() {
           src="../images/slider/slider003_pc.webp"
           alt="選ばれる理由"
           className="slide-images"
-          loading='lazy'
         />
       </Link>
 

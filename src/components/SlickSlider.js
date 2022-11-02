@@ -33,21 +33,18 @@ export default function SlickSlider() {
         <StaticImage
           src="../images/slider/slider001_sp.webp"
           alt="キャンペーン実施中！予約する"
-
         />
       </Link>
       <Link to="/advantage">
         <StaticImage
           src="../images/slider/slider002_sp.webp"
           alt="様々なオプション"
-          loading='lazy'
         />
       </Link>
       <Link to="/price">
         <StaticImage
           src="../images/slider/slider003_sp.webp"
           alt="選ばれる理由"
-          loading='lazy'
         />
       </Link>
     </Slider>

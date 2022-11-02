@@ -73,7 +73,8 @@
   &__title {
     text-align: center;
     color: $pink;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: $medium;
   }
   &__wrap[data-bg="white"] .button__reserve__title {
     color: #fff;

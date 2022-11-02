@@ -257,7 +257,9 @@
 }
 
 
-// サイドボタン
+/* ================================
+  サイドボタン
+================================= */
 .side-fixed-btn {
   &__wrap {
     display: block;
@@ -318,6 +320,12 @@
         background: linear-gradient(to right, #285AB4, #001C78);
         &::before {
           background-image: url("../../images/icon/access_w.svg");
+        }
+      }
+      @include mq() {
+        &::before {
+          margin-right: 0;
+          margin-bottom: 0.15rem;
         }
       }
     }
