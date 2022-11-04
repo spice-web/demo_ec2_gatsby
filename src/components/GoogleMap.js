@@ -1,7 +1,45 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import { StaticImage } from 'gatsby-plugin-image';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+const AnyReactComponent = ({ text }) => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        transform: "translate(-50%, calc(-100% - 10px))",
+      }}
+    >
+      <div
+        style={{
+          padding: "5px",
+          backgroundColor: "white",
+          wordBreak: "keep-all",
+          // backgroundImage: "url('images/logo.png)'",
+          // backgroundSize: "contain",
+          // backgroundPosition: "center center",
+          // display: "block"
+        }}
+      >
+        {text}
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          top: "100%",
+          left: "50%",
+          transform: "translate(-50%, 0)",
+          width: 0,
+          height: 0,
+          borderStyle: "solid",
+          borderWidth: "10px 10px 0px 10px",
+          borderColor: "white transparent transparent transparent",
+        }}
+      />
+    </div>
+  );
+};
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -26,8 +64,9 @@ class SimpleMap extends Component {
             //マーカーの緯度と経度
             lat = { 35.786203 }
             lng = { 140.369366 }
-            text = "マーカー"
-          />
+            text = {"サンパーキング"}
+          >
+          </AnyReactComponent>
         </GoogleMapReact>
       </div>
     );

@@ -18,7 +18,7 @@ const MoreInfoPage = ( {data} ) => (
     <Seo title="ご予約でお困りの場合" />
     <PageTitle>ご予約でお困りの場合</PageTitle>
 
-<div className="content__wrap">
+  <div className="content__wrap content__pd">
     <Wrap>
       <div className={styles.rsvFaq}>
     {/* 開閉パーツ */}

@@ -22,7 +22,7 @@ const InformationPage = ({ data }) => {
     <Layout>
       <Seo title='HOME' />
       <PageTitle>INFORMATION<span>新着情報</span></PageTitle>
-      <div className="content__wrap">
+      <div className="content__wrap content__pd">
       <div className={Styles.inner}>
 
       {/* コンテナ */}
@@ -31,7 +31,7 @@ const InformationPage = ({ data }) => {
         {data.allMicrocmsInformation.edges.map(({ node }) => (
           <div className={Styles.article}>
               <div className={Styles.title}>
-                <Link to={node.informationId}>
+                <Link to={`/information/${node.informationId}`}>
                   {node.title}
                 </Link>
               </div>
@@ -39,7 +39,7 @@ const InformationPage = ({ data }) => {
                 <ul className={Styles.footer}>
                   <li>{node.date}</li>
                   <li>{node.category.category}</li>
-                  <li className={Styles.more}><Link to={node.informationId}>MORE&nbsp;&#x226B;</Link></li>
+                  <li className={Styles.more}><Link to={`/information/${node.informationId}`}>MORE&nbsp;&#x226B;</Link></li>
                 </ul>
           </div>
         ))}

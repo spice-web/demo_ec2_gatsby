@@ -34,6 +34,7 @@ export default function SlickSlider() {
           src="../images/slider/slider001_sp.webp"
           alt="キャンペーン実施中！予約する"
           quality="40"
+          width={480}
         />
       </Link>
       <Link to="/advantage">
@@ -41,6 +42,7 @@ export default function SlickSlider() {
           src="../images/slider/slider002_sp.webp"
           alt="様々なオプション"
           quality="40"
+          width={480}
         />
       </Link>
       <Link to="/price">
@@ -48,6 +50,7 @@ export default function SlickSlider() {
           src="../images/slider/slider003_sp.webp"
           alt="選ばれる理由"
           quality="40"
+          width={480}
         />
       </Link>
     </Slider>

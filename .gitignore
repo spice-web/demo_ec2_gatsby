@@ -76,3 +76,5 @@ yarn-error.log
 
 event.JSON
 sponsor-logo.js
+
+*.old

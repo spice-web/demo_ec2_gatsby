@@ -50,7 +50,7 @@ const PriceChart = () => {
               <dl className="flex__wrap text-center price-chart__row">
                 <dt className="text-white bdr-white bg--dark-green flex-col-3 text-sm text-medium is-center day">{e.node.date}</dt>
                 <dd className="bg--light-yellow text-deep-gr bdr-white flex-col-3 text-sm is-center price--normal">{e.node.price}<span className="text-xs">円</span></dd>
-                <dd className="bdr-white text-md text-medium flex-col-3 bg--light-gray text-pk price--sale">{e.node.sale}<span className="en">円</span></dd>
+                <dd className="bdr-white text-lg text-medium flex-col-3 bg--light-gray text-pk price--sale">{e.node.sale}<span className="en">円</span></dd>
               </dl>
             ))}
           </div>

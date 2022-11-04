@@ -60,6 +60,7 @@ export default function SlickSliderWide() {
           alt="キャンペーン実施中！予約する"
           className="slide-images"
           quality="40"
+          width={1144}
         />
       </Link>
       <Link to="/advantage">
@@ -68,6 +69,7 @@ export default function SlickSliderWide() {
           alt="様々なオプション"
           className="slide-images"
           quality="40"
+          width={1144}
         />
       </Link>
       <Link to="/price">
@@ -76,6 +78,7 @@ export default function SlickSliderWide() {
           alt="選ばれる理由"
           className="slide-images"
           quality="40"
+          width={1144}
         />
       </Link>
 

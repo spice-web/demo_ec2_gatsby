@@ -18,7 +18,7 @@
     letter-spacing: 0.2em;
     font-weight: $regular;
     font-size: 1.25rem;
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 0;
     @include mq() {
       font-size: 2rem;
       padding: 3rem 4rem 0;
@@ -32,6 +32,15 @@
         font-size: 1rem;
       } 
       display: block;
+    }
+    &.underLine {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 0.99px solid #404040;
+      @include mq() {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+      }
     }
   }
   &--greenLabel {

@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -9,6 +8,8 @@ import Complete from "../components/complete"
 import * as styles from '../styles/_form.module.scss'
 
 import Faq from "../components/faq"
+import Wrap from "../components/grayContainer"
+
 
 export default function FormPage() {
   const [value, setValue] = React.useState({})
@@ -47,13 +48,13 @@ export default function FormPage() {
 
   <Layout>
     <Seo title="お問い合わせ" />
-
+    <h2 class="headline--title">INQUIRY<span>お問い合わせ</span></h2>
     {/* コンテナ */}
-    <div className="content__wrap">
+    <div className="content__wrap content__pd">
       <div className="content__inner --sm">
 
         {/* 表題ブロック */}
-        <h2 class="headline--title">INQUIRY<span>お問い合わせ</span></h2>
+        
 
         <p className="pg--md mb--lg">各店舗のご利用・ご予約に関するお問い合せ、サンパーキング各店舗のご利用・ご予約に関するお問い合わせは、下記メールフォームまたはサン予約センター TEL. 0476-33-1123 にてお受けいたします。 ご質問・ご要望にはなるべく迅速にお答えいたします。<br />なお、ご入力いただきましたお客様の個人情報および記述内容は、内容の確認ならびにお客様への回答のために 必要な範囲でのみ利用させていただきます。</p>
 
@@ -65,7 +66,7 @@ export default function FormPage() {
       </div>
       {/* content__inner */}
 
-        <div className="content__inner --sm bg--light-gray dbr-md">
+        <Wrap>
 
         {/* フォームブロック */}
         <div className="content__inner--xs">
@@ -136,20 +137,21 @@ export default function FormPage() {
         </div>
         {/* フォームブロック */}
 
-      </div>
+      </Wrap>
       {/* content__inner */}
 
-      <div id="faq" className="content__inner --sm bg--light-gray dbr-md">
-        <div className="content__inner--xs">
-          <h3 className="text-deep-gr text-center">よくあるお問い合わせ</h3>
-          
+      <Wrap>
+        <div id="faq">
+          <div className="content__inner--xs">
+            <h3 className="text-deep-gr text-center mb--md">よくあるお問い合わせ</h3>
 
-          <Faq />
+            <Faq />
 
-
-
+          </div>
         </div>
-      </div>
+      </Wrap>
+
+
       {/* content__inner */}
 
     </div>
