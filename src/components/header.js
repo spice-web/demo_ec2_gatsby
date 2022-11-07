@@ -3,8 +3,15 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Menu from "./menu"
 
+import { Helmet } from "react-helmet"
+
 const Header = () => (
   <>
+  {/* サイト全体を noindex */}
+    <Helmet>
+      <meta name="robots" content="noindex, follow" />
+      <meta name="googlebot" content="noindex, follow" />
+    </Helmet>
     <header class="header" id="header">
       <div className="header__wrap">
         <div className="header__left">
@@ -47,6 +54,10 @@ const Header = () => (
         {/* ドロワーメニュー */}
         <div class="drawer__menu">
           <div className="drawer__inner">
+            <StaticImage src="../images/logo_w.svg"
+            alt="サンパーキング"
+            width={188}
+            className="drawer__logo" />
             <Menu />
           </div>
         </div>

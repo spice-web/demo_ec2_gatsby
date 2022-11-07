@@ -30,7 +30,7 @@ const Sidebar = () => {
         {posts.map(({ node }) => {
             return (
               <div className={Styles.title}>
-                <Link to={`/${node.informationId}`}>
+                <Link to={`/information/${node.informationId}`}>
                   {node.title}
                 </Link>
               </div>

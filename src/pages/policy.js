@@ -12,7 +12,7 @@ const PolicyPage = () => (
     <Seo title="サイトポリシー・プライバシーポリシー" />
     <PageTitle>POLICY<span>サイトポリシー・プライバシーポリシー</span></PageTitle>
 
-    <div className="content__wrap">
+    <div className="content__wrap content__pd">
       <div className="content__inner --sm text-light text-sm">
         <h3 className="label --pd-sm bg--green bdr-xs text-medium mb--md">サイトポリシー・プライバシーポリシー</h3>
         <p className="mb--sm">このウェブサイトは株式会社サン・ポート（以下当社といいます）が運営しています。 お客様が当サイトをご利用になる際に、前もってご了解いただきたいことや参考になることを説明します。</p>

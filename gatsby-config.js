@@ -33,7 +33,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/faviconV2.png`, // This path is relative to the root of the site.
       },
     },
 
@@ -68,8 +68,25 @@ module.exports = {
           endpoint: 'voice',
         }],
       },
-    }
+    },
     // microCMSの設定ここまで
+
+    // sitemap設定
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        // output: `/sitemap-path.xml`, ファイル名 
+        // exclude: [`/thanks`, `/category/*`],　除く
+      }
+    },
+
+    // 不要なlodashライブラリを削除
+    {
+      resolve: `gatsby-plugin-lodash`,
+      options: {
+        disablesFeatures: [`shorthand`]
+      },
+    },
 
   ],
 }

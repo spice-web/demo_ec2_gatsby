@@ -44,6 +44,8 @@ function Seo({ description, title, children }) {
 }
 
 Seo.defaultProps = {
+  lang: `ja`, // lang: `en` → `ja` に変更
+  meta: [],
   description: ``,
 }
 

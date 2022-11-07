@@ -31,7 +31,8 @@ const GuidePage = () => (
   <Layout>
     <Seo title="ご利用案内" />
     <PageTitle>USER GUIDE<span>ご利用案内</span></PageTitle>
-    <div className="content__wrap">
+
+    <div className="content__wrap content__pd">
     <Wrap>
       <h3 className="sec__ttl">アクセスについて</h3>
       <div className="mb--xl">
@@ -177,7 +178,7 @@ const GuidePage = () => (
       {/* inner white */}
 
       <div style={flow} className="text-center text-deep-gr" >
-        <Link to="/" className="text-xs text-medium">ご予約でお困りの方はこちら</Link>
+        <Link to="/rsv-faq" className="text-xs text-medium">ご予約でお困りの方はこちら</Link>
       </div>
 
       

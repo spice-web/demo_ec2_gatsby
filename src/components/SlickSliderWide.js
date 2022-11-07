@@ -44,14 +44,6 @@ export default function SlickSliderWide() {
           initialSlide: 1,
           centerMode: false,
         }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-        }
       }
     ]
   };
@@ -67,6 +59,8 @@ export default function SlickSliderWide() {
           src="../images/slider/slider001_pc.webp"
           alt="キャンペーン実施中！予約する"
           className="slide-images"
+          quality="40"
+          width={1144}
         />
       </Link>
       <Link to="/advantage">
@@ -74,6 +68,8 @@ export default function SlickSliderWide() {
           src="../images/slider/slider002_pc.webp"
           alt="様々なオプション"
           className="slide-images"
+          quality="40"
+          width={1144}
         />
       </Link>
       <Link to="/price">
@@ -81,6 +77,8 @@ export default function SlickSliderWide() {
           src="../images/slider/slider003_pc.webp"
           alt="選ばれる理由"
           className="slide-images"
+          quality="40"
+          width={1144}
         />
       </Link>
 

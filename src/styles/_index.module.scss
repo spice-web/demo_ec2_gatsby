@@ -5,7 +5,6 @@
   &__wrap {
     background: $light-green;
     padding: 0 0 40px 0;
-    @extend .mb--xl;
     @include mq() {
       padding: 40px 0;
     }
@@ -65,7 +64,7 @@
   }
   &__cate {
     color: #FFF;
-    background: $green;
+    background: $dark-green;
     margin-right: 0.5rem;
     padding: 0 0.33rem;
     text-align: center;
@@ -214,14 +213,21 @@
 ============================== */
 .sns {
   &__wrap {
-    @extend .flex__wrap--md;
+    @extend .flex__wrap--sm;
+    @extend .mb--lg;
+    // max-width: 400px;
+    margin: 0 auto;
+    @include mq() {
+      max-width: 100%;
+    }
   }
   &__box {
     &_line {
-      @extend .flex-col-2--md;
+      @extend .flex-col-2--sm;
       background: $dark-green;
       text-align: center;
       border-radius: 1rem;
+      margin-bottom: 1rem;
     }
     &_tw {
       @extend .sns__box_line;
@@ -315,6 +321,9 @@
     }
   }
   .textBox {
+    font-feature-settings: "palt";
+    font-weight: $medium;
+    letter-spacing: 0.05em;
     @include mq(sm) {
       margin-bottom: 0.5rem;
     }
@@ -341,8 +350,86 @@
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1rem;
+    text-align: justify;
+    text-justify: auto;
+    display: flex;
+    flex-direction: column;
+    @include mq(sm) {
+      font-size: 1rem;
+    }
   }
   .textBox {
     color: $deep-green;
+    margin-bottom: 0.5rem;
+    font-feature-settings: "palt";
+    font-weight: $medium;
+    letter-spacing: 0.05em;
+    @include mq(sm) {
+    }
   }
+  .imgBox {
+    margin-top: auto;
+  }
+  .selectImg {
+    object-fit: contain!important;
+  }
+  .note {
+    font-size: 0.625rem;
+    line-height: 1.5;
+    color: $text-color;
+    display: block;
+  }
+}
+
+.otherInfo__title {
+  /* UI Properties */
+  text-align: center;
+  font-weight: $regular;
+  letter-spacing: 5.6px;
+  opacity: 1;
+  @extend .text-md;
+  @extend .mb--md;
+}
+
+.otherService {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 1fr;
+  gap: 0.5rem;
+  padding: 1rem;
+  &Title {
+    @extend .text-dark-gr;
+    @extend .text-medium;
+    @extend .text-sm;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  &Text {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    @extend .text-sm;
+    align-self: start;
+  }
+  &Img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    justify-self: end;
+  }
+  @include mq(sm) {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 1fr;
+    &Title {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+    &Text {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      align-self: start;
+    }
+    &Img {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  } 
 }

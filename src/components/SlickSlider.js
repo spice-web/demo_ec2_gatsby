@@ -19,41 +19,8 @@ export default function SlickSlider() {
     centerMode: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1424,
-        settings: {
-          centerMode: true,
-          centerPadding: "120px",
-          slidesToShow: 1,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 1224,
-        settings: {
-          centerMode: true,
-          centerPadding: "120px",
-          slidesToShow: 1,
-        }
-      },
-      {
-        breakpoint: 850,
-        settings: {
-          slidesToShow: 1,
-          initialSlide: 1,
-          centerMode: false,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-        }
-      }
-    ]
+    initialSlide: 1,
+    centerMode: false,
   };
 
   return (
@@ -66,19 +33,24 @@ export default function SlickSlider() {
         <StaticImage
           src="../images/slider/slider001_sp.webp"
           alt="キャンペーン実施中！予約する"
-
+          quality="40"
+          width={480}
         />
       </Link>
       <Link to="/advantage">
         <StaticImage
           src="../images/slider/slider002_sp.webp"
           alt="様々なオプション"
+          quality="40"
+          width={480}
         />
       </Link>
       <Link to="/price">
         <StaticImage
           src="../images/slider/slider003_sp.webp"
           alt="選ばれる理由"
+          quality="40"
+          width={480}
         />
       </Link>
     </Slider>

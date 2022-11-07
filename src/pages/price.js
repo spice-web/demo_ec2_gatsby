@@ -8,19 +8,25 @@ import { StaticImage } from "gatsby-plugin-image";
 import PriceChart from "../components/price_chart-sub"
 // css
 import * as Styles from "../styles/_price.module.scss"
+
+// 予約リンク
+const reserve = "/"
+
 const PricePage = () => (
   <Layout>
     <Seo title="料金について" />
     
     <PageTitle>PRICE<span>料金について</span></PageTitle>
 
-  <div className="content__wrap">
+  <div className="content__wrap content__pd">
     <div className="content__inner --md">
       <div className="mb--lg">
-        <StaticImage src="../images/top/banner_campaign.jpg"  className="br_md"></StaticImage>
-        <StaticImage src="../images/top/banner_campaign_sp.jpg" className="br_maxmd"></StaticImage>
+        <Link to={reserve}>
+          <StaticImage src="../images/top/banner_campaign.jpg"  className="br_md"></StaticImage>
+          <StaticImage src="../images/top/banner_campaign_sp.jpg" className="br_maxmd"></StaticImage>
+        </Link>
       </div>
-      <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br-sp" /><span className="text-pk">安心の総額表示</span>で<br className="br-sp" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
+      <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
       <PriceChart />
     </div>
   </div>
@@ -97,7 +103,7 @@ const PricePage = () => (
 
       <div>
         <h4 className="sec__ttl">ご来店時は、現金、カード、PayPayなどで<span className="nowrap">お支払い可能</span></h4>
-        <p className="pg--sm-lgt mb--sm">JCB・VISA・ダイナース・DC・UFJ・ニコス・MASTER・AMEX・UC・Orico・CF・セゾン・イオン・JAL・TS CUBIC・OMC・楽天カード ・銀聯カード・PayPayなど、各種決済が可能です。</p>
+        <p className="pg--sm-lgt mb--md text-center">JCB・VISA・ダイナース・DC・UFJ・ニコス・MASTER・AMEX・UC・<br />Orico・CF・セゾン・イオン・JAL・TS CUBIC・OMC・楽天カード ・銀聯カード・PayPayなど、各種決済が可能です。</p>
         
         <div className={Styles.card_sec}>
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/jcb.png" alt="JCB" /></div>
@@ -135,7 +141,7 @@ const PricePage = () => (
 
       <h3 className="headline--greenLabel">マイル・ポイント</h3>
       <h4 className="sec__ttl">マイル・ポイントを<br />ためるコースもあります</h4>
-      <p className="pg--sm-lgt mb--sm text-center--md">提携マイル・ポイントをためるには、料金ご精算時にマイル積算希望の旨をお申し出ください。<br className="br_md"/>※通常料金でのご利用のみマイル対象となります。</p>
+      <p className="pg--sm-lgt mb--md text-center--md">提携マイル・ポイントをためるには、料金ご精算時にマイル積算希望の旨をお申し出ください。<br className="br_md"/>※通常料金でのご利用のみマイル対象となります。</p>
 
       <div className={Styles.mile}>
         <div className={Styles.box}>

@@ -27,7 +27,7 @@ img {
       }
     
       .drawer__btn {
-        width: 90px;
+        width: 60px;
         height: 60px;
       }
     }
@@ -248,8 +248,8 @@ img {
     top: 0;
     right: 0;
     z-index: 10002;
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     // background-color: #ddd;
     overflow: hidden;
     cursor: pointer;
@@ -276,10 +276,14 @@ img {
         &:nth-child(1) { transform: translate(-50%, 0) rotate(45deg); }
         &:nth-child(2) { transform: translate(-50%, -50%); opacity: 0; }
         &:nth-child(3) { transform: translate(-50%, 0) rotate(-45deg);}
-
       }
     }
   } // btn
+
+  // logo
+  &__logo {
+    margin-bottom: 2rem;
+  }
 
 
 
@@ -310,6 +314,7 @@ img {
     max-width: 600px;
     margin: 0 auto;
     color: #fff;
+    padding: 4rem 0 5rem;
   }
   &__def {
     padding: 1rem 0;

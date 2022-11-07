@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo";
 
+import Wrap from "../components/grayContainer"
+
 // GoogleMap
 import GoogleMap from "../components/GoogleMap"
 
@@ -12,23 +14,23 @@ import * as Styles from "../styles/_about.module.scss"
 const AboutPage = () => (
   <Layout>
     <Seo title="サンパーキンについて" />
-    <div className="content__wrap">
+    <h2 class="headline--title">COMPANY PROFILE<span>会社情報</span></h2>
+    <div className="content__wrap content__pd">
       <div className="content__inner --sm">
-        <h2 class="headline--title">COMPANY PROFILE<span>会社情報</span></h2>
         <p className="pg--md">株式会社サン･ポートは1985年に成田空港利用者用駐車場「サンパーキング」を開業し、 地域とともに事業を展開・発展させてまいりました。 創設より、私たちは駐車場を出発地と目的地をつなぐ「心安らぐアクセスポイント」と考え、 駐車システムとサービスの充実に力を注ぎ、地域ナンバーワンのサービス産業を目指してまいりました。 今後も成熟した車社会の中で、お客様をあたたかくお迎えする「港」となるために、 未来のモビリティ･ライフを見つめながら、新たなチャレンジを続けてまいります。</p>
       </div>
 
-      <div className="content__inner --sm bg--light-gray dbr-md">
+      <Wrap>
         <div className="content__inner--xs">
-          <h2 class="headline--title">Philosophy<span>私たちの理念</span></h2>
+          <h2 class="headline--title mb--md underLine">Philosophy<span>私たちの理念</span></h2>
           <p className="pg--md">私たちは、お客様への最高のサービスを提供することを使命と考え行動し、仕事を通じて自己研鑽に努め、能力の向上と共に人生の目標を達成し、事業のグローバルな展開によって社会の発展に貢献します。<br />
           <br />
           ●お客様の笑顔は最高の褒め言葉です 。私たちは、お客様が笑顔で出発し笑顔でお帰りいただくためにどうしたらよいのかを常に考えています。 私たちの笑顔にお客様が笑顔で応えてくれたとき、それは最高の褒め言葉となり私たちは笑顔になれるのです。</p>
         </div>
-      </div>
+      </Wrap>
     </div>
 
-    <div className="content__wrap bg--gray text-white">
+    <div className="content__wrap content__pd bg--gray text-white">
       <h2 class="headline--title text-white">COMPANY PROFILE<span>会社情報</span></h2>
 
       {/*  */}
