@@ -106,6 +106,7 @@ const IndexPage = ( { data } ) => (
         alt="送迎用バス"
         className={styles.hero_bus}
         loading="lazy"
+        width="650"
       />
     </div>
 
