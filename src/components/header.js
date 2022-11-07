@@ -42,17 +42,17 @@ const Header = () => (
 
         {/* ドロワーメニュー */}
         {/* ハンバーガーアイコン */}
-        <div class="drawer__btn">
+        {/* <div class="drawer__btn">
           <span></span>
           <span></span>
           <span></span>
           <div class="cover"></div>
-        </div>
+        </div> */}
         {/* オーバーレイ背景 */}
-        <div class="drawer__bg"></div>
+        {/* <div class="drawer__bg"></div> */}
 
         {/* ドロワーメニュー */}
-        <div class="drawer__menu">
+        {/* <div class="drawer__menu">
           <div className="drawer__inner">
             <StaticImage src="../images/logo_w.svg"
             alt="サンパーキング"
@@ -60,7 +60,9 @@ const Header = () => (
             className="drawer__logo" />
             <Menu />
           </div>
-        </div>
+        </div> */}
+
+        <Menu width={250}/>
       </div>
 
 
