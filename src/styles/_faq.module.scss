@@ -4,7 +4,7 @@
 
 // 旅のリンク集
 .linkOther {
-  dl {
+  dl:not(:last-child) {
     margin-bottom: 3rem;
   }
 }

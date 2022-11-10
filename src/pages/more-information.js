@@ -24,7 +24,7 @@ const MoreInfoPage = ( {data} ) => (
 
 <div className="content__wrap content__pd">
     <Wrap>
-      <h3 className="sec__ttl mb--md">マイル・ポイント</h3>
+      <h3 className="sec__ttl mb--md" id="point">マイル・ポイント</h3>
       <p className="text-normal text-light mb--md lh175">提携マイル・ポイントを貯めるには、料金ご精算時にカウンターで「マイル積算希望」とお申し出ください。お申し出がない場合はマイルが積算されませんのでご注意ください。マイルはご利用日の約２～３ヶ月後に積算されます。 ※通常料金でのご利用で、駐車料金のみがマイルの対象となります。）</p>
 
       <div className="flex__wrap--lg">
@@ -61,7 +61,7 @@ const MoreInfoPage = ( {data} ) => (
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl mb--md">メンバーズカード</h3>
+      <h3 className="sec__ttl mb--md" id="members_card">メンバーズカード</h3>
       <p className="text-normal text-light mb--md lh175">
       スタンプが貯まれば貯まるほど、カード、特典条件がランクUP!カード記載のIDを入力するWEB予約でメンバー料金が適用されます。
       </p>
@@ -164,7 +164,7 @@ const MoreInfoPage = ( {data} ) => (
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl">お客さまの声</h3>
+      <h3 className="sec__ttl link__inner">お客さまの声</h3>
       {data.allMicrocmsVoice.edges.map(({ node }) => (
         <div className={styles.voice__wrap}>
           <div className={styles.customer}>
@@ -182,7 +182,7 @@ const MoreInfoPage = ( {data} ) => (
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl">旅のリンク集</h3>
+      <h3 className="sec__ttl" id="travel">旅のリンク集</h3>
       <LinkOther />
     </Wrap>
 

@@ -5,8 +5,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import ButtonReserve from "./button-reserve"
 import ButtonFoot from "./button-footer"
 
+// フッターナビ
 import Menu from "./menu"
-
+// スクロール
+import Scroll from './scroll'
 const reserve = "https://www.sunparking.co.jp/form/rsv1.php"
 
 const Footer = () => (
@@ -23,9 +25,9 @@ const Footer = () => (
 
         <p className="text-center">当日はお電話でお問い合せください</p>
         <div className="flex__wrap--md text-center mb--sm">
-          <p>サン予約センター</p>
+          <p className="text-center">サン予約センター</p>
           <h3 className="text-lg">TEL.0476-33-1123</h3>
-          <p>［受付時間］9:00〜18:00</p>
+          <p className="text-center">［受付時間］9:00〜18:00</p>
         </div>
 
         {/* 予約ボタン */}
@@ -38,6 +40,7 @@ const Footer = () => (
 
 
     <footer className="footer">
+      <Scroll showBelow={250} />
       <div className="footer__inner">
         <div className="footer__head">
           <h2 className="footer__logo"><StaticImage src="../images/logo.svg" /></h2>

@@ -126,6 +126,9 @@ img {
       // padding: 0 0.5rem;
       &.active {
         z-index: 1;
+        &.nonActive {
+          z-index: 10003;
+        }
       }
     }
   }
@@ -242,10 +245,9 @@ img {
 //ドロワー
 .drawer {
   &__btn {
-
     // button
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 0;
     z-index: 10002;
     width: 60px;
@@ -253,7 +255,9 @@ img {
     // background-color: #ddd;
     overflow: hidden;
     cursor: pointer;
-
+    .fixed & {
+      top: 0;
+    }
     span {
       display: block;
       width: 30px;
@@ -268,7 +272,6 @@ img {
       &:nth-child(2) { transform: translate(-50%, -50%); }
       &:nth-child(3) { transform: translate(-50%, 10px); }
     }
-
     &__close {
       @extend .drawer__btn;
       span {
@@ -284,7 +287,9 @@ img {
   &__logo {
     margin-bottom: 2rem;
   }
+.noneScroll .cover span {
 
+}
 /* ================================
   メニュー
 ================================ */
@@ -304,6 +309,10 @@ img {
     &.active {
       transform: translateX(0);
       opacity: 0.95;
+      &.nonActive {
+        transform: translateX(100%);
+        opacity: 0;    
+      }
     }
   } // menu
 
@@ -350,73 +359,4 @@ img {
 }
 .close {
   @extend .cover;
-}
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #005b99;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: white;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-  text-decoration: none;
-  outline: none;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
 }
