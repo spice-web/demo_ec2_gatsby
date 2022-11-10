@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Menu from "./menu"
+// import Menu from "./menu"
 
 import { Helmet } from "react-helmet"
-
+import Menu   from "./menu-header"
 const Header = () => (
   <>
   {/* サイト全体を noindex */}
@@ -42,17 +42,17 @@ const Header = () => (
 
         {/* ドロワーメニュー */}
         {/* ハンバーガーアイコン */}
-        <div class="drawer__btn" id="drawerBtn">
+        {/* <div class="drawer__btn" id="drawerBtn">
           <span></span>
           <span></span>
           <span></span>
           <div className="cover" id="coverOption"></div>
-        </div>
+        </div> */}
         {/* オーバーレイ背景 */}
-        <div class="drawer__bg"></div>
+        {/* <div class="drawer__bg"></div> */}
 
         {/* ドロワーメニュー */}
-        <div class="drawer__menu">
+        {/* <div class="drawer__menu">
           <div className="drawer__inner">
             <StaticImage src="../images/logo_w.svg"
             alt="サンパーキング"
@@ -60,7 +60,8 @@ const Header = () => (
             className="drawer__logo" />
             <Menu />
           </div>
-        </div>
+        </div> */}
+        <Menu />
       </div>
 
 

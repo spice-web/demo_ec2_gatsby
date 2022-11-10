@@ -244,6 +244,11 @@ img {
 
 //ドロワー
 .drawer {
+  &__wrap {
+    @include mq() {
+      display: none;
+    }
+  }
   &__btn {
     // button
     position: absolute;
@@ -287,9 +292,7 @@ img {
   &__logo {
     margin-bottom: 2rem;
   }
-.noneScroll .cover span {
 
-}
 /* ================================
   メニュー
 ================================ */
