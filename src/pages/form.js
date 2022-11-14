@@ -143,7 +143,7 @@ export default function FormPage() {
       <Wrap>
         <div id="faq">
           <div className="content__inner--xs">
-            <h3 className="text-deep-gr text-center mb--md">よくあるお問い合わせ</h3>
+            <h3 className="text-deep-gr text-center mb--md" id="faq">よくあるお問い合わせ</h3>
 
             <Faq />
 

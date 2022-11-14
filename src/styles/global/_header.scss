@@ -20,9 +20,7 @@ img {
         left: 0;
         margin-top: 0;
         z-index: 101;
-      }
-
-    
+      }    
       .header__wrap {
         height: 60px;
       }
@@ -242,6 +240,43 @@ img {
       width: 100%;
       text-align: center;
       line-height: 58px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:before {
+        content: "";
+        display: inline-block;
+        object-fit: contain;
+        background-position: center right;
+        margin-right: 0.15rem;
+        width: 25px;
+        height: 25px;
+      }
+      &.price {
+        &:before {
+          background-image: url('../../images/icon/price.svg');
+        }
+      }
+      &.option {
+        &:before {
+          background-image: url('../../images/icon/option.svg');
+        }
+      }
+      &.advantage {
+        &:before {
+          background-image: url('../../images/icon/search.svg');
+        }
+      }
+      &.more-information {
+        &:before {
+          background-image: url('../../images/icon/bag.svg');
+        }
+      }
+      &.guide {
+        &:before {
+          background-image: url('../../images/icon/car.svg');
+        }
+      }
     }
   }
 }

@@ -38,11 +38,15 @@ const MoreInfoPage = ( {data} ) => (
           <p>ためたマイルを、航空券や電子マネーなどの豊富な特典と交換できるJALのマイレージプログラム。マイルの換算率が高いので当駐車場をよくご利用される方にオススメです。</p>
         </div>
         <div className={styles.mile_box}>
-          <StaticImage src="../images/more-information/b4_002.png"
-            alt="JALカード ショッピングマイル"
-            style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}}
-            className='br_maxlg' />
+          <div className="br_maxlg">
+            <StaticImage src="../images/more-information/b4_002.png"
+              alt="JALカード ショッピングマイル"
+              style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}}
+              className='br_maxlg' />
+          </div>
+          <div className="br_lg"> 
             <StaticImage src="../images/more-information/b4_005.png" alt="JALカード ショッピングマイル" className="br_lg" />
+          </div>
           <h4 className="text-smd">JALカード<br className="br_lg"/>ショッピングマイル</h4>
           <p>ショッピングマイル・プレミアムに入会すると、日常でのカードご利用分はもちろん、月づきの定期的なお支払いでもショッピングマイルが2倍たまります。</p>
           <div className="note text-center">※ショッピングマイル・プレミアム（有料）にご入会の場合</div>
@@ -163,8 +167,9 @@ const MoreInfoPage = ( {data} ) => (
 
     </Wrap>
 
+{/* 5件のみ表示 */}
     <Wrap>
-      <h3 className="sec__ttl link__inner">お客さまの声</h3>
+      <h3 className="sec__ttl link__inner" id="voice">お客さまの声</h3>
       {data.allMicrocmsVoice.edges.map(({ node }) => (
         <div className={styles.voice__wrap}>
           <div className={styles.customer}>

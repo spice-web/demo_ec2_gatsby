@@ -14,7 +14,7 @@ const ButtonReserve = ({ bg }) => (
         <p className="note text-center">受付は9:00～18:00<br />年中無休で承っております</p>
       </div>
       <div className={styles.button__reserve} data-type="fax" >
-        <Link to="https://www.sunparking.co.jp/images/fax.pdf" className={styles.button__fax} target="_blank">FAXで予約</Link>
+        <Link to="/pdf/fax.pdf" className={styles.button__fax} target="_blank">FAXで予約</Link>
         <p className={styles.number}>FAX.0476-33-1331</p>
         <p className="note text-center">申込み用紙がダウンロードできます<br />必要事項をご記入の上お送りください</p>
       </div>

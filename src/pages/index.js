@@ -260,6 +260,7 @@ const IndexPage = ( { data } ) => (
                   src="../images/top/line.png"
                   alt="Line公式アカウント"
                   loading="lazy"
+                  width={265}
                 >
                 </StaticImage>
               </div>
@@ -267,7 +268,7 @@ const IndexPage = ( { data } ) => (
                 <StaticImage
                   src="../images/top/icon-line.svg"
                   alt="Line公式アカウント"
-                  width="50"
+                  width={50}
                   loading="lazy"
                   >
                 </StaticImage>LINEで簡単予約!
@@ -282,6 +283,7 @@ const IndexPage = ( { data } ) => (
                   src="../images/top/twitter.png"
                   alt="Twitter公式アカウント"
                   loading="lazy"
+                  width={295}
                   >
                 </StaticImage>
               </div>
@@ -289,7 +291,7 @@ const IndexPage = ( { data } ) => (
                 <StaticImage
                   src="../images/top/icon-tw.svg"
                   alt="Line公式アカウント"
-                  width="50"
+                  width={50}
                   loading="lazy"
                 >
                 </StaticImage>今すぐフォロー！
@@ -309,7 +311,7 @@ const IndexPage = ( { data } ) => (
             </Link>
           </li>
           <li className="flex-col-2 flex-col-4--sm mb--md">
-            <Link to=""><StaticImage src="../images/parts/button/how_pay.png" alt="色々あります。お支払い方法" loading="lazy" /></Link>
+            <Link to="/price#payment"><StaticImage src="../images/parts/button/how_pay.png" alt="色々あります。お支払い方法" loading="lazy" /></Link>
             </li>
           <li className="flex-col-2 flex-col-4--sm mb--md">
             <Link to="/more-information#voice"><StaticImage src="../images/parts/button/voice.png" alt="届いてます。お客様の声" loading="lazy" /></Link>
@@ -333,20 +335,20 @@ const IndexPage = ( { data } ) => (
           <div className="flex-col-3--sm bdr-xs bdr-dark-green mb--sm">
             <dl className={styles.otherService}>
               <dt className={styles.otherServiceTitle} >CHUBB海外旅行保険</dt>
-              <dd className={styles.otherServiceText}><Link to="/option#hoken">当日、その場で海外旅行保険に加入できます。</Link></dd>
+              <dd className={styles.otherServiceText}><Link to="/option#insurance">当日、その場で海外旅行保険に加入できます。</Link></dd>
               <dd className={styles.otherServiceImg}>
-                <a href="https://www.sunparking.co.jp/narita-insurance.html" target="_blank" rel="noregerrer noopener">
+                <Link href="/option#insurance">
                   <StaticImage src="../images/top/link02.jpg" alt="CHUBB海外旅行保険サービス" loading="lazy" />
-                </a>
+                </Link>
               </dd>
             </dl>
           </div>
           <div className="flex-col-3--sm bdr-xs bdr-dark-green mb--sm">
             <dl className={styles.otherService}>
             <dt className={styles.otherServiceTitle} >JAF</dt>
-              <dd className={styles.otherServiceText}>もしもの時の頼れる味方！会員優待施設も充実。</dd>
+              <dd className={styles.otherServiceText}><Link to="/option#jaf">もしもの時の頼れる味方！会員優待施設も充実。</Link></dd>
               <dd className={styles.otherServiceImg}>
-                <StaticImage src="../images/top/link03.jpg" alt="JAFサービス" loading="lazy" />
+              <Link to="/option#jaf"><StaticImage src="../images/top/link03.jpg" alt="JAFサービス" loading="lazy" /></Link>
               </dd>
             </dl>
           </div>

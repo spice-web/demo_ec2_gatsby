@@ -87,8 +87,8 @@ const PricePage = () => (
     {/* オプションサービス */}
 
   <div className="content__wrap">
-    <div className="content__inner">
-      <h3 className="headline--greenLabel">お支払い方法</h3>
+    <div className="content__inner --md">
+      <h3 className="headline--greenLabel" id="payment">お支払い方法</h3>
       <div>
         <h4 className="sec__ttl">WEB予約でカード事前決済可能</h4>
         <p className="pg--sm-lgt mb--sm">VISA・MasterCard・JCB・AMEX・DinersではWEB予約時にカード決済ができます。カード決済のタイミングはWEBで予約された時点で決済されます。</p>

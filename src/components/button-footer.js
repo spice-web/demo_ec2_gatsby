@@ -8,7 +8,7 @@ const ButtonReserve = () => (
   <>
     <div className={styles.button__reserve__wrap}>
       <div className={styles.button__reserve}>
-        <Link to="../images/pdf/reservation_form.pdf" className={styles.button__footer} target="_blank">FAXで予約</Link>
+        <Link to="/pdf/reservation_form.pdf" className={styles.button__footer} target="_blank">FAXで予約</Link>
       </div>
       <div className={styles.button__reserve}>
         <Link to="/rsv-faq" className={styles.button__footer}>予約でお困りの方</Link>

@@ -33,7 +33,7 @@ const Header = () => (
           <p className="header__right--time">［営業時間］5:00～22:30 成田空港最終便到着まで営業</p>
           <ul className="header-menu__wrap">
             <li className="header-menu__item access"><Link to="/guide">アクセス</Link></li>
-            <li className="header-menu__item faq"><Link to="/faq">Q&A</Link></li>
+            <li className="header-menu__item faq"><Link to="/form#faq">Q&A</Link></li>
             <li className="header-menu__item voice"><Link to="/voice">お客様の声</Link></li>
             <li className="header-menu__item info"><Link to="/information">新着情報</Link></li>
             <li className="header-menu__item about"><Link to="/about">企業情報</Link></li>
@@ -70,19 +70,19 @@ const Header = () => (
     <div className="header-nav__wrap">
       <ul className="header-nav__list">
         <li className="header-nav__item">
-          <Link to="/price">料金について</Link>
+          <Link to="/price" className="price">料金について</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/option">オプション</Link>
+          <Link to="/option" className="option">オプション</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/advantage">選ばれる理由</Link>
+          <Link to="/advantage" className="advantage">選ばれる理由</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/more-information">関連情報</Link>
+          <Link to="/more-information" className="more-information">関連情報</Link>
         </li>
         <li className="header-nav__item">
-          <Link to="/guide">ご利用案内</Link>
+          <Link to="/guide" className="guide">ご利用案内</Link>
         </li>
       </ul>
     </div>
