@@ -5,7 +5,6 @@ import "../styles/_menu.scss"
 
 const Menu = () => (
 
-
   <div className="navigation__wrap">
     <ul class="navigation__def">
       <li className="navigation__dttl"><Link to="/price">料金について</Link></li>

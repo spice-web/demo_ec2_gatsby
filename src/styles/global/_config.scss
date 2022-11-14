@@ -43,14 +43,14 @@ $bold: 700;
 // 650pxまで
 .br_maxsm {
   display: block;
-  @include mq(max-sm) {
+  @include mq(sm) {
     display: none;
   }
 }
 // 650px以上
 .br_sm {
   display: block;
-  @include mq(sm) {
+  @include mq(max-sm) {
     display: none;
   }
 }
@@ -372,11 +372,9 @@ $bold: 700;
 a {
   text-decoration: none;
   color: inherit;
-
   &:hover {
     opacity: 0.75;
   }
-
   &:visited {
     color: inherit;
   }
@@ -393,8 +391,8 @@ a.text-deep-gr {
 
 .link {
   &__inner {
-    padding-top: 130px;
-    margin-top:  -130px;
+    padding-top: 80px;
+    margin-top:  -80px;
   }
 }
 /* ==============================

@@ -48,19 +48,18 @@ const OptionPage = () => (
 {/* 空港お届けサービス */}
    <div className="content__wrap content__pd">
     <Wrap>
-      <h2 className="sec__ttl link__inner" id="service">空港お届けサービス</h2>
-      <div className={styles.flexTop}>
-        <p className={styles.leftBox}>お車を成田空港へお届けするサービスをご用意しています。<br />「出発時駐車場経由空港引取り」は出発時駐車場受付で成田空港までスタッフが同乗してお届けするサービスです。<br />「お帰り時空港お車お届け」は駐車場をご利用いただき、お帰りに成田空港までお届けします。<br />※第３ターミナルでの引取り・お届けはできません。</p>
+      <h2 className="sec__ttl link__inner" id="delivery">空港お届けサービス</h2>
+      <div className={ styles.flexTop }>
+        <p className={ styles.leftBox }>お車を成田空港へお届けするサービスをご用意しています。<br />「出発時駐車場経由空港引取り」は出発時駐車場受付で成田空港までスタッフが同乗してお届けするサービスです。<br />「お帰り時空港お車お届け」は駐車場をご利用いただき、お帰りに成田空港までお届けします。<br />※第３ターミナルでの引取り・お届けはできません。</p>
         <figure>
           <StaticImage
             src="../images/option/b2_001.jpg"
             alt="空港お届けサービス"
             quality="100"
-            style={{width:'100%'}}
+            style={{ width:'100%' }}
           />
         </figure>
       </div>
-
 
       <dl className={styles.fee}>
         <dt>出発時 駐車場経由空港引取り</dt>

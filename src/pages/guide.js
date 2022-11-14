@@ -34,7 +34,7 @@ const GuidePage = () => (
 
     <div className="content__wrap content__pd">
     <Wrap>
-      <h3 className="sec__ttl">アクセスについて</h3>
+      <h3 className="sec__ttl link__inner" id="#access">アクセスについて</h3>
       <div className="mb--xl">
         <GoogleMap />
       </div>
@@ -104,7 +104,7 @@ const GuidePage = () => (
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl">ご利用の流れ</h3>
+      <h3 id="#flow" className="sec__ttl link__inner">ご利用の流れ</h3>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
           <div className="label bg--green text-lg text-medium text-left ls01 bdr-xs">&#10102;予約する</div>
@@ -242,7 +242,8 @@ const GuidePage = () => (
 
     {/* お帰りになったら */}
     <Wrap>
-      <h3 className="sec__ttl">お帰りになったら</h3>
+      <h3 id="last" className="sec__ttl link__inner">お帰りになったら</h3>
+      <div className={styles.lastFlowTitle}><Link to="#terminal2">第2,第3ターミナルの方はこちら</Link></div>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
         <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10102;各お迎え場所に移動</div>
@@ -257,7 +258,7 @@ const GuidePage = () => (
         <StaticImage src="../images/guide/closingMap01.jpg" />
       </div>
       <div style={flow}>
-      <p className="label bg--gray --pd-xd text-smd">成田空港第2ターミナル お迎え場所</p>
+      <p id="terminal2" className="label bg--gray --pd-xd text-smd">成田空港第2ターミナル お迎え場所</p>
         <StaticImage src="../images/guide/closingMap02.jpg" />
       </div>
 
@@ -273,7 +274,7 @@ const GuidePage = () => (
 
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
-        <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10104;送迎バスがお迎えします</div>
+        <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10104;到着専用ターミナルに到着</div>
           <p className="text-light text-normal mb--sm">お荷物を受け取り、 屋根付プラットフォームにご用意したお車にすぐにご乗車いただけます。</p>
         </div>
         <div className="flex-col-2--md">
@@ -281,7 +282,7 @@ const GuidePage = () => (
         </div>
       </div>
 
-      <p className="sec__ttl text-medium">おつかれさまでした。<span className="nowrap">またのご利用をお待ちしております！</span></p>
+      <p className="sec__ttl text-medium">おつかれさまでした。<br className="br_maxmd" />またのご利用を<br className="br_maxsm" />お待ちしております！</p>
 
     </Wrap>
 
