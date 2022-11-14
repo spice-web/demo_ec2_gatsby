@@ -10,6 +10,8 @@ import * as styles from '../styles/_form.module.scss'
 import Faq from "../components/faq"
 import Wrap from "../components/grayContainer"
 
+// smoothscroll
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 export default function FormPage() {
   const [value, setValue] = React.useState({})
@@ -61,7 +63,7 @@ export default function FormPage() {
         <p className="text-center text-deep-gr mb--xs"><Link to="/policy">&gt;&gt;&gt;サイトポリシー</Link></p>
         <p className="text-center text-xs mb--lg">必須の欄は必ずご記入の上お問い合わせください。 漢字・カナは全角、半角数字、半角ハイフンをご使用ください。</p>
 
-        <p className="text-center text-deep-gr mb--xxl">お問い合わせの前に<Link to="#faq" className="link_deco">よくあるお問い合わせ</Link>のご確認もお願いします。</p>
+        <p className="text-center text-deep-gr mb--xxl">お問い合わせの前に<button className={styles.linkBox} onClick={() => scrollTo('#faq')}>よくあるお問い合わせ</button>のご確認もお願いします。</p>
 
       </div>
       {/* content__inner */}

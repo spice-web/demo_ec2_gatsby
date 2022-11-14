@@ -5659,6 +5659,13 @@
     "minimatch" "^3.1.2"
     "sitemap" "^7.0.0"
 
+"gatsby-plugin-smoothscroll@^1.2.0":
+  "integrity" "sha512-wfIK06xwbNx91nHVg1YJwlLUJc0EmfWqV8KgvlNr6gFa9pqMx5Mprdp5jDRloAi3+9K0dVCybPO8FfaZ0i4HgA=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-smoothscroll/-/gatsby-plugin-smoothscroll-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "smoothscroll-polyfill" "^0.4.4"
+
 "gatsby-plugin-typescript@^4.24.0":
   "integrity" "sha512-d7OnNETBLXfMVKdYEm+MSpeX04zb/LoU+JoeovlJ45b9ovh7dYTCOBMnka54LnOU0rJR+JCirWDWpTBaXaBpnw=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-typescript/-/gatsby-plugin-typescript-4.24.0.tgz"
@@ -9921,6 +9928,11 @@
   "integrity" "sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg=="
   "resolved" "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz"
   "version" "4.2.0"
+
+"smoothscroll-polyfill@^0.4.4":
+  "integrity" "sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg=="
+  "resolved" "https://registry.npmjs.org/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.4.tgz"
+  "version" "0.4.4"
 
 "snake-case@^3.0.4":
   "integrity" "sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg=="

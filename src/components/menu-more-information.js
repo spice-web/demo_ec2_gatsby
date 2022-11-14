@@ -2,26 +2,27 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import "../styles/_menu.scss"
+// smoothscroll
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
+const MenuMoreInformation = () => (
 
-
-const Menu = () => (
   <div className="navigation__wrap">
     <ul class="navigation__def">
       <li className="navigation__dttl"><Link to="/price">料金について</Link></li>
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/option">オプション</Link></li>
+      <li className=""><Link to="/option" className="navigation__dttl">オプション</Link></li>
       <li className="navigation__desc">
         <ul class="navigation__list option">
-          <li class="navigation__item"><Link to="/option#service">・空港お届けサービス</Link></li>
-          <li class="navigation__item"><Link to="/option#maintenance">・洗車・カーメンテナンス</Link></li>
-          <li class="navigation__item"><Link to="/option#insurance">・海外・国内旅行保険</Link></li>
-          <li class="navigation__item"><Link to="/option#electrification">・電気自動車充電サービス</Link></li>
-          <li class="navigation__item"><Link to="/option#rental">・レンタルモバイル</Link></li>
-          <li class="navigation__item"><Link to="/option#delivery" class="link">・空港宅配サービス</Link></li>
-          <li class="navigation__item"><Link to="/option#jaf" class="link">・JAF</Link></li>
+          <li class="navigation__item"><Link to="/option#delivery">空港お届けサービス</Link></li>
+          <li class="navigation__item"><Link to="/option#maintenance">洗車・カーメンテナンス</Link></li>
+          <li class="navigation__item"><Link to="/option#insurance">海外・国内旅行保険</Link></li>
+          <li class="navigation__item"><Link to="/option#electrification">電気自動車充電サービス</Link></li>
+          <li class="navigation__item"><Link to="/option#rental">レンタルモバイル</Link></li>
+          <li class="navigation__item"><Link to="/option#takuhai">空港宅配サービス</Link></li>
+          <li class="navigation__item"><Link to="/option#jaf">JAF</Link></li>
         </ul>
       </li>
     </ul>
@@ -32,13 +33,13 @@ const Menu = () => (
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/more-information">関連情報</Link></li>
+      <li className="navigation__dttl"><button onClick={() => scrollTo('#top')}>関連情報</button></li>
       <li className="navigation__desc">
         <ul className="navigation__list">
-          <li><Link to="/">・マイル・ポイント</Link></li>
-          <li><Link to="/">・メンバーズカード</Link></li>
-          <li><Link to="/">・お客さまの声</Link></li>
-          <li><Link to="/">・旅のリンク集</Link></li>
+          <li><button onClick={() => scrollTo('#point')}>・マイル・ポイント</button></li>
+          <li><button onClick={() => scrollTo('#members_card')}>・メンバーズカード</button></li>
+          <li><button onClick={() => scrollTo('#voice')}>・お客さまの声</button></li>
+          <li><button onClick={() => scrollTo('#travel')}>・旅のリンク集</button></li>
         </ul>
       </li>
     </ul>
@@ -86,4 +87,4 @@ const Menu = () => (
 
 )
 
-export default Menu
+export default MenuMoreInformation

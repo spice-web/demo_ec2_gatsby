@@ -17,6 +17,9 @@
   background: #FFF;
   border-radius: 0.625rem;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @extend .mb--md;
   @extend .mb0--lg;
   @include mq(lg){

@@ -37,3 +37,13 @@ input, textarea {
   gap: 5px;
   margin: 0 auto 2rem;
 }
+
+// リンク
+.linkBox {
+  background: $dark-green;
+  color: #fff!important;
+  margin: 0 0.25rem;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+}

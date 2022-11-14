@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/layout-more-information"
 import Seo from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -22,18 +22,21 @@ const MoreInfoPage = ( {data} ) => (
     <Seo title="サンパーキンについて" />
     <PageTitle>MORE INFORMATION<span>関連情報</span></PageTitle>
 
-<div className="content__wrap content__pd">
+<div className="content__wrap content__pd" id="top">
     <Wrap>
       <h3 className="sec__ttl mb--md link__inner" id="point">マイル・ポイント</h3>
       <p className="text-normal text-light mb--md lh175">提携マイル・ポイントを貯めるには、料金ご精算時にカウンターで「マイル積算希望」とお申し出ください。お申し出がない場合はマイルが積算されませんのでご注意ください。マイルはご利用日の約２～３ヶ月後に積算されます。 ※通常料金でのご利用で、駐車料金のみがマイルの対象となります。）</p>
 
       <div className="flex__wrap--lg">
         <div className={styles.mile_box}>
-          <StaticImage src="../images/more-information/b4_001.png"
-            alt="JALマイレージバンク"
-            style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}}
-            className='br_maxlg' />
-          <StaticImage src="../images/more-information/b4_004.png" alt="JALマイレージバンク" className="br_lg" />
+          <div className="br_maxlg">
+            <StaticImage src="../images/more-information/b4_001.png"
+              alt="JALマイレージバンク"
+              style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}} />
+          </div>
+          <div className="br_lg"> 
+            <StaticImage src="../images/more-information/b4_004.png" alt="JALマイレージバンク" />
+          </div>
           <h4 className="text-smd">JAL<br className="br_lg"/>マイレージバンク</h4>
           <p>ためたマイルを、航空券や電子マネーなどの豊富な特典と交換できるJALのマイレージプログラム。マイルの換算率が高いので当駐車場をよくご利用される方にオススメです。</p>
         </div>
@@ -41,22 +44,24 @@ const MoreInfoPage = ( {data} ) => (
           <div className="br_maxlg">
             <StaticImage src="../images/more-information/b4_002.png"
               alt="JALカード ショッピングマイル"
-              style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}}
-              className='br_maxlg' />
+              style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}} />
           </div>
           <div className="br_lg"> 
-            <StaticImage src="../images/more-information/b4_005.png" alt="JALカード ショッピングマイル" className="br_lg" />
+            <StaticImage src="../images/more-information/b4_005.png" alt="JALカード ショッピングマイル" />
           </div>
           <h4 className="text-smd">JALカード<br className="br_lg"/>ショッピングマイル</h4>
           <p>ショッピングマイル・プレミアムに入会すると、日常でのカードご利用分はもちろん、月づきの定期的なお支払いでもショッピングマイルが2倍たまります。</p>
           <div className="note text-center">※ショッピングマイル・プレミアム（有料）にご入会の場合</div>
         </div>
         <div className={styles.mile_box}>
-          <StaticImage src="../images/more-information/b4_003.png"
+          <div className="br_maxlg">
+            <StaticImage src="../images/more-information/b4_003.png"
             alt="TS CUBIC カード"
-            style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}}
-            className='br_maxlg' />
-          <StaticImage src="../images/more-information/b4_006.png" alt="TS CUBIC カード" className="br_lg" />
+            style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}} />
+          </div>
+          <div className="br_lg">
+            <StaticImage src="../images/more-information/b4_006.png" alt="TS CUBIC カード" className="br_lg" />
+          </div>
           <h4 className="text-smd">TS CUBIC<br className="br_lg"/>カード</h4>
           <p>毎日をもっと快適、お得、安心に。 くらしをトータルサポートする、トヨタのクレジットカードです。駐車料金のお支払いをポイント提携カードでお支払いいただくとポイントが溜まります。</p>
         </div>

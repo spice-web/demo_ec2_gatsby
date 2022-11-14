@@ -1,4 +1,4 @@
-@import '_config.scss';
+@import '_variable.scss';
 
 // 上部グレー部分
 .footer-gray{
@@ -14,6 +14,7 @@
   &__inner {
     width: 93%;
     padding: 4rem 0;
+    margin: 0 auto;
   }
 }
 .footer {

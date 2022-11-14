@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import FooterFixed from "./footer-fixed"
 
 // import "./layout.css"
 
@@ -46,6 +47,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       </div>
       <Footer />
+      <FooterFixed />
     </>
   )
 }

@@ -5,7 +5,8 @@ import {slide as Menu} from 'react-burger-menu'
 import { StaticImage } from "gatsby-plugin-image"
 import "../styles/_menu.scss"
 
-
+// smoothscroll
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 // make a new context
 const MyContext = React.createContext();
@@ -80,13 +81,13 @@ const Navigation = () => {
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/more-information">関連情報</Link></li>
+      <li className="navigation__dttl" onClick={() => scrollTo('#top')}><button onClick={ctx.toggleMenu }>関連情報</button></li>
       <li className="navigation__desc">
         <ul className="navigation__list">
-          <li><Link to="/more-information#point" onClick={ctx.toggleMenu}>・マイル・ポイント</Link></li>
-          <li><Link to="/more-information#members_card" onClick={ctx.toggleMenu}>・メンバーズカード</Link></li>
-          <li><Link to="/more-information#voice" onClick={ctx.toggleMenu}>・お客さまの声</Link></li>
-          <li><Link to="/more-information#travel" onClick={ctx.toggleMenu}>・旅のリンク集</Link></li>
+          <li onClick={() => scrollTo('#point')}><button onClick={ctx.toggleMenu } >・マイル・ポイント</button></li>
+          <li onClick={() => scrollTo('#members_card')}><button onClick={ctx.toggleMenu } >・メンバーズカード</button></li>
+          <li onClick={() => scrollTo('#voice')}><button onClick={ctx.toggleMenu } >・お客さまの声</button></li>
+          <li onClick={() => scrollTo('#travel')}><button onClick={ctx.toggleMenu } >・旅のリンク集</button></li>
         </ul>
       </li>
     </ul>

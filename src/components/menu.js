@@ -57,13 +57,13 @@ const Menu = () => (
       <li className="navigation__dttl"><Link to="/form">お問い合わせ</Link></li>
       <li className="navigation__desc none-footer">
         <ul className="navigation__list">
-          <li><Link to="/">・よくあるお問い合わせ</Link></li>
+          <li><Link to="/faq">・よくあるお問い合わせ</Link></li>
         </ul>
       </li>
     </ul>
 
     <ul class="navigation__def none-drawer faq">
-      <li className="navigation__dttl"><Link to="/form#faq">よくあるお問い合わせ</Link></li>
+      <li className="navigation__dttl"><Link to="/faq">よくあるお問い合わせ</Link></li>
     </ul>
 
     <ul class="navigation__def">

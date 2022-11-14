@@ -1,39 +1,54 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { StaticImage
+ } from "gatsby-plugin-image";
 import Layout from "../components/layout"
 import Seo from "../components/seo";
-
+import PageTitle from "../components/PageTitle";
 import Wrap from "../components/grayContainer_sm";
 // css
-import * as Styles from "../styles/_recruit.module.scss"
+import * as styles from "../styles/_recruit.module.scss"
 
 const RecruitPage = () => (
   <Layout>
     <Seo title="求人情報" />
-    <h2 class="headline--title">RECRUIT<span>求人情報</span></h2>
-    <div className="content__wrap">
+    
+    <PageTitle>RECRUIT<span>求人情報</span></PageTitle>
+    <div className="content__wrap content__pd">
       <div className="content__inner --sm">
         <p className="mb--xl pg--md">「やりがい」と「充実感」が感じられる職場です。 元気があって活力のある方からのエントリーを待っています。</p>
 
         <h3 className="label --pd-sm bg--green bdr-xs text-medium mb--md">駐車場事業の仕事内容</h3>
 
-        <Wrap>
-          <dl className={Styles.desc}>
-            <dt>送迎業務</dt>
-            <dd>各駐車場から各空港間のマイクロバスによるお客様の送迎を行います。</dd>
-            <dt>駐車管理</dt>
-            <dd>車の移動等、大切なお客様のお車を管理します。</dd>
-            <dt>カウンターでの受付・事務等の接客業務</dt>
-            <dd>お客様との接客や電話対応などを行います</dd>
-            <dt>予約センター業務</dt>
-            <dd>予約センターにてお客様からの電話予約受付及びコンピュータ入力を行ないます。</dd>
-          </dl>
-        </Wrap>
+        <div className={styles.recruitWrap}>
+          <div className={styles.recruitInner}>
+            <dl className={styles.desc}>
+              <dt>送迎業務</dt>
+              <dd>各駐車場から各空港間のマイクロバスによるお客様の送迎を行います。</dd>
+              <dt>駐車管理</dt>
+              <dd>車の移動等、大切なお客様のお車を管理します。</dd>
+              <dt>カウンターでの受付・事務等の接客業務</dt>
+              <dd>お客様との接客や電話対応などを行います</dd>
+              <dt>予約センター業務</dt>
+              <dd>予約センターにてお客様からの電話予約受付及びコンピュータ入力を行ないます。</dd>
+            </dl>
+          </div>
+
+          <div className={styles.descFlex}>
+          <StaticImage
+             src="../images/recruit/recruit001.jpg"
+             className={styles.descFlexBox}
+          />
+          <StaticImage
+             src="../images/recruit/recruit002.jpg"
+             className={styles.descFlexBox}
+          />
+          </div>
+        </div>
 
         <h3 className="label --pd-sm bg--green bdr-xs text-medium mb--md">募集要項</h3>
         <Wrap>
-          <h4 className="text-center text-deep-gr mb--md">正社員</h4>
-          <dl className={Styles.recruiting}>
+          <h4 className="text-center text-deep-gr mb--md text-md">正社員</h4>
+          <dl className={styles.recruiting}>
             <dt>応募資格</dt>
             <dd>25歳～40歳位の方</dd>
             <dt>募集職種</dt>
@@ -57,8 +72,8 @@ const RecruitPage = () => (
         </Wrap>
 
         <Wrap>
-          <h4 className="text-center text-deep-gr mb--md">シーズン・スタッフ（パート・アルバイト）</h4>
-          <dl className={Styles.recruiting}>
+          <h4 className="text-center text-deep-gr mb--md text-md">シーズン・スタッフ（パート・アルバイト）</h4>
+          <dl className={styles.recruiting}>
             <dt>応募資格</dt>
             <dd>25歳～40歳位の方</dd>
             <dt>募集職種</dt>

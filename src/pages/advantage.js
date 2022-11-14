@@ -38,7 +38,7 @@ const AdvantagePage = () => (
       </div>
 
       <h4 className={styles.headline}>料金の比較</h4>
-      <p className="pg--md mb--sm">
+      <p className="text-normal text-light mb--sm">
       家族4人（大人2人、子供2人）4泊5日で成田空港をご利用になる場合を比較するとサンパーキング成田店が安い！</p>
       <div className="scroll">
         <StaticImage
@@ -56,7 +56,7 @@ const AdvantagePage = () => (
 
       <h4 className={styles.headline}>
       駐車場を使うと他の交通機関に比べて<span className="nowrap">「高い」と考えていませんか？</span></h4>
-      <p className="pg--md">
+      <p className="text-normal text-light mb--sm">
       サンパーキング成田店の料金は、他の交通機関と比べてもお安いんです。ご自宅からサンパーキングまで車で移動すれば重い荷物をご自分で運ぶ距離もわずかです。小さなお子様やお年寄りがご一緒の場合ならなおのこと快適です。
       </p>
 
@@ -104,7 +104,7 @@ const AdvantagePage = () => (
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl">駐車場でありながら 洗車は専門店並み。 手洗い洗車受注率98%</h3>
+      <h3 className="sec__ttl">駐車場でありながら<span className="nowrap">洗車は専門店並み。</span><br />手洗い洗車受注率98%</h3>
 
       <div className="flex__wrap mb--md">
         <p className="pg--md flex-col-2--md">Keeperコーティングの代理店で、有資格者が在籍しているので、駐車場でありながら洗車は専門店レベル。お出かけ中の時間を利用して洗車するので待ち時間もありません。 また、公式LINEのお友だち登録で洗車無料クーポンや、定期的な割引クーポンもありおトクに利用できます。</p>
@@ -115,18 +115,28 @@ const AdvantagePage = () => (
         </div>
       </div>
 
-      <StaticImage src="../images/advantage/logo_keeper.jpg" className="br_sm"/>
-      <StaticImage src="../images/advantage/logo_keeper_wide.jpg" className="br_maxsm" />
+      <a href="https://www.keepercoating.jp/proshop/chiba/city625/05287/" target="_blank">
+        <div className="br_maxsm">
+          <StaticImage src="../images/advantage/logo_keeper.jpg" alt="keeper pro shop"/>
+        </div>
+        <div className="br_sm">
+          <StaticImage src="../images/advantage/logo_keeper_wide.jpg" alt="keeper pro shop" />
+        </div>
+      </a>
     </Wrap>
 
     <Wrap>
       <h3 className="sec__ttl">第一印象が最高に良い接客</h3>
       <div className="flex__wrap">
         <p className="flex-col-2--md pg--md --mb0--md">
-          お客様重視のサングループでは、首都圏で唯一となる専属での予約センターの部門を設けており、オペレーターが専属でお問合せなどの電話を懇切丁寧にご案内しております。 社員、アルバイトに関わらず新人全員、全店で入社前研修を受け、当社で仕事をする心構え・社内規定・お客様の車両の取扱ルールなどを学びます。この研修を受けずしてサンパーキングのスタッフとして現場に出ることはできません。 また、お客様アンケートなどのご意見を真摯に受け止め、待合室の清掃や、スタッフの身だしなみ、接客のクオリティ向上にも力を入れております。
+          お客様重視のサングループでは、首都圏で唯一となる専属での予約センターの部門を設けており、オペレーターが専属でお問合せなどの電話を懇切丁寧にご案内しております。社員、アルバイトに関わらず新人全員、全店で入社前研修を受け、当社で仕事をする心構え・社内規定・お客様の車両の取扱ルールなどを学びます。この研修を受けずしてサンパーキングのスタッフとして現場に出ることはできません。また、お客様アンケートなどのご意見を真摯に受け止め、待合室の清掃や、スタッフの身だしなみ、接客のクオリティ向上にも力を入れております。
         </p>
         <div className="flex-col-2--md">
-          <StaticImage src="../images/advantage/member.jpg" style={{width:'100%'}}/>
+          <StaticImage
+            src="../images/advantage/member.jpg"
+            style={{width:'100%'}}
+            alt="接客のクオリティ向上にも力を入れております。"
+          />
         </div>
       </div>
     </Wrap>
@@ -138,19 +148,23 @@ const AdvantagePage = () => (
         空港ターミナルまで直行の送迎バスで迷うことなし！マイクロバス保有台数も成田空港No.1でお待たせしません！ サングリーンのシャトルバスはお客様も驚くほどの高回転。その秘訣は、全てのバスが無線で交信し常に場所を把握しているから。重たい荷物のバスへの積み下ろしもスタッフが対応します。 当然無料送迎です！
         </p>
         <div className="flex-col-2--md">
-          <StaticImage src="../images/advantage/bus.jpg" />
+          <StaticImage src="../images/advantage/bus.jpg"
+          alt="スムーズな無料送迎！"/>
         </div>
       </div>
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl">空港アクセスに 最短な駐車場</h3>
+      <h3 className="sec__ttl">空港アクセスに<br className="br_maxmd" />最短な駐車場</h3>
       <div className="flex__wrap mb--lg">
         <p className="flex-col-2--md pg--md --mb0--md">
         成田ICを降りてまっすぐ！空港通り沿いの交差点に位置しているので、建物も目立ちわかりやすい＆入りやすい。 東関東自動車道「成田I.C.」料金所の「成田市内」を出て、国道295号を「空港方面」へお進みください。 サンパーキング成田店は「成田I.C.」より約3分、サンレッドガレージは「成田I.C.」より約5分です。
         </p>
         <div className="flex-col-2--md">
-          <StaticImage src="../images/advantage/building.jpg" />
+          <StaticImage
+            src="../images/advantage/building.jpg"
+            alt="空港アクセスに最短な駐車場"
+          />
         </div>
       </div>
       <StaticImage src="../images/advantage/map.jpg" alt="サンパーキング周辺マップ" />
