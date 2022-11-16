@@ -230,22 +230,22 @@ const IndexPage = ( { data } ) => (
         </ul>
         
 
-        <ul className={styles.optionBox}>
-          <li className={styles.textBox}>10日目以降の<span className="text-pk">長期利用は 1日わずか220円</span>長期の出張や海外旅行でも安心！</li>
-          <StaticImage
-            src="../images/top/option05.jpg" imgClassName={styles.selectImg} alt="長期の出張や海外旅行でも安心！" loading="lazy" className={styles.imgBox} />
+        <li className={styles.optionBox}>
+          <li className={styles.textBox}>10日目以降の<span className="text-pk">長期利用は1日わずか220円</span>長期の出張や海外旅行でも安心！</li>
+          <li className={styles.imgBox}></li><StaticImage
+            src="../images/top/option05.jpg" imgClassName={styles.selectImg} alt="長期の出張や海外旅行でも安心！" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}>キーパープロショップだから<span className="text-pk">専門店レベルの洗車クオリティ!</span></li>
-          <StaticImage src="../images/top/option06.jpg" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" className={styles.imgBox} />
+          <li className={styles.imgBox}><StaticImage src="../images/top/option06.jpg" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}><span className="text-pk">専用マイクロバス</span>で送迎。お帰りはICまで1分!<span className="text-pk">荷物の積み降ろし</span>もスタッフが対応!</li>
-          <StaticImage src="../images/top/option07.jpg" imgClassName={styles.selectImg} alt="成田空港駐車場では最大級の2,000台収容" loading="lazy" className={styles.imgBox} />
+          <li className={styles.imgBox}><StaticImage src="../images/top/option07.jpg" imgClassName={styles.selectImg} alt="成田空港駐車場では最大級の2,000台収容" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}><span className="text-pk">成田空港最終便到着まで営業。</span>夜間早朝の出発＆到着、予定より早い帰着などによる<span className="text-pk">追加料金はありません</span>。</li>
-          <StaticImage src="../images/top/option08.jpg" imgClassName={styles.selectImg} alt="WEB予約だと更に 大幅割引実施中！" loading="lazy" className={styles.imgBox} />
+          <li className={styles.imgBox}><StaticImage src="../images/top/option08.jpg" imgClassName={styles.selectImg} alt="WEB予約だと更に 大幅割引実施中！" loading="lazy" className={styles.imgBox} /></li>
         </ul>
 
       </div>
