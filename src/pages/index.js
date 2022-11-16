@@ -151,7 +151,7 @@ const IndexPage = ( { data } ) => (
 
     <div className="content__wrap content__pd">
       <div className="content__inner --lg mb0">
-        <h3 style={headline} className="sec__ttl">信頼と安心の<br className="br-sp" />サンパーキング成田店<br />
+        <h3 style={headline} className="sec__ttl">信頼と安心の<span className="nowrap">サンパーキング成田店</span><br />
           航空会社や旅行会社、<span className="nowrap">銀行、官公庁など</span><span className="nowrap">約2,000社と契約！</span></h3>
 
         <div className={styles.sponsor}>
