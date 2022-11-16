@@ -22,7 +22,7 @@ const AdvantagePage = () => (
 
     <div className="content__wrap content__pd">
     <Wrap>
-      <h3 className="sec__ttl">成田空港公式駐車場と比較しても<span className="nowrap">断然サンパーキング成田店が</span><span className="nowrap">便利でおトク！</span></h3>
+      <h3 className="sec__ttl">成田空港公式駐車場と<br className="br_maxmd" />比較しても<span className="nowrap">断然サンパーキング成田店が</span><span className="nowrap">便利でおトク！</span></h3>
       <p className="pg--md">
       公式の駐車場は、「高いぶん利便性が高い」と思っていませんか？サンパーキング成田店が選ばれるのには理由があります。実は、料金だけでなく、駐車場に到着してからの手間やサービスにおいても優位性がある事に気づいているお客さまが多くいらっしゃいます。
       </p>
@@ -47,6 +47,7 @@ const AdvantagePage = () => (
           width={880}
           layout="fixed"
         />
+        <div className="result_scroll"></div>
       </div>
     </Wrap>
 

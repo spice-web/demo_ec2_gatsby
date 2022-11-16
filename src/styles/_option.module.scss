@@ -24,16 +24,24 @@
 
 .reservationText {
   background: #32B400;
-  width: 67%;
+  width: 60%;
+  padding-left: 2em;
+  text-indent: -1em;
 }
 .reservationLink {
-  width: 33%;
+  width: 40%;
   background: #FF2C73;
   display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
   align-items: center;
   justify-items: center;
   place-items: center;
   text-align: center;
+  @include mq() {
+    display: flex;
+    justify-content: center;  
+  }
 }
 
 // flex

@@ -218,11 +218,11 @@ const GuidePage = () => (
 
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
-        <div className="label bg--green text-lg text-medium text-left ls01 bdr-xs">&#10104;予約する送迎バスで成田空港へ</div>
+        <div className="label bg--green text-lg text-medium text-left ls01 bdr-xs">&#10104;送迎バスで成田空港へ</div>
           <p className="text-light text-normal mb--sm">第3ターミナルは民間駐車場送迎車両の乗り入れが禁止されています。隣の第2ターミナルへの送迎となります。第2⇔第3ターミナル間は徒歩で10分程度、空港ターミナル間無料循環バスも待ち時間を含めて同程度の時間を要します。余裕を持ってご来場ください。</p>
         </div>
         <div className="flex-col-2--md">
-          <StaticImage src="../images/guide/flow01.jpg" />
+          <StaticImage src="../images/guide/flow03.jpg" />
         </div>
       </div>
 

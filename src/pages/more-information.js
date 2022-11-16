@@ -76,25 +76,25 @@ const MoreInfoPage = ( {data} ) => (
       </p>
       <div className={styles.member}>
         <div className="flex__wrap--sm mb--lg">
-          <div className="inner-pd bg--white bdr-sm flex-col-2--sm mb--sm" data-wrap="member">
+          <div className="bg--white bdr-sm flex-col-2--sm mb--sm pd--sm" data-wrap="member">
             <div className="flex__wrap">
               <StaticImage src="../images/more-information/green.png" className="flex-col-2"/>
               <dl className="flex-col-2">
                 <dt style={green}>GREEN<span className="text-xxs is-block">グリーンカード</span></dt>
-                <dd>ご利用回数10回まで<br /><span style={green}>スタンプ５個で一日無料券</span></dd>
+                <dd>ご利用回数10回まで<br /><span style={green}>スタンプ５個で<span className="nowrap">一日無料券</span></span></dd>
               </dl>
             </div>
           </div>
-          <div className="inner-pd bg--white bdr-sm flex-col-2--sm mb--sm" data-wrap="member">
+          <div className="bg--white bdr-sm flex-col-2--sm mb--sm pd--sm" data-wrap="member">
             <div className="flex__wrap">
               <StaticImage src="../images/more-information/silver.png" className="flex-col-2"/>
               <dl className="flex-col-2">
                 <dt style={silver}>SILVER<span className="text-xxs is-block">シルバーカード</span></dt>
-                <dd>ご利用回数20回まで<br /><span style={silver}>スタンプ５個で一日無料券</span></dd>
+                <dd>ご利用回数20回まで<br /><span style={silver}>スタンプ５個で<span className="nowrap">一日無料券</span></span></dd>
               </dl>
             </div>
           </div>
-          <div className="inner-pd bg--white bdr-sm flex-col-2--sm mb--sm" data-wrap="member">
+          <div className="bg--white bdr-sm flex-col-2--sm mb--sm pd--sm" data-wrap="member">
             <div className="flex__wrap">
               <StaticImage
                 src="../images/more-information/gold.png"
@@ -102,16 +102,16 @@ const MoreInfoPage = ( {data} ) => (
               />
               <dl className="flex-col-2">
                 <dt style={gold}>GOLD<span className="text-xxs is-block">ゴールドカード</span></dt>
-                <dd>ご利用回数50回まで<br /><span style={gold}>スタンプ４個で一日無料券</span></dd>
+                <dd>ご利用回数50回まで<br /><span style={gold}>スタンプ４個で<span className="nowrap">一日無料券</span></span></dd>
               </dl>
             </div>
           </div>
-          <div className="inner-pd bg--white bdr-sm flex-col-2--sm mb--sm" data-wrap="member">
+          <div className="bg--white bdr-sm flex-col-2--sm mb--sm pd--sm" data-wrap="member">
             <div className="flex__wrap">
               <StaticImage src="../images/more-information/black.png" className="flex-col-2"/>
               <dl className="flex-col-2">
                 <dt style={black}>BLACK<span className="text-xxs is-block">ブラックカード</span></dt>
-                <dd>ご利用回数100回超<br /><span style={green}>スタンプ3個で一日無料券</span></dd>
+                <dd>ご利用回数100回超<br /><span style={green}>スタンプ3個で<span className="nowrap">一日無料券</span></span></dd>
               </dl>
             </div>
           </div>
@@ -179,11 +179,11 @@ const MoreInfoPage = ( {data} ) => (
         <div className={styles.voice__wrap}>
           <div className={styles.customer}>
             <h3 className={styles.voice__title}>お客様の声#{node.number}</h3>
-            <p className="pg--md --mb0 text-xs">{node.user_voice}</p>
+            <p className="pg--md --mb0 text-sm">{node.user_voice}</p>
           </div>
           <div className={styles.reply}>
             <h3 className={styles.reply__title}>サンパーキングより</h3>
-            <p className="pg--md --mb0 text-xs">{node.reply}</p>
+            <p className="pg--md --mb0 text-sm">{node.reply}</p>
           </div>
         </div>
       ))}

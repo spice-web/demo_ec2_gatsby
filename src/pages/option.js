@@ -33,8 +33,8 @@ const taR = {
 }
 
 const arrow = {
-  fontSize: '0.5rem',
-  marginLeft: '0.25rem'
+  fontSize: '0.75rem',
+  marginLeft: '0.25rem',
 }
 
 const OptionPage = () => (

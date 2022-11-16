@@ -108,7 +108,10 @@
   &__title {
     color: $deep-green;
     text-align: left;
-    @extend .text-normal;
+    font-size: 0.875rem;
+    @include mq() {
+      font-size: 1.125rem;
+    }
   }
 }
 
@@ -126,7 +129,9 @@
 .customer {
   @include commentWrap;
   margin-left: 50px;
-  margin-right: 50px;
+  @include mq() {
+    margin-right: 50px;
+  }
   background: #FFF;
   margin-bottom: 0.625rem;
   &:before {
@@ -153,13 +158,16 @@
     top: 20px;
     left: -10px;
   }
+
 }
 
 .reply {
   @include commentWrap;
   background: #FFFAC8;
   margin-right: 50px;
-  margin-left: 80px;
+  @include mq() {
+    margin-left: 80px;  
+  }
   &:after {
     content: "";
     position: absolute;
@@ -186,6 +194,10 @@
   }
   &__title {
     color: #193296;
+    font-size: 0.875rem;
+    @include mq() {
+      font-size: 1.125rem;
+    }
   }
 }
 

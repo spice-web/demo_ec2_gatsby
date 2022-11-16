@@ -324,6 +324,8 @@
     font-feature-settings: "palt";
     font-weight: $medium;
     letter-spacing: 0.05em;
+    text-align: justify;
+    text-justify: auto;
     @include mq(sm) {
       margin-bottom: 0.5rem;
     }

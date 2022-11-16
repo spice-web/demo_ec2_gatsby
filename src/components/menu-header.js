@@ -6,7 +6,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../styles/_menu.scss"
 
 
-
 // make a new context
 const MyContext = React.createContext();
 
@@ -49,14 +48,14 @@ const Navigation = () => {
       onStateChange={(state) => ctx.stateChangeHandler(state)}>
     
     <div class="drawer__menu">
-          <div className="drawer__inner">
-    <StaticImage src="../images/logo_w.svg"
-      alt="サンパーキング"
-      width={188}
-      className="drawer__logo" />
+      <div className="drawer__inner">
+        <StaticImage src="../images/logo_w.svg"
+          alt="サンパーキング"
+          width={188}
+          className="drawer__logo" />
   <div className="navigation__wrap">
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/price">料金について</Link></li>
+      <li className="navigation__dttl"><Link to="/price" onClick={ctx.toggleMenu}>料金について</Link></li>
     </ul>
 
     <ul class="navigation__def">
@@ -76,11 +75,11 @@ const Navigation = () => {
 
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/advantage">選ばれる理由</Link></li>
+      <li className="navigation__dttl"><Link to="/advantage" onClick={ctx.toggleMenu}>選ばれる理由</Link></li>
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/more-information">関連情報</Link></li>
+      <li className="navigation__dttl"><Link to="/more-information" onClick={ctx.toggleMenu}>関連情報</Link></li>
       <li className="navigation__desc">
         <ul className="navigation__list">
           <li><Link to="/more-information#point" onClick={ctx.toggleMenu}>・マイル・ポイント</Link></li>
@@ -92,7 +91,7 @@ const Navigation = () => {
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/guide">ご利用案内</Link></li>
+      <li className="navigation__dttl"><Link to="/guide" onClick={ctx.toggleMenu}>ご利用案内</Link></li>
       <li className="navigation__desc">
         <ul className="navigation__list">
           <li><Link to="/guide#access" onClick={ctx.toggleMenu}>・アクセスについて</Link></li>
@@ -103,37 +102,47 @@ const Navigation = () => {
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/form">お問い合わせ</Link></li>
+      <li className="navigation__dttl"><Link to="/form" onClick={ctx.toggleMenu}>お問い合わせ</Link></li>
       <li className="navigation__desc none-footer">
         <ul className="navigation__list">
-          <li><Link to="/faq">・よくあるお問い合わせ</Link></li>
+          <li><Link to="/faq" onClick={ctx.toggleMenu}>・よくあるお問い合わせ</Link></li>
         </ul>
       </li>
     </ul>
 
-    <ul class="navigation__def none-drawer faq">
-      <li className="navigation__dttl"><Link to="/faq">よくあるお問い合わせ</Link></li>
+    <ul class="navigation__def">
+      <li className="navigation__dttl"><Link to="/about" onClick={ctx.toggleMenu}>会社情報</Link></li>
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/about">会社情報</Link></li>
+      <li className="navigation__dttl"><Link to="/information" onClick={ctx.toggleMenu}>新着情報</Link></li>
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/information">新着情報</Link></li>
-    </ul>
-
-    <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/recruit">求人情報</Link></li>
+      <li className="navigation__dttl"><Link to="/recruit" onClick={ctx.toggleMenu}>求人情報</Link></li>
     </ul>
 
     <ul class="navigation__def">
       <li className="navigation__dttl">
-        <Link to="/policy"><span className="none">サイトポリシー・<br className="none-drawer"/>プライバシー</span>ポリシー</Link>
+        <Link to="/policy"><span className="none" onClick={ctx.toggleMenu}>サイトポリシー・<br className="none-drawer"/>プライバシー</span>ポリシー</Link>
       </li>
     </ul>
   </div>
+  <ul className="flex__wrap navigation__sns">
+    <li><a href="https://page.line.me/165idnoa?openQrModal=true" rel="noreferrer noopener" target="_blank"><StaticImage src="../images/icon/line_w.svg" alt="サンパーキング公式LINE" width={24.29} /></a></li>
+    <li><a href="https://twitter.com/sunparking" rel="noreferrer noopener" target="_blank"><StaticImage src="../images/icon/tw_w.svg" alt="サンパーキング公式twitter" width={25.37} /></a></li>
+    <li><a href="https://www.facebook.com/Sunport389" rel="noreferrer noopener" target="_blank"><StaticImage src="../images/icon/fb_w.svg" alt="サンパーキング公式facebook" width={14.16} /></a></li>
+    <li><Link to="/form" onClick={ctx.toggleMenu}>
+      <StaticImage src="../images/icon/mail_w.svg"
+      alt="お問い合わせ"
+      width={24.02}
+      style={{verticalAlign:'middle'}}
+      /></Link></li>
+  </ul>
+
   </div>
+
+
   </div>
     </Menu>
   )

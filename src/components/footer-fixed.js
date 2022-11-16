@@ -9,8 +9,8 @@ const FooterFixed = () => (
   {/* フッター固定ボタン */}
   <ul className="footer-fixed-btn__wrap">
     <li className="footer-fixed-btn__item"><Link to="/price" className="is-block">料金確認</Link></li>
-    <li className="footer-fixed-btn__item"><Link to="{reserve}" className="is-block" target="_blank">WEB予約</Link></li>
-    <li className="footer-fixed-btn__item"><Link to="/access" className="is-block">アクセス</Link></li>
+    <li className="footer-fixed-btn__item"><Link to={reserve} className="is-block" target="_blank">WEB予約</Link></li>
+    <li className="footer-fixed-btn__item"><Link to="/guide" className="is-block">アクセス</Link></li>
   </ul>
   {/* フッター固定ボタン */}
   <ul className="side-fixed-btn__wrap">
