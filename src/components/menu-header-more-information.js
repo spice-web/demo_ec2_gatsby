@@ -49,8 +49,8 @@ const Navigation = () => {
       isOpen={ctx.isMenuOpen}
       onStateChange={(state) => ctx.stateChangeHandler(state)}>
     
-    <div class="drawer__menu">
-          <div className="drawer__inner">
+    <div class="bm-item">
+      <div className="drawer__inner">
     <StaticImage src="../images/logo_w.svg"
       alt="サンパーキング"
       width={188}

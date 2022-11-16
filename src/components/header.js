@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 // import Menu from "./menu"
 
 import { Helmet } from "react-helmet"
-import Menu   from "./menu-header"
+import Menu from "./menu-header"
 const Header = () => (
   <>
   {/* サイト全体を noindex */}

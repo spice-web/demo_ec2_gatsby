@@ -45,34 +45,36 @@ const Navigation = () => {
       outerContainerId={ "outer-container" }
       customBurgerIcon={false}
       isOpen={ctx.isMenuOpen}
-      onStateChange={(state) => ctx.stateChangeHandler(state)}>
+      onStateChange={(state) => ctx.stateChangeHandler(state)}
+    >
     
-    <div class="drawer__menu">
+    <div class="bm-item">
       <div className="drawer__inner">
-        <StaticImage src="../images/logo_w.svg"
-          alt="サンパーキング"
-          width={188}
-          className="drawer__logo" />
-  <div className="navigation__wrap">
-    <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/price" onClick={ctx.toggleMenu}>料金について</Link></li>
-    </ul>
+        <Link to="/">
+          <StaticImage src="../images/logo_w.svg"
+            alt="サンパーキング"
+            width={188}
+            className="drawer__logo" />
+        </Link>
+        <div className="navigation__wrap">
+          <ul class="navigation__def">
+            <li className="navigation__dttl" onClick={ctx.toggleMenu}><Link to="/price">料金について</Link></li>
+          </ul>
 
-    <ul class="navigation__def">
-      <li className=""><Link to="/option" className="navigation__dttl" onClick={ctx.toggleMenu}>オプション</Link></li>
-      <li className="navigation__desc">
-        <ul class="navigation__list option">
-          <li class="navigation__item"><Link to="/option#delivery" onClick={ctx.toggleMenu}>空港お届けサービス</Link></li>
-          <li class="navigation__item"><Link to="/option#maintenance" onClick={ctx.toggleMenu}>洗車・カーメンテナンス</Link></li>
-          <li class="navigation__item"><Link to="/option#insurance" onClick={ctx.toggleMenu}>海外・国内旅行保険</Link></li>
-          <li class="navigation__item"><Link to="/option#electrification" onClick={ctx.toggleMenu}>電気自動車充電サービス</Link></li>
-          <li class="navigation__item"><Link to="/option#rental" onClick={ctx.toggleMenu}>レンタルモバイル</Link></li>
-          <li class="navigation__item"><Link to="/option#takuhai" onClick={ctx.toggleMenu}>空港宅配サービス</Link></li>
-          <li class="navigation__item"><Link to="/option#jaf" onClick={ctx.toggleMenu}>JAF</Link></li>
-        </ul>
-      </li>
-    </ul>
-
+          <ul class="navigation__def">
+            <li className=""><Link to="/option" className="navigation__dttl" onClick={ctx.toggleMenu}>オプション</Link></li>
+            <li className="navigation__desc">
+              <ul class="navigation__list option">
+                <li class="navigation__item"><Link to="/option#delivery" onClick={ctx.toggleMenu}>空港お届けサービス</Link></li>
+                <li class="navigation__item"><Link to="/option#maintenance" onClick={ctx.toggleMenu}>洗車・カーメンテナンス</Link></li>
+                <li class="navigation__item"><Link to="/option#insurance" onClick={ctx.toggleMenu}>海外・国内旅行保険</Link></li>
+                <li class="navigation__item"><Link to="/option#electrification" onClick={ctx.toggleMenu}>電気自動車充電サービス</Link></li>
+                <li class="navigation__item"><Link to="/option#rental" onClick={ctx.toggleMenu}>レンタルモバイル</Link></li>
+                <li class="navigation__item"><Link to="/option#takuhai" onClick={ctx.toggleMenu}>空港宅配サービス</Link></li>
+                <li class="navigation__item"><Link to="/option#jaf" onClick={ctx.toggleMenu}>JAF</Link></li>
+              </ul>
+            </li>
+          </ul>
 
     <ul class="navigation__def">
       <li className="navigation__dttl"><Link to="/advantage" onClick={ctx.toggleMenu}>選ばれる理由</Link></li>

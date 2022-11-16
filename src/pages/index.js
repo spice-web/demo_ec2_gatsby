@@ -114,7 +114,7 @@ const IndexPage = ( { data } ) => (
     <div className="content__wrap content__pd bg--pale-green">
       <div className="content__inner  --lg">
         <div className="br_md">
-          <Link to={reserve}>
+          <Link to={reserve} target="_blank">
             <StaticImage
               src="../images/top/banner_campaign.jpg"
               alt="サンパーキング秋割キャンペーン"
@@ -123,7 +123,7 @@ const IndexPage = ( { data } ) => (
           </Link>
         </div>
         <div className="br_maxmd">
-          <Link to={reserve}>
+          <Link to={reserve} target="_blank">
             <StaticImage
               src="../images/top/banner_campaign_sp.jpg"
               alt="サンパーキング秋割キャンペーン"

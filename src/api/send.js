@@ -12,12 +12,13 @@ export default async function formHandler(req, res) {
     subject: 'サンパーキングwebサイトからのお問い合わせ',
     html: `<p>以下のお問い合わせを受け付けました。回答をお待ち下さい。</p>
     <hr>
-    <p>お名前：${body.formName}</p>
-    <p>フリガナ：${body.formKana}</p>
-    <p>お電話番号：${body.formTel}</p>
-    <p>FAX：${body.formFax}</p>
-    <p>アドレス：${body.formEmail}</p>
-    <p>メッセージ：${body.formTextarea}</p>`,
+    <p>お問合せ先 : ${body.contactUs}</p>
+    <p>お名前 : ${body.formName}</p>
+    <p>フリガナ : ${body.formKana}</p>
+    <p>お電話番号 : ${body.formTel}</p>
+    <p>FAX : ${body.formFax}</p>
+    <p>アドレス : ${body.formEmail}</p>
+    <p>メッセージ : ${body.formTextarea}</p>`,
   }
 
   const response = sgMail.send(mailData)

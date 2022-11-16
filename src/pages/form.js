@@ -82,7 +82,7 @@ export default function FormPage() {
 
             {/* セレクト */}
             <label for="contactUs" >お問い合わせ先</label>
-            <select name="contactUs" size="1">
+            <select name="contactUs" id="contactUs" size="1">
               <option value="" hidden>選択してください</option>
               <option value="1">サンパーキング成田店</option>
               <option value="2">個人情報保護法について</option>
@@ -104,20 +104,20 @@ export default function FormPage() {
 
             {/* 電話番号 */}
             <div class="">
-              <label for="formTel" class="">電話番号（ハイフン無し）</label>
+              <label for="formTel" class="">電話番号（数字のみハイフン無し）</label>
                 <input type="text" id="formTel" pattern="^[0-9]{9,}$" inputmode="numeric" value={value['formTel'] || ``} onChange={handleChange} class="" placeholder="0476331155" />
             </div>
 
             {/* FAX */}
             <div class="">
-              <label for="formFax" class="">FAX番号</label>
-              <input type="text" id="formFax" value={value['formFax'] || ``} onChange={handleChange} class="" placeholder="例：0476-33-1198" />
+              <label for="formFax" class="">FAX番号（数字のみハイフン無し）</label>
+              <input type="text" id="formFax" pattern="^[0-9]{9,}$" inputmode="numeric" value={value['formFax'] || ``} onChange={handleChange} class="" placeholder="0476331198" />
             </div>
 
             {/* メールアドレス */}
             <label for="formEmail" class="">メールアドレス※必須</label>
             <div class="">
-              <input type="email" id="formEmail" value={value['formEmail'] || ``} onChange={handleChange} class="" placeholder="info@sunparking.co.jp" required  />
+              <input type="email" pattern=".+\.[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]" id="formEmail" value={value['formEmail'] || ``} onChange={handleChange} class="" placeholder="メールアドレスを入力してください。" required  />
             </div>
 
             {/* お問い合わせ内容 */}
