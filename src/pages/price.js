@@ -21,14 +21,12 @@ const PricePage = () => (
   <div className="content__wrap content__pd">
     <div className="content__inner --md">
       <div className="mb--lg">
-        <Link to={reserve}>
-          <div className="br_md">
-            <StaticImage src="../images/top/banner_campaign.jpg"  />
-          </div>
-          <div className="br_maxmd">
-            <StaticImage src="../images/top/banner_campaign_sp.jpg" />
-          </div>          
-        </Link>
+        <div className="br_md">
+          <StaticImage src="../images/top/banner_campaign.jpg"  />
+        </div>
+        <div className="br_maxmd">
+          <StaticImage src="../images/top/banner_campaign_sp.jpg" />
+        </div>          
       </div>
       <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
       <PriceChart />
@@ -44,7 +42,7 @@ const PricePage = () => (
           <div className={Styles.box}>
             <figure className={Styles.img}>
               <StaticImage
-                src="../images/price/option003.jpg"
+                src="../images/price/option003.png"
                 alt="洗車・カーメンテナンス"
               />
             </figure>
@@ -70,7 +68,7 @@ const PricePage = () => (
           <div className={Styles.box}>
             <figure className={Styles.img}>
               <StaticImage
-                src="../images/price/option002.jpg"
+                src="../images/price/option002.png"
                 alt="海外・国内旅行保険"
               />
             </figure>

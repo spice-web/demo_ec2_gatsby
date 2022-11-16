@@ -11,9 +11,16 @@
   height: 30px;
 }
 
+//  Button
 .slick-dots {
   bottom: -35px;
 }
+
+.slick-dots li, .slick-dots li button {
+  height: 30px;
+  width: 30px;
+}
+
 .slick-dots li button:before {
   // font-size: 6px;
   line-height: 30px;

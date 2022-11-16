@@ -82,11 +82,11 @@ export default function FormPage() {
 
             {/* セレクト */}
             <label for="contactUs" >お問い合わせ先</label>
-            <select name="contactUs" id="contactUs" size="1">
+            <select value={value['contactUs'] || ``} name="contactUs" id="contactUs" size="1" onChange={handleChange} >
               <option value="" hidden>選択してください</option>
-              <option value="1">サンパーキング成田店</option>
-              <option value="2">個人情報保護法について</option>
-              <option value="3">その他</option>
+              <option value="サンパーキング成田店">サンパーキング成田店</option>
+              <option value="個人情報保護法について">個人情報保護法について</option>
+              <option value="その他">その他</option>
             </select>
 
             {/* お名前 */}
