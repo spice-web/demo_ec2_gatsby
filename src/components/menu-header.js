@@ -28,7 +28,7 @@ const MyProvider = (props) => {
 const Button = () => {
   const ctx = useContext(MyContext)
   return (
-    <button onClick={ctx.toggleMenu} className="drawer__btn">
+    <button onClick={ctx.toggleMenu} className="drawer__btn" aria-label="ナビゲーションの切替">
       <span></span><span></span><span></span>
     </button>
   )

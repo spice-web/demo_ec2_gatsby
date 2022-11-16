@@ -45,7 +45,7 @@ const IndexPage = ( { data } ) => (
     <div className="content__wrap content__pd">
       <div className="content__inner --sm">
 
-        <h3 className="text-center text-normal mb--md">最新情報</h3>
+        <h2 className="text-center text-normal mb--md">最新情報</h2>
 
         {/* 最新記事ループ */}
         <div className={styles.info__wrap}>
@@ -85,7 +85,7 @@ const IndexPage = ( { data } ) => (
         src="../images/top/year.png"
         alt="サンパーキングは今年で創業37年を迎えます"
         className={styles.hero_logo}
-        width="200"
+        width={200}
         loading="lazy"
       />
       <StaticImage
@@ -98,7 +98,7 @@ const IndexPage = ( { data } ) => (
         src="../images/top/airplane.png"
         alt="飛行機イメージ図"
         className={styles.hero_airplane}
-        width="185"
+        width={185}
         loading="lazy"
       />
       <StaticImage
@@ -106,7 +106,7 @@ const IndexPage = ( { data } ) => (
         alt="送迎用バス"
         className={styles.hero_bus}
         loading="lazy"
-        width="650"
+        width={650}
       />
     </div>
 
@@ -176,20 +176,28 @@ const IndexPage = ( { data } ) => (
         <div className={styles.select}>
           <ul className={styles.selectBox}>
             <li className={styles.textBox}>成田ICを降りてまっすぐ！ 成田空港通り交差点前に<span>グリーンの門が目印</span>で、わかりやすい＆入りやすい！</li>
+            <li className={styles.imgBox}>
             <StaticImage
               src="../images/top/select01.jpg" imgClassName={styles.selectImg} alt="当日現地で迷わない" loading="lazy" className={styles.imgBox} />
+            </li>
           </ul>
           <ul className={styles.selectBox}>
             <li className={styles.textBox}><span>24時間警備体制で安心</span>で安心！鍵はセコムの大型金庫で保管！ 預かり時のお車の状態を 動画でチェック！</li>
-            <StaticImage src="../images/top/select02.jpg" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" />
+            <li className={styles.imgBox}>
+              <StaticImage src="../images/top/select02.jpg" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" />
+            </li>
           </ul>
           <ul className={styles.selectBox}>
             <li className={styles.textBox}>成田空港駐車場では<span>最大級の2,000台収容!</span>お仕事が旅行シーズンと重なっても大丈夫！</li>
+            <li className={styles.imgBox}>
             <StaticImage src="../images/top/select03.jpg" imgClassName={styles.selectImg} alt="成田空港駐車場では最大級の2,000台収容" loading="lazy" className={styles.imgBox} />
+            </li>
           </ul>
           <ul className={styles.selectBox}>
             <li className={styles.textBox}><span>予約専用コールセンターで安心！</span>WEB予約だと更に大幅割引実施中！</li>
+            <li className={styles.imgBox}>
             <StaticImage src="../images/top/select04.jpg" imgClassName={styles.selectImg} alt="WEB予約だと更に 大幅割引実施中！" loading="lazy" className={styles.imgBox} />
+            </li>
           </ul>
         </div>
 
@@ -205,20 +213,20 @@ const IndexPage = ( { data } ) => (
       <div className={styles.option}>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}><span className="text-pk">様々なお支払い方法</span>に対応。予約時にクレジットカードで<span className="text-pk">事前決済もOK！</span><span className={styles.note}>※その他、各種カードご利用できます。</span></li>
-          <StaticImage
-            src="../images/top/option01.png" imgClassName={styles.selectImg} alt="様々なお支払い方法に対応。予約時にクレジットカードで事前決済もOK！" loading="lazy" className={styles.imgBox} />
+          <li className={styles.imgBox}><StaticImage
+            src="../images/top/option01.png" imgClassName={styles.selectImg} alt="様々なお支払い方法に対応。予約時にクレジットカードで事前決済もOK！" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}><span className="text-pk">電気自動車</span>の充電設備あります。TESLAも充電できます!<br /><span className={styles.note}>※必ず充電用コードをお持ちください。<br />※テスラ・ロードスターは充電できません。</span></li>
-          <StaticImage src="../images/top/option02.png" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" className={styles.imgBox} />
+          <li className={styles.imgBox}><StaticImage src="../images/top/option02.png" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}>当日でも<span className="text-pk">窓口で旅行保険に加入</span>できるので安心。</li>
-          <StaticImage src="../images/top/option03.jpg" imgClassName={styles.selectImg} alt="成田空港駐車場では最大級の2,000台収容" loading="lazy" className={styles.imgBox} />
+          <li className={styles.imgBox}><StaticImage src="../images/top/option03.jpg" imgClassName={styles.selectImg} alt="成田空港駐車場では最大級の2,000台収容" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}>行く時も帰る時も、<span className="text-pk">屋根有り乗降スペース</span>で雨に濡れない!</li>
-          <StaticImage src="../images/top/option04.jpg" imgClassName={styles.selectImg} alt="WEB予約だと更に 大幅割引実施中！" loading="lazy" className={styles.imgBox} />
+          <li className={styles.imgBox}><StaticImage src="../images/top/option04.jpg" imgClassName={styles.selectImg} alt="WEB予約だと更に 大幅割引実施中！" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         
 
