@@ -230,9 +230,9 @@ const IndexPage = ( { data } ) => (
         </ul>
         
 
-        <li className={styles.optionBox}>
+        <ul className={styles.optionBox}>
           <li className={styles.textBox}>10日目以降の<span className="text-pk">長期利用は1日わずか220円</span>長期の出張や海外旅行でも安心！</li>
-          <li className={styles.imgBox}></li><StaticImage
+          <li className={styles.imgBox}><StaticImage
             src="../images/top/option05.jpg" imgClassName={styles.selectImg} alt="長期の出張や海外旅行でも安心！" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
