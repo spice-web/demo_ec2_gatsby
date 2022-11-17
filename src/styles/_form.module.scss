@@ -1,19 +1,8 @@
-/* ==============================
-  variable
-============================== */
-// color
-$pale-green: #EFFCC9;
-$light-green: #B4F000;
-$green: #64C800;
-$dark-green: #32B400;
-$deep-green: #006E00;
-$yellow: #FFFF00;
-$pink: #FF2C73;
-$text-color: #404040;
-
 form {
   label {
-    color: $deep-green;
+    color: #006E00;
+    display: block;
+    margin-bottom: 0.15rem;
   }
   > div {
     display: flex;
@@ -36,4 +25,34 @@ input, textarea {
   grid-template-rows: auto;
   gap: 5px;
   margin: 0 auto 2rem;
+}
+
+// リンク
+.linkBox {
+  background: #32B400;
+  color: #fff!important;
+  margin: 0 0.25rem;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+}
+
+// select
+select {
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+  border: 0.99px solid #404040;
+  padding: 0.5rem;
+  width: 100%;
+  background: #FFF;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+select::-ms-expand {
+  display: block;
+}
+
+// サンクス文章
+.p_thanks {
+  margin-bottom: 2rem;
 }

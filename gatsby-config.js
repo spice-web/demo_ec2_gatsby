@@ -10,6 +10,8 @@ module.exports = {
     siteUrl: `https://spice-web.jp/`,
   },
   plugins: [
+    // smoothscroll
+    `gatsby-plugin-smoothscroll`,
     // sass
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,

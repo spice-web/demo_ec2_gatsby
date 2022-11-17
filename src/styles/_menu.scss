@@ -1,4 +1,4 @@
-@import './global/_config.scss';
+@import './global/_variable.scss';
 
 // variable
 $main-black-color: #000;
@@ -37,7 +37,14 @@ $main-black-color: #000;
       content: "・";
     }
   }
+  &__sns {
+    margin-top: 1rem;
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
   }
+}
   
 // navigation
 header [class^="navigation"] {
@@ -51,6 +58,16 @@ header [class^="drawer"] {
   }
 }
 
+header {
+  .navigation {
+    &__def {
+      button {
+        color: #fff;
+      }
+    }
+  }
+}
+
 footer {
   .navigation {
     &__wrap {
@@ -59,6 +76,9 @@ footer {
     }
     &__def {
       border-bottom: none;
+      button {
+        color: #404040;
+      }
     }
     &__list {
       display: none;
@@ -69,3 +89,4 @@ footer {
     }
   }
 }
+

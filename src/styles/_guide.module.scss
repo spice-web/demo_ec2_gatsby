@@ -170,6 +170,35 @@
   }
 }
 
+// お帰りになったら
+.lastFlowTitle {
+  background: #404040;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  a {
+    color: #FFF!important;
+  }
+}
+
+.lastFlowLink {
+  background: #FF2C73;
+  border: 0.99px solid #FF2C73;
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  &:hover {
+    background: #FFF;
+    border: 0.99px solid #FF2C73;
+    color: #FF2C73;
+    opacity: 1!important;
+  }
+  a {
+    display: block;
+  }
+}
 
 .note {
   font-size: 0.625rem;

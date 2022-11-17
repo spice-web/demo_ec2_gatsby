@@ -29,14 +29,14 @@ export default function SlickSlider() {
       <div className="slide-images --item02"></div>
       <div className="slide-images --item03"></div> */}
 
-      <Link to={reserve}>
+      <a href={reserve} target="_blank">
         <StaticImage
           src="../images/slider/slider001_sp.webp"
           alt="キャンペーン実施中！予約する"
           quality="40"
           width={480}
         />
-      </Link>
+      </a>
       <Link to="/advantage">
         <StaticImage
           src="../images/slider/slider002_sp.webp"

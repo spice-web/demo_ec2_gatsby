@@ -34,7 +34,7 @@ const GuidePage = () => (
 
     <div className="content__wrap content__pd">
     <Wrap>
-      <h3 className="sec__ttl">アクセスについて</h3>
+      <h3 className="sec__ttl link__inner" id="access">アクセスについて</h3>
       <div className="mb--xl">
         <GoogleMap />
       </div>
@@ -57,7 +57,7 @@ const GuidePage = () => (
       
       <div className={styles.accessFlow}>
         <div className="flex-col-2--md">
-          <StaticImage src="../images/guide/img_highway.jpg" alt="" />
+          <StaticImage src="../images/guide/img_highway.jpg" alt="東関東自動車道からのアクセス方法" />
         </div>
         <div className={styles.flowGrid}>
           <figure className={styles.number}><StaticImage src="../images/guide/number/1.png" /></figure>
@@ -73,7 +73,7 @@ const GuidePage = () => (
         <div className={styles.flowGrid}>
           <figure className={styles.number}><StaticImage src="../images/guide/number/2.png" /></figure>
           <p>料金所先の分岐を 「空港方面」へ進む</p>
-          <StaticImage src="../images/guide/ao_airport.png" alt="" />
+          <StaticImage src="../images/guide/ao_airport.png" alt="料金所先の分岐を 「空港方面」へ進む" />
         </div>
       </div>
 
@@ -84,7 +84,7 @@ const GuidePage = () => (
         <div className={styles.flowGrid_3}>
           <figure className={styles.number}><StaticImage src="../images/guide/number/3.png" /></figure>
           <p>国道295号合流交差点を右折</p>
-          <StaticImage src="../images/guide/shiro_narita.png" alt="" />
+          <StaticImage src="../images/guide/shiro_narita.png" alt="国道295号合流交差点を右折" />
           <p className={styles.flowFooter}>右折後、約1.5キロ直進です。</p>
         </div>
       </div>
@@ -94,7 +94,9 @@ const GuidePage = () => (
           <StaticImage src="../images/guide/img_enter.jpg" alt="" />
         </div>
         <div className={styles.flowGrid_3}>
-          <figure className={styles.number}><StaticImage src="../images/guide/number/4.png" /></figure>
+          <figure className={styles.number}>
+            <StaticImage src="../images/guide/number/4.png" />
+          </figure>
           <p>堀之内交差点の左手に入り口が 見えてきます</p>
           <StaticImage src="../images/guide/shiro_hori.png" alt="堀之内入り口" />
           <p className={styles.flowFooter}>おつかれさまでした。<br />いらっしゃいませ。</p>
@@ -104,7 +106,7 @@ const GuidePage = () => (
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl">ご利用の流れ</h3>
+      <h3 id="flow" className="sec__ttl link__inner">ご利用の流れ</h3>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
           <div className="label bg--green text-lg text-medium text-left ls01 bdr-xs">&#10102;予約する</div>
@@ -216,11 +218,11 @@ const GuidePage = () => (
 
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
-        <div className="label bg--green text-lg text-medium text-left ls01 bdr-xs">&#10104;予約する送迎バスで成田空港へ</div>
+        <div className="label bg--green text-lg text-medium text-left ls01 bdr-xs">&#10104;送迎バスで成田空港へ</div>
           <p className="text-light text-normal mb--sm">第3ターミナルは民間駐車場送迎車両の乗り入れが禁止されています。隣の第2ターミナルへの送迎となります。第2⇔第3ターミナル間は徒歩で10分程度、空港ターミナル間無料循環バスも待ち時間を含めて同程度の時間を要します。余裕を持ってご来場ください。</p>
         </div>
         <div className="flex-col-2--md">
-          <StaticImage src="../images/guide/flow01.jpg" />
+          <StaticImage src="../images/guide/flow03.jpg" />
         </div>
       </div>
 
@@ -242,23 +244,26 @@ const GuidePage = () => (
 
     {/* お帰りになったら */}
     <Wrap>
-      <h3 className="sec__ttl">お帰りになったら</h3>
+      <h3 id="last" className="sec__ttl link__inner">お帰りになったら</h3>
+      <div className={styles.lastFlowTitle}><Link to="#terminal2">第2・第3ターミナルの方はこちら</Link></div>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
         <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10102;各お迎え場所に移動</div>
           <p className="text-light text-normal mb--sm">成田空港へお戻りになったら、お荷物を受け取り、税関通過後に、出発の際にお渡ししましたお預かり券の「到着専用電話番号」へご連絡の上、裏面にある「お迎え場所」まで移動をお願いします。 到着ターミナルやお迎え方法によって場所が違いますので、お電話の際に今一度ご確認ください。</p>
         </div>
         <div className="flex-col-2--md">
-          <StaticImage src="../images/guide/closing01.jpg" />
+          <StaticImage src="../images/guide/closing01.jpg" alt="成田空港イメージ" />
         </div>
       </div>
       <div className="mb--lg">
         <p className="label bg--gray --pd-xd text-smd">成田空港第1ターミナル お迎え場所</p>
-        <StaticImage src="../images/guide/closingMap01.jpg" />
+        <StaticImage src="../images/guide/closingMap01.jpg" alt="成田空港第1ターミナル お迎え場所"/>
+        <p className={styles.lastFlowLink}><a href="https://goo.gl/maps/1mXCM3KBtumzWV5e9" target="_blank" rel="noreferrer noopener">Google Mapで表示</a></p>
       </div>
       <div style={flow}>
-      <p className="label bg--gray --pd-xd text-smd">成田空港第2ターミナル お迎え場所</p>
-        <StaticImage src="../images/guide/closingMap02.jpg" />
+      <p id="terminal2" className="label bg--gray --pd-xd text-smd">成田空港第2ターミナル お迎え場所</p>
+        <StaticImage src="../images/guide/closingMap02.jpg" alt="成田空港第2ターミナルお迎え場所" />
+        <p className={styles.lastFlowLink}><a href="https://goo.gl/maps/nb2a5uoj6GnMGFZF9" target="_blank" rel="noreferrer noopener">Google Mapで表示</a></p>
       </div>
 
       <div style={flow} className="flex__wrap mb--md">
@@ -273,7 +278,7 @@ const GuidePage = () => (
 
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
-        <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10104;送迎バスがお迎えします</div>
+        <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10104;到着専用ターミナルに到着</div>
           <p className="text-light text-normal mb--sm">お荷物を受け取り、 屋根付プラットフォームにご用意したお車にすぐにご乗車いただけます。</p>
         </div>
         <div className="flex-col-2--md">
@@ -281,7 +286,7 @@ const GuidePage = () => (
         </div>
       </div>
 
-      <p className="sec__ttl text-medium">おつかれさまでした。<span className="nowrap">またのご利用をお待ちしております！</span></p>
+      <p className="sec__ttl text-medium">おつかれさまでした。<br className="br_maxmd" />またのご利用を<br className="br_maxsm" />お待ちしております！</p>
 
     </Wrap>
 

@@ -9,4 +9,7 @@
   @extend .bdr-xs;
   @extend .text-normal;
   margin-bottom: 1rem;
+  @include mq() {
+    margin-bottom: 2rem;
+  }
 }

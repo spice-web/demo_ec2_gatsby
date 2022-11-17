@@ -5,8 +5,14 @@ import Seo from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div className="content__wrap content__pd">
+      <div className="content__inner --md">
+      <h1 className="text-center">404: Not Found</h1>
+      <h2 className="text-center">ページがみつかりませんでした</h2>
+      <p>入力されたURLをもう一度ご確認ください。</p>
+      </div>
+    </div>
+    
   </Layout>
 )
 

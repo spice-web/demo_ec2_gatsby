@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/layout-more-information"
 import Seo from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -22,37 +22,46 @@ const MoreInfoPage = ( {data} ) => (
     <Seo title="サンパーキンについて" />
     <PageTitle>MORE INFORMATION<span>関連情報</span></PageTitle>
 
-<div className="content__wrap content__pd">
+<div className="content__wrap content__pd" id="top">
     <Wrap>
-      <h3 className="sec__ttl mb--md">マイル・ポイント</h3>
+      <h3 className="sec__ttl mb--md link__inner" id="point">マイル・ポイント</h3>
       <p className="text-normal text-light mb--md lh175">提携マイル・ポイントを貯めるには、料金ご精算時にカウンターで「マイル積算希望」とお申し出ください。お申し出がない場合はマイルが積算されませんのでご注意ください。マイルはご利用日の約２～３ヶ月後に積算されます。 ※通常料金でのご利用で、駐車料金のみがマイルの対象となります。）</p>
 
       <div className="flex__wrap--lg">
         <div className={styles.mile_box}>
-          <StaticImage src="../images/more-information/b4_001.png"
-            alt="JALマイレージバンク"
-            style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}}
-            className='br_maxlg' />
-          <StaticImage src="../images/more-information/b4_004.png" alt="JALマイレージバンク" className="br_lg" />
+          <div className="br_maxlg">
+            <StaticImage src="../images/more-information/b4_001.png"
+              alt="JALマイレージバンク"
+              style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}} />
+          </div>
+          <div className="br_lg"> 
+            <StaticImage src="../images/more-information/b4_004.png" alt="JALマイレージバンク" />
+          </div>
           <h4 className="text-smd">JAL<br className="br_lg"/>マイレージバンク</h4>
           <p>ためたマイルを、航空券や電子マネーなどの豊富な特典と交換できるJALのマイレージプログラム。マイルの換算率が高いので当駐車場をよくご利用される方にオススメです。</p>
         </div>
         <div className={styles.mile_box}>
-          <StaticImage src="../images/more-information/b4_002.png"
-            alt="JALカード ショッピングマイル"
-            style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}}
-            className='br_maxlg' />
-            <StaticImage src="../images/more-information/b4_005.png" alt="JALカード ショッピングマイル" className="br_lg" />
+          <div className="br_maxlg">
+            <StaticImage src="../images/more-information/b4_002.png"
+              alt="JALカード ショッピングマイル"
+              style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}} />
+          </div>
+          <div className="br_lg"> 
+            <StaticImage src="../images/more-information/b4_005.png" alt="JALカード ショッピングマイル" />
+          </div>
           <h4 className="text-smd">JALカード<br className="br_lg"/>ショッピングマイル</h4>
           <p>ショッピングマイル・プレミアムに入会すると、日常でのカードご利用分はもちろん、月づきの定期的なお支払いでもショッピングマイルが2倍たまります。</p>
           <div className="note text-center">※ショッピングマイル・プレミアム（有料）にご入会の場合</div>
         </div>
         <div className={styles.mile_box}>
-          <StaticImage src="../images/more-information/b4_003.png"
+          <div className="br_maxlg">
+            <StaticImage src="../images/more-information/b4_003.png"
             alt="TS CUBIC カード"
-            style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}}
-            className='br_maxlg' />
-          <StaticImage src="../images/more-information/b4_006.png" alt="TS CUBIC カード" className="br_lg" />
+            style={{maxWidth:'350px', margin:'0 auto', objectFit: 'contain'}} />
+          </div>
+          <div className="br_lg">
+            <StaticImage src="../images/more-information/b4_006.png" alt="TS CUBIC カード" className="br_lg" />
+          </div>
           <h4 className="text-smd">TS CUBIC<br className="br_lg"/>カード</h4>
           <p>毎日をもっと快適、お得、安心に。 くらしをトータルサポートする、トヨタのクレジットカードです。駐車料金のお支払いをポイント提携カードでお支払いいただくとポイントが溜まります。</p>
         </div>
@@ -61,31 +70,31 @@ const MoreInfoPage = ( {data} ) => (
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl mb--md">メンバーズカード</h3>
+      <h3 className="sec__ttl mb--md link__inner" id="members_card">メンバーズカード</h3>
       <p className="text-normal text-light mb--md lh175">
       スタンプが貯まれば貯まるほど、カード、特典条件がランクUP!カード記載のIDを入力するWEB予約でメンバー料金が適用されます。
       </p>
       <div className={styles.member}>
         <div className="flex__wrap--sm mb--lg">
-          <div className="inner-pd bg--white bdr-sm flex-col-2--sm mb--sm" data-wrap="member">
+          <div className="bg--white bdr-sm flex-col-2--sm mb--sm pd--sm" data-wrap="member">
             <div className="flex__wrap">
               <StaticImage src="../images/more-information/green.png" className="flex-col-2"/>
               <dl className="flex-col-2">
                 <dt style={green}>GREEN<span className="text-xxs is-block">グリーンカード</span></dt>
-                <dd>ご利用回数10回まで<br /><span style={green}>スタンプ５個で一日無料券</span></dd>
+                <dd>ご利用回数10回まで<br /><span style={green}>スタンプ５個で<span className="nowrap">一日無料券</span></span></dd>
               </dl>
             </div>
           </div>
-          <div className="inner-pd bg--white bdr-sm flex-col-2--sm mb--sm" data-wrap="member">
+          <div className="bg--white bdr-sm flex-col-2--sm mb--sm pd--sm" data-wrap="member">
             <div className="flex__wrap">
               <StaticImage src="../images/more-information/silver.png" className="flex-col-2"/>
               <dl className="flex-col-2">
                 <dt style={silver}>SILVER<span className="text-xxs is-block">シルバーカード</span></dt>
-                <dd>ご利用回数20回まで<br /><span style={silver}>スタンプ５個で一日無料券</span></dd>
+                <dd>ご利用回数20回まで<br /><span style={silver}>スタンプ５個で<span className="nowrap">一日無料券</span></span></dd>
               </dl>
             </div>
           </div>
-          <div className="inner-pd bg--white bdr-sm flex-col-2--sm mb--sm" data-wrap="member">
+          <div className="bg--white bdr-sm flex-col-2--sm mb--sm pd--sm" data-wrap="member">
             <div className="flex__wrap">
               <StaticImage
                 src="../images/more-information/gold.png"
@@ -93,16 +102,16 @@ const MoreInfoPage = ( {data} ) => (
               />
               <dl className="flex-col-2">
                 <dt style={gold}>GOLD<span className="text-xxs is-block">ゴールドカード</span></dt>
-                <dd>ご利用回数50回まで<br /><span style={gold}>スタンプ４個で一日無料券</span></dd>
+                <dd>ご利用回数50回まで<br /><span style={gold}>スタンプ４個で<span className="nowrap">一日無料券</span></span></dd>
               </dl>
             </div>
           </div>
-          <div className="inner-pd bg--white bdr-sm flex-col-2--sm mb--sm" data-wrap="member">
+          <div className="bg--white bdr-sm flex-col-2--sm mb--sm pd--sm" data-wrap="member">
             <div className="flex__wrap">
               <StaticImage src="../images/more-information/black.png" className="flex-col-2"/>
               <dl className="flex-col-2">
                 <dt style={black}>BLACK<span className="text-xxs is-block">ブラックカード</span></dt>
-                <dd>ご利用回数100回超<br /><span style={green}>スタンプ3個で一日無料券</span></dd>
+                <dd>ご利用回数100回超<br /><span style={green}>スタンプ3個で<span className="nowrap">一日無料券</span></span></dd>
               </dl>
             </div>
           </div>
@@ -163,17 +172,18 @@ const MoreInfoPage = ( {data} ) => (
 
     </Wrap>
 
+{/* 5件のみ表示 */}
     <Wrap>
-      <h3 className="sec__ttl">お客さまの声</h3>
+      <h3 className="sec__ttl link__inner" id="voice">お客さまの声</h3>
       {data.allMicrocmsVoice.edges.map(({ node }) => (
         <div className={styles.voice__wrap}>
           <div className={styles.customer}>
             <h3 className={styles.voice__title}>お客様の声#{node.number}</h3>
-            <p className="pg--md --mb0 text-xs">{node.user_voice}</p>
+            <p className="pg--md --mb0 text-sm">{node.user_voice}</p>
           </div>
           <div className={styles.reply}>
             <h3 className={styles.reply__title}>サンパーキングより</h3>
-            <p className="pg--md --mb0 text-xs">{node.reply}</p>
+            <p className="pg--md --mb0 text-sm">{node.reply}</p>
           </div>
         </div>
       ))}
@@ -182,7 +192,7 @@ const MoreInfoPage = ( {data} ) => (
     </Wrap>
 
     <Wrap>
-      <h3 className="sec__ttl">旅のリンク集</h3>
+      <h3 className="sec__ttl link__inner" id="travel">旅のリンク集</h3>
       <LinkOther />
     </Wrap>
 

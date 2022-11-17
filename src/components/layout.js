@@ -11,10 +11,12 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import FooterFixed from "./footer-fixed"
+
 // import "./layout.css"
 
 // font指定
-// import "@fontsource/noto-sans-jp/100.css"
+import "@fontsource/noto-sans-jp/100.css"
 import "@fontsource/noto-sans-jp/300.css"
 import "@fontsource/noto-sans-jp/400.css"
 import "@fontsource/noto-sans-jp/500.css"
@@ -45,6 +47,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       </div>
       <Footer />
+      <FooterFixed />
     </>
   )
 }

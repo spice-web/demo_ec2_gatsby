@@ -24,9 +24,8 @@ export default function SlickSliderWide() {
         breakpoint: 1424,
         settings: {
           centerMode: true,
-          centerPadding: "120px",
+          centerPadding: "240px",
           slidesToShow: 1,
-          dots: true,
         }
       },
       {
@@ -54,22 +53,22 @@ export default function SlickSliderWide() {
       <div className="slide-images --item02"></div>
       <div className="slide-images --item03"></div> */}
 
-      <Link to={reserve}>
+      <a href={reserve} target="_blank">
         <StaticImage
           src="../images/slider/slider001_pc.webp"
           alt="キャンペーン実施中！予約する"
           className="slide-images"
           quality="40"
-          width={1144}
+          width={980}
         />
-      </Link>
+      </a>
       <Link to="/advantage">
         <StaticImage
           src="../images/slider/slider002_pc.webp"
           alt="様々なオプション"
           className="slide-images"
           quality="40"
-          width={1144}
+          width={980}
         />
       </Link>
       <Link to="/price">
@@ -78,7 +77,7 @@ export default function SlickSliderWide() {
           alt="選ばれる理由"
           className="slide-images"
           quality="40"
-          width={1144}
+          width={980}
         />
       </Link>
 

@@ -5,9 +5,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import ButtonReserve from "./button-reserve"
 import ButtonFoot from "./button-footer"
 
+// フッターナビ
 import Menu from "./menu"
-
-const reserve = "https://www.sunparking.co.jp/form/rsv1.php"
+// スクロール
+import Scroll from './scroll'
 
 const Footer = () => (
   <>
@@ -23,9 +24,9 @@ const Footer = () => (
 
         <p className="text-center">当日はお電話でお問い合せください</p>
         <div className="flex__wrap--md text-center mb--sm">
-          <p>サン予約センター</p>
-          <h3 className="text-lg">TEL.0476-33-1123</h3>
-          <p>［受付時間］9:00〜18:00</p>
+          <p className="text-center">サン予約センター</p>
+          <h3 className="text-lg"><a href="tel:0476331123">TEL.0476-33-1123</a></h3>
+          <p className="text-center">［受付時間］9:00〜18:00</p>
         </div>
 
         {/* 予約ボタン */}
@@ -38,6 +39,7 @@ const Footer = () => (
 
 
     <footer className="footer">
+      <Scroll showBelow={250} />
       <div className="footer__inner">
         <div className="footer__head">
           <h2 className="footer__logo"><StaticImage src="../images/logo.svg" /></h2>
@@ -64,48 +66,8 @@ const Footer = () => (
 
 
     </footer>
-    {/* フッター固定ボタン */}
-    <ul className="footer-fixed-btn__wrap">
-      <li className="footer-fixed-btn__item"><Link to="/price" className="is-block">料金確認</Link></li>
-      <li className="footer-fixed-btn__item"><Link to="{reserve}" className="is-block">WEB予約</Link></li>
-      <li className="footer-fixed-btn__item"><Link to="/access" className="is-block">アクセス</Link></li>
-    </ul>
-    {/* フッター固定ボタン */}
-    <ul className="side-fixed-btn__wrap">
-      <li className="side-fixed-btn__item">
-        <Link to="/price" className="is-block">
-          <div className="side-fixed-btn__item--head fee">料金確認</div>
-          <div className="side-fixed-btn__item--right fee">
-            <dl>
-              <dt className="side-fixed-btn__dttl fee">安心料金設定</dt>
-              <dd className="side-fixed-btn__desc">基本料金<br />深夜早朝<br />割増なし</dd>
-            </dl>
-          </div>
-        </Link>
-      </li>
-      <li className="side-fixed-btn__item">
-        <Link to={reserve} className="is-block">
-          <div className="side-fixed-btn__item--head reserve">WEB予約</div>
-          <div className="side-fixed-btn__item--right reserve">
-            <dl>
-              <dt className="side-fixed-btn__dttl">安心料金設定</dt>
-              <dd className="side-fixed-btn__desc">おトクで<br />カンタン<br />WEB予約</dd>
-            </dl>
-          </div>
-        </Link>
-      </li>
-      <li className="side-fixed-btn__item">
-        <Link to="/guide" className="is-block">
-          <div className="side-fixed-btn__item--head access">アクセス</div>
-          <div className="side-fixed-btn__item--right access">
-            <dl>
-              <dt className="side-fixed-btn__dttl">空港スグそこ</dt>
-              <dd className="side-fixed-btn__desc">成田空港<br />通り<br />交差点前</dd>
-            </dl>
-          </div>
-        </Link>
-        </li>
-    </ul>
+
+
   </>
 
 )
