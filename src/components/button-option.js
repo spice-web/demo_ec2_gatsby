@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import * as styles from "../styles/_option.module.scss"
 
-const link = 'https://www.sunparking.co.jp/form/rsv1.php?office_id=1';
+const reserve = 'https://www.sunparking.co.jp/form/rsv1.php?office_id=1';
 
 const reservation = {
   position: 'relative',
@@ -24,9 +24,9 @@ const reservationButton = {
 const ButtonOption = () => (
   <div style={reservationButton} className={styles.reservationButton}>
     <p className={styles.reservationText}>■ 駐車ご予約時に<br className="br_sm"/>一緒にお申込いただけます。</p>
-    <Link to={link} className={styles.reservationLink}>
+    <a href={reserve} target="_blank" className={styles.reservationLink}>
       今すぐ予約&nbsp;&nbsp;<span className="">&#9654;&#9654;&#9654;</span>
-      </Link>
+      </a>
   </div>
 )
 

@@ -25,7 +25,7 @@ const Footer = () => (
         <p className="text-center">当日はお電話でお問い合せください</p>
         <div className="flex__wrap--md text-center mb--sm">
           <p className="text-center">サン予約センター</p>
-          <h3 className="text-lg">TEL.0476-33-1123</h3>
+          <h3 className="text-lg"><a href="tel:0476331123">TEL.0476-33-1123</a></h3>
           <p className="text-center">［受付時間］9:00〜18:00</p>
         </div>
 
