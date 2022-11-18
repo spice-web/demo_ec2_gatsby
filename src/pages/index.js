@@ -336,7 +336,7 @@ const IndexPage = ( { data } ) => (
             <dt className={styles.otherServiceTitle} >洗車・コーティング</dt>
               <dd className={styles.otherServiceText}><Link to="/option#maintenance">お帰りまでにお車ピカピカキレイを、長く！本格派コーティング。</Link></dd>
               <dd className={styles.otherServiceImg}>
-                <Link to="/option#coating"><StaticImage src="../images/top/link01.jpg" alt="洗車・コーティングサービス" loading="lazy" /></Link>
+                <Link to="/option#maintenance"><StaticImage src="../images/top/link01.jpg" alt="洗車・コーティングサービス" loading="lazy" /></Link>
               </dd>
             </dl>
           </div>
