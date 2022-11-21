@@ -6,7 +6,7 @@ import Seo from '../components/seo';
 import { Pagination } from '../components/pagination';
 import PageTitle from '../components/PageTitle';
 
-import { Helmet } from "react-helmet"
+// import { Helmet } from "react-helmet"
 
 // サイドバー
 import Sidebar from "../components/Sidebar";

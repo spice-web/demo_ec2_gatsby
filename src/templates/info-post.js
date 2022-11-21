@@ -1,6 +1,5 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image";
+import {  graphql } from "gatsby"
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -8,7 +7,7 @@ import Seo from "../components/seo";
 // サイドバー
 import Sidebar from "../components/Sidebar";
 //  CSS
-import * as Styles from "../styles/_info_post.module.scss";
+// import * as Styles from "../styles/_info_post.module.scss";
 import * as infoStyles from "../styles/_information.module.scss";
 
 
