@@ -1,12 +1,5 @@
 @import '_variable.scss';
-/* ==============================
- ||font-weight
-============================== */
-$thin: 100;
-$light: 300;
-$regular: 400;
-$medium: 500;
-$bold: 700;
+
 
 /* ==============================
   ||block
@@ -14,9 +7,22 @@ $bold: 700;
 .nowrap {
   display: inline-block;
 }
-
+@media screen and (max-width:1120px) {
 .scroll {
-  overflow-x: scroll;
+  overflow-x: scroll;    
+}
+
+.scroll::-webkit-scrollbar { 
+  height: 10px; 
+} 
+.result_scroll::-webkit-scrollbar-track { 
+  margin: 0 2px; 
+  background: #ccc; 
+  border-radius: 5px; 
+} 
+.result_scroll::-webkit-scrollbar-thumb { 
+  border-radius: 5px; background: #666; 
+}
 }
 
 /* inline -> block */
@@ -41,14 +47,14 @@ $bold: 700;
 // 650pxまで
 .br_maxsm {
   display: block;
-  @include mq(max-sm) {
+  @include mq(sm) {
     display: none;
   }
 }
 // 650px以上
 .br_sm {
   display: block;
-  @include mq(sm) {
+  @include mq(max-sm) {
     display: none;
   }
 }
@@ -281,7 +287,7 @@ $bold: 700;
 
 
 .text-xxs {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   @include mq() {
     font-size: 0.75rem;
   }
@@ -370,11 +376,9 @@ $bold: 700;
 a {
   text-decoration: none;
   color: inherit;
-
   &:hover {
     opacity: 0.75;
   }
-
   &:visited {
     color: inherit;
   }
@@ -389,6 +393,12 @@ a.text-deep-gr {
   text-decoration: underline;
 }
 
+.link {
+  &__inner {
+    padding-top: 80px;
+    margin-top:  -80px;
+  }
+}
 /* ==============================
   ||body
 ============================== */
@@ -398,7 +408,8 @@ body {
   font-size: 16px;
 }
 
-p {
+.txt-jt {
+  text-align: justify; // 両端揃え
   text-justify: inter-ideograph;
 }
 
@@ -434,10 +445,6 @@ p {
 
 .bg--light-green {
   background: $light-green;
-
-  .content__inner {
-    background: #FFF;
-  }
 }
 
 .bg--green {
@@ -483,7 +490,6 @@ p {
 .bg--light-yellow {
   background: #FFFAC8;
 }
-
 
 
 /* ==============================

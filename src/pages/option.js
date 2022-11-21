@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout"
@@ -34,7 +33,8 @@ const taR = {
 }
 
 const arrow = {
-  fontSize: '0.5rem'
+  fontSize: '0.75rem',
+  marginLeft: '0.25rem',
 }
 
 const OptionPage = () => (
@@ -45,21 +45,20 @@ const OptionPage = () => (
 
 
 {/* 空港お届けサービス */}
-   <div className="content__wrap" id="delivery">
+   <div className="content__wrap content__pd">
     <Wrap>
-      <h2 className="sec__ttl">空港お届けサービス</h2>
-      <div className={styles.flexTop}>
-        <p className={styles.leftBox}>お車を成田空港へお届けするサービスをご用意しています。<br />「出発時駐車場経由空港引取り」は出発時駐車場受付で成田空港までスタッフが同乗してお届けするサービスです。<br />「お帰り時空港お車お届け」は駐車場をご利用いただき、お帰りに成田空港までお届けします。<br />※第３ターミナルでの引取り・お届けはできません。</p>
+      <h2 className="sec__ttl link__inner" id="delivery">空港お届けサービス</h2>
+      <div className={ styles.flexTop }>
+        <p className={ styles.leftBox }>お車を成田空港へお届けするサービスをご用意しています。<br />「出発時駐車場経由空港引取り」は出発時駐車場受付で成田空港までスタッフが同乗してお届けするサービスです。<br />「お帰り時空港お車お届け」は駐車場をご利用いただき、お帰りに成田空港までお届けします。<br />※第３ターミナルでの引取り・お届けはできません。</p>
         <figure>
           <StaticImage
             src="../images/option/b2_001.jpg"
             alt="空港お届けサービス"
             quality="100"
-            style={{width:'100%'}}
+            style={{ width:'100%' }}
           />
         </figure>
       </div>
-
 
       <dl className={styles.fee}>
         <dt>出発時 駐車場経由空港引取り</dt>
@@ -79,7 +78,7 @@ const OptionPage = () => (
 
 {/* 洗車・カーメンテナンス */}
     <Wrap>
-      <h3 className="sec__ttl">洗車・カーメンテナンス</h3>
+      <h3 id="maintenance" className="sec__ttl link__inner">洗車・カーメンテナンス</h3>
       <div className={styles.flexTop}>
       <p className={styles.leftBox}>サンパーキング全店では、お預かりしたお車をメンテナンスするメニューをご用意しております。 お出かけ中の時間を利用できるため、煩わしい待ち時間もありません。社内訓練された専属のスタッフがお客様のお車をきれいにし、メンテナンスなどを行なっております。 洗車やWAXだけでなくタイヤ交換・バッテリー液補充や充電・タイヤ空気圧補充・修理・車検など、どんなことでもご相談に応じさせて頂きますのでご遠慮なくお申し付け下さい。（実費ご負担いただきます）</p>
         <figure>
@@ -98,7 +97,7 @@ const OptionPage = () => (
         </div>
 
         <div className="flex-col-2--md mb--md">
-          <h4 className={styles.headline}>検査員制度導入%</h4>
+          <h4 className={styles.headline}>検査員制度導入</h4>
           <p className="pg--sm--light">社内で定められた基準をクリアした者が（社内資格制度）お客様へのお引渡しまでをチェック。洗車の仕上がりなど万全の状態でお引渡し致しております。</p>
         </div>
       </div>
@@ -117,11 +116,11 @@ const OptionPage = () => (
       <div className={styles.menu}>
         <dl>
           <dt>撥水コート（FK-2）</dt>
-          <dd>今流行のコーティングWAX洗車。手洗い+シリコン系コーティング+ホイール洗浄+灰皿清掃でも¥3,000（税込3,300円）と驚きの価格でご提供！雨の日の驚きの撥水をご体験下さい！当社一押しのメニューです！もちろんホイールも隅々まで綺麗にしてタイヤWAXを塗ってからお引渡しとなります。</dd>
+          <dd>今流行のコーティングWAX洗車。手洗い+シリコン系コーティング+ホイール洗浄+灰皿清掃でも¥3,000（税込3,300円）と驚きの価格でご提供!雨の日の驚きの撥水をご体験下さい!当社一押しのメニューです!もちろんホイールも隅々まで綺麗にしてタイヤWAXを塗ってからお引渡しとなります。</dd>
         </dl>
         <dl>
           <dt>手掛けWAX</dt>
-          <dd>お車のサイズは問いません。（※バス、トラック、キャンピングカー以外、中型車以下のサイズになります）屋根まできれいに手掛けWAXを行ないます。しかも室内清掃込み！ホイールも隅々まできれいにしてタイヤWAXを塗ってからお引渡しとなります。</dd>
+          <dd>お車のサイズは問いません。（※バス、トラック、キャンピングカー以外、中型車以下のサイズになります）屋根まできれいに手掛けWAXを行ないます。しかも室内清掃込み!ホイールも隅々まできれいにしてタイヤWAXを塗ってからお引渡しとなります。</dd>
         </dl>
         <dl>
           <dt>室内清掃</dt>
@@ -132,10 +131,11 @@ const OptionPage = () => (
       <p className="text-lg text-deep-gr text-bold mb--sm">■ KeePerコーティング</p>
 
       <div className={styles.coating}>
-        <p className="text-light text-normal mb--md">KeePerのガラスコーティング「ダイヤモンドキーパー」と「クリスタルキーパー」は、従来のガラスコーティングとは異なり、よほど塗装の劣化が進行していない限り、研磨不要で驚きのツヤを出すことができます。サンパーキングならお出かけ中に施工しますので、超寿命のガラスコーティングを待ち時間なしで実現します！</p>
+        <p className="text-light text-normal mb--md">KeePerのガラスコーティング「ダイヤモンドキーパー」と「クリスタルキーパー」は、従来のガラスコーティングとは異なり、よほど塗装の劣化が進行していない限り、研磨不要で驚きのツヤを出すことができます。サンパーキングならお出かけ中に施工しますので、超寿命のガラスコーティングを待ち時間なしで実現します!</p>
         <div className={styles.keeper}>
-          <Link to="/" className="text-center text-medium">KeePer<br />詳細はこちら→</Link>
-          <figure><StaticImage src="../images/option/keeper.jpg" /></figure>
+          <p to="/" className="text-center text-medium">KeePer<br />詳細はこちら→</p>
+          <figure>
+            <a href="https://www.keepercoating.jp/proshop/chiba/city625/05287/" target="_blank" rel="noreferrer noopener"><StaticImage src="../images/option/logo/keeper.jpg" /></a></figure>
         </div>
       </div>
           
@@ -154,7 +154,7 @@ const OptionPage = () => (
 
 {/* 海外・国内旅行保険 */}
     <Wrap>
-      <h3 className="sec__ttl">海外・国内旅行保険</h3>
+      <h3 id="insurance" className="sec__ttl link__inner">海外・国内旅行保険</h3>
       <div className={styles.flexTop}>
         <p className={styles.leftBox}>海外旅行中は、予期せぬトラブルが起こる可能性があります。旅先はもちろん、出発から帰宅まで万全サポートできる保険を取り扱っております。 旅行中の様々なトラブルに対応しており、またクレジットカード付帯の海外旅行保険を補う合理的なプランもご用意しています。インターネットから簡単に契約ができ、旅行の当日までお申込みが可能です。</p>
         <figure><StaticImage src="../images/option/hoken.jpg" /></figure>
@@ -171,7 +171,7 @@ const OptionPage = () => (
                 alt="エイチ・エス保険"
               />
             </dt>
-            <dd>”リーズナブルな保険料”で"充実な補償"がたびともの魅力！ご家族・ご友人もご一緒に！LINE電話で海外サポートセンターへ24時間365日日本語で無料通話OK！</dd>
+            <dd>”リーズナブルな保険料”で"充実な補償"がたびともの魅力!ご家族・ご友人もご一緒に!LINE電話で海外サポートセンターへ24時間365日日本語で無料通話OK!</dd>
 
           </dl>
           <dl>
@@ -181,7 +181,7 @@ const OptionPage = () => (
                 width={150}
               />
             </dt>
-            <dd>”リーズナブルな保険料”で"充実な補償"がたびともの魅力！ご家族・ご友人もご一緒に！LINE電話で海外サポートセンターへ24時間365日日本語で無料通話OK！</dd>
+            <dd>”リーズナブルな保険料”で"充実な補償"がたびともの魅力!ご家族・ご友人もご一緒に!LINE電話で海外サポートセンターへ24時間365日日本語で無料通話OK!</dd>
           </dl>
           <dl>
             <dt>
@@ -204,7 +204,7 @@ const OptionPage = () => (
       </Wrap>
 
       <Wrap>
-          <h3 className="sec__ttl">電気自動車充電サービス</h3>
+          <h3 id="electrification" className="sec__ttl link__inner">電気自動車充電サービス</h3>
           <div className={styles.flexTop}>
             <div className={styles.leftBox} >
               <h4 className={styles.headline}><span className="br_sm">電気自動車、</span>プラグインハイブリッド車充電器設置</h4>
@@ -224,9 +224,9 @@ const OptionPage = () => (
 <div className={styles.service_wrap}>
   {/* レンタルモバイル */}
   <Wrap>
-    <h3 className="sec__ttl">レンタルモバイル</h3>
+    <h3 className="sec__ttl link__inner" id="rental">レンタルモバイル</h3>
     <div className={styles.service}>
-      <div className="text-sm text-light mb--md">国内も海外も！旅先で使える携帯電話をプラス！</div>
+      <div className="text-sm text-light mb--md">国内も海外も!旅先で使える携帯電話をプラス!</div>
       <div className="img"><StaticImage src="../images/option/mobile.jpg" /></div>
     </div>
 
@@ -239,9 +239,9 @@ const OptionPage = () => (
 
 {/* 宅配サービス */}
 <Wrap>
-  <h3 className="sec__ttl">空港宅配サービス</h3>
+  <h3 id="takuhai" className="sec__ttl link__inner">空港宅配サービス</h3>
   <div className={styles.service}>
-    <div className="text-sm text-light mb--md">カラダ一つで楽々旅行！行きも帰りも空港で荷物を配送します。</div>
+    <div className="text-sm text-light mb--md">カラダ一つで楽々旅行!行きも帰りも空港で荷物を配送します。</div>
     <div className="img"><StaticImage src="../images/option/takuhai.jpg" /></div>
   </div>
   {/* inner */}
@@ -253,7 +253,7 @@ const OptionPage = () => (
 
 {/* JAF */}
 <Wrap>
-  <h3 className="sec__ttl" id="jaf">JAF</h3>
+  <h3 className="sec__ttl link__inner" id="jaf">JAF</h3>
   <div className={styles.service}>
     <div className="text-sm text-light mb--md">もしもの時の頼れる味方。会員優待施設も充実しています。</div>
     <div className="img"><StaticImage src="../images/option/jaf.jpg" /></div>

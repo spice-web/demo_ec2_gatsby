@@ -17,8 +17,61 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: repeat(8, auto);
-  > * { line-height: 2; }
+  > * {
+    font-size: 1rem;
+    line-height: 2;
+  }
   dt {
     margin-right: 1rem;
   }
 }
+
+.recruitWrap {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 80px;
+  background: #F2F2F2;
+  border-radius: 0.625rem;
+  position: relative;
+  padding: 3rem 0 0;
+}
+
+@media screen and (min-width: 769px){
+ .recruitWrap {
+    border-radius: 1.25rem;
+    margin-bottom: 4rem;
+  } 
+}
+
+.recruitInner {
+  width: 93%;
+  max-width: 880px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+
+.descFlex {
+  display: flex;
+}
+
+.descFlexBox {
+  width: 50%;
+  &:nth-child(1) {
+    border-bottom-left-radius: 0.625rem;
+  }
+  &:nth-child(2) {
+    border-bottom-right-radius: 0.625rem;  
+  }
+}
+
+@media screen and (min-width: 769px){
+  .descFlexBox {
+    &:nth-child(1) {
+      border-bottom-left-radius: 1.25rem;
+    }
+    &:nth-child(2) {
+      border-bottom-right-radius: 1.25rem; 
+    }
+  }
+ }

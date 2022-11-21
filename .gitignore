@@ -76,3 +76,11 @@ yarn-error.log
 
 event.JSON
 sponsor-logo.js
+
+*.old
+
+# default files
+using-ssr.js
+gatsby-ssr.js
+using-typescript.tsx
+page-2.js

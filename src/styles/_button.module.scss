@@ -18,7 +18,7 @@
   }
   &__link {
   @include button;
-    font-style: 1.5rem;
+    // font-size: 1.5rem;
     display: block;
     height: 48px;
     width: 276px;
@@ -30,7 +30,6 @@
     align-items: center;
     margin: 0 auto 16px;
     filter: drop-shadow(0px 4px 0 rgba(40, 45, 49, 0.7));
-  
     &:before {
       content: "";
       display: inline-block;
@@ -74,6 +73,8 @@
   &__title {
     text-align: center;
     color: $pink;
+    margin-bottom: 0.5rem;
+    font-weight: $medium;
   }
   &__wrap[data-bg="white"] .button__reserve__title {
     color: #fff;
@@ -116,6 +117,28 @@
     @extend .button__tel;
     &:before {
       background-image: url("../images/icon/fax.svg");
+    }
+  }
+
+  // footer button
+  &__footer {
+    @extend .button__reserve__link;
+    background: linear-gradient(180deg, #DFFF66 0%, #B4F000 25%, #90D200 50%, #B4F000 75%, #90D200 100%);
+    color: #404040!important;
+    font-size: 0.875rem;
+    &:before {
+      content: none;
+    }
+    &:after {
+      background-image: url("../images/icon/arrow.png");
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(0, -50%);
+      filter: none;
     }
   }
 }

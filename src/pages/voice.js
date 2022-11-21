@@ -16,7 +16,7 @@ const VoicePage = ({ data }) => (
     <Seo title="お客さまの声" />
     <PageTitle>VOICE<span>お客さまの声</span></PageTitle>
 
-    <div className="content__wrap">
+    <div className="content__wrap content__pd">
 
     <Wrap>
       <h3 className="sec__ttl">お客さまの声</h3>

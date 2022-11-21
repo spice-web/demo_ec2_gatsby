@@ -1,4 +1,4 @@
-@import '_config.scss';
+@import '_variable.scss';
 
 //variable
 $drawer-menu-color: #000;
@@ -14,10 +14,13 @@ img {
   transition: 0.5s;
   &.fixed {
     @include mq(max-md) {
-    position: fixed;
-      top: 0;
-      left: 0;
-    
+      .header__wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        z-index: 101;
+      }    
       .header__wrap {
         height: 60px;
       }
@@ -27,13 +30,18 @@ img {
       }
     
       .drawer__btn {
-        width: 90px;
+        width: 60px;
         height: 60px;
+      }
+      .header__right--time {
+        position: static;
+        display: none;
       }
     }
   }
   &__wrap {
     position: relative;
+    background: $light-green;
     width: 100%;
     height: 90px;
     margin-top: 2rem;
@@ -102,8 +110,9 @@ img {
   &__right {
     // padding-top: 1rem;
     &--time {
-      position: fixed;
-      top: 0;
+      // position: fixed;
+      position: absolute;
+      top: -32px;
       left: 0;
       width: 100%;
       font-size: 0.875rem;
@@ -124,9 +133,6 @@ img {
       height: 2rem;
       line-height: 2rem;
       // padding: 0 0.5rem;
-      &.active {
-        z-index: 1;
-      }
     }
   }
 
@@ -234,6 +240,43 @@ img {
       width: 100%;
       text-align: center;
       line-height: 58px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:before {
+        content: "";
+        display: inline-block;
+        object-fit: contain;
+        background-position: center right;
+        margin-right: 0.15rem;
+        width: 25px;
+        height: 25px;
+      }
+      &.price {
+        &:before {
+          background-image: url('../../images/icon/price.svg');
+        }
+      }
+      &.option {
+        &:before {
+          background-image: url('../../images/icon/option.svg');
+        }
+      }
+      &.advantage {
+        &:before {
+          background-image: url('../../images/icon/search.svg');
+        }
+      }
+      &.more-information {
+        &:before {
+          background-image: url('../../images/icon/bag.svg');
+        }
+      }
+      &.guide {
+        &:before {
+          background-image: url('../../images/icon/car.svg');
+        }
+      }
     }
   }
 }
@@ -241,19 +284,25 @@ img {
 
 //ドロワー
 .drawer {
+  &__wrap {
+    @include mq() {
+      display: none;
+    }
+  }
   &__btn {
-
     // button
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 0;
     z-index: 10002;
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     // background-color: #ddd;
     overflow: hidden;
     cursor: pointer;
-
+    .fixed & {
+      top: 0;
+    }
     span {
       display: block;
       width: 30px;
@@ -268,7 +317,6 @@ img {
       &:nth-child(2) { transform: translate(-50%, -50%); }
       &:nth-child(3) { transform: translate(-50%, 10px); }
     }
-
     &__close {
       @extend .drawer__btn;
       span {
@@ -276,14 +324,18 @@ img {
         &:nth-child(1) { transform: translate(-50%, 0) rotate(45deg); }
         &:nth-child(2) { transform: translate(-50%, -50%); opacity: 0; }
         &:nth-child(3) { transform: translate(-50%, 0) rotate(-45deg);}
-
       }
     }
   } // btn
 
+  // logo
+  &__logo {
+    margin-bottom: 2rem;
+  }
 
-
-  // menu
+/* ================================
+  メニュー
+================================ */
   &__menu {
     position: fixed;
     top: 0;
@@ -300,6 +352,10 @@ img {
     &.active {
       transform: translateX(0);
       opacity: 0.95;
+      &.nonActive {
+        transform: translateX(100%);
+        opacity: 0;    
+      }
     }
   } // menu
 
@@ -310,6 +366,7 @@ img {
     max-width: 600px;
     margin: 0 auto;
     color: #fff;
+    padding: 4rem 0 5rem;
   }
   &__def {
     padding: 1rem 0;

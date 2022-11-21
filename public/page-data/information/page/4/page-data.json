@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-{"componentChunkName":"component---src-templates-information-page-js","path":"/information/page/4","result":{"data":{"allMicrocmsInformation":{"totalCount":7,"edges":[{"node":{"id":"42d19775-3966-556f-9259-e6da3c75a4bd","informationId":"a59_yc0djk7","title":"サンプルタイトル","excerpt":"今月の連休は2回あります。","category":{"category":"ニュース"},"date":"2022年09月07日"}}]}},"pageContext":{"limit":2,"skip":6}},"staticQueryHashes":["2598326468","3649515864","63159454"]}
-=======
-{"componentChunkName":"component---src-templates-information-page-js","path":"/information/page/4","result":{"data":{"allMicrocmsInformation":{"totalCount":7,"edges":[{"node":{"id":"42d19775-3966-556f-9259-e6da3c75a4bd","informationId":"a59_yc0djk7","title":"サンプルタイトル","excerpt":"今月の連休は2回あります。","category":{"category":"ニュース"},"date":"2022年09月07日"}}]}},"pageContext":{"limit":2,"skip":6}},"staticQueryHashes":["2598326468","3649515864","4183784856","63159454"]}
->>>>>>> develop
-=======
-{"componentChunkName":"component---src-templates-information-page-js","path":"/information/page/4","result":{"data":{"allMicrocmsInformation":{"totalCount":7,"edges":[{"node":{"id":"42d19775-3966-556f-9259-e6da3c75a4bd","informationId":"a59_yc0djk7","title":"サンプルタイトル","excerpt":"今月の連休は2回あります。","category":{"category":"ニュース"},"date":"2022年09月07日"}}]}},"pageContext":{"limit":2,"skip":6}},"staticQueryHashes":["3649515864","4183784856","63159454"]}
->>>>>>> develop
+{"componentChunkName":"component---src-templates-information-page-js","path":"/information/page/4","result":{"data":{"allMicrocmsInformation":{"totalCount":11,"edges":[{"node":{"id":"1693db4f-c875-5292-978c-d03ee0f9c522","informationId":"ie1rojmqvpi9","title":"記事5件目","excerpt":"エラーが消えません。。","category":{"category":"ニュース"},"date":"2022年09月12日"}},{"node":{"id":"980b1041-4389-581c-814f-1690b619815f","informationId":"ys5v-92ca","title":"microCMSで記事をアップしたら、自動的に更新する2","excerpt":"microCMSで記事をアップしたら、自動的に更新できた！","category":{"category":"ニュース"},"date":"2022年09月11日"}}]}},"pageContext":{"limit":2,"skip":6}},"staticQueryHashes":["3649515864","4091360188","4183784856","63159454"]}

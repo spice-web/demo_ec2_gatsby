@@ -35,7 +35,7 @@ $breakpoints: (
   variable
 ============================== */
 // color
-$yellow: #FFFAC8;
+// $yellow: #FFFAC8;
 $pale-green: #EFFCC9;
 $light-green: #B4F000;
 $green: #64C800;
@@ -44,6 +44,7 @@ $deep-green: #006E00;
 $yellow: #FFFF00;
 $pink:   #FF2C73;
 $text-color: #404040;
+
 
 /* ==============================
   中央寄せ
@@ -87,3 +88,12 @@ $text-color: #404040;
       margin-bottom: calc((1 - #{$line-height}) * .5em);
   }
 }
+
+/* ==============================
+ ||font-weight
+============================== */
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;

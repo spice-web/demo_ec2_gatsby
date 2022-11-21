@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -9,6 +8,10 @@ import Complete from "../components/complete"
 import * as styles from '../styles/_form.module.scss'
 
 import Faq from "../components/faq"
+import Wrap from "../components/grayContainer"
+
+// smoothscroll
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 export default function FormPage() {
   const [value, setValue] = React.useState({})
@@ -47,25 +50,25 @@ export default function FormPage() {
 
   <Layout>
     <Seo title="お問い合わせ" />
-
+    <h2 class="headline--title">INQUIRY<span>お問い合わせ</span></h2>
     {/* コンテナ */}
-    <div className="content__wrap">
+    <div className="content__wrap content__pd">
       <div className="content__inner --sm">
 
         {/* 表題ブロック */}
-        <h2 class="headline--title">INQUIRY<span>お問い合わせ</span></h2>
+        
 
         <p className="pg--md mb--lg">各店舗のご利用・ご予約に関するお問い合せ、サンパーキング各店舗のご利用・ご予約に関するお問い合わせは、下記メールフォームまたはサン予約センター TEL. 0476-33-1123 にてお受けいたします。 ご質問・ご要望にはなるべく迅速にお答えいたします。<br />なお、ご入力いただきましたお客様の個人情報および記述内容は、内容の確認ならびにお客様への回答のために 必要な範囲でのみ利用させていただきます。</p>
 
         <p className="text-center text-deep-gr mb--xs"><Link to="/policy">&gt;&gt;&gt;サイトポリシー</Link></p>
         <p className="text-center text-xs mb--lg">必須の欄は必ずご記入の上お問い合わせください。 漢字・カナは全角、半角数字、半角ハイフンをご使用ください。</p>
 
-        <p className="text-center text-deep-gr mb--xxl">お問い合わせの前に<Link to="#faq" className="link_deco">よくあるお問い合わせ</Link>のご確認もお願いします。</p>
+        <p className="text-center text-deep-gr mb--xxl">お問い合わせの前に<button className={styles.linkBox} onClick={() => scrollTo('#faq')}>よくあるお問い合わせ</button>のご確認もお願いします。</p>
 
       </div>
       {/* content__inner */}
 
-        <div className="content__inner --sm bg--light-gray dbr-md">
+        <Wrap>
 
         {/* フォームブロック */}
         <div className="content__inner--xs">
@@ -76,6 +79,15 @@ export default function FormPage() {
           </div>
 
           <form onSubmit={onSubmit} method="POST" action="/api/send">
+
+            {/* セレクト */}
+            <label for="contactUs" >お問い合わせ先</label>
+            <select value={value['contactUs'] || ``} name="contactUs" id="contactUs" size="1" onChange={handleChange} >
+              <option value="" hidden>選択してください</option>
+              <option value="サンパーキング成田店">サンパーキング成田店</option>
+              <option value="個人情報保護法について">個人情報保護法について</option>
+              <option value="その他">その他</option>
+            </select>
 
             {/* お名前 */}
             <div class="">
@@ -92,20 +104,20 @@ export default function FormPage() {
 
             {/* 電話番号 */}
             <div class="">
-              <label for="formTel" class="">電話番号</label>
-                <input type="text" id="formTel" value={value['formTel'] || ``} onChange={handleChange} class="" placeholder="例：0476-33-1155" />
+              <label for="formTel" class="">電話番号（数字のみハイフン無し）</label>
+                <input type="text" id="formTel" pattern="^[0-9]{9,}$" inputmode="numeric" value={value['formTel'] || ``} onChange={handleChange} class="" placeholder="0476331155" />
             </div>
 
             {/* FAX */}
             <div class="">
-              <label for="formFax" class="">FAX番号</label>
-              <input type="text" id="formFax" value={value['formFax'] || ``} onChange={handleChange} class="" placeholder="例：0476-33-1198" />
+              <label for="formFax" class="">FAX番号（数字のみハイフン無し）</label>
+              <input type="text" id="formFax" pattern="^[0-9]{9,}$" inputmode="numeric" value={value['formFax'] || ``} onChange={handleChange} class="" placeholder="0476331198" />
             </div>
 
             {/* メールアドレス */}
             <label for="formEmail" class="">メールアドレス※必須</label>
             <div class="">
-              <input type="email" id="formEmail" value={value['formEmail'] || ``} onChange={handleChange} class="" placeholder="info@sunparking.co.jp" required  />
+              <input type="email" pattern=".+\.[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]" id="formEmail" value={value['formEmail'] || ``} onChange={handleChange} class="" placeholder="メールアドレスを入力してください。" required  />
             </div>
 
             {/* お問い合わせ内容 */}
@@ -136,20 +148,21 @@ export default function FormPage() {
         </div>
         {/* フォームブロック */}
 
-      </div>
+      </Wrap>
       {/* content__inner */}
 
-      <div id="faq" className="content__inner --sm bg--light-gray dbr-md">
-        <div className="content__inner--xs">
-          <h3 className="text-deep-gr text-center">よくあるお問い合わせ</h3>
-          
+      <Wrap>
+        <div id="faq">
+          <div className="content__inner--xs">
+            <h3 className="text-deep-gr text-center mb--md" id="faq">よくあるお問い合わせ</h3>
 
-          <Faq />
+            <Faq />
 
-
-
+          </div>
         </div>
-      </div>
+      </Wrap>
+
+
       {/* content__inner */}
 
     </div>

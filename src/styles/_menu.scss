@@ -1,4 +1,4 @@
-@import './global/_config.scss';
+@import './global/_variable.scss';
 
 // variable
 $main-black-color: #000;
@@ -7,11 +7,15 @@ $main-black-color: #000;
   &__def {
     padding: 1rem 0;
     border-bottom: 1px solid #FFF;
+    &:last-child {
+      border: none;
+    }
   }
 
   &__dttl {
     position: relative;
-    padding-left: 1rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.25rem;
     &:before {
       content: "■";
       display: inline-block;
@@ -23,6 +27,9 @@ $main-black-color: #000;
 
   &__list {
     padding-left: 0.875rem;
+    > li {
+      line-height: 2;
+    }
   }
 
   &__item {
@@ -30,7 +37,14 @@ $main-black-color: #000;
       content: "・";
     }
   }
+  &__sns {
+    margin-top: 1rem;
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
   }
+}
   
 // navigation
 header [class^="navigation"] {
@@ -44,6 +58,16 @@ header [class^="drawer"] {
   }
 }
 
+header {
+  .navigation {
+    &__def {
+      button {
+        color: #fff;
+      }
+    }
+  }
+}
+
 footer {
   .navigation {
     &__wrap {
@@ -52,6 +76,9 @@ footer {
     }
     &__def {
       border-bottom: none;
+      button {
+        color: #404040;
+      }
     }
     &__list {
       display: none;
@@ -62,3 +89,4 @@ footer {
     }
   }
 }
+

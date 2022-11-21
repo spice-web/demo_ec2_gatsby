@@ -76,15 +76,18 @@ const Faq = () => {
   return (
     <>
 
-      <h4 className="text-deep-gr">予約に関して</h4>
+    <div className={styles.faqWrap}>
+      <h4 className="text-deep-gr mb--sm">予約に関して</h4>
       {reserve.map(e => (
         <dl class="faq faq__def">
           <dt style={TitleStyles} className="headline--greenLabel faq__title">{e.node.title}<button class="question-button"><span></span><span></span></button></dt>
           <dd class="text-sm faq__answer">{e.node.contents}</dd>
         </dl>
       ))}
+    </div>
 
-      <h4 className="text-deep-gr">支払い、料金に関して</h4>
+    <div className={styles.faqWrap}>
+      <h4 className="text-deep-gr mb--sm">支払い、料金に関して</h4>
 
       {payment.map(f => (
         <dl class="faq faq__def">
@@ -98,10 +101,10 @@ const Faq = () => {
           </dd>
         </dl>
       ))}
+    </div>
 
-
-
-      <h4 className="text-deep-gr">出発当日に関して</h4>
+    <div className={styles.faqWrap}>
+      <h4 className="text-deep-gr mb--sm">出発当日に関して</h4>
       {Departure.map(i => (
         <dl class="faq faq__def">
           <dt style={TitleStyles} className="headline--greenLabel faq__title">{i.node.title}<button class="question-button"><span></span><span></span></button>
@@ -109,10 +112,10 @@ const Faq = () => {
           <dd class="text-sm faq__answer">{i.node.contents}</dd>
         </dl>
       ))}
+    </div>
 
-
-
-      <h4 className="text-deep-gr">到着について</h4>
+    <div className={styles.faqWrap}>
+      <h4 className="text-deep-gr mb--sm">到着について</h4>
 
       {Arrival.map(g => (
         <dl class="faq faq__def">
@@ -121,7 +124,7 @@ const Faq = () => {
         </dl>
       ))}
 
-      <h4 className="text-deep-gr">その他</h4>
+      <h4 className="text-deep-gr mb--sm">その他</h4>
       {Other.map(h => (
         <dl class="faq faq__def">
           <dt style={TitleStyles} class="headline--greenLabel faq__title">{h.node.title}<button class="question-button"><span></span><span></span></button></dt>
@@ -132,6 +135,7 @@ const Faq = () => {
             {h.node.more}</dd>
         </dl>
       ))}
+    </div>
 
     </>
   )

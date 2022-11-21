@@ -18,7 +18,7 @@ const InformationPost = ({ data }) => (
     <Seo title={data.microcmsInformation.title} />
 
     {/* コンテナ */}
-    <div className="content__wrap">
+    <div className="content__wrap content__pd">
       <div className={infoStyles.inner}>
 
         <div className={infoStyles.mainInner}>

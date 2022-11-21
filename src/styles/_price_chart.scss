@@ -5,19 +5,13 @@
   max-width: 530px;
   margin: 0 auto 2rem;
   font-size: 0.75rem;
-  &__wrap {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    @include mq(lg) {
-      display: flex;
-      width: calc(100% - 2rem);
-      &.price-page {
-        display: block;
-      }
-    }
-  }
 
+  @include mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    flex-wrap: wrap;
+  }
   &__head {
     > * {
       padding: 0.5rem 0;
@@ -25,22 +19,27 @@
   }
   &__row {
     justify-content: center;
-    &:not(.price-chart__head):last-child {
+  }
+}
+
+
+
+.price {
+  // 右側
+  &__second {
+    .price-chart__head {
+      display: none;
+      @include mq(lg) {
+        display: flex;
+      }
+    }
+    .price-chart__row:last-child {
       .price--sale {
         &:before {
           content: "1日ごと";
           font-size: 1rem;
         }
       }
-    }
-  }
-}
-
-.price {
-  &__second {
-      display: none;
-    @include mq(lg) {
-      display: block;
     }
   }
   &--normal {
@@ -60,6 +59,15 @@
 
 }
 
+.priceBox {
+  margin: 0 auto;
+  @include mq(lg) {
+    width: 48%;
+    margin: 0;
+  }
+}
+
+
 .day {
   width: 20%;
   font-weight: $medium;
@@ -69,17 +77,35 @@
   font-size: 1rem;
 }
 
-.note {
-  margin: 0 auto;
+.priceNote {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
   max-width: 530px;
   @include mq(lg) {
-    width: calc(100% - 2rem);
+    // width: calc(100% - 2rem);
     max-width: 100%;
+    @include mq() {
+      margin-bottom: 3rem;
+    }
   }
 }
 
+
+// price page
 .price-chart--sub {
   @extend .price-chart;
+  @include mq(lg) {
+    display: block;
+  }
+  .price-chart__row:last-child {
+    .price--sale {
+      &:before {
+        content: "1日ごと";
+        font-size: 1rem;
+      }
+    }
+  }
   max-width: 980px;
   .price--sale {
     @include mq(xs) {
@@ -89,9 +115,10 @@
       padding-right: 6rem;
     }
   }
+  .note {
+    @extend .note;
+    max-width: 980px;
+  }
+  
 }
 
-.note {
-  @extend .note;
-  max-width: 980px;
-}

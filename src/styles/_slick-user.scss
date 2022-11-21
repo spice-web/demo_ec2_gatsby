@@ -6,34 +6,55 @@
 .slick-next {
   right: 20px;
 }
-
-.slide-images {
-  width: 100%;
-  height: 128vw;
-  &.--item01 {
-    background: url('../images/slider/slider001_sp.webp') no-repeat center/cover;
-  }
-  &.--item02 {
-    background: url('../images/slider/slider002_sp.webp') no-repeat center/cover;
-  }
-  &.--item03 {
-    background: url('../images/slider/slider003_sp.webp') no-repeat center/cover;
-  }
+.slick-dots li {
+  width: 30px;
+  height: 30px;
 }
+
+//  Button
+.slick-dots {
+  bottom: -35px;
+}
+
+.slick-dots li, .slick-dots li button {
+  height: 30px;
+  width: 30px;
+}
+
+.slick-dots li button:before {
+  // font-size: 6px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+// .slide-images {
+//   width: 100%;
+//   height: 128vw;
+//   &.--item01 {
+//     background: url('../images/slider/slider001_sp.webp') no-repeat center/cover;
+//   }
+//   &.--item02 {
+//     background: url('../images/slider/slider002_sp.webp') no-repeat center/cover;
+//   }
+//   &.--item03 {
+//     background: url('../images/slider/slider003_sp.webp') no-repeat center/cover;
+//   }
+// }
 
 @media screen and (min-width: 481px) {
   .slide-images {
-    width: 100%;
-    height: 51.02vw;
-    &.--item01 {
-      background: url('../images/slider/slider001_pc.webp') no-repeat center/cover;
-    }
-    &.--item02 {
-      background: url('../images/slider/slider002_pc.webp') no-repeat center/cover;
-    }
-    &.--item03 {
-      background: url('../images/slider/slider003_pc.webp') no-repeat center/cover;
-    }
+//     width: 100%;
+//     height: 51.02vw;
+//     &.--item01 {
+//       background: url('../images/slider/slider001_pc.webp') no-repeat center/cover;
+//     }
+//     &.--item02 {
+//       background: url('../images/slider/slider002_pc.webp') no-repeat center/cover;
+//     }
+//     &.--item03 {
+//       background: url('../images/slider/slider003_pc.webp') no-repeat center/cover;
+//     }
   }
 }
 
@@ -41,8 +62,15 @@
   .slide-images {
     width: 98%!important;
     border-radius: 1rem;
-    height: calc(60vw - 240px);
+//     height: calc(60vw - 240px);
     margin: 0 1%;
+  }
+  .slick-prev {
+    left: 4rem;
+  }
+  
+  .slick-next {
+    right: 4rem;
   }
 }
 
@@ -53,8 +81,16 @@
     display: block !important;
     width: 90% !important;
     max-width: 980px;
-    height: calc(67vw - 64px);
-    max-height: 500px;
+//     height: calc(67vw - 64px);
+//     max-height: 500px;
     margin: 0 auto;
+  }
+  .slick-prev {
+    left: 20vw;
+    z-index: 101;
+  }
+  
+  .slick-next {
+    right: 20vw;
   }
 }

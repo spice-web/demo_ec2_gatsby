@@ -16,7 +16,7 @@ const InformationPage = ({ data }) => (
   <Layout>
     <Seo title="インフォーメーション" />
     <PageTitle>INFORMATION<span>新着情報</span></PageTitle>
-    <div className="content__wrap">
+    <div className="content__wrap content__pd">
       <div className={Styles.inner}>
 
       {/* コンテナ */}

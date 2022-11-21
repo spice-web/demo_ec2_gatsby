@@ -2,24 +2,26 @@
   ||見出し ||headline
 ============================== */
 .headline {
-  .-lv1 {
-    font-size: 2rem;
-  }
-  .-lv2 {
-    font-size: 1.5rem;
-    font-weight: $bold;
-    text-align: center;
-  }
+  // .-lv1 {
+  //   font-size: 2rem;
+  // }
+  // .-lv2 {
+  //   font-size: 1.5rem;
+  //   font-weight: $bold;
+  //   text-align: center;
+  // }
+
+  // ページタイトル
   &--title {
     text-align: center;
     color: $deep-green;
     letter-spacing: 0.2em;
     font-weight: $regular;
     font-size: 1.25rem;
-    padding: 2.5rem 2.5rem;
+    padding: 2.5rem 0 0;
     @include mq() {
       font-size: 2rem;
-      padding: 3rem 4rem 5rem;
+      padding: 3rem 4rem 0;
     }
     &.text-white {
       color: #FFF;
@@ -30,6 +32,15 @@
         font-size: 1rem;
       } 
       display: block;
+    }
+    &.underLine {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 0.99px solid #404040;
+      @include mq() {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+      }
     }
   }
   &--greenLabel {
@@ -79,7 +90,12 @@
     @extend .text-lg;
     color: $deep-green;
     text-align: center;
-    margin-bottom: 0.75rem ;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    font-weight: $bold;
+    @include mq() {
+      margin-bottom: 2rem;
+    }
     &--sub {
       display: block;
     }

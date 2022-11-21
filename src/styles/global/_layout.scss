@@ -4,20 +4,30 @@
 .content {
   &__wrap {
     width: 100%;
-    padding: 0 0 2.5rem 0;
-
     @include mq() {
       padding-left: 5rem;
       padding-right: 5rem;
     }
   }
-
+  &__pd {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @include mq() {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+  &__mg {
+    margin-bottom: 4rem;
+    @include mq() {
+      margin-bottom: 6rem;
+    }
+  }
   &__inner {
     width: 93%;
-    margin: 0 auto 4rem;
+    margin: 0 auto;
     @include mq() {
       width: 100%;
-      margin-bottom: 5rem;
     }
     &.bg--light-gray {
       margin-bottom: 6rem;
@@ -25,10 +35,10 @@
 
     &.--sm { max-width: 880px; }
     &.--md { max-width: 980px; }
+    &.--w1100 { max-width: 1100px; }
     &.--lg { max-width: 1200px; }
 
     &--xs {
-      padding: 2.5rem 0;
       width: 90%;
       max-width: 700px;
       margin: 0 auto;
@@ -37,7 +47,15 @@
 }
 
 .inner {
-  padding: 3.5rem;
+  width: 93%;
+  &__pd {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @include mq() {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
   &--white {
     @extend .bdr-xs;
     background: #FFF; 
@@ -136,6 +154,11 @@
       }
     &--md {
       @include mq() {
+        width: 24%;
+      }
+    }
+    &--lg {
+      @include mq(lg) {
         width: 24%;
       }
     }

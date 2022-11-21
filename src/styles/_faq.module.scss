@@ -1,6 +1,10 @@
+.faqWrap {
+  margin-bottom: 3rem;
+}
+
 // 旅のリンク集
 .linkOther {
-  dl {
-    margin-bottom: 2rem;
+  dl:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
