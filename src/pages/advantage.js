@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
@@ -117,7 +116,7 @@ const AdvantagePage = () => (
         </div>
       </div>
 
-      <a href="https://www.keepercoating.jp/proshop/chiba/city625/05287/" target="_blank">
+      <a href="https://www.keepercoating.jp/proshop/chiba/city625/05287/" target="_blank" rel="noreferrer noopener">
         <div className="br_maxsm">
           <StaticImage src="../images/advantage/logo_keeper.jpg" alt="keeper pro shop"/>
         </div>

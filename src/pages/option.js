@@ -9,13 +9,6 @@ import ButtonOp from "../components/button-option"
 
 import * as styles from "../styles/_option.module.scss"
 
-const link = 'https://www.sunparking.co.jp/form/rsv1.php?office_id=1';
-
-const reservation = {
-  position: 'relative',
-  paddingBottom: '2rem'
-}
-
 const reservationButton = {
   position: 'absolute',
   bottom: '0',
