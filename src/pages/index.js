@@ -343,7 +343,9 @@ const IndexPage = ( { data } ) => (
           <div className="flex-col-3--sm bdr-xs bdr-dark-green mb--sm">
             <dl className={styles.otherService}>
               <dt className={styles.otherServiceTitle} >CHUBB海外旅行保険</dt>
-              <dd className={styles.otherServiceText}><Link to="/option#insurance">当日、その場で海外旅行保険に加入できます。</Link></dd>
+              <dd className={styles.otherServiceText}>
+                <Link to="/option#insurance">当日、その場で海外旅行保険に加入できます。</Link>
+              </dd>
               <dd className={styles.otherServiceImg}>
                 <Link href="/option#insurance">
                   <StaticImage src="../images/top/link02.jpg" alt="CHUBB海外旅行保険サービス" loading="lazy" />
