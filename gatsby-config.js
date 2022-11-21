@@ -60,6 +60,16 @@ module.exports = {
         }],
       },
     },
+    {
+      resolve: `gatsby-source-microcms`,
+      options: {
+        apiKey: process.env.MICROCMS_APIKEY,
+        serviceId: process.env.MICROCMS_SERVICE_ID,
+        apis: [{
+          endpoint: 'category',
+        }],
+      },
+    },
     // voice
     {
       resolve: `gatsby-source-microcms`,

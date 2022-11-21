@@ -68,7 +68,7 @@ const PricePage = () => (
           <div className={Styles.box}>
             <figure className={Styles.img}>
               <StaticImage
-                src="../images/price/option002.png"
+                src="../images/price/option005.png"
                 alt="海外・国内旅行保険"
               />
             </figure>
