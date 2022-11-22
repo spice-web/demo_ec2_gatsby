@@ -3,15 +3,15 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 // import Menu from "./menu"
 
-import { Helmet } from "react-helmet"
+// import { Helmet } from "react-helmet"
 import MenuHeaderMoreInformation   from "./menu-header-more-information"
 const Header = () => (
   <>
   {/* サイト全体を noindex */}
-    <Helmet>
+    {/* <Helmet>
       <meta name="robots" content="noindex, follow" />
       <meta name="googlebot" content="noindex, follow" />
-    </Helmet>
+    </Helmet> */}
     <header class="header" id="header">
       <div className="header__wrap">
         <div className="header__left">
