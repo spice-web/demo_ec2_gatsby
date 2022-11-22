@@ -5,8 +5,8 @@ export default function formHandler(req, res) {
     port: 465,
     host: 'smtp.sendgrid.net',
     auth: {
-      user: `${process.env.GATSBY_SENDGRID_USERNAME}`,
-      pass: `${process.env.GATSBY_SENDGRID_APIKEY}`,
+      user: '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',
+      pass: 'apikey',
     },
     secure: true,
   })
