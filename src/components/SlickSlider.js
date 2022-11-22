@@ -12,8 +12,8 @@ const reserve = "https://www.sunparking.co.jp/form/rsv1.php";
 
 export default function SlickSlider() {
   const settings = {
-    // autoplay: true,
-    speed: 500,
+    autoplay: true,
+    speed: 1000,
     infinite: true,
     dots: true,
     centerMode: false,
@@ -21,6 +21,7 @@ export default function SlickSlider() {
     slidesToScroll: 1,
     initialSlide: 1,
     centerMode: false,
+    initialSlide: 0,
   };
 
   return (
@@ -28,7 +29,6 @@ export default function SlickSlider() {
       {/* <div className="slide-images --item01"></div>
       <div className="slide-images --item02"></div>
       <div className="slide-images --item03"></div> */}
-
       <a href={reserve} target="_blank">
         <StaticImage
           src="../images/slider/slider001_sp.webp"
@@ -45,6 +45,8 @@ export default function SlickSlider() {
           width={480}
         />
       </Link>
+
+
       <Link to="/price">
         <StaticImage
           src="../images/slider/slider003_sp.webp"

@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import "../styles/_price_chart.scss"
 
 // button
-import ButtonMore from "../components/button-more"
+// import ButtonMore from "../components/button-more"
 
 
 const PriceChart = () => {

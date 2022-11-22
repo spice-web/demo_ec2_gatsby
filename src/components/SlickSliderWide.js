@@ -12,8 +12,8 @@ const reserve = "https://www.sunparking.co.jp/form/rsv1.php";
 
 export default function SlickSliderWide() {
   const settings = {
-    // autoplay: true,
-    speed: 500,
+    autoplay: true,
+    speed: 1000,
     infinite: true,
     dots: true,
     centerMode: false,
