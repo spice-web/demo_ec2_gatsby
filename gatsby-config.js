@@ -83,7 +83,7 @@ module.exports = {
     },
     // microCMSの設定ここまで
 
-    // sitemap設定
+    // サイトマップ設定
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {

@@ -100,6 +100,7 @@ const IndexPage = ( { data } ) => (
         className={styles.hero_airplane}
         width={185}
         loading="lazy"
+        quality="40"
       />
       <StaticImage
         src="../images/top/bus.png"
@@ -107,6 +108,7 @@ const IndexPage = ( { data } ) => (
         className={styles.hero_bus}
         loading="lazy"
         width={650}
+        quality="40"
       />
     </div>
 
