@@ -22,6 +22,7 @@ const Header = () => (
                 alt="成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1"
                 className="logoImg"
                 loading='eager'
+                backgroundColor='#B4F000'
               />
             </Link>
           </div>
