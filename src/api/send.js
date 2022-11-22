@@ -7,6 +7,7 @@ export default async function formHandler(req, res) {
 
   const mailData = {
     from: 'admin@spice-web.jp',
+    // center@sunparking.co.jp
     to: body.formEmail,
     bcc: 'admin@spice-web.jp',
     subject: 'サンパーキングwebサイトからのお問い合わせ',

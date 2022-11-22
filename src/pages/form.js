@@ -85,7 +85,6 @@ export default function FormPage() {
             <select value={value['contactUs'] || ``} name="contactUs" id="contactUs" size="1" onChange={handleChange} >
               <option value="" hidden>選択してください</option>
               <option value="サンパーキング成田店">サンパーキング成田店</option>
-              <option value="個人情報保護法について">個人情報保護法について</option>
               <option value="その他">その他</option>
             </select>
 
