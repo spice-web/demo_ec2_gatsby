@@ -37,6 +37,7 @@ jobs:
         env:
           GATSBY_GOOGLE_MAP_API_KEY: ${{ secrets.GATSBY_GOOGLE_MAP_API_KEY }}
           GATSBY_SENDGRID_APIKEY: ${{ secrets.GATSBY_SENDGRID_APIKEY }}
+          GATSBY_SENDGRID_USERNAME: ${{ secrets.GATSBY_SENDGRID_USERNAME }}
           MICROCMS_APIKEY: ${{ secrets.MICROCMS_APIKEY }}
           MICROCMS_SERVICE_ID: ${{ secrets.MICROCMS_SERVICE_ID }}
 
