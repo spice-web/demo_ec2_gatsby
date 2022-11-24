@@ -2,7 +2,8 @@ export default function formHandler(req, res) {
 
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
-    port: 587,
+    // port: 587,
+    port: 465,
     host: 'smtp.sendgrid.net',
     auth: {
       user: 'apikey',
