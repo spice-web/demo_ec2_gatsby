@@ -9,7 +9,7 @@ const NotFoundPage = () => (
       <div className="content__inner --md">
       <h1 className="text-center">404: Not Found</h1>
       <h2 className="text-center">ページがみつかりませんでした</h2>
-      <p>入力されたURLをもう一度ご確認ください。</p>
+      <p className="text-center">入力されたURLをもう一度ご確認ください。</p>
       </div>
     </div>
     
