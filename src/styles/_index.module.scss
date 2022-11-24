@@ -267,20 +267,18 @@
     display: grid;
     grid-template-columns: repeat(6, auto);
     grid-template-rows: repeat(2, 30px);
-    gap: 0.25rem;
-    margin-bottom: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
     @include mq() {
-      gap: 0.5rem;
-      margin-bottom: 2rem;
       grid-template-columns: repeat(5, auto);
-      grid-template-rows: auto;
+      grid-template-rows: 42px;
     }
-    img {
-      height: 30px!important;
-      @include mq() {
-        height: 42px!important;
-      }
-    }
+    // img {
+    //   height: 30px!important;
+    //   @include mq() {
+    //     height: 42px!important;
+    //   }
+    // }
     .sponsorLogo {
       // margin: 0 0.5rem;
     
@@ -324,19 +322,20 @@
   &_bottom {
     display: grid;
     grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(30px);
-    gap: 0.25rem;
+    grid-template-rows: repeat(54px);
+    gap: 0.5rem;
     margin-bottom: 2rem;
+    align-items: center;
     @include mq() {
-      gap: 0.5rem;
+      grid-template-rows: repeat(76px);
       margin-bottom: 4rem;  
     }
-    img {
-      height: 54px!important;
-      @include mq() {
-        height: 76px!important;
-      }
-    }
+    // img {
+    //   height: 54px!important;
+    //   @include mq() {
+    //     height: 76px!important;
+    //   }
+    // }
     .sponsorLogo {
       // margin: 0 0.5rem;
     
