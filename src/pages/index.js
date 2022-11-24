@@ -158,19 +158,21 @@ const IndexPage = ( { data } ) => (
 
         <div className={styles.sponsor}>
           <div className={styles.sponsor_top}>
-            <StaticImage src="../images/company-logo/jal.jpg" alt="JAL" loading="lazy" />
-            <StaticImage src="../images/company-logo/ana.jpg" alt="ANA" loading="lazy" />
-            <StaticImage src="../images/company-logo/jet.jpg" alt="JET STAR" loading="lazy" />
-            <StaticImage src="../images/company-logo/peach.jpg" alt="peach" loading="lazy" />
-            <StaticImage src="../images/company-logo/zipair.jpg" alt="Zip Air" loading="lazy" />
+            <figure className={styles.sponsorLogo}>
+              <StaticImage src="../images/company-logo/jal.jpg" alt="JAL" loading="lazy" />
+            </figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/ana.jpg" alt="ANA" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/jet.jpg" alt="JET STAR" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/peach.jpg" alt="peach" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/zipair.jpg" alt="Zip Air" loading="lazy" /></figure>
           </div>
           <div className={styles.sponsor_bottom}>
-            <StaticImage src="../images/company-logo/spring.jpg" alt="spring" loading="lazy" />
-            <StaticImage src="../images/company-logo/jtb.jpg" alt="JTB" loading="lazy" />
-            <StaticImage src="../images/company-logo/his.jpg" alt="HIS" loading="lazy" />
-            <StaticImage src="../images/company-logo/kinki.jpg" alt="近畿日本ツーリスト" loading="lazy" />
-            <StaticImage src="../images/company-logo/nipon.jpg" alt="日本旅行" loading="lazy" />
-            <StaticImage src="../images/company-logo/hankyu.jpg" alt="阪急交通社" loading="lazy" />
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/spring.jpg" alt="spring" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/jtb.jpg" alt="JTB" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/his.jpg" alt="HIS" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/kinki.jpg" alt="近畿日本ツーリスト" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/nipon.jpg" alt="日本旅行" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/hankyu.jpg" alt="阪急交通社" loading="lazy" /></figure>
           </div>
         </div>
 
@@ -216,11 +218,11 @@ const IndexPage = ( { data } ) => (
         <ul className={styles.optionBox}>
           <li className={styles.textBox}><span className="text-pk">様々なお支払い方法</span>に対応。予約時にクレジットカードで<span className="text-pk">事前決済もOK！</span><span className={styles.note}>※その他、各種カードご利用できます。</span></li>
           <li className={styles.imgBox}><StaticImage
-            src="../images/top/option01.png" imgClassName={styles.selectImg} alt="様々なお支払い方法に対応。予約時にクレジットカードで事前決済もOK！" loading="lazy" className={styles.imgBox} /></li>
+            src="../images/top/option02.png" imgClassName={styles.selectImg} alt="様々なお支払い方法に対応。予約時にクレジットカードで事前決済もOK！" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}><span className="text-pk">電気自動車</span>の充電設備あります。TESLAも充電できます!<br /><span className={styles.note}>※必ず充電用コードをお持ちください。<br />※テスラ・ロードスターは充電できません。</span></li>
-          <li className={styles.imgBox}><StaticImage src="../images/top/option02.png" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" className={styles.imgBox} /></li>
+          <li className={styles.imgBox}><StaticImage src="../images/top/option01.png" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" className={styles.imgBox} /></li>
         </ul>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}>当日でも<span className="text-pk">窓口で旅行保険に加入</span>できるので安心。</li>

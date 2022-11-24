@@ -245,25 +245,31 @@ const GuidePage = () => (
     {/* お帰りになったら */}
     <Wrap>
       <h3 id="last" className="sec__ttl link__inner">お帰りになったら</h3>
-      <div className={styles.lastFlowTitle}><Link to="#terminal2">第2・第3ターミナルの方はこちら</Link></div>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
-        <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10102;各お迎え場所に移動</div>
+          <div>
+            <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10102;各お迎え場所に移動</div>
+            <div className={styles.lastFlowTitle}><Link to="#terminal1" className="is-block">第1ターミナルの方はこちら&nbsp;&#x25B6;&#x25B6;</Link></div>
+            <div className={styles.lastFlowTitle}><Link to="#terminal2" className="is-block">第2・第3ターミナルの方はこちら&nbsp;&#x25B6;&#x25B6;</Link></div>
+          </div>
+
           <p className="text-light text-normal mb--sm">成田空港へお戻りになったら、お荷物を受け取り、税関通過後に、出発の際にお渡ししましたお預かり券の「到着専用電話番号」へご連絡の上、裏面にある「お迎え場所」まで移動をお願いします。 到着ターミナルやお迎え方法によって場所が違いますので、お電話の際に今一度ご確認ください。</p>
         </div>
         <div className="flex-col-2--md">
           <StaticImage src="../images/guide/closing01.jpg" alt="成田空港イメージ" />
         </div>
       </div>
-      <div className="mb--lg">
+      <div className="mb--lg" id="terminal1">
         <p className="label bg--gray --pd-xd text-smd">成田空港第1ターミナル お迎え場所</p>
         <StaticImage src="../images/guide/closingMap01.jpg" alt="成田空港第1ターミナル お迎え場所"/>
-        <p className={styles.lastFlowLink}><a href="https://goo.gl/maps/1mXCM3KBtumzWV5e9" target="_blank" rel="noreferrer noopener">Google Mapで表示</a></p>
+        <p className={styles.lastFlowMapLink}><a href="https://goo.gl/maps/1mXCM3KBtumzWV5e9" target="_blank" rel="noreferrer noopener"><span>Google Mapで表示</span></a></p>
+        <p className={styles.lastFlowTelLink}><a href="tel:0476331199 "><span>送迎バスを呼ぶ</span></a></p>
       </div>
       <div style={flow}>
       <p id="terminal2" className="label bg--gray --pd-xd text-smd">成田空港第2ターミナル お迎え場所</p>
         <StaticImage src="../images/guide/closingMap02.jpg" alt="成田空港第2ターミナルお迎え場所" />
-        <p className={styles.lastFlowLink}><a href="https://goo.gl/maps/nb2a5uoj6GnMGFZF9" target="_blank" rel="noreferrer noopener">Google Mapで表示</a></p>
+        <p className={styles.lastFlowMapLink}><a href="https://goo.gl/maps/nb2a5uoj6GnMGFZF9" target="_blank" rel="noreferrer noopener"><span>Google Mapで表示</span></a></p>
+        <p className={styles.lastFlowTelLink}><a href="tel:0476331199 "><span>送迎バスを呼ぶ</span></a></p>
       </div>
 
       <div style={flow} className="flex__wrap mb--md">

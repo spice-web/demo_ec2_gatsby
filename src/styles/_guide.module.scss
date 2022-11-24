@@ -182,21 +182,78 @@
   }
 }
 
-.lastFlowLink {
+.lastFlowMapLink {
   background: #FF2C73;
   border: 0.99px solid #FF2C73;
   color: #fff;
   text-align: center;
   margin-top: 2rem;
   padding: 1rem 0;
+  span {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: -35px;
+      background-image: url('../images/icon/map.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
   &:hover {
     background: #FFF;
     border: 0.99px solid #FF2C73;
     color: #FF2C73;
     opacity: 1!important;
+    span {
+      &:after {
+        background-image: url('../images/icon/map_r.png');
+      }
+    }
   }
   a {
     display: block;
+  }
+}
+
+.lastFlowTelLink {
+  @extend .lastFlowMapLink;
+  margin-top: 1rem;
+  background: #001C78;
+  border-color: #001C78;
+  span {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: -35px;
+      background-image: url('../images/icon/phone.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &:hover {
+    color: #001c78;
+    border-color: #001C78;
+    span {
+      &:after {
+        content: "";
+        background-image: url('../images/icon/phone_b.png');
+      }
+    }
   }
 }
 

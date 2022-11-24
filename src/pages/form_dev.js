@@ -39,7 +39,7 @@ export default function FormPage() {
       <p>{serverResponse}</p>
     </div>
     <hr />
-    <form onSubmit={onSubmit} method="POST" action="/api/form" className="formWrapper">
+    <form onSubmit={onSubmit} method="POST" action="/api/send_dev" className="formWrapper">
       <h2>Contact Form</h2>
       <div className="formBlock">
         <label>
