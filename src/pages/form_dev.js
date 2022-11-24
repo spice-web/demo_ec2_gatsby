@@ -15,7 +15,7 @@ export default function FormPage() {
   async function onSubmit(e) {
     e.preventDefault()
     const response = await window
-      .fetch('src/api/send_dev', {
+      .fetch('/api/send_dev', {
         method: 'POST',
         headers: {
           "content-type": "application/json",

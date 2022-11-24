@@ -10,19 +10,19 @@ const FormFlex = () => (
       action="https://www.flexyform.com/f/1182875604167c7dcf13359e5c66df8294902e4c">
         <p>
             <label>お名前※必須</label>
-            <input type="text" name="fullname" />
+            <input type="text" name="お名前" />
         </p>
         <p>
             <label>フリガナ※必須</label>
-            <input type="text" name="kana" />
+            <input type="text" name="フリガナ" />
         </p>
         <p>
             <label>メールアドレス※必須</label>
-            <input type="email" name="_reply_to" />
+            <input type="email" name="メールアドレス" />
         </p>
         <p>
         <label>お問い合わせ内容※必須</label>
-            <textarea name="message"></textarea>
+            <textarea name="お問い合わせ内容"></textarea>
         </p>
         <button type="submit">Send</button>
     </form>
