@@ -14,6 +14,8 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     // sass
     `gatsby-plugin-sass`,
+    // sitemap
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
