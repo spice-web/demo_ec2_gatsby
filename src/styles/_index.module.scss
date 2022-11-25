@@ -334,6 +334,7 @@
       margin-bottom: 4rem;  
     }
     img {
+      object-fit: contain!important;
       height: 54px!important;
       @include mq() {
         height: 76px!important;

@@ -14,7 +14,10 @@ import * as Styles from "../styles/_information.module.scss"
 
 const InformationPage = ({ data }) => (
   <Layout>
-    <Seo title="インフォーメーション" />
+    <Seo　
+      title="インフォーメーション"
+      description="サンパーキングの新着情報やお得な情報を掲載中！"
+    />
     <PageTitle>INFORMATION<span>新着情報</span></PageTitle>
     <div className="content__wrap content__pd">
       <div className={Styles.inner}>

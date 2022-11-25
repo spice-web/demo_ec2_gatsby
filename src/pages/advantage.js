@@ -16,7 +16,10 @@ const max450px = {
 
 const AdvantagePage = () => (
   <Layout>
-    <Seo title="選ばれる理由" />
+    <Seo
+      title="サンパーキングが選ばれる理由"
+      description="成田空港公式駐車場と比較しても断然サンパーキング成田店が便利でおトク！"
+    />
     <PageTitle>ADVANTAGE<span>選ばれる理由</span></PageTitle>
 
     <div className="content__wrap content__pd">

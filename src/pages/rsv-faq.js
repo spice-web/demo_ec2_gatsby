@@ -15,7 +15,10 @@ const TitleStyles = {
 
 const MoreInfoPage = ( {data} ) => (
   <Layout>
-    <Seo title="ご予約でお困りの場合" />
+    <Seo 
+      title="ご予約でお困りの場合"
+      description="ご予約でお困りの場合はこちらをご確認ください"
+    />
     <PageTitle>ご予約でお困りの場合</PageTitle>
 
   <div className="content__wrap content__pd">

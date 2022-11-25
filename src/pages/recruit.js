@@ -10,7 +10,7 @@ import * as styles from "../styles/_recruit.module.scss"
 
 const RecruitPage = () => (
   <Layout>
-    <Seo title="求人情報" />
+    <Seo title="求人情報" description="私達と一緒にサンパーキングで働きませんか？" />
     
     <PageTitle>RECRUIT<span>求人情報</span></PageTitle>
     <div className="content__wrap content__pd">

@@ -12,7 +12,7 @@ import * as Styles from "../styles/_about.module.scss"
 
 const AboutPage = () => (
   <Layout>
-    <Seo title="サンパーキンについて" />
+    <Seo title="サンパーキンについて" description="サンパーキンの会社概要ページ" />
     <h2 class="headline--title">COMPANY PROFILE<span>会社情報</span></h2>
     <div className="content__wrap content__pd">
       <div className="content__inner --sm">

@@ -35,7 +35,7 @@ const Header = () => (
           <p className="header__right--time">［営業時間］5:00～22:30 成田空港最終便到着まで営業</p>
           <ul className="header-menu__wrap">
             <li className="header-menu__item access"><Link to="/guide">アクセス</Link></li>
-            <li className="header-menu__item faq"><Link to="/form#faq">Q&A</Link></li>
+            <li className="header-menu__item faq"><Link to="/faq">Q&A</Link></li>
             <li className="header-menu__item voice"><Link to="/voice">お客様の声</Link></li>
             <li className="header-menu__item info"><Link to="/information">新着情報</Link></li>
             <li className="header-menu__item about"><Link to="/about">企業情報</Link></li>

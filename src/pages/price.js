@@ -14,25 +14,28 @@ const reserve = "/"
 
 const PricePage = () => (
   <Layout>
-    <Seo title="料金について" />
+    <Seo
+      title="料金について"
+      description="サンパーキング成田店は、安心の総額表示で実質最安値に挑戦中！"
+    />
     
     <PageTitle>PRICE<span>料金について</span></PageTitle>
 
-  <div className="content__wrap content__pd">
-    <div className="content__inner --md">
-      <div className="mb--lg">
-        <div className="br_md">
-          <StaticImage src="../images/top/banner_campaign.jpg"  />
+    <div className="content__wrap content__pd">
+      <div className="content__inner --md">
+        <div className="mb--lg">
+          <div className="br_md">
+            <StaticImage src="../images/top/banner_campaign.jpg"  />
+          </div>
+          <div className="br_maxmd">
+            <StaticImage src="../images/top/banner_campaign_sp.jpg" />
+          </div>          
         </div>
-        <div className="br_maxmd">
-          <StaticImage src="../images/top/banner_campaign_sp.jpg" />
-        </div>          
+        <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
+        <PriceChart />
       </div>
-      <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
-      <PriceChart />
     </div>
-  </div>
-  {/* content__wrap */}
+    {/* content__wrap */}
     
     {/* オプションサービス */}
     <div className={Styles.option}>
