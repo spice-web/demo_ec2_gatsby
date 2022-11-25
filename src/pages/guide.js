@@ -29,7 +29,10 @@ const border = {
 
 const GuidePage = () => (
   <Layout>
-    <Seo title="ご利用案内" />
+    <Seo
+      title="ご利用案内"
+      description="サンパーキングまでのアクセス方法・空港に着いてからのご利用の流れを説明しています。"
+    />
     <PageTitle>USER GUIDE<span>ご利用案内</span></PageTitle>
 
     <div className="content__wrap content__pd">

@@ -19,7 +19,10 @@ const black  = { color: "#9E3D9B" }
 
 const MoreInfoPage = ( {data} ) => (
   <Layout>
-    <Seo title="サンパーキンについて" />
+    <Seo
+      title="関連情報"
+      description="今までご利用頂いたお客様の声を掲載しています"
+    />
     <PageTitle>MORE INFORMATION<span>関連情報</span></PageTitle>
 
 <div className="content__wrap content__pd" id="top">

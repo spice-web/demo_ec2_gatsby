@@ -32,7 +32,10 @@ const arrow = {
 
 const OptionPage = () => (
   <Layout>
-    <Seo title="サンパーキンについて" />
+    <Seo
+      title="オプション"
+      description="空港お届けサービス・洗車・カーメンテナンスなど様々なオプションサービスを取り揃えております。"
+    />
 
     <PageTitle>OPTION<span>オプション</span></PageTitle>
 

@@ -167,7 +167,13 @@ const IndexPage = ( { data } ) => (
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/zipair.jpg" alt="Zip Air" loading="lazy" /></figure>
           </div>
           <div className={styles.sponsor_bottom}>
-            <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/spring.jpg" alt="spring" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}>
+              <StaticImage
+                src="../images/company-logo/spring.jpg"
+                alt="spring" loading="lazy"
+                style={{objectFit: 'contain!important'}}
+              />
+            </figure>
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/jtb.jpg" alt="JTB" loading="lazy" /></figure>
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/his.jpg" alt="HIS" loading="lazy" /></figure>
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/kinki.jpg" alt="近畿日本ツーリスト" loading="lazy" /></figure>

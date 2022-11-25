@@ -9,7 +9,7 @@ import * as Styles from "../styles/_policy.module.scss"
 
 const PolicyPage = () => (
   <Layout>
-    <Seo title="サイトポリシー・プライバシーポリシー" />
+    <Seo title="サイトポリシー・プライバシーポリシー" description="サンパーキングのサイトポリシー・プライバシーポリシーページになります"/>
     <PageTitle>POLICY<span>サイトポリシー・プライバシーポリシー</span></PageTitle>
 
     <div className="content__wrap content__pd">

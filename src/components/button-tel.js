@@ -28,7 +28,7 @@ return (
     <div className={styles.button__reserve} data-type="fax" >
         {data.allFile.edges.map((file, index) => {
           return (
-              <a href={file.node.publicURL} target="_blank" className={styles.button__fax} >
+              <a href={file.node.publicURL} target="_blank" className={styles.button__fax} rel="noreferrer noopener" >
                 FAXで予約
               </a>
           )

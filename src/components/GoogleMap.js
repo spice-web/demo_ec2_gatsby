@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 // import { StaticImage } from 'gatsby-plugin-image';
 
-
 const AnyReactComponent = ({ text }) => {
   return (
     <div
@@ -54,7 +53,7 @@ class SimpleMap extends Component {
   render() {
     return (
       //サイズの大きさを指定
-      <div style = {{ height: '65vw', width: '100%' }}>
+      <div style = {{ height: '65vw', maxHeight:'550px', width: '100%' }} >
         <GoogleMapReact
           bootstrapURLKeys = {{ key: `${process.env.GATSBY_GOOGLE_MAP_API_KEY}` }}
           defaultCenter = { this.props.center }
