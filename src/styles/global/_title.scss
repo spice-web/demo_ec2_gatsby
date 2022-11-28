@@ -99,5 +99,19 @@
     &--sub {
       display: block;
     }
+    .hiatus {
+      color: #FF2C3A;
+      border: 0.99px solid #FF2C3A;
+      display: inline-block;
+      margin-left: 0.5rem;
+      padding: 0.125rem 0.25rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      background-color: #FEDEE0;
+      @include mq() {
+        line-height: 2rem;
+      }
+    }
   }
+  // sec__ttl
 }

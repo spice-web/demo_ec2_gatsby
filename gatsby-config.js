@@ -12,34 +12,35 @@ module.exports = {
     siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com/`,
   },
   plugins: [
-    // Google Analytics
-    [
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [process.env.GATSBY_TRACKING_ID],
-      },
-    ],
+    // // Google Analytics
+    // [
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [process.env.GATSBY_TRACKING_ID],
+    //   },
+    // ],
+
     // tag manager
-    {
-      resolve: `gatsby-plugin-google-tagmanager`,
-      options: {
-        id: `GTM-T43LP9C`,
+    // {
+    //   resolve: `gatsby-plugin-google-tagmanager`,
+    //   options: {
+    //     id: process.env.Gatsby_Google_Tag_Manager,
     
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
+    //     // Include GTM in development.
+    //     // Defaults to false meaning GTM will only be loaded in production.
+    //     includeInDevelopment: false,
     
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
+    //     // datalayer to be set before GTM is loaded
+    //     // should be an object or a function that is executed in the browser
+    //     // Defaults to null
+    //     defaultDataLayer: { platform: "gatsby" },
     
-        // Specify optional GTM environment details.
-        gtmAuth: "xNwDtuXDGlgZTO1P8TF2cg",
-        gtmPreview: "env-1",
-        dataLayerName: 'dataLayer',
-      }
-    },
+    //     // Specify optional GTM environment details.
+    //     // gtmAuth: "xNwDtuXDGlgZTO1P8TF2cg",
+    //     // gtmPreview: "env-1",
+    //     // dataLayerName: 'dataLayer',
+    //   }
+    // },
     // smoothscroll
     `gatsby-plugin-smoothscroll`,
     // sass

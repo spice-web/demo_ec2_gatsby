@@ -142,7 +142,7 @@ const GuidePage = () => (
       </div>
 
       <ButtonReserve />
-      <p className={styles.note}>サンパーキングのオンライン予約は、セコムによるSSLを使用しておりますので、安心してご利用できます。クレジットによる事前決済システムも導入しております。</p>
+      <p className={styles.note}>サンパーキングのオンライン予約は、SSLを使用しておりますので、安心してご利用できます。クレジットによる事前決済システムも導入しております。</p>
       
       <div className="mb--xl">
         <ButtonTel />
@@ -252,11 +252,14 @@ const GuidePage = () => (
         <div className="flex-col-2--md">
           <div>
             <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10102;各お迎え場所に移動</div>
+          </div>
+          <div>
+            <p className="text-light text-normal mb--sm">成田空港へお戻りになったら、お荷物を受け取り、税関通過後に、出発の際にお渡ししましたお預かり券の「到着専用電話番号」へご連絡の上、裏面にある「お迎え場所」まで移動をお願いします。 到着ターミナルやお迎え方法によって場所が違いますので、お電話の際に今一度ご確認ください。</p>
             <div className={styles.lastFlowTitle}><Link to="#terminal1" className="is-block">第1ターミナルの方はこちら&nbsp;&#x25B6;&#x25B6;</Link></div>
             <div className={styles.lastFlowTitle}><Link to="#terminal2" className="is-block">第2・第3ターミナルの方はこちら&nbsp;&#x25B6;&#x25B6;</Link></div>
           </div>
 
-          <p className="text-light text-normal mb--sm">成田空港へお戻りになったら、お荷物を受け取り、税関通過後に、出発の際にお渡ししましたお預かり券の「到着専用電話番号」へご連絡の上、裏面にある「お迎え場所」まで移動をお願いします。 到着ターミナルやお迎え方法によって場所が違いますので、お電話の際に今一度ご確認ください。</p>
+
         </div>
         <div className="flex-col-2--md">
           <StaticImage src="../images/guide/closing01.jpg" alt="成田空港イメージ" />
@@ -278,7 +281,7 @@ const GuidePage = () => (
       <div style={flow} className="flex__wrap mb--md">
         <div className="flex-col-2--md">
         <div className="label bg--green text-md text-medium text-left ls01 bdr-xs">&#10103;送迎バスがお迎えします</div>
-          <p className="text-light text-normal mb--sm">当社サングリーンのシャトルバスがお迎えに上がります。お越しの際にお渡ししましたお預かり券をバスのドライバーにお渡しください。</p>
+          <p className="text-light text-normal mb--sm">当社白いシャトルバスがお迎えに上がります。お越しの際にお渡ししましたお預かり券をバスのドライバーにお渡しください。</p>
         </div>
         <div className="flex-col-2--md">
           <StaticImage src="../images/guide/closing02.jpg" />

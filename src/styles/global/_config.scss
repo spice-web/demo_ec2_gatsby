@@ -371,35 +371,6 @@
 
 
 /* ==============================
-  ||link
-============================== */
-a {
-  text-decoration: none;
-  color: inherit;
-  &:hover {
-    opacity: 0.75;
-  }
-  &:visited {
-    color: inherit;
-  }
-}
-
-a.text-deep-gr {
-  color: $deep-green!important;
-}
-
-.link_deco {
-  padding-bottom: 0.125rem;
-  text-decoration: underline;
-}
-
-.link {
-  &__inner {
-    padding-top: 80px;
-    margin-top:  -80px;
-  }
-}
-/* ==============================
   ||body
 ============================== */
 body {

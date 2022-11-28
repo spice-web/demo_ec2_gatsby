@@ -34,7 +34,7 @@ const AdvantagePage = () => (
         <StaticImage
           src="../images/advantage/graph01.png"
           alt="サービスの比較一覧表"
-          width={880}
+          width={881}
           layout="fixed"
         />
       </div>
@@ -46,7 +46,7 @@ const AdvantagePage = () => (
         <StaticImage
           src="../images/advantage/graph02.png"
           alt="料金の比較一覧表"
-          width={880}
+          width={881}
           layout="fixed"
         />
         <div className="result_scroll"></div>
@@ -67,7 +67,7 @@ const AdvantagePage = () => (
         <StaticImage
           src="../images/advantage/graph03.png"
           alt="料金の比較一覧表"
-          width={880}
+          width={881}
           layout="fixed"
         />
       </div>
@@ -98,7 +98,7 @@ const AdvantagePage = () => (
       <h3 className="sec__ttl">安心安全な車両管理設備。<br />鍵は専用金庫で保管で<span className="nowrap">リレーアタック対策も万全。</span></h3>
 
       <div className="flex__wrap">
-        <p className="pg--md flex-col-2--md txt-jt">24時間警備会社が警備をしています。また預かった鍵は全て専用の金庫で保管するのでリレーアタック対策も万全です。また夜間に関しては、駐車場の出入り口に施錠する、マイクロバス等を配置して侵入を防ぐ対策がされています。</p>
+        <p className="pg--md flex-col-2--md txt-jt">24時間警備会社が警備をし、また、赤外線センサーによる侵入検知するセキュリティ対策を行っております。また預かった鍵は全て専用の金庫で保管するのでリレーアタック対策も万全です。また夜間に関しては、駐車場の出入り口に施錠する、マイクロバス等を配置して侵入を防ぐ対策がされています。</p>
         <div className="flex-col-2--md">
           <StaticImage src="../images/advantage/key.jpg"
           alt=""
@@ -149,10 +149,10 @@ const AdvantagePage = () => (
       <h3 className="sec__ttl">お待たせしない、<br className="br_maxmd" />スムーズな無料送迎！</h3>
       <div className="flex__wrap">
         <p className="flex-col-2--md pg--md --mb0--md txt-jt">
-        空港ターミナルまで直行の送迎バスで迷うことなし！マイクロバス保有台数も成田空港No.1でお待たせしません！ サングリーンのシャトルバスはお客様も驚くほどの高回転。その秘訣は、全てのバスが無線で交信し常に場所を把握しているから。重たい荷物のバスへの積み下ろしもスタッフが対応します。 当然無料送迎です！
+        空港ターミナルまで直行の送迎バスで迷うことなし！マイクロバス保有台数も成田空港No.1でお待たせしません！サングリーンのシャトルバスはお客様も驚くほどの高回転。その秘訣は、全てのバスが無線で交信し常に場所を把握しているから。重たい荷物のバスへの積み下ろしもスタッフが対応します。当然無料送迎です！
         </p>
         <div className="flex-col-2--md">
-          <StaticImage src="../images/advantage/bus.jpg"
+          <StaticImage src="../images/advantage/bus.png"
           alt="スムーズな無料送迎！"/>
         </div>
       </div>
@@ -162,7 +162,7 @@ const AdvantagePage = () => (
       <h3 className="sec__ttl">空港アクセスに<br className="br_maxmd" />最短な駐車場</h3>
       <div className="flex__wrap mb--lg">
         <p className="flex-col-2--md pg--md --mb0--md txt-jt">
-        成田ICを降りてまっすぐ！空港通り沿いの交差点に位置しているので、建物も目立ちわかりやすい＆入りやすい。 東関東自動車道「成田I.C.」料金所の「成田市内」を出て、国道295号を「空港方面」へお進みください。 サンパーキング成田店は「成田I.C.」より約3分、サンレッドガレージは「成田I.C.」より約5分です。
+        成田ICを降りてまっすぐ！空港通り沿いの交差点に位置しているので、建物も目立ちわかりやすい＆入りやすい。東関東自動車道「成田I.C.」料金所の「成田市内」を出て、国道295号を「空港方面」へお進みください。サンパーキング成田店は「成田I.C.」より約3分です。
         </p>
         <div className="flex-col-2--md">
           <StaticImage

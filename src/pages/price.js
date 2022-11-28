@@ -10,7 +10,11 @@ import PriceChart from "../components/price_chart-sub"
 import * as Styles from "../styles/_price.module.scss"
 
 // 予約リンク
-const reserve = "/"
+const reserve = "https://www.sunparking.co.jp/form/rsv1.php?corp=sunport&o_id=1"
+
+const optionImg = {
+  height:"100%",
+}
 
 const PricePage = () => (
   <Layout>
@@ -25,10 +29,10 @@ const PricePage = () => (
       <div className="content__inner --md">
         <div className="mb--lg">
           <div className="br_md">
-            <StaticImage src="../images/top/banner_campaign.jpg"  />
+            <a href={reserve} target="_blank" rel="noreferrer noopener"><StaticImage src="../images/top/banner_campaign.jpg"  /></a>
           </div>
           <div className="br_maxmd">
-            <StaticImage src="../images/top/banner_campaign_sp.jpg" />
+            <a href={reserve} target="_blank" rel="noreferrer noopener"><StaticImage src="../images/top/banner_campaign_sp.jpg" /></a>
           </div>          
         </div>
         <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
@@ -73,6 +77,7 @@ const PricePage = () => (
               <StaticImage
                 src="../images/price/option005.png"
                 alt="海外・国内旅行保険"
+                className="optionImgWrap"
               />
             </figure>
             <dl className={Styles.text}>
@@ -86,13 +91,15 @@ const PricePage = () => (
               <StaticImage
                 src="../images/price/option004.jpg"
                 alt="空港お届けサービス"
+                className="optionImgWrap"
+                imgClassName="optionImg"
               />
             </figure>
             <dl className={Styles.text}>
               <dt className="text-bold">空港お届けサービス</dt>
               <dd>出発時やお帰り時に、スタッフがお車をお届けするサービスです。</dd>
             </dl>
-            <Link to="/option#" className={Styles.link}>詳しく&#9654;&#9654;</Link>
+            <p className={Styles.link}>詳しく&#9654;&#9654;</p>
           </div>
         </div>
 
@@ -142,17 +149,11 @@ const PricePage = () => (
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/union.png" alt="union card" /></div>
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/paypay.png" alt="paypay card" /></div>
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/rakuten.png" alt="Rakuten card" /></div>
-          <div className={Styles.box_sec}><StaticImage src="../images/price/logo/paypal.png" alt="Paypal card" /></div>
-          <div className={Styles.box_sec}><StaticImage src="../images/price/logo/amazonpay.png" alt="amazonpay card" /></div>
-          <div className={Styles.box_sec}><StaticImage src="../images/price/logo/applepay.png" alt="apple card" /></div>
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/ufj.png" alt="UFJ card" /></div>
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/life.png" alt="Life card" /></div>
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/jaccs.png" alt="Jaccs card" /></div>
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/cedyna.png" alt="cedyna card" /></div>
           <div className={Styles.box_sec}><StaticImage src="../images/price/logo/discover.png" alt="discover card" /></div>
-          <div className={Styles.box_sec}><StaticImage src="../images/price/logo/redy.png" alt="R edy card" /></div>
-          <div className={Styles.box_sec}><StaticImage src="../images/price/logo/payeasy.png" alt="Pay Easy card" /></div>
-          <div className={Styles.box_sec}><StaticImage src="../images/price/logo/yahoo.png" alt="Yahoo ウォレット" /></div>
         </div>
       </div>
 
@@ -182,12 +183,6 @@ const PricePage = () => (
             <figcaption>TS CUBIC<br />カード</figcaption>
           </figure>
         </div>
-
-
-
-
-
-
       </div>
 
       <Link to="/more-information" className={Styles.button}>更に詳しく</Link>

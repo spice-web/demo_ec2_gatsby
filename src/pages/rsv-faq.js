@@ -99,7 +99,7 @@ const MoreInfoPage = ( {data} ) => (
     {/* 開閉パーツ */}
 
     {/* 開閉パーツ */}
-     <dl class="faq">
+     {/* <dl class="faq">
        <dt style={TitleStyles} className="headline--greenLabel faq__title">
        ネット予約申込時に『この接続ではプライバシーが保護されていません』と表示される場合<br />（Androidをご利用のお客様）<button class="question-button"><span></span><span></span></button>
        </dt>
@@ -134,7 +134,7 @@ const MoreInfoPage = ( {data} ) => (
           </dd>
         </dl>
        </dd>
-     </dl>
+     </dl> */}
     {/* 開閉パーツ */}
 
     {/* 開閉パーツ */}

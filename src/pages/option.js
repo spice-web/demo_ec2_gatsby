@@ -8,6 +8,7 @@ import Wrap from "../components/grayContainer"
 import ButtonOp from "../components/button-option"
 
 import * as styles from "../styles/_option.module.scss"
+import { Link } from "gatsby";
 
 const reservationButton = {
   position: 'absolute',
@@ -39,39 +40,17 @@ const OptionPage = () => (
 
     <PageTitle>OPTION<span>オプション</span></PageTitle>
 
+    <ul className={styles.optionLink}>
+      <li className={styles.optionLinkList}><Link to="#delivery">お届け<span>&#9654;</span></Link></li>
+      <li className={styles.optionLinkList}><Link to="#maintenance">洗車<span>&#9654;</span></Link></li>
+      <li className={styles.optionLinkList}><Link to="#insurance">保険<span>&#9654;</span></Link></li>
+      <li className={styles.optionLinkList}><Link to="#electrification">充電<span>&#9654;</span></Link></li>
+      <li className={styles.optionLinkList}><Link to="#rental">その他<span>&#9654;</span></Link></li>
+    </ul>
 
-{/* 空港お届けサービス */}
+
+
    <div className="content__wrap content__pd">
-    <Wrap>
-      <h2 className="sec__ttl link__inner" id="delivery">空港お届けサービス</h2>
-      <div className={ styles.flexTop }>
-        <p className={ styles.leftBox }>お車を成田空港へお届けするサービスをご用意しています。<br />「出発時駐車場経由空港引取り」は出発時駐車場受付で成田空港までスタッフが同乗してお届けするサービスです。<br />「お帰り時空港お車お届け」は駐車場をご利用いただき、お帰りに成田空港までお届けします。<br />※第３ターミナルでの引取り・お届けはできません。</p>
-        <figure>
-          <StaticImage
-            src="../images/option/b2_001.jpg"
-            alt="空港お届けサービス"
-            quality="100"
-            style={{ width:'100%' }}
-          />
-        </figure>
-      </div>
-
-      <dl className={styles.fee}>
-        <dt>出発時 駐車場経由空港引取り</dt>
-        <dd>駐車料金 + <span className="text-pk"><span className="text-bold text-lg">3,300円</span><span>（税込）</span></span></dd>
-        <dt>お帰り時 空港お車お届け</dt>
-        <dd>駐車料金 + <span className="text-pk"><span className="text-bold text-lg">3,300円</span><span>（税込）</span></span></dd>
-        <dt>駐車場経由空港引取り＋空港お車お届け</dt>
-        <dd>駐車料金 + <span className="text-pk"><span className="text-bold text-lg">5,500円</span><span>（税込）</span></span></dd>
-      </dl>
-
-      {/* 今すぐ予約 */}
-      <ButtonOp />
-    </Wrap>
-
-
-
-
 {/* 洗車・カーメンテナンス */}
     <Wrap>
       <h3 id="maintenance" className="sec__ttl link__inner">洗車・カーメンテナンス</h3>
@@ -112,7 +91,7 @@ const OptionPage = () => (
       <div className={styles.menu}>
         <dl>
           <dt>撥水コート（FK-2）</dt>
-          <dd>今流行のコーティングWAX洗車。手洗い+シリコン系コーティング+ホイール洗浄+灰皿清掃でも¥3,000（税込3,300円）と驚きの価格でご提供!雨の日の驚きの撥水をご体験下さい!当社一押しのメニューです!もちろんホイールも隅々まで綺麗にしてタイヤWAXを塗ってからお引渡しとなります。</dd>
+          <dd>今流行のコーティングWAX洗車。手洗い+シリコン系コーティング+ホイール洗浄+灰皿清掃でも驚きの価格でご提供!雨の日の驚きの撥水をご体験下さい!当社一押しのメニューです!もちろんホイールも隅々まで綺麗にしてタイヤWAXを塗ってからお引渡しとなります。</dd>
         </dl>
         <dl>
           <dt>手掛けWAX</dt>
@@ -137,7 +116,7 @@ const OptionPage = () => (
           
       <div className="scroll">
           <StaticImage
-          src="../images/option/Coating.jpg"
+          src="../images/option/coating.png"
           alt="有料洗車メニュー表"
           width={880}
           layout="fixed"/>
@@ -192,7 +171,7 @@ const OptionPage = () => (
         </div>
         
         <div className={styles.compare}>
-          <a href="http://www.sunhoken.jp/" target="_blank" rel="noreferrer noopener">日数と行き先で保険料がスグわかる<br />海外旅行保険かんたん比較はこちら</a>
+          <a href="http://www.sunhoken.jp/" target="_blank" rel="noreferrer noopener" className="is-block">日数と行き先で保険料がスグわかる<br />海外旅行保険かんたん比較はこちら</a>
         </div>
  
         {/* 今すぐ予約 */}
@@ -215,12 +194,44 @@ const OptionPage = () => (
       {/* 今すぐ予約 */}
       <ButtonOp />
     </Wrap>
+{/* 海外・国内旅行保険 */}
+
+
+    {/* 空港お届けサービス */}
+    <Wrap>
+      <h2 className="sec__ttl link__inner" id="delivery">空港お届けサービス<span className="hiatus">休止中</span></h2>
+      <div className={ styles.flexTop }>
+        <p className={ styles.leftBox }>お車を成田空港へお届けするサービスをご用意しています。<br />「出発時駐車場経由空港引取り」は出発時駐車場受付で成田空港までスタッフが同乗してお届けするサービスです。<br />「お帰り時空港お車お届け」は駐車場をご利用いただき、お帰りに成田空港までお届けします。<br />※第３ターミナルでの引取り・お届けはできません。</p>
+        <figure>
+          <StaticImage
+            src="../images/option/b2_001.jpg"
+            alt="空港お届けサービス"
+            quality="100"
+            style={{ width:'100%' }}
+          />
+        </figure>
+      </div>
+
+      <dl className={styles.fee}>
+        <dt>出発時 駐車場経由空港引取り</dt>
+        <dd>駐車料金 + <span className="text-pk"><span className="text-bold text-lg">3,300円</span><span>（税込）</span></span></dd>
+        <dt>お帰り時 空港お車お届け</dt>
+        <dd>駐車料金 + <span className="text-pk"><span className="text-bold text-lg">3,300円</span><span>（税込）</span></span></dd>
+        <dt>駐車場経由空港引取り＋空港お車お届け</dt>
+        <dd>駐車料金 + <span className="text-pk"><span className="text-bold text-lg">5,500円</span><span>（税込）</span></span></dd>
+      </dl>
+
+      {/* 今すぐ予約 */}
+      <ButtonOp />
+    </Wrap>
+    {/* 空港お届けサービス */}
+
 
 {/* Flex ブロック */}
-<div className={styles.service_wrap}>
+<div className={styles.service_wrap} id="rental">
   {/* レンタルモバイル */}
   <Wrap>
-    <h3 className="sec__ttl link__inner" id="rental">レンタルモバイル</h3>
+    <h3 className="sec__ttl link__inner">レンタルモバイル</h3>
     <div className={styles.service}>
       <div className="text-sm text-light mb--md">国内も海外も!旅先で使える携帯電話をプラス!</div>
       <div className="img"><StaticImage src="../images/option/mobile.jpg" /></div>

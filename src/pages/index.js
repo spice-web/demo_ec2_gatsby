@@ -78,7 +78,7 @@ const IndexPage = ( { data } ) => (
 
 
 
-    <h2 className="text-center text-lg text-deep-gr text-bold">創業37年の信頼と<br />安⼼のサンパーキング<br className="br_sm" />成⽥店です。</h2>
+    <h2 className="text-center text-lg text-deep-gr text-bold">創業37年の信頼と<br />安⼼のサンパーキング<br className="br_maxsm" />成⽥店です。</h2>
     
     <div className={styles.hero_image}>
       <StaticImage
@@ -165,15 +165,12 @@ const IndexPage = ( { data } ) => (
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/jet.jpg" alt="JET STAR" loading="lazy" /></figure>
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/peach.jpg" alt="peach" loading="lazy" /></figure>
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/zipair.jpg" alt="Zip Air" loading="lazy" /></figure>
+            <figure className={styles.sponsorLogo}>
+              <StaticImage src="../images/company-logo/spring.png"  alt="spring" loading="lazy" />
+            </figure>
           </div>
           <div className={styles.sponsor_bottom}>
-            <figure className={styles.sponsorLogo}>
-              <StaticImage
-                src="../images/company-logo/spring.jpg"
-                alt="spring" loading="lazy"
-                style={{objectFit: 'contain!important'}}
-              />
-            </figure>
+
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/jtb.jpg" alt="JTB" loading="lazy" /></figure>
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/his.jpg" alt="HIS" loading="lazy" /></figure>
             <figure className={styles.sponsorLogo}><StaticImage src="../images/company-logo/kinki.jpg" alt="近畿日本ツーリスト" loading="lazy" /></figure>
@@ -340,39 +337,33 @@ const IndexPage = ( { data } ) => (
         </ul>
 
 {/* その他サービス */}
-        <div className="flex__wrap--sm">
-        <div className="flex-col-3--sm bdr-xs bdr-dark-green mb--sm">
-            <dl className={styles.otherService}>
-            <dt className={styles.otherServiceTitle} >洗車・コーティング</dt>
-              <dd className={styles.otherServiceText}><Link to="/option#maintenance">お帰りまでにお車ピカピカキレイを、長く！本格派コーティング。</Link></dd>
-              <dd className={styles.otherServiceImg}>
-                <Link to="/option#maintenance"><StaticImage src="../images/top/link01.jpg" alt="洗車・コーティングサービス" loading="lazy" /></Link>
-              </dd>
-            </dl>
-          </div>
-          <div className="flex-col-3--sm bdr-xs bdr-dark-green mb--sm">
-            <dl className={styles.otherService}>
-              <dt className={styles.otherServiceTitle} >CHUBB海外旅行保険</dt>
-              <dd className={styles.otherServiceText}>
-                <Link to="/option#insurance">当日、その場で海外旅行保険に加入できます。</Link>
-              </dd>
-              <dd className={styles.otherServiceImg}>
-                <Link href="/option#insurance">
-                  <StaticImage src="../images/top/link02.jpg" alt="CHUBB海外旅行保険サービス" loading="lazy" />
-                </Link>
-              </dd>
-            </dl>
-          </div>
-          <div className="flex-col-3--sm bdr-xs bdr-dark-green mb--sm">
-            <dl className={styles.otherService}>
-            <dt className={styles.otherServiceTitle} >JAF</dt>
-              <dd className={styles.otherServiceText}><Link to="/option#jaf">もしもの時の頼れる味方！会員優待施設も充実。</Link></dd>
-              <dd className={styles.otherServiceImg}>
-              <Link to="/option#jaf"><StaticImage src="../images/top/link03.jpg" alt="JAFサービス" loading="lazy" /></Link>
-              </dd>
-            </dl>
-          </div>
-        </div>
+    <ul className="flex__wrap--sm">
+      <li className={styles.otherService}>
+          <p className={styles.otherServiceTitle} >洗車・コーティング</p>
+          <p className={styles.otherServiceText}><Link to="/option#maintenance">お帰りまでにお車ピカピカキレイを、長く！本格派コーティング。</Link></p>
+          <p className={styles.otherServiceImg}>
+            <Link to="/option#maintenance"><StaticImage src="../images/top/link01.jpg" alt="洗車・コーティングサービス" loading="lazy" /></Link>
+          </p>
+      </li>
+      <li className={styles.otherService}>
+        <p className={styles.otherServiceTitle} >CHUBB海外旅行保険</p>
+        <p className={styles.otherServiceText}>
+          <Link to="/option#insurance">当日、その場で海外旅行保険に加入できます。</Link>
+        </p>
+        <p className={styles.otherServiceImg}>
+          <Link href="/option#insurance">
+            <StaticImage src="../images/top/link02.jpg" alt="CHUBB海外旅行保険サービス" loading="lazy" />
+          </Link>
+        </p>
+      </li>
+      <li className={styles.otherService}>
+        <p className={styles.otherServiceTitle} >JAF</p>
+        <p className={styles.otherServiceText}><Link to="/option#jaf">もしもの時の頼れる味方！会員優待施設も充実。</Link></p>
+        <p className={styles.otherServiceImg}>
+        <Link to="/option#jaf"><StaticImage src="../images/top/link03.jpg" alt="JAFサービス" loading="lazy" /></Link>
+        </p>
+      </li>
+    </ul>
 
       </div>
       {/* inner */}
