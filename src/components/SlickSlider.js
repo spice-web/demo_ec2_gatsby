@@ -16,10 +16,10 @@ export default function SlickSlider() {
     speed: 1000,
     infinite: true,
     dots: true,
-    centerMode: false,
+    // centerMode: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 1,
+    // initialSlide: 1,
     centerMode: false,
     initialSlide: 0,
   };
@@ -29,7 +29,7 @@ export default function SlickSlider() {
       {/* <div className="slide-images --item01"></div>
       <div className="slide-images --item02"></div>
       <div className="slide-images --item03"></div> */}
-      <a href={reserve} target="_blank">
+      <a href={reserve} target="_blank" rel="noreferrer noopener">
         <StaticImage
           src="../images/slider/slider001_sp.webp"
           alt="キャンペーン実施中！予約する"

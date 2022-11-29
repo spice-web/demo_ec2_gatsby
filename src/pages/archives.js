@@ -2,11 +2,11 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const ArchivesPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <p>カテゴリー一覧</p>
     <ul>
       {data.allMicrocmsInformation.group.map(cate => (

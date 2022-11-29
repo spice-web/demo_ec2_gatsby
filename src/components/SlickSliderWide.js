@@ -53,7 +53,7 @@ export default function SlickSliderWide() {
       <div className="slide-images --item02"></div>
       <div className="slide-images --item03"></div> */}
 
-      <a href={reserve} target="_blank">
+      <a href={reserve} target="_blank" rel="noreferrer noopener">
         <StaticImage
           src="../images/slider/slider001_pc.webp"
           alt="キャンペーン実施中！予約する"

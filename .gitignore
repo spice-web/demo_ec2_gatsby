@@ -79,6 +79,13 @@ sponsor-logo.js
 
 *.old
 
+# image files
+/images/old
+
+# mail form
+form_dev.js
+form_flex.js
+
 # default files
 using-ssr.js
 gatsby-ssr.js

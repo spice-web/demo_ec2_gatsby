@@ -22,7 +22,7 @@ const Header = () => (
                 alt="成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1"
                 className="logoImg"
                 loading='eager'
-                backgroundColor='#B4F000'
+                placeholder="None"
               />
             </Link>
           </div>
@@ -32,7 +32,7 @@ const Header = () => (
           </div>
         </div>
         <div className="header__right">
-          <p className="header__right--time">［営業時間］5:00～22:30 成田空港最終便到着まで営業</p>
+          <p className="header__right--time">［営業時間］5:00～22:30 成田空港最終便到着まで対応</p>
           <ul className="header-menu__wrap">
             <li className="header-menu__item access"><Link to="/guide">アクセス</Link></li>
             <li className="header-menu__item faq"><Link to="/faq">Q&A</Link></li>

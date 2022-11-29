@@ -81,7 +81,7 @@ export default function FormPage() {
           <form onSubmit={onSubmit} method="POST" action="/api/send">
 
             {/* セレクト */}
-            <label for="contactUs" >お問い合わせ先</label>
+            <label for="contactUs" htmlFor="contactUs">お問い合わせ先</label>
             <select value={value['contactUs'] || ``} name="contactUs" id="contactUs" size="1" onChange={handleChange} >
               <option value="" hidden>選択してください</option>
               <option value="サンパーキング成田店">サンパーキング成田店</option>
@@ -90,37 +90,37 @@ export default function FormPage() {
 
             {/* お名前 */}
             <div class="">
-              <label for="formName" class="">お名前※必須</label>
+              <label for="formName" class="" htmlFor="formName">お名前※必須</label>
               <input type="text" id="formName" value={value['formName'] || ``} onChange={handleChange} class="" placeholder="例：鈴木太郎" required />
             </div>
 
             {/* フリガナ */}
             <div class="">
-              <label for="formKana" class="">フリガナ※必須</label>
+              <label for="formKana" class="" htmlFor="formKana">フリガナ※必須</label>
               <input type="text" id="formKana" value={value['formKana'] || ``} onChange={handleChange} class="" placeholder="例：スズキタロウ" required  />
             </div>
 
 
             {/* 電話番号 */}
             <div class="">
-              <label for="formTel" class="">電話番号（数字のみハイフン無し）</label>
+              <label for="formTel" class="" htmlFor="formTel">電話番号（数字のみハイフン無し）</label>
                 <input type="text" id="formTel" pattern="^[0-9]{9,}$" inputmode="numeric" value={value['formTel'] || ``} onChange={handleChange} class="" placeholder="0476331155" />
             </div>
 
             {/* FAX */}
             <div class="">
-              <label for="formFax" class="">FAX番号（数字のみハイフン無し）</label>
+              <label for="formFax" class="" htmlFor="formFax">FAX番号（数字のみハイフン無し）</label>
               <input type="text" id="formFax" pattern="^[0-9]{9,}$" inputmode="numeric" value={value['formFax'] || ``} onChange={handleChange} class="" placeholder="0476331198" />
             </div>
 
             {/* メールアドレス */}
-            <label for="formEmail" class="">メールアドレス※必須</label>
+            <label for="formEmail" class="" htmlFor="formEmail">メールアドレス※必須</label>
             <div class="">
               <input type="email" pattern=".+\.[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]" id="formEmail" value={value['formEmail'] || ``} onChange={handleChange} class="" placeholder="メールアドレスを入力してください。" required  />
             </div>
 
             {/* お問い合わせ内容 */}
-            <label for="formTextarea" class="">お問い合わせ内容※必須</label>
+            <label for="formTextarea" class="" htmlFor="formTextarea">お問い合わせ内容※必須</label>
             <div class="">
               <textarea id="formTextarea" value={value['formTextarea'] || ``} onChange={handleChange} class="" rows="3" placeholder="" required></textarea>
             </div>
@@ -133,15 +133,15 @@ export default function FormPage() {
                 required
                 onChange={handleChange}
               />
-              <label for="agreement">
-                <Link to="/policy/" className="link_deco">プライバシーポリシー</Link>
+              <label for="agreement" htmlFor="privacy" >
+                <Link to="/policy/" className="link_deco" id="privacy">プライバシーポリシー</Link>
                 に同意する※必須
               </label>
             </div>
 
             {/* 送信ボタン */}
             <div class="">
-              <button type="submit" class="button__submit"></button>
+              <button type="submit" class="button__submit" aria-label="送信する"></button>
             </div>
           </form>
         </div>

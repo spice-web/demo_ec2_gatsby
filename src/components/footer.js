@@ -9,6 +9,7 @@ import ButtonFoot from "./button-footer"
 import Menu from "./menu"
 // スクロール
 import Scroll from './scroll'
+// import PageTop from "./ScrollPageTop"
 
 const Footer = () => (
   <>

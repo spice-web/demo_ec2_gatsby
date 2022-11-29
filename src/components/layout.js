@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
           padding: `var(--size-gutter)`,
         }}
       >
-        <main>{children}</main>
+        <main id="pagetop">{children}</main>
       </div>
       <Footer />
       <FooterFixed />

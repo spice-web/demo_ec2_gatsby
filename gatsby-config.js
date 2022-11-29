@@ -7,15 +7,51 @@ module.exports = {
     title: `成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1`,
     description: `基本料金無し、深夜早朝・追加料金一切無し。安心の総額表示で「実質最安値」挑戦中！もちろんLCC対応・無料送迎バス付き！クレカ支払い対応`,
     author: `@spice Inc.`,
-    siteUrl: `https://spice-web.jp/`,
+
+    // 本番時変更
+    siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com/`,
   },
   plugins: [
+    // // Google Analytics
+    // [
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [process.env.GATSBY_TRACKING_ID],
+    //   },
+    // ],
+
+
+    // tag manager
+    // {
+    //   resolve: `gatsby-plugin-google-tagmanager`,
+    //   options: {
+    //     id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
+    
+    //     // Include GTM in development.
+    //     // Defaults to false meaning GTM will only be loaded in production.
+    //     includeInDevelopment: false,
+    
+    //     // datalayer to be set before GTM is loaded
+    //     // should be an object or a function that is executed in the browser
+    //     // Defaults to null
+    //     defaultDataLayer: { platform: "gatsby" },
+    
+    //     // Specify optional GTM environment details.
+    //     // gtmAuth: "xNwDtuXDGlgZTO1P8TF2cg",
+    //     // gtmPreview: "env-1",
+    //     // dataLayerName: 'dataLayer',
+    //   }
+    // },
+
+
     // smoothscroll
     `gatsby-plugin-smoothscroll`,
     // sass
     `gatsby-plugin-sass`,
     // sitemap
     `gatsby-plugin-sitemap`,
+    // 最適化
+    `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

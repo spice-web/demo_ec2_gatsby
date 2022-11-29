@@ -27,7 +27,7 @@ const MoreInfoPage = ( {data} ) => (
     {/* 開閉パーツ */}
     <dl class="faq">
        <dt style={TitleStyles} className="headline--greenLabel faq__title">
-       予約お申し込みのお知らせメールが届かない<button class="question-button"><span></span><span></span></button>
+       予約お申し込みのお知らせメールが届かない<button class="question-button" aria-label="お知らせメールが届かない"><span></span><span></span></button>
        </dt>
        <dd class="text-sm faq__answer">
         <p className="mb--md">当サイトでは、お客様からの予約申込みに迅速に対応するよう努力をしております。「予約フォームご案内メール」は通常、メール発行ボタンをクリック後、すぐに送信する仕組みとなっております。 クリック後、10分以上経っても「予約フォームご案内メール」の受信が確認できない場合は、下記をご確認ください。</p>
@@ -99,7 +99,7 @@ const MoreInfoPage = ( {data} ) => (
     {/* 開閉パーツ */}
 
     {/* 開閉パーツ */}
-     <dl class="faq">
+     {/* <dl class="faq">
        <dt style={TitleStyles} className="headline--greenLabel faq__title">
        ネット予約申込時に『この接続ではプライバシーが保護されていません』と表示される場合<br />（Androidをご利用のお客様）<button class="question-button"><span></span><span></span></button>
        </dt>
@@ -134,13 +134,13 @@ const MoreInfoPage = ( {data} ) => (
           </dd>
         </dl>
        </dd>
-     </dl>
+     </dl> */}
     {/* 開閉パーツ */}
 
     {/* 開閉パーツ */}
       <dl class="faq">
         <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        パソコンでの不具合について<button class="question-button"><span></span><span></span></button>
+        パソコンでの不具合について<button class="question-button" aria-label="パソコンでの不具合について"><span></span><span></span></button>
         </dt>
         <dd class="text-sm faq__answer">
           <p className="mb--md">パソコンのブラウザIE9以前のものをご利用の方で正常に動作しない場合については、ブラウザのバージョンアップや他のブラウザへの切り替え、ご利用の端末のソフトウェアのバージョンアップを行うことでの改善を確認しております。最新のものへアップデートしてご利用ください。</p>
@@ -154,7 +154,7 @@ const MoreInfoPage = ( {data} ) => (
               <p>9より以前のバージョン（6・7・8・9など）をご利用の場合は、大変お手数ではございますが「最新バージョンへの更新」または「他のブラウザをご利用いただく」ようにお願い致します。<br />尚、WindowsXPなど最新のバージョンへの更新ができない端末もございます。ご利用の方におかれましては、他のブラウザをご利用いただけますようお願い致します。</p>
               <p className="mb--sm">Internet Explorer 11 のサポートは、2022 年 6 月 15 日に終了しました。 Internet Explorer 11 は、2023 年 2 月 14 日以降はアクセスできなくなります。</p>
               <p className="text-deep-gr">Microsoft Edge 最新バージョンのダウンロードはこちら（無料）<br />
-              <a href="" target="_blank" rel="noreferrer noopener">https://www.microsoft.com/ja-jp/edge</a></p>
+              <a href="https://www.microsoft.com/ja-jp/edge" target="_blank" rel="noreferrer noopener">https://www.microsoft.com/ja-jp/edge</a></p>
             </dd>
           </dl>
 
@@ -187,7 +187,7 @@ const MoreInfoPage = ( {data} ) => (
     {/* 開閉パーツ */}
       <dl class="faq">
         <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        スマートフォンで予約申込をしている途中でボタンが押せなくなった<button class="question-button"><span></span><span></span></button>
+        スマートフォンで予約申込をしている途中でボタンが押せなくなった<button class="question-button" aria-label="スマートフォンで予約申込をしている途中でボタンが押せなくなった"><span></span><span></span></button>
         </dt>
         <dd class="text-sm faq__answer">予約申込の途中でボタンが押せなくなることがございます。これはスマートフォンの不具合等によるものなので、開いている画面を全て閉じるか再起動をして再度お申し込みをしてください。</dd>
       </dl>
