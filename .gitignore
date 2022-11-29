@@ -78,8 +78,14 @@ event.JSON
 sponsor-logo.js
 
 *.old
+
 # image files
 /images/old
+
+# form
+form_dev.js
+form_flex.js
+send_dev.js
 
 # default files
 using-ssr.js

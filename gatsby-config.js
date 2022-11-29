@@ -20,11 +20,12 @@ module.exports = {
     //   },
     // ],
 
+
     // tag manager
     // {
     //   resolve: `gatsby-plugin-google-tagmanager`,
     //   options: {
-    //     id: process.env.Gatsby_Google_Tag_Manager,
+    //     id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
     
     //     // Include GTM in development.
     //     // Defaults to false meaning GTM will only be loaded in production.
@@ -42,12 +43,15 @@ module.exports = {
     //   }
     // },
 
+
     // smoothscroll
     `gatsby-plugin-smoothscroll`,
     // sass
     `gatsby-plugin-sass`,
     // sitemap
     `gatsby-plugin-sitemap`,
+    // 最適化
+    `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
