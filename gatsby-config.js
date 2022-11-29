@@ -20,27 +20,30 @@ module.exports = {
     //   },
     // ],
 
+
     // tag manager
-    {
-      resolve: `gatsby-plugin-google-tagmanager`,
-      options: {
-        id: process.env.Gatsby_Google_Tag_Manager,
+    // {
+    //   resolve: `gatsby-plugin-google-tagmanager`,
+    //   options: {
+    //     id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
     
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
+    //     // Include GTM in development.
+    //     // Defaults to false meaning GTM will only be loaded in production.
+    //     includeInDevelopment: false,
     
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
+    //     // datalayer to be set before GTM is loaded
+    //     // should be an object or a function that is executed in the browser
+    //     // Defaults to null
+    //     defaultDataLayer: { platform: "gatsby" },
     
-        // Specify optional GTM environment details.
-        // gtmAuth: "xNwDtuXDGlgZTO1P8TF2cg",
-        // gtmPreview: "env-1",
-        // dataLayerName: 'dataLayer',
-      }
-    },
+    //     // Specify optional GTM environment details.
+    //     // gtmAuth: "xNwDtuXDGlgZTO1P8TF2cg",
+    //     // gtmPreview: "env-1",
+    //     // dataLayerName: 'dataLayer',
+    //   }
+    // },
+
+
     // smoothscroll
     `gatsby-plugin-smoothscroll`,
     // sass
