@@ -50,6 +50,8 @@ module.exports = {
     `gatsby-plugin-sass`,
     // sitemap
     `gatsby-plugin-sitemap`,
+    // 最適化
+    `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
