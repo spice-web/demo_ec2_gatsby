@@ -82,9 +82,10 @@ sponsor-logo.js
 # image files
 /images/old
 
-# mail form
+# form
 form_dev.js
 form_flex.js
+send_dev.js
 
 # default files
 using-ssr.js
