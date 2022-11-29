@@ -42,6 +42,7 @@ module.exports = {
     //   }
     // },
 
+
     // smoothscroll
     `gatsby-plugin-smoothscroll`,
     // sass
