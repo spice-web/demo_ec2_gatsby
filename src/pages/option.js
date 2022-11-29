@@ -81,7 +81,7 @@ const OptionPage = () => (
       <p className="text-lg text-deep-gr text-bold mb--sm">■ 有料洗車メニュー</p>
       <div className="scroll mb--lg">
         <StaticImage
-          src="../images/option/graphWash.jpg"
+          src="../images/option/graphWash.png"
           alt="有料洗車メニュー表"
           width={880}
           layout="fixed"

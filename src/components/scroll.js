@@ -1,5 +1,6 @@
 // components/scroll.js
 import React, { useState, useEffect } from 'react'
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Scroll = ({ showBelow }) => {
   const [show, setShow] = useState(showBelow ? false : true)
@@ -24,11 +25,15 @@ const Scroll = ({ showBelow }) => {
   })
 
   return (
+    // <div>
+    //   {show && (
+    //     <button onClick={handleClick} id="scrollBtn" aria-label="to top" className='text-center'>PAGE<br />Top
+    //     </button>
+    //   )}
+    // </div>
     <div>
-      {show && (
-        <button onClick={handleClick} id="scrollBtn" aria-label="to top" className='text-center'>PAGE<br />Top
-        </button>
-      )}
+      <button onClick={() => scrollTo('#header')} id="scrollBtn" aria-label="to top" className='text-center'>PAGE<br />Top
+      </button>
     </div>
   )
 }
