@@ -12,10 +12,6 @@ import * as Styles from "../styles/_price.module.scss"
 // 予約リンク
 const reserve = "https://www.sunparking.co.jp/form/rsv1.php?corp=sunport&o_id=1"
 
-const optionImg = {
-  height:"100%",
-}
-
 const PricePage = () => (
   <Layout>
     <Seo
@@ -29,10 +25,10 @@ const PricePage = () => (
       <div className="content__inner --md">
         <div className="mb--lg">
           <div className="br_md">
-            <a href={reserve} target="_blank" rel="noreferrer noopener"><StaticImage src="../images/top/banner_campaign.jpg"  /></a>
+            <a href={reserve} target="_blank" rel="noreferrer noopener" aria-label="キャンペーン実施中"><StaticImage src="../images/top/banner_campaign.jpg"  /></a>
           </div>
           <div className="br_maxmd">
-            <a href={reserve} target="_blank" rel="noreferrer noopener"><StaticImage src="../images/top/banner_campaign_sp.jpg" /></a>
+            <a href={reserve} target="_blank" rel="noreferrer noopener" aria-label="キャンペーン実施中"><StaticImage src="../images/top/banner_campaign_sp.jpg" /></a>
           </div>          
         </div>
         <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>

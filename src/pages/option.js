@@ -110,7 +110,8 @@ const OptionPage = () => (
         <div className={styles.keeper}>
           <p to="/" className="text-center text-medium">KeePer<br />詳細はこちら→</p>
           <figure>
-            <a href="https://www.keepercoating.jp/proshop/chiba/city625/05287/" target="_blank" rel="noreferrer noopener"><StaticImage src="../images/option/logo/keeper.jpg" /></a></figure>
+            <a href="https://www.keepercoating.jp/proshop/chiba/city625/05287/" target="_blank" rel="noreferrer noopener" aria-label="KeePerのガラスコーティング"><StaticImage src="../images/option/logo/keeper.jpg" /></a>
+          </figure>
         </div>
       </div>
           
@@ -118,7 +119,7 @@ const OptionPage = () => (
           <StaticImage
           src="../images/option/coating.png"
           alt="有料洗車メニュー表"
-          width={880}
+          width={881}
           layout="fixed"/>
       </div>
 

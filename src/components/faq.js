@@ -81,7 +81,7 @@ const Faq = () => {
       <h4 className="text-deep-gr mb--sm">予約に関して</h4>
       {reserve.map(e => (
         <dl class="faq faq__def">
-          <dt style={TitleStyles} className="headline--greenLabel faq__title">{e.node.title}<button class="question-button"><span></span><span></span></button></dt>
+          <dt style={TitleStyles} className="headline--greenLabel faq__title">{e.node.title}<button class="question-button" aria-label="予約に関して"><span></span><span></span></button></dt>
           <dd class="text-sm faq__answer">{e.node.contents}</dd>
         </dl>
       ))}
@@ -92,7 +92,7 @@ const Faq = () => {
 
       {payment.map(f => (
         <dl class="faq faq__def">
-          <dt style={TitleStyles} className="headline--greenLabel faq__title">{f.node.title}<button class="question-button"><span></span><span></span></button>
+          <dt style={TitleStyles} className="headline--greenLabel faq__title">{f.node.title}<button class="question-button" aria-label="支払い、料金に関して"><span></span><span></span></button>
           </dt>
           <dd class="text-sm faq__answer">{f.node.contents}
             {f.node.url &&
@@ -108,7 +108,7 @@ const Faq = () => {
       <h4 className="text-deep-gr mb--sm">出発当日に関して</h4>
       {Departure.map(i => (
         <dl class="faq faq__def">
-          <dt style={TitleStyles} className="headline--greenLabel faq__title">{i.node.title}<button class="question-button"><span></span><span></span></button>
+          <dt style={TitleStyles} className="headline--greenLabel faq__title">{i.node.title}<button class="question-button" aria-label="出発当日に関して"><span></span><span></span></button>
           </dt>
           <dd class="text-sm faq__answer">{i.node.contents}</dd>
         </dl>
@@ -120,7 +120,7 @@ const Faq = () => {
 
       {Arrival.map(g => (
         <dl class="faq faq__def">
-          <dt style={TitleStyles} className="headline--greenLabel  faq__title">{g.node.title}<button class="question-button"><span></span><span></span></button></dt>
+          <dt style={TitleStyles} className="headline--greenLabel  faq__title">{g.node.title}<button class="question-button" aria-label="到着について"><span></span><span></span></button></dt>
           <dd class="text-sm faq__answer">{g.node.contents}</dd>
         </dl>
       ))}
@@ -128,7 +128,7 @@ const Faq = () => {
       <h4 className="text-deep-gr mb--sm">その他</h4>
       {Other.map(h => (
         <dl class="faq faq__def">
-          <dt style={TitleStyles} class="headline--greenLabel faq__title">{h.node.title}<button class="question-button"><span></span><span></span></button></dt>
+          <dt style={TitleStyles} class="headline--greenLabel faq__title">{h.node.title}<button class="question-button" aria-label="その他"><span></span><span></span></button></dt>
           <dd class="text-sm faq__answer">{h.node.contents}
             {h.node.url &&
               <Link to={h.node.url}>{h.node.link}</Link>

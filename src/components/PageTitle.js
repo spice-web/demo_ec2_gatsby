@@ -1,5 +1,8 @@
 import React from "react"
 
-export default ({ children }) => (
-  <h2 class="headline--title">{children}</h2>
-)
+const PageTitle = ({ children }) => {
+  return (
+    <h2 class="headline--title">{children}</h2>
+)}
+
+export default PageTitle

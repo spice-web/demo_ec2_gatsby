@@ -58,7 +58,7 @@ const Navigation = () => {
         </Link>
         <div className="navigation__wrap">
           <ul class="navigation__def">
-            <li className="navigation__dttl" onClick={ctx.toggleMenu}><Link to="/price">料金について</Link></li>
+            <li className="navigation__dttl"><button onClick={ctx.toggleMenu}><Link to="/price">料金について</Link></button></li>
           </ul>
 
           <ul class="navigation__def">
@@ -126,7 +126,7 @@ const Navigation = () => {
 
     <ul class="navigation__def">
       <li className="navigation__dttl">
-        <Link to="/policy"><span className="none" onClick={ctx.toggleMenu}>サイトポリシー・<br className="none-drawer"/>プライバシー</span>ポリシー</Link>
+        <button onClick={ctx.toggleMenu}><Link to="/policy"><span className="none">サイトポリシー・<br className="none-drawer"/>プライバシー</span>ポリシー</Link></button>
       </li>
     </ul>
   </div>

@@ -84,7 +84,7 @@ const Navigation = () => {
       <li className="navigation__dttl" onClick={() => scrollTo('#top')}><button onClick={ctx.toggleMenu }>関連情報</button></li>
       <li className="navigation__desc">
         <ul className="navigation__list">
-          <li onClick={() => scrollTo('#point')}><button onClick={ctx.toggleMenu } >・マイル・ポイント</button></li>
+          <li onClick={() => scrollTo('#point')}><button onClick={ctx.toggleMenu}>・マイル・ポイント</button></li>
           <li onClick={() => scrollTo('#members_card')}><button onClick={ctx.toggleMenu } >・メンバーズカード</button></li>
           <li onClick={() => scrollTo('#voice')}><button onClick={ctx.toggleMenu } >・お客さまの声</button></li>
           <li onClick={() => scrollTo('#travel')}><button onClick={ctx.toggleMenu } >・旅のリンク集</button></li>

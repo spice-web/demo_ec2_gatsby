@@ -23,7 +23,7 @@ return (
       <div className={styles.button__reserve}>
       {data.allFile.edges.map((file, index) => {
         return (
-        <a href={file.node.publicURL} target="_blank" className={styles.button__footer}>FAXで予約</a>
+        <a href={file.node.publicURL} target="_blank" rel="noreferrer noopener" className={styles.button__footer}>FAXで予約</a>
         )
       })}
       </div>

@@ -12,7 +12,7 @@ const LinkPage = () => {
     <div className={styles.linkOther}>
       <dl class="faq">
         <dt style={TitleStyles} className="headline--greenLabel faq__title">
-          空　港<button class="question-button"><span></span><span></span></button>
+          空　港<button class="question-button" aria-label="空港"><span></span><span></span></button>
         </dt>
         <dd class="text-sm faq__answer">
           <ul>
@@ -29,7 +29,7 @@ const LinkPage = () => {
     {/* 開閉パーツ */}
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        日本の航空会社<button class="question-button"><span></span><span></span></button>
+        日本の航空会社<button class="question-button" aria-label="日本の航空会社"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -47,7 +47,7 @@ const LinkPage = () => {
 
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        第1ターミナル(国際線/南)<button class="question-button"><span></span><span></span></button>
+        第1ターミナル(国際線/南)<button class="question-button" aria-label="第1ターミナル"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -78,7 +78,7 @@ const LinkPage = () => {
 
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        第1ターミナル(国際線/北)<button class="question-button"><span></span><span></span></button>
+        第1ターミナル(国際線/北)<button class="question-button" aria-label="第1ターミナル(国際線/北)"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -104,7 +104,7 @@ const LinkPage = () => {
 
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        第2ターミナル(国際線)<button class="question-button"><span></span><span></span></button>
+        第2ターミナル(国際線)<button class="question-button" aria-label="第2ターミナル(国際線)"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -147,7 +147,7 @@ const LinkPage = () => {
 
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        第3ターミナル(国際線)<button class="question-button"><span></span><span></span></button>
+        第3ターミナル(国際線)<button class="question-button" aria-label="第3ターミナル(国際線"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -161,7 +161,7 @@ const LinkPage = () => {
     {/* 開閉パーツ */}
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        その他航空会社<button class="question-button"><span></span><span></span></button>
+        その他航空会社<button class="question-button" aria-label="その他航空会社"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">        
         <ul className={styles.faqList}>
@@ -176,7 +176,7 @@ const LinkPage = () => {
      {/* 開閉パーツ */}
      <dl class="faq">
        <dt style={TitleStyles} className="headline--greenLabel faq__title">
-          交通情報<button class="question-button"><span></span><span></span></button>
+          交通情報<button class="question-button" aria-label="交通情報"><span></span><span></span></button>
        </dt>
        <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -194,7 +194,7 @@ const LinkPage = () => {
      {/* 開閉パーツ */}
      <dl class="faq">
        <dt style={TitleStyles} className="headline--greenLabel faq__title">
-          旅行代理店<button class="question-button"><span></span><span></span></button>
+          旅行代理店<button class="question-button" aria-label="旅行代理店"><span></span><span></span></button>
        </dt>
        <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -215,7 +215,7 @@ const LinkPage = () => {
      {/* 開閉パーツ */}
      <dl class="faq">
        <dt style={TitleStyles} className="headline--greenLabel faq__title">
-          輸入・輸出・規制品情報<button class="question-button"><span></span><span></span></button>
+          輸入・輸出・規制品情報<button class="question-button" aria-label="輸入・輸出・規制品情報"><span></span><span></span></button>
        </dt>
        <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -233,7 +233,7 @@ const LinkPage = () => {
 
      {/* 開閉パーツ */}
      <dl class="faq">
-       <dt style={TitleStyles} className="headline--greenLabel faq__title">外務省海外安全ＨＰ・海外旅行に関する情報<button class="question-button"><span></span><span></span></button>
+       <dt style={TitleStyles} className="headline--greenLabel faq__title">外務省海外安全ＨＰ・海外旅行に関する情報<button class="question-button" aria-label="外務省海外安全ＨＰ・海外旅行に関する情報"><span></span><span></span></button>
        </dt>
        <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -254,7 +254,7 @@ const LinkPage = () => {
      {/* 開閉パーツ */}
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        国内・世界の天気<button class="question-button"><span></span><span></span></button>
+        国内・世界の天気<button class="question-button" aria-label="国内・世界の天気"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -272,7 +272,7 @@ const LinkPage = () => {
      {/* 開閉パーツ */}
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        外貨・為替情報<button class="question-button"><span></span><span></span></button>
+        外貨・為替情報<button class="question-button" aria-label="外貨・為替情報"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -283,16 +283,10 @@ const LinkPage = () => {
 
 
 
-
-
-
-
-
-
      {/* 開閉パーツ */}
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        観光情報<button class="question-button"><span></span><span></span></button>
+        観光情報<button class="question-button" aria-label="観光情報"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>
@@ -307,7 +301,7 @@ const LinkPage = () => {
      {/* 開閉パーツ */}
     <dl class="faq">
       <dt style={TitleStyles} className="headline--greenLabel faq__title">
-        サンパーキング関連ページ<button class="question-button"><span></span><span></span></button>
+        サンパーキング関連ページ<button class="question-button" aria-label="サンパーキング関連ページ"><span></span><span></span></button>
       </dt>
       <dd class="text-sm faq__answer">
         <ul className={styles.faqList}>

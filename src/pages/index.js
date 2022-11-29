@@ -52,10 +52,10 @@ const IndexPage = ( { data } ) => (
           {data.allMicrocmsInformation.edges.map(({ node }) => (
             <div className={styles.info__article}>
               <ul className={styles.info__head}>
-                <li className={styles.info__cate}>{node.category.category}</li>
-                <li className={styles.info__date}>{node.date}</li>
+                <li>{node.category.category}</li>
+                <li>{node.date}</li>
               </ul>
-              <div className={styles.info__center}>
+              <div>
                 <p className={styles.info__title}>
                   <Link to={`/information/${node.informationId}`}>
                     {node.title}
@@ -156,7 +156,7 @@ const IndexPage = ( { data } ) => (
         <h3 style={headline} className="sec__ttl">信頼と安心の<span className="nowrap">サンパーキング成田店</span><br />
           航空会社や旅行会社、<span className="nowrap">銀行、官公庁など</span><span className="nowrap">約2,000社と契約！</span></h3>
 
-        <div className={styles.sponsor}>
+        <div>
           <div className={styles.sponsor_top}>
             <figure className={styles.sponsorLogo}>
               <StaticImage src="../images/company-logo/jal.jpg" alt="JAL" loading="lazy" />
