@@ -171,7 +171,7 @@ const AdvantagePage = () => (
           />
         </div>
       </div>
-      <StaticImage src="../images/advantage/map.jpg" alt="サンパーキング周辺マップ" />
+      <StaticImage src="../images/guide/map.png" alt="サンパーキング周辺マップ" />
     </Wrap>
 
     </div>

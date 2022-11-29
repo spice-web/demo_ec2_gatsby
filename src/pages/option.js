@@ -1,5 +1,8 @@
 import * as React from "react"
+// import { Link } from "gatsby";
+
 import { StaticImage } from "gatsby-plugin-image";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import Layout from "../components/layout"
 import Seo from "../components/seo";
@@ -8,7 +11,6 @@ import Wrap from "../components/grayContainer"
 import ButtonOp from "../components/button-option"
 
 import * as styles from "../styles/_option.module.scss"
-import { Link } from "gatsby";
 
 const reservationButton = {
   position: 'absolute',
@@ -41,11 +43,11 @@ const OptionPage = () => (
     <PageTitle>OPTION<span>オプション</span></PageTitle>
 
     <ul className={styles.optionLink}>
-      <li className={styles.optionLinkList}><Link to="#delivery">お届け<span>&#9654;</span></Link></li>
-      <li className={styles.optionLinkList}><Link to="#maintenance">洗車<span>&#9654;</span></Link></li>
-      <li className={styles.optionLinkList}><Link to="#insurance">保険<span>&#9654;</span></Link></li>
-      <li className={styles.optionLinkList}><Link to="#electrification">充電<span>&#9654;</span></Link></li>
-      <li className={styles.optionLinkList}><Link to="#rental">その他<span>&#9654;</span></Link></li>
+      <li className={styles.optionLinkList}><button onClick={() => scrollTo('#maintenance')}>洗車<span>&#8811;</span></button></li>
+      <li className={styles.optionLinkList}><button onClick={() => scrollTo('#insurance')}>保険<span>&#8811;</span></button></li>
+      <li className={styles.optionLinkList}><button onClick={() => scrollTo('#electrification')}>充電<span>&#8811;</span></button></li>
+      <li className={styles.optionLinkList}><button onClick={() => scrollTo('#delivery')}>お届け<span>&#8811;</span></button></li>
+      <li className={styles.optionLinkList}><button onClick={() => scrollTo('#rental')}>その他<span>&#8811;</span></button></li>
     </ul>
 
 
@@ -240,7 +242,7 @@ const OptionPage = () => (
 
     {/* inner */}
     <div style={reservationButton} className={styles.reservationButton}>
-      <a style={taR} href="https://www.site.jalabc.com/agency/7639/mobile/" target="_blank" rel="noreferrer noopener">今すぐ予約<span style={arrow}>&#9654;&#9654;&#9654;</span></a>
+      <a style={taR} href="https://www.site.jalabc.com/agency/7639/mobile/" target="_blank" rel="noreferrer noopener">今すぐ予約<span style={arrow}>&#8811;&#8811;&#8811;</span></a>
     </div>
     </Wrap>
   {/* レンタルモバイル */}
@@ -254,7 +256,7 @@ const OptionPage = () => (
   </div>
   {/* inner */}
   <div style={reservationButton} className={styles.reservationButton}>
-    <a style={taR} href="https://www.site.jalabc.com/agency/5213/takuhai/" target="_blank" rel="noreferrer noopener">今すぐ予約<span style={arrow}>&#9654;&#9654;&#9654;</span></a>
+    <a style={taR} href="https://www.site.jalabc.com/agency/5213/takuhai/" target="_blank" rel="noreferrer noopener">今すぐ予約<span style={arrow}>&#8811;&#8811;&#8811;</span></a>
   </div>
 </Wrap>
 {/* 宅配サービス */}
@@ -269,7 +271,7 @@ const OptionPage = () => (
 
   {/* inner */}
   <div style={reservationButton} className={styles.reservationButton}>
-    <a style={taR} href="https://jafnavi.jp/jyyk/pa/" target="_blank" rel="noreferrer noopener">今すぐ予約<span style={arrow}>&#9654;&#9654;&#9654;</span></a>
+    <a style={taR} href="https://jafnavi.jp/jyyk/pa/" target="_blank" rel="noreferrer noopener">今すぐ予約<span style={arrow}>&#8811;&#8811;&#8811;</span></a>
   </div>
 </Wrap>
 {/* JAF */}

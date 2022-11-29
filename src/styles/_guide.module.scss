@@ -177,9 +177,21 @@
   text-align: center;
   padding: 0.5rem 0;
   margin-bottom: 1rem;
+  button {
+    color: #FFF;
+    &:focus {
+      color: inherit;
+    }
+  }
   a {
     color: #FFF!important;
   }
+}
+
+.lastFlowLink {
+  margin-bottom: 2rem;
+  margin-top: -80px;
+  padding-top: 80px;
 }
 
 .lastFlowMapLink {

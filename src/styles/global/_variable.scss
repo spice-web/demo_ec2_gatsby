@@ -2,7 +2,8 @@
   || breakpoints
 ============================== */
 $breakpoints: (
-  'xxs': 'screen and (min-width: 375px)',
+  'xxs': 'screen and (min-width: 389px)',
+  'max-xxs': 'screen and (max-width: 389px)',
   'xs': 'screen and (min-width: 400px)',
   'max-sm': 'screen and (max-width: 650px)',
   'sm': 'screen and (min-width: 650px)',
