@@ -93,6 +93,9 @@
     margin-bottom: 1rem;
     letter-spacing: 0.02em;
     font-weight: $bold;
+    @include mq(max-xxs) {
+      font-size: 1.375rem;
+    }
     @include mq() {
       margin-bottom: 2rem;
     }

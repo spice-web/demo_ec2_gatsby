@@ -45,7 +45,7 @@ const IndexPage = ( { data } ) => (
     <div className="content__wrap content__pd">
       <div className="content__inner --sm">
 
-        <h2 className="text-center text-normal mb--md">最新情報</h2>
+        <h2 className="text-center text-normal mb--md">新着情報</h2>
 
         {/* 最新記事ループ */}
         <div className={styles.info__wrap}>
@@ -189,7 +189,7 @@ const IndexPage = ( { data } ) => (
             </li>
           </ul>
           <ul className={styles.selectBox}>
-            <li className={styles.textBox}><span>24時間警備体制で安心</span>で安心！鍵はセコムの大型金庫で保管！ 預かり時のお車の状態を 動画でチェック！</li>
+            <li className={styles.textBox}><span>24時間警備体制で安心</span>で安心！鍵は大型金庫で保管！ 預かり時のお車の状態を 動画でチェック！</li>
             <li className={styles.imgBox}>
               <StaticImage src="../images/top/select02.jpg" imgClassName={styles.selectImg} alt="24時間警備体制で安心" loading="lazy" />
             </li>

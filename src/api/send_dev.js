@@ -2,8 +2,9 @@ export default function formHandler(req, res) {
 
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
-    // port: 587,
-    port: 465,
+    // EC2本番環境
+    port: 587,
+    // port: 465,
     host: 'smtp.sendgrid.net',
     auth: {
       user: `${process.env.GATSBY_SENDGRID_USERNAME}`,
