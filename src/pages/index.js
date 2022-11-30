@@ -45,7 +45,7 @@ const IndexPage = ( { data } ) => (
     <div className="content__wrap content__pd">
       <div className="content__inner --sm">
 
-        <h2 className="text-center text-normal mb--md">最新情報</h2>
+        <h2 className="text-center text-normal mb--md">新着情報</h2>
 
         {/* 最新記事ループ */}
         <div className={styles.info__wrap}>
