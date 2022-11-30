@@ -42,7 +42,8 @@ jobs:
           MICROCMS_APIKEY: ${{ secrets.MICROCMS_APIKEY }}
           MICROCMS_SERVICE_ID: ${{ secrets.MICROCMS_SERVICE_ID }}
           GATSBY_FLEXYFORM_ACTION: ${{ secrets.GATSBY_FLEXYFORM_ACTION }}
-
+          GATSBY_SMTP_USERNAME: ${{ secrets.GATSBY_SMTP_USERNAME }}
+          GATSBY_SMTP_API_KEY: ${{ secrets.GATSBY_SMTP_API_KEY }}
 
       - name: commit main Branch
 
