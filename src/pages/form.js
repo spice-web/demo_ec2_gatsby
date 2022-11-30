@@ -21,9 +21,9 @@ const FormFlex = () => (
           <p className="pg--md mb--lg">各店舗のご利用・ご予約に関するお問い合せ、サンパーキング各店舗のご利用・ご予約に関するお問い合わせは、下記メールフォームまたはサン予約センター TEL. 0476-33-1123 にてお受けいたします。 ご質問・ご要望にはなるべく迅速にお答えいたします。<br />なお、ご入力いただきましたお客様の個人情報および記述内容は、内容の確認ならびにお客様への回答のために 必要な範囲でのみ利用させていただきます。</p>
 
           <p className="text-center text-deep-gr mb--xs"><Link to="/policy">&gt;&gt;&gt;サイトポリシー</Link></p>
-          <p className="text-center text-xs mb--lg">必須の欄は必ずご記入の上お問い合わせください。 漢字・カナは全角、半角数字、半角ハイフンをご使用ください。</p>
+          <p className="text-center text-xs mb--lg">必須の欄は必ずご記入の上お問い合わせください。<br />漢字・カナは全角、半角数字、半角ハイフンをご使用ください。</p>
 
-          <p className="text-center text-deep-gr mb--xxl">お問い合わせの前に<button className={styles.linkBox} onClick={() => scrollTo('#faq')}>よくあるお問い合わせ</button>のご確認もお願いします。</p>
+          <p className="text-center text-deep-gr mb--xxl">お問い合わせの前に<button className={styles.linkBox} onClick={() => scrollTo('#faq')}>よくあるお問い合わせ</button>の<br className="br_maxsm" />ご確認もお願いします。</p>
 
         </div>
 
@@ -56,13 +56,13 @@ const FormFlex = () => (
               {/* 電話番号 */}
               <div>
                 <label htmlFor="formTel">電話番号（数字のみハイフン無し）</label>
-                <input type="text" pattern="^[0-9]{9,}$" inputmode="numeric" name="電話番号" id="formTel" />
+                <input type="text" pattern="^[0-9]{9,}$" maxlength="11" inputmode="numeric" name="電話番号" id="formTel" />
               </div>
 
               {/* FAX番号 */}
               <div>
                 <label htmlFor="formFax">FAX番号（数字のみハイフン無し）</label>
-                <input type="text" pattern="^[0-9]{9,}$" inputmode="numeric" name="FAX番号" id="formFax" />
+                <input type="text" pattern="^[0-9]{9,}$" maxlength="10" inputmode="numeric" name="FAX番号" id="formFax" />
               </div>
               <div>
                 <label htmlFor="email">メールアドレス※必須</label>

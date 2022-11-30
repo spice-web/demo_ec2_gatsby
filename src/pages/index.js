@@ -317,7 +317,7 @@ const IndexPage = ( { data } ) => (
       
         <ul className="flex__wrap">
           <li className="flex-col-2 flex-col-4--sm mb--md">
-            <Link to="/more-information#mile">
+            <Link to="/more-information#point">
               <StaticImage
                 src="../images/parts/button/point.png"
                 alt="貯めてオトクなマイル・ポイント"
@@ -340,7 +340,7 @@ const IndexPage = ( { data } ) => (
     <ul className="flex__wrap--sm">
       <li className={styles.otherService}>
           <p className={styles.otherServiceTitle} >洗車・コーティング</p>
-          <p className={styles.otherServiceText}><Link to="/option#maintenance">お帰りまでにお車ピカピカキレイを、長く！本格派コーティング。</Link></p>
+          <p className={styles.otherServiceText}><Link to="/option#maintenance">お帰りまでにお車ピカピカ！キレイを長く、本格派コーティング。</Link></p>
           <p className={styles.otherServiceImg}>
             <Link to="/option#maintenance"><StaticImage src="../images/top/link01.jpg" alt="洗車・コーティングサービス" loading="lazy" /></Link>
           </p>

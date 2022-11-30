@@ -85,7 +85,7 @@ const OptionPage = () => (
         <StaticImage
           src="../images/option/graphWash.png"
           alt="有料洗車メニュー表"
-          width={880}
+          width={881}
           layout="fixed"
         />
       </div>

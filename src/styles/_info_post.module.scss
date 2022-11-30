@@ -1,9 +1,11 @@
-img {
-  max-width: 100%;
-}
-
-@media screen and (min-width: 851px) {
+.post {
   img {
-    max-width: 580px;
-  } 
+    max-width: 100%;
+  }
+  
+  @media screen and (min-width: 851px) {
+    img {
+      max-width: 580px;
+    } 
+  }
 }

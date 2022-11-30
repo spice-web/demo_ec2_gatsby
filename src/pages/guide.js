@@ -24,9 +24,9 @@ const flow =  {
 }
 
 const border = {
-  paddingBottom: '1rem',
-  marginBottom: '1rem',
-  borderBottom: '0.99px solid rgba(242, 242, 242, 0.75)'
+  paddingBottom: '0.5rem',
+  marginBottom: '0.5rem',
+  borderBottom: '1px solid rgba(242, 242, 242, 0.75)'
 }
 
 const GuidePage = () => (
@@ -231,7 +231,7 @@ const GuidePage = () => (
         </div>
       </div>
 
-      <p className="text-center pg--deepGreen-sm-medium mb--lg">ドライバーにご利用の航空会社または ご出発のターミナルをご確認の上、ご乗車ください。</p>
+      <p className="text-center pg--deepGreen-sm-medium mb--lg">ドライバーにご利用の航空会社またはご出発のターミナルをご確認の上、ご乗車ください。</p>
 
       <div className="flex__wrap">
         <div className="inner--white flex-col-2--md">
