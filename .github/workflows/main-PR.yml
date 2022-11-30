@@ -41,6 +41,8 @@ jobs:
           GATSBY_SENDGRID_USERNAME: ${{ secrets.GATSBY_SENDGRID_USERNAME }}
           MICROCMS_APIKEY: ${{ secrets.MICROCMS_APIKEY }}
           MICROCMS_SERVICE_ID: ${{ secrets.MICROCMS_SERVICE_ID }}
+          GATSBY_FLEXYFORM_ACTION: ${{ secrets.GATSBY_FLEXYFORM_ACTION }}
+
 
       - name: commit main Branch
 
