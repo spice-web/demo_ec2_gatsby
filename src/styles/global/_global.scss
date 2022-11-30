@@ -35,6 +35,13 @@ a.text-deep-gr {
   }
 }
 
+.LinkMargin {
+  margin-top: -200px;
+  padding-top: 200px;
+  display: block;
+  z-index: -101;
+}
+
 // よくある質問
 .faq {
   &__def {

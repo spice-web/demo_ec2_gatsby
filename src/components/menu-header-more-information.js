@@ -64,7 +64,7 @@ const Navigation = () => {
       <li className=""><Link to="/option" className="navigation__dttl" onClick={ctx.toggleMenu}>オプション</Link></li>
       <li className="navigation__desc">
         <ul class="navigation__list option">
-          <li class="navigation__item"><Link to="/option#maintenance" onClick={ctx.toggleMenu}>洗車・カーメンテナンス</Link></li>
+          <li class="navigation__item"><Link to="/option" onClick={ctx.toggleMenu}>洗車・カーメンテナンス</Link></li>
           <li class="navigation__item"><Link to="/option#insurance" onClick={ctx.toggleMenu}>海外・国内旅行保険</Link></li>
           <li class="navigation__item"><Link to="/option#electrification" onClick={ctx.toggleMenu}>電気自動車充電サービス</Link></li>
           <li class="navigation__item"><Link to="/option#delivery" onClick={ctx.toggleMenu}>空港お届けサービス</Link></li>
