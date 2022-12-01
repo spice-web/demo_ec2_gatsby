@@ -53,6 +53,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
+        // 本番時変更
         siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com`,
         stripQueryString: true,
       },

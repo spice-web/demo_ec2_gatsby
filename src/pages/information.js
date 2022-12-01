@@ -59,7 +59,7 @@ export default InformationPage
 
 export const query = graphql`
 query {
-  allMicrocmsInformation(limit:2, skip:0, sort: {fields:[date], order:DESC}) {
+  allMicrocmsInformation(limit:2, skip:0, sort: {date: DESC}) {
     totalCount
     edges {
       node {

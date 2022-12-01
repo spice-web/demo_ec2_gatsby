@@ -7,7 +7,7 @@ import * as Styles from "../styles/_side.module.scss"
 const Sidebar = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMicrocmsInformation(sort: { fields: [date], order: DESC }, limit: 5) {
+      allMicrocmsInformation(sort: { date: DESC }, limit: 5) {
         edges {
           node {
             category {

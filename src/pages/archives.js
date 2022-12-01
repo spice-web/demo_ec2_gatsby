@@ -23,9 +23,9 @@ export default ArchivesPage
 export const query = graphql`
   query {
     allMicrocmsInformation {
-      group(field: category___id) {
+      group(field: {category: {id: SELECT}}) {
         totalCount
-        distinct(field: category___id)
+        distinct(field: {category: {id: SELECT}})
       }
     }
   }
