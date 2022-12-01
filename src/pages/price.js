@@ -12,11 +12,6 @@ import * as Styles from "../styles/_price.module.scss"
 // 予約リンク
 const reserve = "https://www.sunparking.co.jp/form/rsv1.php?corp=sunport&o_id=1"
 
-const LinkMargin = {
-  marginTop: "-80px",
-  paddingTop: "80px",
-}
-
 const PricePage = () => (
   <Layout>
     <Seo
@@ -111,8 +106,8 @@ const PricePage = () => (
     </div>
     {/* オプションサービス */}
 
-<a className="LinkMargin" id="payment"></a>
-  <div className="content__wrap ">
+  <div className="LinkMargin" id="payment"></div>
+  <div className="content__wrap">
     <div className="content__inner --md">
       <h3 className="headline--greenLabel">お支払い方法</h3>
       <div>

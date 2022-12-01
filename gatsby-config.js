@@ -22,26 +22,26 @@ module.exports = {
 
 
     // tag manager
-    // {
-    //   resolve: `gatsby-plugin-google-tagmanager`,
-    //   options: {
-    //     id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
     
-    //     // Include GTM in development.
-    //     // Defaults to false meaning GTM will only be loaded in production.
-    //     includeInDevelopment: false,
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
     
-    //     // datalayer to be set before GTM is loaded
-    //     // should be an object or a function that is executed in the browser
-    //     // Defaults to null
-    //     defaultDataLayer: { platform: "gatsby" },
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
     
-    //     // Specify optional GTM environment details.
-    //     // gtmAuth: "xNwDtuXDGlgZTO1P8TF2cg",
-    //     // gtmPreview: "env-1",
-    //     // dataLayerName: 'dataLayer',
-    //   }
-    // },
+        // Specify optional GTM environment details.
+        // gtmAuth: "xNwDtuXDGlgZTO1P8TF2cg",
+        // gtmPreview: "env-1",
+        // dataLayerName: 'dataLayer',
+      }
+    },
 
 
     // smoothscroll
@@ -53,6 +53,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
+        // 本番時変更
         siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com`,
         stripQueryString: true,
       },

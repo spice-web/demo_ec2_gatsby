@@ -39,7 +39,7 @@ const GuidePage = () => (
 
     <div className="content__wrap content__pd">
     <Wrap>
-      <a id="access" className="LinkMargin"></a>
+      <div id="access" className="LinkMargin"></div>
       <h3 className="sec__ttl link__inner">アクセスについて</h3>
       <div className="mb--xl">
         <GoogleMap />
@@ -112,7 +112,7 @@ const GuidePage = () => (
     </Wrap>
 
     <Wrap>
-      <a id="flow" className="LinkMargin"></a>
+      <div id="flow" className="LinkMargin"></div>
       <h3 className="sec__ttl link__inner">ご利用の流れ</h3>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
@@ -251,7 +251,7 @@ const GuidePage = () => (
 
     {/* お帰りになったら */}
     <Wrap>
-      <a id="last" className="LinkMargin"></a>
+      <div id="last" className="LinkMargin"></div>
       <h3 className="sec__ttl link__inner">お帰りになったら</h3>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">

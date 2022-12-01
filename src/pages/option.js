@@ -55,7 +55,7 @@ const OptionPage = () => (
    <div className="content__wrap content__pd">
 {/* 洗車・カーメンテナンス */}
     <Wrap>
-      <a id="maintenance"></a>
+      <div id="maintenance"></div>
       <h3 className="sec__ttl link__inner">洗車・カーメンテナンス</h3>
       <div className={styles.flexTop}>
       <p className={styles.leftBox}>サンパーキング全店では、お預かりしたお車をメンテナンスするメニューをご用意しております。 お出かけ中の時間を利用できるため、煩わしい待ち時間もありません。社内訓練された専属のスタッフがお客様のお車をきれいにし、メンテナンスなどを行なっております。 洗車やWAXだけでなくタイヤ交換・バッテリー液補充や充電・タイヤ空気圧補充・修理・車検など、どんなことでもご相談に応じさせて頂きますのでご遠慮なくお申し付け下さい。（実費ご負担いただきます）</p>
@@ -133,7 +133,7 @@ const OptionPage = () => (
 
 {/* 海外・国内旅行保険 */}
     <Wrap>
-      <a className="LinkMargin" id="insurance"></a>
+      <div id="insurance" className="LinkMargin"></div>
       <h3 className="sec__ttl link__inner">海外・国内旅行保険</h3>
       <div className={styles.flexTop}>
         <p className={styles.leftBox}>海外旅行中は、予期せぬトラブルが起こる可能性があります。旅先はもちろん、出発から帰宅まで万全サポートできる保険を取り扱っております。 旅行中の様々なトラブルに対応しており、またクレジットカード付帯の海外旅行保険を補う合理的なプランもご用意しています。インターネットから簡単に契約ができ、旅行の当日までお申込みが可能です。</p>
@@ -166,11 +166,12 @@ const OptionPage = () => (
           
           <dl>
             <dt>
-              <a className="LinkMargin" id="chubb"></a>
               <StaticImage src="../images/option/logo/chubb.jpg"
                 width={180}
                 alt="チャブ保険"
-                style={{mixBlendMode: 'multiply'}} />
+                style={{mixBlendMode: 'multiply'}}
+                className="LinkMargin"
+                id="chubb" />
             </dt>
             <dd>日本語サービスセンターは24時間対応。キャッシュレス医療サービスで、お客様による治療費立替えは不要。チャブが直接、病院に治療費をお支払いするので安心。</dd>
           </dl>
@@ -185,7 +186,7 @@ const OptionPage = () => (
       </Wrap>
 
       <Wrap>
-          <a id="electrification" className="LinkMargin"></a>
+          <div id="electrification" className="LinkMargin"></div>
           <h3 className="sec__ttl link__inner">電気自動車充電サービス</h3>
           <div className={styles.flexTop}>
             <div className={styles.leftBox} >
@@ -206,7 +207,7 @@ const OptionPage = () => (
 
     {/* 空港お届けサービス */}
     <Wrap>
-      <a id="delivery" className="LinkMargin"></a>
+      <div id="delivery" className="LinkMargin"></div>
       <h2 className="sec__ttl link__inner">空港お届けサービス<span className="hiatus">休止中</span></h2>
       <div className={ styles.flexTop }>
         <p className={ styles.leftBox }>お車を成田空港へお届けするサービスをご用意しています。<br />「出発時駐車場経由空港引取り」は出発時駐車場受付で成田空港までスタッフが同乗してお届けするサービスです。<br />「お帰り時空港お車お届け」は駐車場をご利用いただき、お帰りに成田空港までお届けします。<br />※第３ターミナルでの引取り・お届けはできません。</p>
@@ -236,7 +237,7 @@ const OptionPage = () => (
 
 
 {/* Flex ブロック */}
-<a className="LinkMargin" id="rental"></a>
+<div id="rental" className="LinkMargin"></div>
 <div className={styles.service_wrap}>
   {/* レンタルモバイル */}
   <Wrap>
@@ -255,7 +256,7 @@ const OptionPage = () => (
 
 {/* 宅配サービス */}
 <Wrap>
-  <a id="takuhai" className="LinkMargin"></a>
+  <div id="takuhai" className="LinkMargin"></div>
   <h3 className="sec__ttl link__inner">空港宅配サービス</h3>
   <div className={styles.service}>
     <div className="text-sm text-light mb--md">カラダ一つで楽々旅行!行きも帰りも空港で荷物を配送します。</div>
@@ -270,7 +271,7 @@ const OptionPage = () => (
 
 {/* JAF */}
 <Wrap>
-  <a id="jaf" className="LinkMargin"></a>
+  <div id="jaf" className="LinkMargin"></div>
   <h3 className="sec__ttl link__inner">JAF</h3>
   <div className={styles.service}>
     <div className="text-sm text-light mb--md">もしもの時の頼れる味方。会員優待施設も充実しています。</div>

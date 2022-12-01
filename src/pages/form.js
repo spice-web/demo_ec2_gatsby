@@ -13,7 +13,9 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const FormFlex = () => (
   <Layout>
-    <Seo title="お問い合わせ" />
+    <Seo
+      title="お問い合わせ"
+      description="サンパーキングへのお問い合わせページ" />
     <h2 class="headline--title">INQUIRY<span>お問い合わせ</span></h2>
     {/* コンテナ */}
     <div className="content__wrap content__pd">
@@ -50,7 +52,7 @@ const FormFlex = () => (
               </div>
               <div>
                   <label htmlFor="kana">フリガナ※必須</label>
-                  <input type="text" name="フリガナ" pattern="/\A[ァ-ヴー]+\z/u" id="kana" required />
+                  <input type="text" name="フリガナ" id="kana" required />
               </div>
 
               {/* 電話番号 */}

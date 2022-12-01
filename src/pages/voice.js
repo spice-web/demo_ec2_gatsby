@@ -45,7 +45,7 @@ export default VoicePage
 
 export const query = graphql`
 query {
-  allMicrocmsVoice(sort:{fields:[number], order:ASC}) {
+  allMicrocmsVoice(sort:{number: ASC}) {
     edges {
       node {
         user_voice
