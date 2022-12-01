@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[454],{8192:function(e,t,l){l.r(t);var a=l(7294),n=l(1883),r=l(7619),c=l(9357);t.default=e=>{let{data:t}=e;return a.createElement(r.Z,null,a.createElement(c.Z,{title:"Home"}),a.createElement("p",null,"カテゴリー一覧"),a.createElement("ul",null,t.allMicrocmsInformation.group.map((e=>a.createElement("li",{key:e.distinct},a.createElement(n.Link,{to:"/information/"+e.distinct},e.distinct))))))}}}]);
+//# sourceMappingURL=component---src-pages-archives-js-6c783a455f77c50c5f95.js.map
