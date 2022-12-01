@@ -68,7 +68,7 @@ const Faq = () => {
   const Other = data.allFaqOtherJson.edges
 
   const TitleStyles = {
-    padding: "10px 30px 10px 30px",
+    padding: "10px 30px 10px 15px",
     borderRadius: "3px",
   }
 

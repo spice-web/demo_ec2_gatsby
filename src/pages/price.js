@@ -12,6 +12,11 @@ import * as Styles from "../styles/_price.module.scss"
 // 予約リンク
 const reserve = "https://www.sunparking.co.jp/form/rsv1.php?corp=sunport&o_id=1"
 
+const LinkMargin = {
+  marginTop: "-80px",
+  paddingTop: "80px",
+}
+
 const PricePage = () => (
   <Layout>
     <Seo
@@ -31,7 +36,7 @@ const PricePage = () => (
             <a href={reserve} target="_blank" rel="noreferrer noopener" aria-label="キャンペーン実施中"><StaticImage src="../images/top/banner_campaign_sp.jpg" /></a>
           </div>          
         </div>
-        <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
+        <h3 className="text-lg text-center text-deep-gr text-bold mb--lg">サンパーキング成田店は、<br className="br_maxsm" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
         <PriceChart />
       </div>
     </div>
@@ -53,7 +58,7 @@ const PricePage = () => (
               <dt className="text-bold">洗車・カーメンテナンス</dt>
               <dd>お帰りに合わせてお車をキレイに仕上げてお返しできます。お車の気になる点もご相談ください。</dd>
             </dl>
-            <Link to="/option#maintenance" className={Styles.link}>詳しく&#9654;&#9654;</Link>
+            <Link to="/option" className={Styles.link}>詳しく&#9654;&#9654;</Link>
           </div>
           <div className={Styles.box}>
             <figure className={Styles.img}>
@@ -106,9 +111,10 @@ const PricePage = () => (
     </div>
     {/* オプションサービス */}
 
-  <div className="content__wrap">
+<a className="LinkMargin" id="payment"></a>
+  <div className="content__wrap ">
     <div className="content__inner --md">
-      <h3 className="headline--greenLabel" id="payment">お支払い方法</h3>
+      <h3 className="headline--greenLabel">お支払い方法</h3>
       <div>
         <h4 className="sec__ttl">WEB予約でカード事前決済可能</h4>
         <p className="pg--sm-lgt mb--sm">VISA・MasterCard・JCB・AMEX・DinersではWEB予約時にカード決済ができます。カード決済のタイミングはWEBで予約された時点で決済されます。</p>

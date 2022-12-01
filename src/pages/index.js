@@ -317,7 +317,7 @@ const IndexPage = ( { data } ) => (
       
         <ul className="flex__wrap">
           <li className="flex-col-2 flex-col-4--sm mb--md">
-            <Link to="/more-information#mile">
+            <Link to="/more-information">
               <StaticImage
                 src="../images/parts/button/point.png"
                 alt="貯めてオトクなマイル・ポイント"
@@ -329,7 +329,7 @@ const IndexPage = ( { data } ) => (
             <Link to="/price#payment"><StaticImage src="../images/parts/button/how_pay.png" alt="色々あります。お支払い方法" loading="lazy" /></Link>
             </li>
           <li className="flex-col-2 flex-col-4--sm mb--md">
-            <Link to="/more-information#voice"><StaticImage src="../images/parts/button/voice.png" alt="届いてます。お客様の声" loading="lazy" /></Link>
+            <Link to="/voice"><StaticImage src="../images/parts/button/voice.png" alt="届いてます。お客様の声" loading="lazy" /></Link>
           </li>
           <li className="flex-col-2 flex-col-4--sm mb--md">
             <Link to="/form#faq"><StaticImage src="../images/parts/button/faq.png" alt="お答えします。Q&A" loading="lazy" /></Link>
@@ -340,18 +340,18 @@ const IndexPage = ( { data } ) => (
     <ul className="flex__wrap--sm">
       <li className={styles.otherService}>
           <p className={styles.otherServiceTitle} >洗車・コーティング</p>
-          <p className={styles.otherServiceText}><Link to="/option#maintenance">お帰りまでにお車ピカピカキレイを、長く！本格派コーティング。</Link></p>
+          <p className={styles.otherServiceText}><Link to="/option">お帰りまでにお車ピカピカ！キレイを長く、本格派コーティング。</Link></p>
           <p className={styles.otherServiceImg}>
-            <Link to="/option#maintenance"><StaticImage src="../images/top/link01.jpg" alt="洗車・コーティングサービス" loading="lazy" /></Link>
+            <Link to="/option"><StaticImage src="../images/top/link01.jpg" alt="洗車・コーティングサービス" loading="lazy" /></Link>
           </p>
       </li>
       <li className={styles.otherService}>
         <p className={styles.otherServiceTitle} >CHUBB海外旅行保険</p>
         <p className={styles.otherServiceText}>
-          <Link to="/option#insurance">当日、その場で海外旅行保険に加入できます。</Link>
+          <Link to="/option#chubb">当日、その場で海外旅行保険に加入できます。</Link>
         </p>
         <p className={styles.otherServiceImg}>
-          <Link href="/option#insurance">
+          <Link href="/option#chubb">
             <StaticImage src="../images/top/link02.jpg" alt="CHUBB海外旅行保険サービス" loading="lazy" />
           </Link>
         </p>

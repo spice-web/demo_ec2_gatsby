@@ -18,7 +18,8 @@ const reservationButton = {
   // padding: '1rem 0',
   display: 'flex',
   justifyContent: 'space-between',
-  borderTop: '10px solid #F2F2F2'
+  borderTop: '10px solid #F2F2F2',
+  zIndex: "100",
 }
 
 const ButtonOption = () => (

@@ -7,9 +7,9 @@ import Seo from "../components/seo";
 // サイドバー
 import Sidebar from "../components/Sidebar";
 //  CSS
-// import * as Styles from "../styles/_info_post.module.scss";
 import * as infoStyles from "../styles/_information.module.scss";
-
+//　microCMS用画像CSS
+import * as Styles from "../styles/_info_post.module.scss";
 
 const InformationPost = ({ data }) => (
 
@@ -27,7 +27,7 @@ const InformationPost = ({ data }) => (
           </div>
 
           {/* 記事詳細ブロック */}
-          <div className="">
+          <div className={Styles.post}>
             <div className="">
               {data.microcmsInformation.date}{` `}{data.microcmsInformation.category.category}
             </div>

@@ -72,7 +72,7 @@ const RecruitPage = () => (
         </Wrap>
 
         <Wrap>
-          <h4 className="text-center text-deep-gr mb--md text-md">シーズン・スタッフ（パート・アルバイト）</h4>
+          <h4 className="text-center text-deep-gr mb--md text-md">シーズン・スタッフ<br className="br_maxsm"/>（パート・アルバイト）</h4>
           <dl className={styles.recruiting}>
             <dt>応募資格</dt>
             <dd>16歳～60歳位の方<br />

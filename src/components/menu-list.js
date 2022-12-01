@@ -15,10 +15,10 @@ const Menu = () => (
       <li className="navigation__dttl"><Link to="/option">オプション</Link></li>
       <li className="navigation__desc">
         <ul class="navigation__list option">
-          <li class="navigation__item"><Link to="/option#service">・空港お届けサービス</Link></li>
-          <li class="navigation__item"><Link to="/option#maintenance">・洗車・カーメンテナンス</Link></li>
+          <li class="navigation__item"><Link to="/option">・洗車・カーメンテナンス</Link></li>
           <li class="navigation__item"><Link to="/option#insurance">・海外・国内旅行保険</Link></li>
           <li class="navigation__item"><Link to="/option#electrification">・電気自動車充電サービス</Link></li>
+          <li class="navigation__item"><Link to="/option#service">・空港お届けサービス</Link></li>
           <li class="navigation__item"><Link to="/option#rental">・レンタルモバイル</Link></li>
           <li class="navigation__item"><Link to="/option#delivery" class="link">・空港宅配サービス</Link></li>
           <li class="navigation__item"><Link to="/option#jaf" class="link">・JAF</Link></li>
