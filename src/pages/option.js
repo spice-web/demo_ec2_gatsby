@@ -166,12 +166,11 @@ const OptionPage = () => (
           
           <dl>
             <dt>
+              <div id="chubb" className="LinkMargin"></div>
               <StaticImage src="../images/option/logo/chubb.jpg"
                 width={180}
                 alt="チャブ保険"
-                style={{mixBlendMode: 'multiply'}}
-                className="LinkMargin"
-                id="chubb" />
+                style={{mixBlendMode: 'multiply'}} />
             </dt>
             <dd>日本語サービスセンターは24時間対応。キャッシュレス医療サービスで、お客様による治療費立替えは不要。チャブが直接、病院に治療費をお支払いするので安心。</dd>
           </dl>
