@@ -44,6 +44,7 @@ jobs:
           GATSBY_FLEXYFORM_ACTION: ${{ secrets.GATSBY_FLEXYFORM_ACTION }}
           GATSBY_SMTP_USERNAME: ${{ secrets.GATSBY_SMTP_USERNAME }}
           GATSBY_SMTP_API_KEY: ${{ secrets.GATSBY_SMTP_API_KEY }}
+          GATSBY_GOOGLE_TAG_MANAGER: ${{ secrets.GATSBY_GOOGLE_TAG_MANAGER }}
 
       - name: commit main Branch
 
