@@ -50,6 +50,13 @@ module.exports = {
     `gatsby-plugin-sass`,
     // sitemap
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com`,
+        stripQueryString: true,
+      },
+    },
     // 最適化
     // `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
