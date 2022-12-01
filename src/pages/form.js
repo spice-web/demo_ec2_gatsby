@@ -50,7 +50,7 @@ const FormFlex = () => (
               </div>
               <div>
                   <label htmlFor="kana">フリガナ※必須</label>
-                  <input type="text" name="フリガナ" id="kana" />
+                  <input type="text" name="フリガナ" pattern="/\A[ァ-ヴー]+\z/u" id="kana" required />
               </div>
 
               {/* 電話番号 */}

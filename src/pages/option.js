@@ -163,14 +163,14 @@ const OptionPage = () => (
             </dt>
             <dd>”リーズナブルな保険料”で"充実な補償"がたびともの魅力!ご家族・ご友人もご一緒に!LINE電話で海外サポートセンターへ24時間365日日本語で無料通話OK!</dd>
           </dl>
-          <a className="LinkMargin" id="chubb"></a>
+          
           <dl>
             <dt>
+              <a className="LinkMargin" id="chubb"></a>
               <StaticImage src="../images/option/logo/chubb.jpg"
                 width={180}
                 alt="チャブ保険"
-                style={{mixBlendMode: 'multiply'}}
-               />
+                style={{mixBlendMode: 'multiply'}} />
             </dt>
             <dd>日本語サービスセンターは24時間対応。キャッシュレス医療サービスで、お客様による治療費立替えは不要。チャブが直接、病院に治療費をお支払いするので安心。</dd>
           </dl>
@@ -185,7 +185,7 @@ const OptionPage = () => (
       </Wrap>
 
       <Wrap>
-        <a id="electrification" className="LinkMargin"></a>
+          <a id="electrification" className="LinkMargin"></a>
           <h3 className="sec__ttl link__inner">電気自動車充電サービス</h3>
           <div className={styles.flexTop}>
             <div className={styles.leftBox} >

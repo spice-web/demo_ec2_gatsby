@@ -39,7 +39,8 @@ const GuidePage = () => (
 
     <div className="content__wrap content__pd">
     <Wrap>
-      <h3 className="sec__ttl link__inner" id="access">アクセスについて</h3>
+      <a id="access" className="LinkMargin"></a>
+      <h3 className="sec__ttl link__inner">アクセスについて</h3>
       <div className="mb--xl">
         <GoogleMap />
       </div>
@@ -58,7 +59,7 @@ const GuidePage = () => (
 
       <h4 className={styles.headline}>東関東自動車道からの場合</h4>
       <p className="text-sm text-light mb--sm">東関東自動車道「成田I.C.」料金所の「成田市内」を出て国道295号を「空港方面」へ</p>
-      <StaticImage src="../images/guide/map.png" alt="東関東自動車道からのアクセス方法" />
+      <StaticImage src="../images/guide/map.png" alt="東関東自動車道からのアクセス方法" className="mb--md" />
       
       <div className={styles.accessFlow}>
         <div className="flex-col-2--md">
@@ -111,7 +112,8 @@ const GuidePage = () => (
     </Wrap>
 
     <Wrap>
-      <h3 id="flow" className="sec__ttl link__inner">ご利用の流れ</h3>
+      <a id="flow" className="LinkMargin"></a>
+      <h3 className="sec__ttl link__inner">ご利用の流れ</h3>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
           <div className="label bg--green text-lg text-medium text-left ls01 bdr-xs">&#10102;予約する</div>
@@ -185,7 +187,7 @@ const GuidePage = () => (
       {/* inner white */}
 
       <div style={flow} className="text-center text-deep-gr" >
-        <Link to="/rsv-faq" className="text-xs text-medium">ご予約でお困りの方はこちら</Link>
+        <Link to="/rsv-faq" className="text-xs text-medium">ご予約でお困りの方はこちら&#0062;	&#0062;</Link>
       </div>
 
       
@@ -249,7 +251,8 @@ const GuidePage = () => (
 
     {/* お帰りになったら */}
     <Wrap>
-      <h3 id="last" className="sec__ttl link__inner">お帰りになったら</h3>
+      <a id="last" className="LinkMargin"></a>
+      <h3 className="sec__ttl link__inner">お帰りになったら</h3>
       <div className="flex__wrap mb--md">
         <div className="flex-col-2--md">
           <div>

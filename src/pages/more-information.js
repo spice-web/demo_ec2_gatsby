@@ -15,7 +15,11 @@ const green  = { color: "#51B674" }
 const silver = { color: "#547998" }
 const gold   = { color: "#C89650" }
 const black  = { color: "#9E3D9B" }
-
+const anker  = {
+  marginTop: "-150px",
+  paddingTop: "150px",
+  display: "block"
+}
 
 const MoreInfoPage = ( {data} ) => (
   <Layout>
@@ -29,7 +33,7 @@ const MoreInfoPage = ( {data} ) => (
     <Wrap>
       <a id="point" className="LinkMargin"></a>
       <h3 className="sec__ttl mb--md link__inner">マイル・ポイント</h3>
-      <p className="text-normal text-light mb--md lh175">提携マイル・ポイントを貯めるには、料金ご精算時にカウンターで「マイル積算希望」とお申し出ください。お申し出がない場合はマイルが積算されませんのでご注意ください。マイルはご利用日の約２～３ヶ月後に積算されます。 ※通常料金でのご利用で、駐車料金のみがマイルの対象となります。）</p>
+      <p className="text-normal text-light mb--md lh175">提携マイル・ポイントを貯めるには、料金ご精算時にカウンターで「マイル積算希望」とお申し出ください。お申し出がない場合はマイルが積算されませんのでご注意ください。マイルはご利用日の約２～３ヶ月後に積算されます。※通常料金でのご利用で、駐車料金のみがマイルの対象となります。）</p>
 
       <div className="flex__wrap--lg">
         <div className={styles.mile_box}>
@@ -198,8 +202,8 @@ const MoreInfoPage = ( {data} ) => (
     </Wrap>
 
     <Wrap>
-      <a id="travel" className="LinkMargin"></a>
       <h3 className="sec__ttl link__inner">旅のリンク集</h3>
+      <a id="travel" style={anker}></a>
       <LinkOther />
     </Wrap>
 
