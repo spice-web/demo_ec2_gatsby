@@ -7,8 +7,9 @@ module.exports = {
     title: `成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1`,
     description: `基本料金無し、深夜早朝・追加料金一切無し。安心の総額表示で「実質最安値」挑戦中！もちろんLCC対応・無料送迎バス付き！クレカ支払い対応`,
     author: `@spice Inc.`,
-
+    // 
     // 本番時変更
+    // 
     siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com/`,
   },
   plugins: [
@@ -25,7 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
+        // id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
+        id: `GTM-T43LP9C`,
     
         // Include GTM in development.
         // Defaults to false meaning GTM will only be loaded in production.
@@ -53,7 +55,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
+        // 
         // 本番時変更
+        // 
         siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com`,
         stripQueryString: true,
       },
