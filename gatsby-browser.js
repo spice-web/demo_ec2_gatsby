@@ -113,7 +113,10 @@ export const onRouteUpdate = ({ location }) => {
       const scrollCount = document.documentElement.scrollTop || document.body.scrollTop;
       const scrollPos = document.documentElement.clientHeight + scrollCount;
       const footerHeight = document.querySelector('footer').clientHeight;
-      if (docHeight - scrollPos <= footerHeight) {
+      const scrolled = window.pageYOffset;
+      if (scrolled < 50) {
+        elem.style.opacity = 0;
+      } else if (docHeight - scrollPos <= footerHeight) {
         elem.style.position = 'absolute';
         elem.style.bottom = footerHeight - 55 + 'px';      
       } else {

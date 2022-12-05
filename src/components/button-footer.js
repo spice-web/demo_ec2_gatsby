@@ -20,6 +20,7 @@ const data = useStaticQuery(graphql`
 return (
   <>
     <div className={styles.button__reserve__wrap}>
+      <div id="fax" className="LinkMargin"></div>
       <div className={styles.button__reserve}>
       {data.allFile.edges.map((file, index) => {
         return (

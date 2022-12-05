@@ -396,6 +396,7 @@
   font-size: 0.5rem;
   letter-spacing: 0.1em;
   animation: fadeIn 1.5s ease 0s 1 normal;
+  transition: opacity 0.8s ease-in-out;
   @include mq() {
     display: none;
   }
