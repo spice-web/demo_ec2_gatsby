@@ -377,9 +377,11 @@
 ==================== */
 #scrollBtn {
   display: block;
-  position: absolute;
-  top: 0;
+  // position: absolute;
+  // top: 0;
   right: 0;
+  width: 55px;
+  height: 55px;
   z-index: 99;
   border: none;
   outline: none;
@@ -409,9 +411,9 @@
     background-position: center center;
   }
 }
-#scrollBtn:hover {
-  background-color: #555;
-}
+// #scrollBtn:hover {
+//   background-color: #555;
+// }
 @keyframes fadeIn {
   0% {
     opacity: 0;

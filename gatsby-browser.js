@@ -107,4 +107,19 @@ export const onRouteUpdate = ({ location }) => {
     } else topBtn.classList.remove("fixed");
   });
 
+  window.addEventListener('scroll', () => {
+      const elem = document.getElementById('scrollBtn');
+      const docHeight = document.body.clientHeight;
+      const scrollCount = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollPos = document.documentElement.clientHeight + scrollCount;
+      const footerHeight = document.querySelector('footer').clientHeight;
+      if (docHeight - scrollPos <= footerHeight) {
+        elem.style.position = 'absolute';
+        elem.style.bottom = footerHeight - 55 + 'px';      
+      } else {
+        elem.style.position = 'fixed';
+        elem.style.bottom = 75 + 'px';
+      }
+ });
+
 };

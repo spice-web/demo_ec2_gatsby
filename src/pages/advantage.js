@@ -114,17 +114,21 @@ const AdvantagePage = () => (
         <p className="pg--md flex-col-2--md txt-jt">Keeperコーティングの代理店で、有資格者が在籍しているので、駐車場でありながら洗車は専門店レベル。お出かけ中の時間を利用して洗車するので待ち時間もありません。 また、公式LINEのお友だち登録で洗車無料クーポンや、定期的な割引クーポンもありおトクに利用できます。</p>
         <div className="flex-col-2--md">
           <StaticImage src="../images/advantage/wash.jpg"
-          alt=""
+          alt="キーパープロショップイメージ画像"
           style={{width:'100%'}} />
         </div>
       </div>
 
       <a href="https://www.keepercoating.jp/proshop/chiba/city625/05287/" target="_blank" rel="noreferrer noopener">
         <div className="br_maxsm">
-          <StaticImage src="../images/advantage/logo_keeper.jpg" alt="keeper pro shop"/>
+          <StaticImage
+            src="../images/advantage/logo_keeper.jpg"
+            alt="keeper pro shop" />
         </div>
         <div className="br_sm">
-          <StaticImage src="../images/advantage/logo_keeper_wide.jpg" alt="keeper pro shop" />
+          <StaticImage
+            src="../images/advantage/logo_keeper_wide.jpg"
+            alt="keeper pro shop" />
         </div>
       </a>
     </Wrap>
