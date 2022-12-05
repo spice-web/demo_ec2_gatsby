@@ -126,10 +126,22 @@ const Navigation = () => {
 
     <ul class="navigation__def">
       <li className="navigation__dttl">
-        <button onClick={ctx.toggleMenu}><Link to="/policy"><span className="none">サイトポリシー・<br className="none-drawer"/>プライバシー</span>ポリシー</Link></button>
+        <button onClick={ctx.toggleMenu}>
+          <Link to="/policy">サイトポリシー・<br className="none-drawer"/>プライバシーポリシー
+          </Link>
+        </button>
       </li>
     </ul>
+    
+    <ul class="navigation__def">
+      <li className="navigation__dttl"><Link to="/menseki">免責約款</Link></li>
+    </ul>
+
+    <ul class="navigation__def">
+      <li className="navigation__dttl"><Link to="/sitemap">サイトマップ</Link></li>
+    </ul>
   </div>
+
   <ul className="flex__wrap navigation__sns">
     <li><a href="https://page.line.me/165idnoa?openQrModal=true" rel="noreferrer noopener" target="_blank"><StaticImage src="../images/icon/line_w.svg" alt="サンパーキング公式LINE" width={24.29} /></a></li>
     <li><a href="https://twitter.com/sunparking" rel="noreferrer noopener" target="_blank"><StaticImage src="../images/icon/tw_w.svg" alt="サンパーキング公式twitter" width={25.37} /></a></li>

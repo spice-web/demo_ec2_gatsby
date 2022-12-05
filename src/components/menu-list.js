@@ -80,7 +80,15 @@ const Menu = () => (
     </ul>
 
     <ul class="navigation__def">
-      <li className="navigation__dttl"><Link to="/policy"><span className="none">サイトポリシー・<br className="none-drawer"/>プライバシー</span>ポリシー</Link></li>
+      <li className="navigation__dttl"><Link to="/policy">サイトポリシー・<br className="none-drawer"/>プライバシーポリシー</Link></li>
+    </ul>
+
+    <ul class="navigation__def">
+      <li className="navigation__dttl"><Link to="/menseki">免責約款</Link></li>
+    </ul>
+
+    <ul class="navigation__def">
+      <li className="navigation__dttl"><Link to="/sitemap">サイトマップ</Link></li>
     </ul>
   </div>
 
