@@ -113,16 +113,22 @@ export const onRouteUpdate = ({ location }) => {
       const scrollCount = document.documentElement.scrollTop || document.body.scrollTop;
       const scrollPos = document.documentElement.clientHeight + scrollCount;
       const footerHeight = document.querySelector('footer').clientHeight;
-      const scrolled = window.pageYOffset;
-      if (scrolled > 50) {
-        elem.style.opacity = 1;
-      } else if (docHeight - scrollPos <= footerHeight) {
+      if (docHeight - scrollPos <= footerHeight) {
         elem.style.position = 'absolute';
         elem.style.bottom = footerHeight - 55 + 'px';      
       } else {
         elem.style.position = 'fixed';
         elem.style.bottom = 75 + 'px';
       }
- });
+  });
+  window.addEventListener('scroll', () => {
+    const goToTopBtn = document.getElementById('scrollBtn');
+    const scrolled = window.pageYOffset;
+    if (scrolled > 50) {
+      goToTopBtn.classList.add("block");
+    } else {
+      goToTopBtn.classList.remove("block");
+    }
+  });
 
 };
