@@ -10,7 +10,7 @@ module.exports = {
     // 
     // 本番時変更
     // 
-    siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com/`,
+    siteUrl: `https://corp.sunparking.co.jp/`,
   },
   plugins: [
     // // Google Analytics
@@ -58,7 +58,7 @@ module.exports = {
         // 
         // 本番時変更
         // 
-        siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com`,
+        siteUrl: `https://corp.sunparking.co.jp/`,
         stripQueryString: true,
       },
     },
