@@ -45,7 +45,7 @@ const Footer = () => (
         <div className="footer__head">
           <h2 className="footer__logo"><StaticImage src="../images/logo.svg" /></h2>
           <h3>株式会社サン・ポート&nbsp;&nbsp;<br className="br_maxmd" />〒286-0121 千葉県成田市駒井野 134</h3>
-          <p>［営業時間］5:00～22:30&nbsp;&nbsp;<br className="br_maxmd" />成田空港最終便到着まで営業</p>
+          <p>［営業時間］5:00～22:30&nbsp;&nbsp;<br className="br_maxmd" />成田空港最終便到着まで対応</p>
         </div>
 
         {/* メニュー */}
