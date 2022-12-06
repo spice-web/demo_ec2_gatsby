@@ -78,12 +78,12 @@ const IndexPage = ( { data } ) => (
 
 
 
-    <h2 className="text-center text-lg text-deep-gr text-bold">創業37年の信頼と<br />安⼼のサンパーキング<br className="br_maxsm" />成⽥店です。</h2>
+    <h2 className="text-center text-lg text-deep-gr text-bold">創業38年の信頼と<br />安⼼のサンパーキング<br className="br_maxsm" />成⽥店です。</h2>
     
     <div className={styles.hero_image}>
       <StaticImage
         src="../images/top/year.png"
-        alt="サンパーキングは今年で創業37年を迎えます"
+        alt="サンパーキングは今年で創業38年を迎えます"
         className={styles.hero_logo}
         width={200}
         loading="lazy"
