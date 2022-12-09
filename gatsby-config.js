@@ -62,6 +62,15 @@ module.exports = {
         stripQueryString: true,
       },
     },
+    // robots
+    // {
+    //   resolve: `gatsby-plugin-robots-txt`,
+    //   option: {
+    //     host: `https://corp.sunparking.co.jp/`,
+    //     sitemap: `https://corp.sunparking.co.jp/sitemap-index.xml`,
+    //     policy: [{ userAgent: `*`, allow: `/`}]
+    //   }
+    // },
     // 最適化
     // `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
@@ -70,6 +79,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    // noindex
+    {
+      resolve: "gatsby-plugin-next-seo",
+      options: {
+        dangerouslySetAllPagesToNoIndex: true,
       },
     },
     `gatsby-transformer-sharp`,
@@ -140,6 +156,61 @@ module.exports = {
         // output: `/sitemap-path.xml`, ファイル名 
         // exclude: [`/thanks`, `/category/*`],　除く
       }
+    },
+    // PWA
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `sunparking`,
+        short_name: `sunparking`,
+        start_url: `/?utm_source=homescreen`,
+        background_color: '#333',
+        theme_color: `#32B400`,
+        display: 'minimal-ui',  // アプリのスタイル
+        "icons": [
+          {
+            "src": "icons/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+          },
+          // サイズ別のアイコン設定
+        ],
+      },
     },
 
     // 不要なlodashライブラリを削除
