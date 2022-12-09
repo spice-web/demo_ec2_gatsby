@@ -83,20 +83,20 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/faviconV2.png`, // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `gatsby-starter-default`,
+    //     short_name: `starter`,
+    //     start_url: `/`,
+    //     background_color: `#663399`,
+    //     // This will impact how browsers show your PWA/website
+    //     // https://css-tricks.com/meta-theme-color-and-trickery/
+    //     // theme_color: `#663399`,
+    //     display: `minimal-ui`,
+    //     icon: `src/images/faviconV2.png`, // This path is relative to the root of the site.
+    //   },
+    // },
 
     `gatsby-transformer-json`,
     {
@@ -160,44 +160,45 @@ module.exports = {
         background_color: '#333',
         theme_color: `#32B400`,
         display: 'minimal-ui',  // アプリのスタイル
+        icon: `src/images/icon-512x512.png`,
         "icons": [
           {
-            "src": "icons/icon-72x72.png",
+            "src": "src/images/icons/icon-72x72.png",
             "sizes": "72x72",
             "type": "image/png"
           },
           {
-            "src": "icons/icon-96x96.png",
+            "src": "src/images/icons/icon-96x96.png",
             "sizes": "96x96",
             "type": "image/png"
           },
           {
-            "src": "icons/icon-128x128.png",
+            "src": "src/images/icons/icon-128x128.png",
             "sizes": "128x128",
             "type": "image/png"
           },
           {
-            "src": "icons/icon-144x144.png",
+            "src": "src/images/icons/icon-144x144.png",
             "sizes": "144x144",
             "type": "image/png"
           },
           {
-            "src": "icons/icon-152x152.png",
+            "src": "src/images/icons/icon-152x152.png",
             "sizes": "152x152",
             "type": "image/png"
           },
           {
-            "src": "icons/icon-192x192.png",
+            "src": "src/images/icons/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
           },
           {
-            "src": "icons/icon-384x384.png",
+            "src": "src/images/icons/icon-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
           },
           {
-            "src": "icons/icon-512x512.png",
+            "src": "src/images/icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
           },
@@ -205,6 +206,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-offline`,
 
     // 不要なlodashライブラリを削除
     {
@@ -213,6 +215,16 @@ module.exports = {
         disablesFeatures: [`shorthand`]
       },
     },
+    {
+    // リダイレクト設定
+    resolve: 'gatsby-plugin-htaccess',
+    options: {
+      ErrorDocument: `ErrorDocument 404 /404/index.html`,
+      custom: ``,
+    }
+    },
+
+
 
   ],
 }
