@@ -81,13 +81,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // noindex
-    {
-      resolve: "gatsby-plugin-next-seo",
-      options: {
-        dangerouslySetAllPagesToNoIndex: true,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
