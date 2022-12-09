@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com/sitemap-index.xml
-Host: ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com
