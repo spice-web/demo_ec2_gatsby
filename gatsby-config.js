@@ -96,7 +96,6 @@ module.exports = {
       },
     },
 
-    // microCMS設定ここから
     // information
     {
       resolve: `gatsby-source-microcms`,
