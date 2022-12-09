@@ -50,18 +50,7 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     // sass
     `gatsby-plugin-sass`,
-    // sitemap
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        // 
-        // 本番時変更
-        // 
-        siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com`,
-        stripQueryString: true,
-      },
-    },
+
     // robots
     // {
     //   resolve: `gatsby-plugin-robots-txt`,
@@ -142,14 +131,7 @@ module.exports = {
     },
     // microCMSの設定ここまで
 
-    // サイトマップ設定
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        // output: `/sitemap-path.xml`, ファイル名 
-        // exclude: [`/thanks`, `/category/*`],　除く
-      }
-    },
+
     // PWA
     {
       resolve: `gatsby-plugin-manifest`,
@@ -219,9 +201,9 @@ module.exports = {
     // リダイレクト設定
     resolve: 'gatsby-plugin-htaccess',
     options: {
-      ErrorDocument: `ErrorDocument 404 /404/index.html`,
-      custom: ``,
-    }
+        ErrorDocument: `ErrorDocument 404 /404/index.html`,
+        custom: ``,
+      },
     },
 
   ],
