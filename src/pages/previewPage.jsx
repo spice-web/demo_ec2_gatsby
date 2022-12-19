@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { getSearchParams } from "gatsby-query-params"
 //...その他コンポーネントなど
 
+import Layout from "../components/layout"
+
 function previewPage() {
   //microCMS側に設定するurlはhttps://xxxxxx.com/previewPage/?contentId={CONTENT_ID}&draftKey={DRAFT_KEY}みたいな感じ
   const queryParams = getSearchParams()
