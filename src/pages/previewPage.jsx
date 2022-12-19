@@ -21,7 +21,7 @@ function previewPage() {
   useEffect(() => {
     if (!postData) {
       fetch(
-        `https://spice-web.microcms.io/api/v1/blogs/${contentId}?draftKey=${draftKey}`,
+        `https://spice-web.microcms.io/api/v1/information/${contentId}?draftKey=${draftKey}`,
         {
           headers: {
             "X-API-KEY": "uPiwKCQW7hJHydhbPrZsn0iXGG908ipjfai7",
