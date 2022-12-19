@@ -27,10 +27,10 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '18.x'
+          node-version: "18.x"
 
       - name: install modules
-        run: npm install
+        run: npm install --save --legacy-peer-deps
 
       - name: build gatsby
         run: |
