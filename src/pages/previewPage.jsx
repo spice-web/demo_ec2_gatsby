@@ -22,7 +22,7 @@ function previewPage() {
         `https://spice-web.microcms.io/api/v1/blogs/${contentId}?draftKey=${draftKey}`,
         {
           headers: {
-            "X-API-KEY": "uPiwKCQW7hJHydhbPrZsn0iXGG908ipjfai7",
+            "X-API-KEY": `${process.env.MICROCMS_APIKEY}`,
           },
         }
       )
@@ -41,11 +41,16 @@ function previewPage() {
     }
   })
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: postData ? postData.sentence : "",
-      }}
-    ></div>
+    <Layout>
+      {/* コンテナ */}
+      <div className="content__wrap content__pd">
+        <div
+          dangerouslySetInnerHTML={{
+            __html: postData ? postData.title : "",
+          }}
+        ></div>
+      </div>
+    </Layout>
   )
 }
 
