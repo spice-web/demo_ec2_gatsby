@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `成田空港駐車場サンパーキング | 安心・信頼の顧客満足No.1`,
-    description: `基本料金無し、深夜早朝・追加料金一切無し。安心の総額表示で「実質最安値」挑戦中！もちろんLCC対応・無料送迎バス付き！クレカ支払い対応`,
+    title: `テストサイト`,
+    description: `テストサイト`,
     author: `@spice Inc.`,
     // 
     // 本番時変更
@@ -200,7 +200,7 @@ module.exports = {
     // リダイレクト設定
     resolve: 'gatsby-plugin-htaccess',
     options: {
-        ErrorDocument: `ErrorDocument 404 /404/index.html`,
+        ErrorDocument: `ErrorDocument 404 /404.html`,
         custom: ``,
       },
     },

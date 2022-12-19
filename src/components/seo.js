@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Thumbnail from "./thumbnail"
 function Seo({ description, title, children }) {
   const { site } = useStaticQuery(
     graphql`
@@ -39,6 +40,7 @@ function Seo({ description, title, children }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="robots" content="noindex" />
+      <Thumbnail />
       {children}
     </>
   )

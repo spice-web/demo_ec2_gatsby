@@ -21,7 +21,7 @@ import PriceChart from "../components/price_chart"
 // import { motion } from "framer-motion"
 
 // to reservation
-const reserve = "https://www.sunparking.co.jp/form/rsv1.php";
+const reserve = "/";
 
 // 見出し
 const headline = {
@@ -78,19 +78,19 @@ const IndexPage = ( { data } ) => (
 
 
 
-    <h2 className="text-center text-lg text-deep-gr text-bold">創業38年の信頼と<br />安⼼のサンパーキング<br className="br_maxsm" />成⽥店です。</h2>
+    <h2 className="text-center text-lg text-deep-gr text-bold">創業38年の信頼と<br />安⼼のSAWAYAKA<br className="br_maxsm" />成⽥店です。</h2>
     
     <div className={styles.hero_image}>
       <StaticImage
         src="../images/top/year.png"
-        alt="サンパーキングは今年で創業38年を迎えます"
+        alt="SAWAYAKAは今年で創業38年を迎えます"
         className={styles.hero_logo}
         width={200}
         loading="lazy"
       />
       <StaticImage
         src="../images/top/build.png"
-        alt="サンパーキング外観"
+        alt="SAWAYAKA外観"
         className={styles.hero_build}
         loading="lazy"
       />
@@ -119,7 +119,7 @@ const IndexPage = ( { data } ) => (
           <Link to={reserve} target="_blank">
             <StaticImage
               src="../images/top/banner_campaign.jpg"
-              alt="サンパーキング秋割キャンペーン"
+              alt="SAWAYAKA秋割キャンペーン"
               loading="lazy"
             />
           </Link>
@@ -128,7 +128,7 @@ const IndexPage = ( { data } ) => (
           <Link to={reserve} target="_blank">
             <StaticImage
               src="../images/top/banner_campaign_sp.jpg"
-              alt="サンパーキング秋割キャンペーン"
+              alt="SAWAYAKA秋割キャンペーン"
               loading="lazy"
             />
           </Link>
@@ -138,7 +138,7 @@ const IndexPage = ( { data } ) => (
 
       <div className="content__inner inner__pd --lg">
         <div className="content__inner inner --w1100">
-          <h3 style={headline} className="sec__ttl">サンパーキング成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
+          <h3 style={headline} className="sec__ttl">SAWAYAKA成田店は、<br className="br_maxmd" /><span className="text-pk">安心の総額表示</span>で<br className="br_maxmd" /><span className="nowrap">実質最安値に挑戦中！</span></h3>
 
         {/* 価格表 */}
           <PriceChart />
@@ -153,7 +153,7 @@ const IndexPage = ( { data } ) => (
 
     <div className="content__wrap content__pd">
       <div className="content__inner --lg mb0">
-        <h3 style={headline} className="sec__ttl">信頼と安心の<span className="nowrap">サンパーキング成田店</span><br />
+        <h3 style={headline} className="sec__ttl">信頼と安心の<span className="nowrap">SAWAYAKA成田店</span><br />
           航空会社や旅行会社、<span className="nowrap">銀行、官公庁など</span><span className="nowrap">約2,000社と契約！</span></h3>
 
         <div>
@@ -208,7 +208,7 @@ const IndexPage = ( { data } ) => (
           </ul>
         </div>
 
-        <ButtonMore title="サンパーキングが選ばれる理由" url="/advantage" />
+        <ButtonMore title="SAWAYAKAが選ばれる理由" url="/advantage" />
 
     
       </div>
@@ -216,7 +216,7 @@ const IndexPage = ( { data } ) => (
 
     <div className="content__wrap content__pd bg--light-green">
       <div className="content__inner --lg mb0">
-      <h3 style={headline} className="sec__ttl">比べたらやっぱり<span className="nowrap">サンパーキング成田店。</span><span className="nowrap">利便性とサービスに自信あり！</span></h3>
+      <h3 style={headline} className="sec__ttl">比べたらやっぱり<span className="nowrap">SAWAYAKA成田店。</span><span className="nowrap">利便性とサービスに自信あり！</span></h3>
       <div className={styles.option}>
         <ul className={styles.optionBox}>
           <li className={styles.textBox}><span className="text-pk">様々なお支払い方法</span>に対応。予約時にクレジットカードで<span className="text-pk">事前決済もOK！</span><span className={styles.note}>※その他、各種カードご利用できます。</span></li>
