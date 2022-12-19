@@ -30,7 +30,7 @@ jobs:
           node-version: '18.x'
 
       - name: install modules
-        run: npm install
+        run: npm install --save --legacy-peer-deps
 
       - name: build gatsby
         run: |
