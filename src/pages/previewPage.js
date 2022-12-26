@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { UseState, UseEffect } from "react"
 import { getSearchParams } from "gatsby-query-params"
 //...その他コンポーネントなど
 
@@ -16,9 +16,9 @@ function previewPage() {
   const contentId = queryParams.contentId
   const draftKey = queryParams.draftKey
 
-  const [postData, setPostData] = useState(null) //最初、postDataにはnullが入ります。
+  const [postData, setPostData] = UseState(null) //最初、postDataにはnullが入ります。
 
-  useEffect(() => {
+  UseEffect(() => {
     if (!postData) {
       fetch(
         `https://spice-web.microcms.io/api/v1/information/${contentId}?draftKey=${draftKey}`,
