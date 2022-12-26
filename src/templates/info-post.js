@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ShareButtonList from "../components/ShareButtonList"
 
 // サイドバー
 import Sidebar from "../components/Sidebar"
@@ -10,6 +11,15 @@ import Sidebar from "../components/Sidebar"
 import * as infoStyles from "../styles/_information.module.scss"
 //　microCMS用画像CSS
 import * as Styles from "../styles/_info_post.module.scss"
+
+// 日付取得
+import dayjs from "dayjs"
+import utc from "dayjs/plugin/utc"
+import timezone from "dayjs/plugin/timezone"
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
+// dayjs.utc(publishedAt).tz("Asia/Tokyo").format("YYYY-MM-DD")
 
 const InformationPost = ({ data }) => (
   <Layout>
@@ -30,7 +40,7 @@ const InformationPost = ({ data }) => (
           {/* 記事詳細ブロック */}
           <div className={Styles.post}>
             <div className="">
-              {data.microcmsInformation.date}
+              {dayjs(data.microcmsInformation.date).format("YYYY年MM月DD日")}
               {` `}
               {data.microcmsInformation.category.category}
             </div>
@@ -41,6 +51,12 @@ const InformationPost = ({ data }) => (
               }}
             />
           </div>
+
+          {/* シェアボタン */}
+          <ShareButtonList
+            title={data.microcmsInformation.title}
+            url={`http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com/information/${data.microcmsInformation.informationId}`}
+          />
         </div>
 
         <Sidebar />
@@ -56,7 +72,7 @@ export const query = graphql`
     microcmsInformation(informationId: { eq: $id }) {
       informationId
       title
-      date(formatString: "YYYY年MM月DD日")
+      date
       body
       category {
         category
