@@ -5,28 +5,39 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(
     `
-    {
-      allMicrocmsInformation {
-        totalCount
-        edges {
-          node {
-            informationId
+      {
+        allMicrocmsInformation {
+          totalCount
+          edges {
+            node {
+              informationId
+              category {
+                id
+              }
+            }
           }
         }
       }
-    }
     `
   ).then(result => {
-    if(result.errors) {
+    if (result.errors) {
       throw result.errors
     }
 
-    result.data.allMicrocmsInformation.edges.forEach( edge => {
+    result.data.allMicrocmsInformation.edges.forEach(edge => {
       createPage({
         path: `/information/${edge.node.informationId}`,
         component: path.resolve(`./src/templates/info-post.js`),
         context: {
-          id: edge.node.informationId
+          id: edge.node.informationId,
+        },
+        defer: false,
+      })
+      createPage({
+        path: `/category/${edge.node.category.id}`,
+        component: path.resolve(`./src/templates/info-cate.js`),
+        context: {
+          categoryId: edge.node.category.id,
         },
         defer: false,
       })
@@ -34,7 +45,9 @@ exports.createPages = ({ graphql, actions }) => {
 
     // ページネーション
     const PerPage = 2
-    const pageCount = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
+    const pageCount = Math.ceil(
+      result.data.allMicrocmsInformation.totalCount / PerPage
+    )
 
     for (let i = 0; i < pageCount; i++) {
       createPage({
