@@ -4,17 +4,23 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PageTitle from "../components/PageTitle"
+// サイドバー
+import Sidebar from "../components/Sidebar"
+
 // CSS
 import * as Styles from "../styles/_information.module.scss"
 
 const categoryPage = ({ data }) => (
   <Layout>
     <Seo
-      title="カテゴリー：ニュース"
-      description="サンパーキング記事カテゴリー：ニュース"
+      title="カテゴリー別記事一覧"
+      description="カテゴリー別記事一覧ページ"
     />
-    {data.allMicrocmsInformation.edges.map(({ node }) => (
-      <PageTitle>カテゴリー：{node.category.category}</PageTitle>
+    {data.allMicrocmsCategory.edges.map(({ node }) => (
+      <PageTitle>
+        {node.categoryId}
+        <span>{node.category}</span>
+      </PageTitle>
     ))}
     <div className="content__wrap content__pd">
       <div className={Styles.inner}>
@@ -37,6 +43,7 @@ const categoryPage = ({ data }) => (
             </div>
           ))}
         </div>
+        <Sidebar />
       </div>
     </div>
   </Layout>
@@ -57,6 +64,14 @@ export const query = graphql`
             category
             id
           }
+        }
+      }
+    }
+    allMicrocmsCategory(filter: { categoryId: { eq: $categoryId } }) {
+      edges {
+        node {
+          category
+          categoryId
         }
       }
     }

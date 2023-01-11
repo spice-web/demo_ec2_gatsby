@@ -6,7 +6,7 @@ import * as Styles from "../styles/_side.module.scss"
 const Sidebar = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMicrocmsInformation(sort: { date: DESC }, limit: 5) {
+      post: allMicrocmsInformation(sort: { date: DESC }, limit: 5) {
         edges {
           node {
             category {
@@ -19,10 +19,20 @@ const Sidebar = () => {
           }
         }
       }
+      category: allMicrocmsCategory {
+        edges {
+          node {
+            category
+            categoryId
+          }
+        }
+      }
     }
   `)
 
-  const posts = data.allMicrocmsInformation.edges
+  const posts = data.post.edges
+  const categories = data.category.edges
+
   return (
     <div className={Styles.side}>
       <h3 className={Styles.headline}>最近の投稿</h3>
@@ -39,12 +49,10 @@ const Sidebar = () => {
       </div>
       <h3 className={Styles.headline}>カテゴリー</h3>
       <div className={Styles.section}>
-        {posts.map(({ node }) => {
+        {categories.map(({ node }) => {
           return (
             <div className={Styles.title}>
-              <Link to={`/category/${node.category.id}`}>
-                {node.category.category}
-              </Link>
+              <Link to={`/category/${node.categoryId}`}>{node.category}</Link>
             </div>
           )
         })}

@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
       createPage({
         path: `/category/${edge.node.category.id}`,
-        component: path.resolve(`./src/templates/info-cate.js`),
+        component: path.resolve(`./src/templates/info-category.js`),
         context: {
           categoryId: edge.node.category.id,
         },

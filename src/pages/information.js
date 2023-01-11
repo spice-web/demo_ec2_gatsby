@@ -33,7 +33,11 @@ const InformationPage = ({ data }) => (
               <p className={Styles.excerpt}>{node.excerpt}</p>
               <ul className={Styles.footer}>
                 <li>{node.date}</li>
-                <li>{node.category.category}</li>
+                <li>
+                  <Link to={`/category/${node.category.id}`}>
+                    {node.category.category}
+                  </Link>
+                </li>
                 <li className={Styles.more}>
                   <Link to={node.informationId}>MORE&nbsp;&#x226B;</Link>
                 </li>
@@ -62,6 +66,7 @@ export const query = graphql`
         node {
           category {
             category
+            id
           }
           date(formatString: "YYYY年MM月DD日")
           informationId
