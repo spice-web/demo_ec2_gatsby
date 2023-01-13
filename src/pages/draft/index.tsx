@@ -33,7 +33,7 @@ const NewsPage: React.FC<PageProps<GatsbyTypes.NewsQuery>> = ({ location }) => {
     <Layout>
       <Seo
         title={data.microcmsInformation?.title}
-        description={data.microcmsInformation?.description}
+        description={data.microcmsInformation?.excerpt}
       />
       {/* <NewsPost data={data} /> // ※3 */}
     </Layout>
