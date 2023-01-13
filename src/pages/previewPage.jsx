@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
-import { getSearchParams, getSearchParams } from "gatsby-query-params"
+import { getSearchParams } from "gatsby-query-params"
 //...その他コンポーネントなど
 
 import Seo from "../components/seo"
@@ -18,7 +18,7 @@ function PreviewPage() {
   const contentId = queryParams.contentId
   const draftKey = queryParams.draftKey
 
-  const [postData, setPostData] = useState("initialState") //最初、postDataにはnullが入ります。
+  const [postData, setPostData] = useState(null) //最初、postDataにはnullが入ります。
 
   useEffect(() => {
     if (!postData) {
