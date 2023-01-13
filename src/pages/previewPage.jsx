@@ -18,7 +18,7 @@ function PreviewPage() {
   const contentId = queryParams.contentId
   const draftKey = queryParams.draftKey
 
-  const [postData, setPostData] = useState(null) //最初、postDataにはnullが入ります。
+  const [postData, setPostData] = useState("initialState") //最初、postDataにはnullが入ります。
 
   useEffect(() => {
     if (!postData) {
@@ -37,7 +37,7 @@ function PreviewPage() {
           }
         })
         .then(json => {
-          setPostData(json) //ここで、postDataに取得したコンテンツが格納されます。
+          postData = setPostData(json) //ここで、postDataに取得したコンテンツが格納されます。
         })
     } else {
       return function cleanup() {
