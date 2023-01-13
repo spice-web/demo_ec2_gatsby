@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
-import { getSearchParams } from "gatsby-query-params"
+import { getSearchParams, getSearchParams } from "gatsby-query-params"
 //...その他コンポーネントなど
 
 import Seo from "../components/seo"
