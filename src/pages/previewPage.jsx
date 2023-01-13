@@ -37,7 +37,7 @@ function PreviewPage() {
           }
         })
         .then(json => {
-          postData = setPostData(json) //ここで、postDataに取得したコンテンツが格納されます。
+          setPostData(json) //ここで、postDataに取得したコンテンツが格納されます。
         })
     } else {
       return function cleanup() {
