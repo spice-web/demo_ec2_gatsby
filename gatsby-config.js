@@ -7,49 +7,42 @@ module.exports = {
     title: `テストサイト`,
     description: `テストサイト`,
     author: `@spice Inc.`,
-    // 
+    //
     // 本番時変更
-    // 
+    //
     siteUrl: `http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com`,
   },
   plugins: [
-    // // Google Analytics
-    // [
-    //   resolve: `gatsby-plugin-google-gtag`,
-    //   options: {
-    //     trackingIds: [process.env.GATSBY_TRACKING_ID],
-    //   },
-    // ],
-
-
     // tag manager
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
         // id: `GTM-T43LP9C`,
-    
+
         // Include GTM in development.
         // Defaults to false meaning GTM will only be loaded in production.
         includeInDevelopment: false,
-    
+
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
         defaultDataLayer: { platform: "gatsby" },
-    
+
         // Specify optional GTM environment details.
         // gtmAuth: "xNwDtuXDGlgZTO1P8TF2cg",
         // gtmPreview: "env-1",
         // dataLayerName: 'dataLayer',
-      }
+      },
     },
-
 
     // smoothscroll
     `gatsby-plugin-smoothscroll`,
     // sass
     `gatsby-plugin-sass`,
+
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-typegen`,
 
     // robots
     // {
@@ -102,9 +95,11 @@ module.exports = {
       options: {
         apiKey: process.env.MICROCMS_APIKEY,
         serviceId: process.env.MICROCMS_SERVICE_ID,
-        apis: [{
-          endpoint: 'information',
-        }],
+        apis: [
+          {
+            endpoint: "information",
+          },
+        ],
       },
     },
     {
@@ -112,9 +107,11 @@ module.exports = {
       options: {
         apiKey: process.env.MICROCMS_APIKEY,
         serviceId: process.env.MICROCMS_SERVICE_ID,
-        apis: [{
-          endpoint: 'category',
-        }],
+        apis: [
+          {
+            endpoint: "category",
+          },
+        ],
       },
     },
     // voice
@@ -123,13 +120,14 @@ module.exports = {
       options: {
         apiKey: process.env.MICROCMS_APIKEY,
         serviceId: process.env.MICROCMS_SERVICE_ID,
-        apis: [{
-          endpoint: 'voice',
-        }],
+        apis: [
+          {
+            endpoint: "voice",
+          },
+        ],
       },
     },
     // microCMSの設定ここまで
-
 
     // PWA
     {
@@ -138,50 +136,50 @@ module.exports = {
         name: `sunparking`,
         short_name: `sunparking`,
         start_url: `/?utm_source=homescreen`,
-        background_color: '#333',
+        background_color: "#333",
         theme_color: `#32B400`,
-        display: 'minimal-ui',  // アプリのスタイル
+        display: "minimal-ui", // アプリのスタイル
         icon: `src/images/icon-512x512.png`,
-        "icons": [
+        icons: [
           {
-            "src": "src/images/icons/icon-72x72.png",
-            "sizes": "72x72",
-            "type": "image/png"
+            src: "src/images/icons/icon-72x72.png",
+            sizes: "72x72",
+            type: "image/png",
           },
           {
-            "src": "src/images/icons/icon-96x96.png",
-            "sizes": "96x96",
-            "type": "image/png"
+            src: "src/images/icons/icon-96x96.png",
+            sizes: "96x96",
+            type: "image/png",
           },
           {
-            "src": "src/images/icons/icon-128x128.png",
-            "sizes": "128x128",
-            "type": "image/png"
+            src: "src/images/icons/icon-128x128.png",
+            sizes: "128x128",
+            type: "image/png",
           },
           {
-            "src": "src/images/icons/icon-144x144.png",
-            "sizes": "144x144",
-            "type": "image/png"
+            src: "src/images/icons/icon-144x144.png",
+            sizes: "144x144",
+            type: "image/png",
           },
           {
-            "src": "src/images/icons/icon-152x152.png",
-            "sizes": "152x152",
-            "type": "image/png"
+            src: "src/images/icons/icon-152x152.png",
+            sizes: "152x152",
+            type: "image/png",
           },
           {
-            "src": "src/images/icons/icon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
+            src: "src/images/icons/icon-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
           },
           {
-            "src": "src/images/icons/icon-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
+            src: "src/images/icons/icon-384x384.png",
+            sizes: "384x384",
+            type: "image/png",
           },
           {
-            "src": "src/images/icons/icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
+            src: "src/images/icons/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
           },
           // サイズ別のアイコン設定
         ],
@@ -193,17 +191,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-lodash`,
       options: {
-        disablesFeatures: [`shorthand`]
+        disablesFeatures: [`shorthand`],
       },
     },
     {
-    // リダイレクト設定
-    resolve: 'gatsby-plugin-htaccess',
-    options: {
+      // リダイレクト設定
+      resolve: "gatsby-plugin-htaccess",
+      options: {
         ErrorDocument: `ErrorDocument 404 /404.html`,
         custom: ``,
       },
     },
-
   ],
 }
