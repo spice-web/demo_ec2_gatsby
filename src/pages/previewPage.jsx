@@ -26,7 +26,7 @@ function PreviewPage() {
         `https://spice-web.microcms.io/api/v1/information/${contentId}?draftKey=${draftKey}`,
         {
           headers: {
-            "X-API-KEY": "uPiwKCQW7hJHydhbPrZsn0iXGG908ipjfai7",
+            "X-API-KEY": `${process.env.MICROCMS_APIKEY}`,
             //
           },
         }
@@ -37,7 +37,7 @@ function PreviewPage() {
           }
         })
         .then(json => {
-          postData = setPostData(json) //ここで、postDataに取得したコンテンツが格納されます。
+          postData = setPostData(json)
         })
     } else {
       return function cleanup() {
