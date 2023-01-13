@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { getSearchParams } from "gatsby-query-params"
 //...その他コンポーネントなど
 
-import Seo from "../components/Seo"
+import Seo from "../components/seo"
 import Layout from "../components/layout"
 
 function PreviewPage() {
