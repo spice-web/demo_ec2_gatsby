@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { getSearchParams } from "gatsby-query-params"
 //...その他コンポーネントなど
 
+import Seo from "../components/Seo"
 import Layout from "../components/layout"
 
 function PreviewPage() {
@@ -46,11 +47,15 @@ function PreviewPage() {
   })
   return (
     <Layout>
+      <Seo
+        title={postData ? postData.title : "見つかりませんでした"}
+        description={postData ? postData.excerpt : "見つかりませんでした"}
+      />
       {/* コンテナ */}
       <div className="content__wrap content__pd">
         <div
           dangerouslySetInnerHTML={{
-            __html: postData ? postData.title : "",
+            __html: postData ? postData.title : "見つかりませんでした",
           }}
         ></div>
       </div>
