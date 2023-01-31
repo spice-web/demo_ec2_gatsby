@@ -15,12 +15,12 @@ function PreviewPage() {
   //draftKey:"xxxx"}
   //というようなデータが入ります。
 
-  // const params = new URLSearchParams(window.location.search)
-  // const contentId = params.get("contentId")
-  // const draftKey = params.get("draftKey")
+  const params = new URLSearchParams(window.location.search)
+  const contentId = params.get("contentId")
+  const draftKey = params.get("draftKey")
 
-  const contentId = "9cnm_1-88" //queryParams.contentId
-  const draftKey = "Y0yp3ktSAo" //queryParams.draftKey
+  // const contentId = queryParams.contentId
+  // const draftKey = queryParams.draftKey
 
   const [postData, setPostData] = useState(null) //最初、postDataにはnullが入ります。
 
@@ -55,7 +55,7 @@ function PreviewPage() {
   return (
     <Layout>
       <Seo
-        title={postData ? postData.title : "見つかりませんでした。"}
+        title={postData ? postData.title : "見つかりませんでした."}
         description={postData ? postData.excerpt : "見つかりませんでした"}
       />
       {/* コンテナ */}
