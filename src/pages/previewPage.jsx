@@ -36,7 +36,7 @@ function PreviewPage() {
             return response.json()
           }
         })
-        .then(res => console.log(res))
+        .then(response => console.log(response))
 
         .then(json => {
           postData = setPostData(json)
