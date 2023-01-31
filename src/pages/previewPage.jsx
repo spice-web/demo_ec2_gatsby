@@ -31,8 +31,16 @@ function PreviewPage() {
           },
         }
       )
-        .then(res => res.json())
-        .then(res => setData({ microcmsInformation: res }))
+        .then(res => console.log(res))
+
+        .then(response => {
+          if (response.ok) {
+            return response.json()
+          }
+        })
+        .then(json => {
+          postData = setPostData(json)
+        })
     } else {
       return function cleanup() {
         console.log("done")
