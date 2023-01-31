@@ -31,14 +31,8 @@ function PreviewPage() {
           },
         }
       )
-        .then(res => {
-          if (res.ok) {
-            return res.json()
-          }
-        })
-        .then(json => {
-          postData = setPostData(json)
-        })
+        .then(res => res.json())
+        .then(res => setData({ microcmsNews: res }))
     } else {
       return function cleanup() {
         console.log("done")
