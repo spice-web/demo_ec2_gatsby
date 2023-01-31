@@ -96,6 +96,14 @@ function PreviewPage() {
               <div
                 className=""
                 dangerouslySetInnerHTML={{
+                  __html: postData
+                    ? postData.category.category
+                    : "カテゴリーなし",
+                }}
+              ></div>
+              <div
+                className=""
+                dangerouslySetInnerHTML={{
                   __html: postData ? postData.body : "テキスト無し",
                 }}
               />
