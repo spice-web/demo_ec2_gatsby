@@ -32,7 +32,7 @@ function PreviewPage() {
         }
       )
         .then(res => res.json())
-        .then(res => setData({ microcmsNews: res }))
+        .then(res => setData({ microcmsInformation: res }))
     } else {
       return function cleanup() {
         console.log("done")
