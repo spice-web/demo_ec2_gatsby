@@ -23,7 +23,7 @@ function PreviewPage() {
   useEffect(() => {
     if (!postData) {
       fetch(
-        `https://spice-web.microcms.io/api/v1/information/9cnm_1-88?draftKey=Y0yp3ktSAo`,
+        `https://spice-web.microcms.io/api/v1/information/${contentId}?draftKey=${draftKey}`,
         {
           headers: {
             "X-MICROCMS-API-KEY": "uPiwKCQW7hJHydhbPrZsn0iXGG908ipjfai7",
