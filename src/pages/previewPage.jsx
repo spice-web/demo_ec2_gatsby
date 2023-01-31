@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import { getSearchParams } from "gatsby-query-params"
+import queryString from "query-string"
 //...その他コンポーネントなど
 
 import Seo from "../components/seo"
@@ -15,12 +16,13 @@ function PreviewPage() {
   //draftKey:"xxxx"}
   //というようなデータが入ります。
 
-  const contentId = queryParams.contentId
-  const draftKey = queryParams.draftKey
+  // const contentId = queryParams.contentId
+  // const draftKey = queryParams.draftKey
 
   const [postData, setPostData] = useState(null) //最初、postDataにはnullが入ります。
 
   useEffect(() => {
+    const { contentId, draftKey } = queryString.parse(location.search)
     if (!postData) {
       fetch(
         `https://spice-web.microcms.io/api/v1/information/${contentId}?draftKey=${draftKey}`,
