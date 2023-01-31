@@ -32,9 +32,10 @@ function PreviewPage() {
         }
       )
         .then(response => {
-          if (response.ok) {
-            return response.json()
+          if (!response.ok) {
+            console.error("サーバーエラー")
           }
+          return response.json()
         })
         .then(response => console.log(response))
 
