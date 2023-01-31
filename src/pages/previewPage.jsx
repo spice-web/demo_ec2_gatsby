@@ -90,6 +90,12 @@ function PreviewPage() {
               <div
                 className=""
                 dangerouslySetInnerHTML={{
+                  __html: postData ? postData.date : "日付なし",
+                }}
+              ></div>
+              <div
+                className=""
+                dangerouslySetInnerHTML={{
                   __html: postData ? postData.body : "テキスト無し",
                 }}
               />
