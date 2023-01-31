@@ -36,15 +36,15 @@ function PreviewPage() {
             return response.json()
           }
         })
-        .then(json => {
-          postData = setPostData(json)
+        .then(response => {
+          setData({ microcmsInformation: res })
         })
     } else {
       return function cleanup() {
         console.log("done")
       }
     }
-  })
+  }, [])
   return (
     <Layout>
       <Seo
