@@ -31,13 +31,13 @@ function PreviewPage() {
           },
         }
       )
-        .then(res => console.log(res))
-
         .then(response => {
           if (response.ok) {
             return response.json()
           }
         })
+        .then(res => console.log(res))
+
         .then(json => {
           postData = setPostData(json)
         })
