@@ -108,6 +108,9 @@ function PreviewPage() {
                 }}
               />
             </div>
+
+            {/* シェアボタン */}
+            <ShareButtonList title={`テストプレビュー`} url={``} />
           </div>
 
           <Sidebar />
