@@ -90,21 +90,10 @@ function PreviewPage() {
               <div
                 className=""
                 dangerouslySetInnerHTML={{
-                  __html: postData ? postData.date : "日付なし",
-                }}
-              ></div>
-              <div
-                className=""
-                dangerouslySetInnerHTML={{
                   __html: postData ? postData.body : "テキスト無し",
                 }}
               />
             </div>
-
-            {/* シェアボタン */}
-            <ShareButtonList
-              url={`http://ec2-54-238-164-111.ap-northeast-1.compute.amazonaws.com/information/${data.microcmsInformation.informationId}`}
-            />
           </div>
 
           <Sidebar />
