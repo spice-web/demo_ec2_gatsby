@@ -31,9 +31,9 @@ function PreviewPage() {
           },
         }
       )
-        .then(response => {
-          if (response.ok) {
-            return response.json()
+        .then(res => {
+          if (res.ok) {
+            return res.json()
           }
         })
         .then(json => {
