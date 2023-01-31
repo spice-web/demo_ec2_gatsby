@@ -26,7 +26,7 @@ function PreviewPage() {
         `https://spice-web.microcms.io/api/v1/information/${contentId}?draftKey=${draftKey}`,
         {
           headers: {
-            "X-MICROCMS-KEY": "uPiwKCQW7hJHydhbPrZsn0iXGG908ipjfai7",
+            "X-MICROCMS-API-KEY": "uPiwKCQW7hJHydhbPrZsn0iXGG908ipjfai7",
             //
           },
         }
