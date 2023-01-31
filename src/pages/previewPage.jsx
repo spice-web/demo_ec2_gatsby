@@ -36,8 +36,8 @@ function PreviewPage() {
             return response.json()
           }
         })
-        .then(response => {
-          setData({ microcmsInformation: res })
+        .then(json => {
+          postData = setPostData(json)
         })
     } else {
       return function cleanup() {
