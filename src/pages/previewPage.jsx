@@ -56,7 +56,7 @@ function PreviewPage() {
     <Layout>
       <Seo
         title={postData ? postData.title : "見つかりませんでした."}
-        description={postData ? postData.excerpt : "見つかりませんでした"}
+        description={postData ? postData.excerpt : "見つかりませんでした。"}
       />
       {/* コンテナ */}
       <div className="content__wrap content__pd">
