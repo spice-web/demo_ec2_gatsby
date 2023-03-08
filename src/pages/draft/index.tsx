@@ -14,7 +14,7 @@ const NewsPage: React.FC<PageProps<GatsbyTypes.NewsQuery>> = ({ location }) => {
 
   useEffect(() => {
     fetch(
-      `https://your-service-id.microcms.io/api/v1/information/${contentId}?draftKey=${draftKey}`,
+      `https://spice-web.microcms.io/api/v1/information/${contentId}?draftKey=${draftKey}`,
       {
         headers: {
           "X-MICROCMS-API-KEY": `${process.env.MICROCMS_APIKEY}`,
@@ -33,7 +33,7 @@ const NewsPage: React.FC<PageProps<GatsbyTypes.NewsQuery>> = ({ location }) => {
     <Layout>
       <Seo
         title={data.microcmsInformation?.title}
-        description={data.microcmsInformation?.description}
+        description={data.microcmsInformation?.excerpt}
       />
       {/* <NewsPost data={data} /> // ※3 */}
     </Layout>
