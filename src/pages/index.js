@@ -291,7 +291,7 @@ const IndexPage = ({ data }) => (
           </ul>
           <ul className={styles.selectBox}>
             <li className={styles.textBox}>
-              成田空港駐車場では<span>最大級の2,000台収容!</span>
+              NIPPON空港駐車場では<span>最大級の5,000台収容!</span>
               お仕事が旅行シーズンと重なっても大丈夫！
             </li>
             <li className={styles.imgBox}>
